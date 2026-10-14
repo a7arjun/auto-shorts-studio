@@ -1,0 +1,12 @@
+__pycache__/
+.pytest_cache/
+.env
+.env.*
+*.pyc
+output/
+.cache/
+*.mp4
+*.wav
+*.token
+client_secret*.json
+credentials*.json
