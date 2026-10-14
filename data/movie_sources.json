@@ -1,0 +1,71 @@
+{
+  "hindi": [
+    {
+      "id": "brahmachari-1938",
+      "film": "Brahmachari",
+      "year": 1938,
+      "language": "Hindi / Marathi",
+      "genre": "Satirical comedy",
+      "file": "Brahmachari, 1938.webm",
+      "duration_seconds": 8092,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Brahmachari,_1938.webm",
+      "rights_basis": "Wikimedia Commons page lists public-domain status in India and the US; recheck before production",
+      "required_categories": [
+        "PD India",
+        "PD-1996"
+      ],
+      "enabled": true,
+      "keep_audio": true
+    }
+  ],
+  "english": [
+    {
+      "id": "keaton-one-week-scene-1920",
+      "film": "One Week",
+      "year": 1920,
+      "language": "Silent / English intertitles",
+      "genre": "Slapstick comedy",
+      "file": "Scene from One Week (1920).webm",
+      "duration_seconds": 44,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Scene_from_One_Week_(1920).webm",
+      "rights_basis": "Wikimedia Commons page lists US public-domain status; recheck before production",
+      "required_categories": [
+        "PD US expired"
+      ],
+      "enabled": true,
+      "keep_audio": false
+    },
+    {
+      "id": "keaton-one-week-1920",
+      "film": "One Week",
+      "year": 1920,
+      "language": "Silent / English intertitles",
+      "genre": "Slapstick comedy",
+      "file": "One Week (1920).webm",
+      "duration_seconds": 1466,
+      "source_page": "https://commons.wikimedia.org/wiki/File:One_Week_(1920).webm",
+      "rights_basis": "Wikimedia Commons page lists US public-domain status; recheck before production",
+      "required_categories": [
+        "PD US expired"
+      ],
+      "enabled": true,
+      "keep_audio": false
+    },
+    {
+      "id": "chaplin-pawnshop-1916",
+      "film": "The Pawnshop",
+      "year": 1916,
+      "language": "Silent / English intertitles",
+      "genre": "Slapstick comedy",
+      "file": "The Pawnshop (1916).ogv",
+      "duration_seconds": 1222,
+      "source_page": "https://commons.wikimedia.org/wiki/File:The_Pawnshop_(1916).ogv",
+      "rights_basis": "Wikimedia Commons page lists US public-domain status; recheck before production",
+      "required_categories": [
+        "PD US expired"
+      ],
+      "enabled": true,
+      "keep_audio": false
+    }
+  ]
+}
