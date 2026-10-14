@@ -1,0 +1,81 @@
+name: Automated Movie Clip Shorts
+on:
+  schedule:
+    - cron: '23 10 * * *'
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: Channel
+        type: choice
+        options: [both, hindi, english]
+        default: both
+      dry_run:
+        description: Use synthetic footage; never upload
+        type: boolean
+        default: true
+permissions:
+  contents: write
+concurrency:
+  group: movie-short-automation
+  cancel-in-progress: false
+jobs:
+  movie-shorts:
+    if: github.event_name == 'workflow_dispatch' || vars.AUTOPUBLISH_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    env:
+      AUTOPUBLISH_ENABLED: ${{ vars.AUTOPUBLISH_ENABLED }}
+      YT_HI_CLIENT_ID: ${{ secrets.YT_HI_CLIENT_ID }}
+      YT_HI_CLIENT_SECRET: ${{ secrets.YT_HI_CLIENT_SECRET }}
+      YT_HI_REFRESH_TOKEN: ${{ secrets.YT_HI_REFRESH_TOKEN }}
+      YT_EN_CLIENT_ID: ${{ secrets.YT_EN_CLIENT_ID }}
+      YT_EN_CLIENT_SECRET: ${{ secrets.YT_EN_CLIENT_SECRET }}
+      YT_EN_REFRESH_TOKEN: ${{ secrets.YT_EN_REFRESH_TOKEN }}
+      YT_PRIVACY_STATUS: private
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install FFmpeg and Python packages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python -m pip install -r requirements.txt
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Render / publish
+        env:
+          REQUESTED_CHANNEL: ${{ inputs.channel }}
+          REQUESTED_DRY_RUN: ${{ inputs.dry_run }}
+        shell: bash
+        run: |
+          channel="${REQUESTED_CHANNEL:-both}"
+          dry="${REQUESTED_DRY_RUN:-true}"
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            channel=both
+            dry=false
+          fi
+          if [[ "$dry" == "true" ]]; then
+            python -m shorts.movie_main --channel "$channel" --dry-run
+          else
+            python -m shorts.movie_main --channel "$channel"
+          fi
+      - name: Commit publishing history
+        if: success() && env.AUTOPUBLISH_ENABLED == 'true' && (github.event_name == 'schedule' || inputs.dry_run == false)
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/movie_state.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record uploaded movie Shorts'
+            git pull --rebase
+            git push
+          fi
+      - name: Save dry-run videos
+        if: github.event_name == 'workflow_dispatch' && inputs.dry_run == true
+        uses: actions/upload-artifact@v4
+        with:
+          name: sample-shorts
+          path: output/**/*.mp4
+          retention-days: 1
