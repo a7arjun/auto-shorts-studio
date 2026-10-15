@@ -196,7 +196,55 @@ def demo():
              "-c:a","aac","-shortest",str(media)]
     subprocess.run(command,check=True,timeout=90)
     transcript=json.loads(Path("data/demo_dialogue.json").read_text(encoding="utf-8"))["segments"]
-    return process_video(media,transcript,output)
+    video,report=process_video(media,transcript,output)
+    # This test video is original synthetic footage, not a Bollywood scene.
+    metadata={
+        "title":"Original Test Pattern | Auto Shorts Studio #Shorts",
+        "description":"Original synthetic test footage to validate Shorts rendering and captions. Not a movie scene.\n#Shorts",
+        "tags":["Shorts","Video pipeline test","Original footage"]
+    }
+    write_upload_package(output,video,metadata)
+    # Separate illustrative SEO example; deliberately NOT the demo video's metadata.
+    from .seo import build_metadata
+    sample=build_metadata("Hera Pheri",scene_label="Baburao Comedy Moment",
+                          featured_characters=["Baburao"])
+    (output/"example_film_seo_only.json").write_text(
+        json.dumps({"example_only_not_used_for_demo":True,"metadata":sample},
+                   ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    return video,report
+
+def prepare_upload_metadata(entry):
+    """Build film-specific YouTube metadata only for a verified source manifest.
+
+    This does not infer characters or actors from a film-level cast list.
+    The entry's 'verified_featured_characters' must be clip-specific.
+    """
+    validate_source(entry)
+    from .seo import build_metadata
+    return build_metadata(
+        film=entry.get("film") or entry["title"],
+        year=entry.get("film_year"),
+        scene_label=entry.get("scene_label"),
+        featured_characters=entry.get("verified_featured_characters",[]),
+        source_credit=entry.get("source_credit") or entry["rights_reference"],
+        rights_text=entry["rights_reference"])
+
+def write_upload_package(output_dir,video,metadata):
+    """Produce inspectable video+SEO output without calling YouTube."""
+    output=Path(output_dir)
+    output.mkdir(parents=True,exist_ok=True)
+    check_export(video)
+    required=("title","description","tags")
+    if any(not metadata.get(key) for key in required):
+        raise ValueError("Upload metadata must have title, description and tags")
+    if len(metadata["title"])>100 or len(metadata["description"])>5000:
+        raise ValueError("YouTube text limits exceeded")
+    payload={"video_path":str(video),"youtube":metadata,"upload_executed":False}
+    (output/"upload_package.json").write_text(
+        json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    print("SEO PACKAGE PREPARED:",metadata["title"])
+    print("TAGS:",", ".join(metadata["tags"]))
+    return payload
 
 def run_authorized(publish=False):
     entry,state=eligible_source()
@@ -207,19 +255,13 @@ def run_authorized(publish=False):
     media=fetch_licensed_source(entry,root)
     transcript=transcribe_audio(media,os.getenv("WHISPER_MODEL","tiny"))
     short,report=process_video(media,transcript,root,entry)
+    metadata=prepare_upload_metadata(entry)
+    write_upload_package(root,short,metadata)
     if not publish:
         return short
     if os.getenv("MODERN_AUTOPUBLISH_ENABLED")!="true":
         raise RuntimeError("MODERN_AUTOPUBLISH_ENABLED must be true for unattended uploads")
     from .youtube import upload
-    from .seo import build_metadata
-    metadata=build_metadata(
-        film=entry.get("film") or entry["title"],
-        year=entry.get("film_year"),
-        scene_label=entry.get("scene_label"),
-        featured_characters=entry.get("verified_featured_characters",[]),
-        source_credit=entry.get("source_credit") or entry.get("rights_reference"),
-        rights_text=entry.get("rights_reference"))
     video_url=upload("hindi",short,metadata)
     state.setdefault("published",[]).append({
         "source_id":entry["source_id"],"url":video_url,
