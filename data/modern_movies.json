@@ -1,0 +1,132 @@
+{
+  "bollywood": [
+    {
+      "movie": "Hera Pheri",
+      "year": 2000,
+      "language": "hi",
+      "region": "IN",
+      "category": "comedy"
+    },
+    {
+      "movie": "Phir Hera Pheri",
+      "year": 2006,
+      "language": "hi",
+      "region": "IN",
+      "category": "comedy"
+    },
+    {
+      "movie": "Welcome",
+      "year": 2007,
+      "language": "hi",
+      "region": "IN",
+      "category": "comedy"
+    },
+    {
+      "movie": "Dhamaal",
+      "year": 2007,
+      "language": "hi",
+      "region": "IN",
+      "category": "comedy"
+    },
+    {
+      "movie": "Golmaal: Fun Unlimited",
+      "year": 2006,
+      "language": "hi",
+      "region": "IN",
+      "category": "comedy"
+    },
+    {
+      "movie": "Bhool Bhulaiyaa",
+      "year": 2007,
+      "language": "hi",
+      "region": "IN",
+      "category": "comedy"
+    },
+    {
+      "movie": "Chup Chup Ke",
+      "year": 2006,
+      "language": "hi",
+      "region": "IN",
+      "category": "comedy"
+    },
+    {
+      "movie": "3 Idiots",
+      "year": 2009,
+      "language": "hi",
+      "region": "IN",
+      "category": "comedy-drama"
+    },
+    {
+      "movie": "Housefull",
+      "year": 2010,
+      "language": "hi",
+      "region": "IN",
+      "category": "comedy"
+    }
+  ],
+  "hollywood": [
+    {
+      "movie": "Rush Hour 2",
+      "year": 2001,
+      "language": "en",
+      "region": "US",
+      "category": "comedy"
+    },
+    {
+      "movie": "Bruce Almighty",
+      "year": 2003,
+      "language": "en",
+      "region": "US",
+      "category": "comedy"
+    },
+    {
+      "movie": "Mean Girls",
+      "year": 2004,
+      "language": "en",
+      "region": "US",
+      "category": "comedy"
+    },
+    {
+      "movie": "White Chicks",
+      "year": 2004,
+      "language": "en",
+      "region": "US",
+      "category": "comedy"
+    },
+    {
+      "movie": "Superbad",
+      "year": 2007,
+      "language": "en",
+      "region": "US",
+      "category": "comedy"
+    },
+    {
+      "movie": "The Hangover",
+      "year": 2009,
+      "language": "en",
+      "region": "US",
+      "category": "comedy"
+    },
+    {
+      "movie": "We're the Millers",
+      "year": 2013,
+      "language": "en",
+      "region": "US",
+      "category": "comedy"
+    },
+    {
+      "movie": "Game Night",
+      "year": 2018,
+      "language": "en",
+      "region": "US",
+      "category": "comedy"
+    },
+    {
+      "movie": "Free Guy",
+      "year": 2021,
+      "language": "en",
+      "region": "US",
+      "category": "action-comedy"
+    }
+  ]
+}
