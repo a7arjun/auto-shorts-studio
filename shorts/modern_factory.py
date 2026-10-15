@@ -212,11 +212,14 @@ def run_authorized(publish=False):
     if os.getenv("MODERN_AUTOPUBLISH_ENABLED")!="true":
         raise RuntimeError("MODERN_AUTOPUBLISH_ENABLED must be true for unattended uploads")
     from .youtube import upload
-    metadata={
-      "title":entry["title"][:100],
-      "description":(entry.get("description","")+"\nFootage rights: "+
-                     entry["license_type"]+"\nSource: "+
-                     entry["rights_reference"]+"\n#Shorts")[:4500]}
+    from .seo import build_metadata
+    metadata=build_metadata(
+        film=entry.get("film") or entry["title"],
+        year=entry.get("film_year"),
+        scene_label=entry.get("scene_label"),
+        featured_characters=entry.get("verified_featured_characters",[]),
+        source_credit=entry.get("source_credit") or entry.get("rights_reference"),
+        rights_text=entry.get("rights_reference"))
     video_url=upload("hindi",short,metadata)
     state.setdefault("published",[]).append({
         "source_id":entry["source_id"],"url":video_url,
