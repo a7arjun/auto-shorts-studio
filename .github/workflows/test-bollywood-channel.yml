@@ -1,0 +1,43 @@
+name: Bollywood Channel - Private Upload Test
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_private_upload:
+        description: Upload one ORIGINAL synthetic test video as PRIVATE (not a movie clip)
+        type: boolean
+        required: true
+        default: false
+permissions:
+  contents: read
+jobs:
+  upload-test:
+    if: inputs.confirm_private_upload == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      YT_HI_CLIENT_ID: \${{ secrets.YT_HI_CLIENT_ID }}
+      YT_HI_CLIENT_SECRET: \${{ secrets.YT_HI_CLIENT_SECRET }}
+      YT_HI_REFRESH_TOKEN: \${{ secrets.YT_HI_REFRESH_TOKEN }}
+      YT_PRIVACY_STATUS: private
+      CONFIRM_PRIVATE_UPLOAD: "true"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check Hindi channel secret configuration
+        run: |
+          python - <<'PY'
+          import os
+          missing=[v for v in ("YT_HI_CLIENT_ID","YT_HI_CLIENT_SECRET","YT_HI_REFRESH_TOKEN") if not os.getenv(v)]
+          if missing:
+              raise SystemExit("Missing GitHub Actions secret(s): "+", ".join(missing))
+          print("OAuth secrets are configured (values hidden).")
+          PY
+      - name: Install FFmpeg and Python dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python -m pip install -r requirements.txt
+      - name: Create original test pattern and upload privately
+        run: python -m shorts.private_upload_test --channel hindi
