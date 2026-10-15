@@ -1,0 +1,62 @@
+name: Screen Bollywood Sources and Remix Options
+on:
+  workflow_run:
+    workflows:
+      - "Discover Modern Comedy Clips (Research Only)"
+    types:
+      - completed
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/screen-modern-sources.yml'
+permissions:
+  actions: read
+  contents: read
+jobs:
+  sourcing:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test source screening
+        run: python -m unittest discover -s tests -p 'test_source_screening.py' -v
+      - name: Retrieve last successful YouTube discovery report
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$SOURCE_RUN_ID" ]]; then
+            SOURCE_RUN_ID="$(gh run list --repo "$GITHUB_REPOSITORY"               --workflow discover-modern-comedy.yml --limit 12               --json databaseId,conclusion               --jq '[.[] | select(.conclusion == "success")][0].databaseId')"
+          fi
+          if [[ -z "$SOURCE_RUN_ID" || "$SOURCE_RUN_ID" == "null" ]]; then
+            echo "No successful discovery run available"
+            exit 1
+          fi
+          mkdir -p output/discovery
+          gh run download "$SOURCE_RUN_ID" --repo "$GITHUB_REPOSITORY"             --name modern-comedy-research --dir output/discovery
+          test -s output/discovery/modern_movies.json
+          echo "Discovery source run $SOURCE_RUN_ID downloaded"
+      - name: Prepare ranked Bollywood licensing and Remix queue
+        run: python -m shorts.source_screening
+      - name: Reject assumed clip reuse rights
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path("output/source_screening/bollywood_source_queue.json").read_text(encoding="utf-8"))
+          assert report["candidates"], "No Bollywood video candidates"
+          assert all(not row["automated_repost_eligible"] and row["license_status"]=="not_verified"
+                     for row in report["candidates"]), "Unexpected authorization assumptions"
+          print("Screened %d candidates; none falsely approved" % len(report["candidates"]))
+          PY
+      - name: Save sourcing, remix and licensing report
+        uses: actions/upload-artifact@v4
+        with:
+          name: bollywood-source-review
+          path: output/source_screening/
+          retention-days: 7
