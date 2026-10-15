@@ -11,6 +11,7 @@ on:
       - '.github/workflows/screen-modern-sources.yml'
       - 'shorts/source_screening.py'
       - 'tests/test_source_screening.py'
+      - 'shorts/discovery.py'
 permissions:
   actions: read
   contents: read
