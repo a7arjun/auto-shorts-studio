@@ -97,6 +97,8 @@ def transcript(video):
     return sorted([s for s in phrases if s["end"]>s["start"] and s["text"]],key=lambda s:s["start"])
 def prepare(mode):
     d=state();guard(mode,d)
+    if mode=="public" and d["reservations"]:
+        raise RuntimeError("An earlier upload has an unresolved reservation; pause before posting more videos")
     if len(d["published"])>=CAP:print("Batch complete");return False
     movie_i=pick(d)
     if movie_i is None:print("All source allocations exhausted");return False
