@@ -1,0 +1,84 @@
+{
+  "Hera Pheri": {
+    "film": "Hera Pheri",
+    "year": 2000,
+    "characters": {
+      "Baburao": "Paresh Rawal",
+      "Raju": "Akshay Kumar",
+      "Shyam": "Suniel Shetty"
+    }
+  },
+  "Phir Hera Pheri": {
+    "film": "Phir Hera Pheri",
+    "year": 2006,
+    "characters": {
+      "Baburao": "Paresh Rawal",
+      "Raju": "Akshay Kumar",
+      "Shyam": "Suniel Shetty"
+    }
+  },
+  "Welcome": {
+    "film": "Welcome",
+    "year": 2007,
+    "characters": {
+      "Uday Shetty": "Nana Patekar",
+      "Majnu": "Anil Kapoor",
+      "Rajiv": "Akshay Kumar",
+      "Dr Ghungroo": "Paresh Rawal"
+    }
+  },
+  "Dhamaal": {
+    "film": "Dhamaal",
+    "year": 2007,
+    "characters": {
+      "Manav": "Javed Jaffrey",
+      "Adi": "Arshad Warsi",
+      "Roy": "Riteish Deshmukh",
+      "Kabir": "Sanjay Dutt"
+    }
+  },
+  "Golmaal: Fun Unlimited": {
+    "film": "Golmaal: Fun Unlimited",
+    "year": 2006,
+    "characters": {
+      "Gopal": "Ajay Devgn",
+      "Madhav": "Arshad Warsi",
+      "Lucky": "Tusshar Kapoor",
+      "Laxman": "Sharman Joshi"
+    }
+  },
+  "Bhool Bhulaiyaa": {
+    "film": "Bhool Bhulaiyaa",
+    "year": 2007,
+    "characters": {
+      "Aditya": "Akshay Kumar",
+      "Manjulika": "Vidya Balan",
+      "Chhote Pandit": "Rajpal Yadav"
+    }
+  },
+  "Chup Chup Ke": {
+    "film": "Chup Chup Ke",
+    "year": 2006,
+    "characters": {
+      "Jeetu": "Shahid Kapoor",
+      "Bandya": "Rajpal Yadav"
+    }
+  },
+  "3 Idiots": {
+    "film": "3 Idiots",
+    "year": 2009,
+    "characters": {
+      "Rancho": "Aamir Khan",
+      "Farhan": "R Madhavan",
+      "Raju Rastogi": "Sharman Joshi"
+    }
+  },
+  "Housefull": {
+    "film": "Housefull",
+    "year": 2010,
+    "characters": {
+      "Aarush": "Akshay Kumar",
+      "Bob": "Riteish Deshmukh"
+    }
+  }
+}
