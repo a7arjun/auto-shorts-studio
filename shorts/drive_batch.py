@@ -62,6 +62,7 @@ def guard(mode,d):
     if not d["private_tests"]:raise RuntimeError("Private test not recorded")
     if len(d["published"])>=CAP:raise RuntimeError("30 public Shorts already published")
 def pick(d):
+    if len(d["published"])>=CAP:return None
     counts=[sum(x["movie_index"]==i for kind in ("published","reservations","private_tests")
                 for x in d[kind]) for i in range(2)]
     available=[i for i in range(2) if counts[i]<16]
