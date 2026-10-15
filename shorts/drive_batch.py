@@ -113,7 +113,8 @@ def prepare(mode):
     subtitle=write_srt(segments,start,end,OUT/"captions.srt")
     rendered=add_captions(raw,subtitle,OUT/"short.mp4")
     title,year=FILMS[movie_i]
-    metadata=build_metadata(title,year=year,scene_label="Funny Scene")
+    episode=1+sum(x["movie_index"]==movie_i for x in d["published"])
+    metadata=build_metadata(title,year=year,scene_label="Funny Scene",episode_number=episode)
     write_upload_package(OUT,rendered,metadata)
     job={"key":hashlib.sha256(f"{movie_i}:{start}:{end}".encode()).hexdigest()[:16],
          "movie_index":movie_i,"start":start,"end":end,"kind":mode,
