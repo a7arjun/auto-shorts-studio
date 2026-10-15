@@ -16,7 +16,8 @@ def upload(channel,video,metadata):
     credentials.refresh(Request())
     youtube=build("youtube","v3",credentials=credentials,cache_discovery=False)
     body={"snippet":{"title":metadata["title"],"description":metadata["description"],
-          "categoryId":"23"},"status":{"privacyStatus":os.getenv("YT_PRIVACY_STATUS","private"),
+          "categoryId":"23",
+          "tags":metadata.get("tags",[])[:20]},"status":{"privacyStatus":os.getenv("YT_PRIVACY_STATUS","private"),
           "selfDeclaredMadeForKids":False}}
     request=youtube.videos().insert(part="snippet,status",body=body,
        media_body=MediaFileUpload(str(video),mimetype="video/mp4",resumable=True,chunksize=4*1024*1024))
