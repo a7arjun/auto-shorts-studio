@@ -1,0 +1,35 @@
+name: Discover Modern Comedy Clips (Research Only)
+on:
+  schedule:
+    - cron: '17 9 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/discover-modern-comedy.yml'
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Validate research logic
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Discover 2000+ Bollywood and Hollywood comedy
+        env:
+          YOUTUBE_DATA_API_KEY: ${{ secrets.YOUTUBE_DATA_API_KEY }}
+        run: python -m shorts.discovery --per-channel 2
+      - name: Save metadata and candidates
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: modern-comedy-research
+          path: output/discovery/
+          if-no-files-found: warn
+          retention-days: 7
