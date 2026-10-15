@@ -1,0 +1,30 @@
+name: Test Comedy Scene Ranking
+on:
+  push:
+    paths:
+      - 'shorts/scene_selector.py'
+      - 'tests/test_scene_selector.py'
+      - 'data/demo_dialogue.json'
+      - '.github/workflows/test-scene-ranking.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  rank-scenes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test candidate ranking
+        run: python -m unittest discover -s tests -p 'test_scene_selector.py' -v
+      - name: Rank original fictional example dialogue
+        run: python -m shorts.scene_selector --transcript data/demo_dialogue.json --output output/scenes/scene_candidates.json
+      - name: Save ranked timestamps
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo-scene-rankings
+          path: output/scenes/scene_candidates.json
+          retention-days: 3
