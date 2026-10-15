@@ -20,6 +20,15 @@ class SEOTests(unittest.TestCase):
         m=build_metadata("Golmaal: Fun Unlimited",scene_label="Very funny "*20)
         self.assertLessEqual(len(m["title"]),100)
         self.assertLessEqual(len(m["hashtags"]),9)
+    def test_episode_series_metadata(self):
+        a=build_metadata("Hera Pheri",year=2000,scene_label="Funny Scene",episode_number=2)
+        b=build_metadata("Hera Pheri",year=2000,scene_label="Funny Scene",episode_number=3)
+        self.assertIn("Hera Pheri | Funny Scene #02",a["title"])
+        self.assertNotEqual(a["title"],b["title"])
+        self.assertIn("Episode 02",a["description"])
+        self.assertLessEqual(len(a["hashtags"]),6)
+        self.assertNotIn("#PareshRawal",a["description"])
+
     def test_hashtag(self):
         self.assertEqual(hashtag("Akshay Kumar"),"#AkshayKumar")
         self.assertEqual(hashtag("Bollywood Comedy"),"#BollywoodComedy")
