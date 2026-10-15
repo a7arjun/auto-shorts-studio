@@ -2,6 +2,9 @@ name: Modern Bollywood Authorized Shorts - Staged
 on:
   schedule:
     - cron: '37 10 * * *'
+  push:
+    paths:
+      - '.github/workflows/modern-authorized-shorts.yml'
   workflow_dispatch:
     inputs:
       mode:
@@ -51,7 +54,7 @@ jobs:
           print("Explicitly enabled authorized source entries:", count)
           mode=os.getenv("REQUESTED_MODE","preview") or "preview"
           if os.getenv("RUN_EVENT")=="schedule":
-              mode="private_upload" if os.getenv("MODERN_AUTOPUBLISH_ENABLED")=="true" else "preview"
+              mode="preview"  # scheduled executions never upload until separate go-live approval
           enabled=os.getenv("MODERN_AUTOPUBLISH_ENABLED")=="true"
           if mode=="private_upload" and not enabled:
               raise SystemExit("Upload requested but MODERN_AUTOPUBLISH_ENABLED is not true")
