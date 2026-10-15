@@ -25,6 +25,26 @@ jobs:
         env:
           YOUTUBE_DATA_API_KEY: ${{ secrets.YOUTUBE_DATA_API_KEY }}
         run: python -m shorts.discovery --per-channel 2
+      - name: Verify live YouTube results
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+          result=json.loads(Path("output/discovery/modern_movies.json").read_text(encoding="utf-8"))
+          rows=[r for r in result["rows"] if r.get("video_id")]
+          counts=Counter(r["channel"] for r in rows)
+          print("Research mode:", result["mode"])
+          print("Retrieved live video candidates:", len(rows))
+          print("Results by channel:", dict(counts))
+          print("Search failures:", len(result["errors"]))
+          if result["mode"] != "live_youtube_metadata":
+              raise SystemExit("YouTube API key missing: configure YOUTUBE_DATA_API_KEY in repository secrets")
+          if result["errors"]:
+              raise SystemExit("Some YouTube API searches failed. See preceding logs and artifact JSON")
+          if not rows:
+              raise SystemExit("YouTube API returned no live video candidates")
+          PY
       - name: Save metadata and candidates
         if: always()
         uses: actions/upload-artifact@v4
