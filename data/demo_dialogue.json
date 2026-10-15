@@ -1,0 +1,45 @@
+{
+  "description": "Original fictional dialogue for scene-selection code testing; not a movie transcript",
+  "segments": [
+    {
+      "start": 0,
+      "end": 5,
+      "text": "I bought new curtains for the office."
+    },
+    {
+      "start": 5,
+      "end": 9,
+      "text": "They are blue."
+    },
+    {
+      "start": 9,
+      "end": 14,
+      "text": "It took an hour to put them up."
+    },
+    {
+      "start": 14,
+      "end": 19,
+      "text": "Can anyone help me move this chair?"
+    },
+    {
+      "start": 19,
+      "end": 23,
+      "text": "What? Why are you sitting on the printer?"
+    },
+    {
+      "start": 23,
+      "end": 28,
+      "text": "Because the boss said I should make an impression!"
+    },
+    {
+      "start": 28,
+      "end": 32,
+      "text": "You have printed your lunch!"
+    },
+    {
+      "start": 32,
+      "end": 37,
+      "text": "Wait, is that my promotion letter?"
+    }
+  ]
+}
