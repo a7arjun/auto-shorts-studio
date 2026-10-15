@@ -9,6 +9,8 @@ on:
   push:
     paths:
       - '.github/workflows/screen-modern-sources.yml'
+      - 'shorts/source_screening.py'
+      - 'tests/test_source_screening.py'
 permissions:
   actions: read
   contents: read
