@@ -8,11 +8,11 @@ class ScreenMovieSourcesTests(unittest.TestCase):
     def setUp(self):
         self.discovery={"date":"2026-10-15","mode":"live_youtube_metadata","rows":[
             {"channel":"bollywood","movie":"Hera Pheri","movie_year":2000,"video_id":"abc1234xyZA",
-             "title":"Original funny clip","uploader":"Uploader unknown","views":1234,"likes":12,
+             "title":"Hera Pheri (2000) funny scene","uploader":"Uploader unknown","views":1234,"likes":12,
              "score":100,"youtube_declared_license":"creativeCommon"},
             {"channel":"bollywood","movie":"Hera Pheri","movie_year":2000,"video_id":"abc1234xyZA","score":10},
             {"channel":"hollywood","movie":"The Hangover","video_id":"def5678xyZA","score":2000},
-            {"channel":"bollywood","movie":"Welcome","movie_year":2007,"video_id":"xyz0123xyZA","score":55}
+            {"channel":"bollywood","movie":"Welcome","movie_year":2007,"video_id":"xyz0123xyZA","title":"Welcome (2007) funny scene","score":55}
         ]}
     def test_only_bollywood_and_deduplicated(self):
         rows=select_candidates(self.discovery)
