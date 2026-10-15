@@ -8,9 +8,9 @@ from .commons_media import download_commons
 from .movie_clips import make_demo_source,make_metadata,render_clip,select_item
 
 STATE=Path("data/movie_state.json")
-def run(channel,dry_run):
+def run(channel,dry_run,real_test=False):
     state=json.loads(STATE.read_text(encoding="utf-8"))
-    if not dry_run and os.getenv("AUTOPUBLISH_ENABLED")!="true":
+    if not (dry_run or real_test) and os.getenv("AUTOPUBLISH_ENABLED")!="true":
         raise RuntimeError("AUTOPUBLISH_ENABLED is not true")
     item,start,duration=select_item(channel,state.get(channel,[]))
     folder=Path("output")/channel
@@ -25,8 +25,8 @@ def run(channel,dry_run):
                     keep_audio=item.get("keep_audio",True))
     metadata=make_metadata(item,channel,start)
     (folder/"metadata.json").write_text(json.dumps({**metadata,"rights":rights,"dry_run":dry_run},indent=2),encoding="utf-8")
-    if dry_run:
-        print("DRY RUN: "+str(out))
+    if dry_run or real_test:
+        print(("SYNTHETIC DRY RUN: " if dry_run else "REAL MOVIE CLIP TEST: ")+str(out))
         return
     from .youtube import upload
     url=upload(channel,out,metadata)
@@ -39,10 +39,13 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument("--channel",choices=["both","hindi","english"],default="both")
     p.add_argument("--dry-run",action="store_true")
+    p.add_argument("--real-test",action="store_true",help="Download and render real footage without any YouTube upload")
     args=p.parse_args()
+    if args.dry_run and args.real_test:
+        p.error("--dry-run and --real-test cannot be combined")
     errors=[]
     for name in (["hindi","english"] if args.channel=="both" else [args.channel]):
-        try:run(name,args.dry_run)
+        try:run(name,args.dry_run,args.real_test)
         except Exception as exc:
             print("FAILED "+name+": "+str(exc),flush=True)
             errors.append(name)
