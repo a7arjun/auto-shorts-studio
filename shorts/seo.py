@@ -38,7 +38,8 @@ def unique(values):
     return out
 
 def build_metadata(film,year=None,scene_label=None,featured_characters=None,
-                   source_credit=None,rights_text=None,catalogue=None):
+                   source_credit=None,rights_text=None,catalogue=None,
+                   episode_number=None):
     """Generate accurate SEO fields, no unverified actor or character inference.
 
     featured_characters must be confirmed by the source curator, not merely
@@ -69,16 +70,25 @@ def build_metadata(film,year=None,scene_label=None,featured_characters=None,
         hook=hook[:62].rsplit(" ",1)[0]
     if not hook:
         hook=(confirmed[0]+"'s Funny Moment" if confirmed else "A Hilarious Comedy Moment")
-    title=f"{hook} 😂 | {movie} #Shorts"
+    # Movie name first is useful for searches; numbering avoids 30 identical titles.
+    if episode_number is not None:
+        number=int(episode_number)
+        if number<1 or number>999:
+            raise ValueError("episode_number must be between 1 and 999")
+        display_hook=(hook if hook!="A Hilarious Comedy Moment" else "Funny Scene")
+        title=f"{movie} | {display_hook} #{number:02d} 😂 #Shorts"
+    else:
+        title=f"{hook} 😂 | {movie} #Shorts"
     if len(title)>100:
-        title=f"{movie} Comedy Scene 😂 #Shorts"[:100]
+        title=f"{movie} Comedy #{int(episode_number):02d} 😂 #Shorts" if episode_number else f"{movie} Comedy Scene 😂 #Shorts"
+        title=title[:100]
 
     hashes=[hashtag(movie),"#BollywoodComedy"]
     for character,actor in zip(confirmed,actor_names):
         hashes.extend([hashtag(character),hashtag(actor)])
     hashes+=["#HindiComedy","#ComedyShorts","#Shorts"]
     hashtags=unique(h for h in hashes if h)
-    hashtags=hashtags[:9]
+    hashtags=hashtags[:6]  # Short, relevant hashtags rather than broad stuffing
     cast_line=(", ".join(confirmed)+" ("+", ".join(actor_names)+")") if confirmed else ""
     lead=f"Funny Hindi comedy moment from {movie}"
     if movie_year:
@@ -87,6 +97,8 @@ def build_metadata(film,year=None,scene_label=None,featured_characters=None,
         lead+=f", featuring {cast_line}"
     lead+="."
     description=lead+"\n"
+    if episode_number is not None:
+        description+=f"Episode {int(episode_number):02d} in our {movie} comedy scene series.\n"
     if hook and hook not in ("A Hilarious Comedy Moment",):
         description+=f"\nScene: {hook}.\n"
     if source_credit:
@@ -96,8 +108,9 @@ def build_metadata(film,year=None,scene_label=None,featured_characters=None,
     description+="\n"+" ".join(hashtags)
     description=description[:5000]
     backend_tags=unique(
-        [movie,f"{movie} comedy",f"{movie} funny scene","Bollywood comedy",
-         "Hindi comedy","funny movie scene","YouTube Shorts"]
+        [movie,f"{movie} comedy",f"{movie} funny scene",f"{movie} Hindi movie",
+         f"{movie} {movie_year}" if movie_year else movie,
+         "Bollywood comedy","Hindi comedy","funny movie scene","YouTube Shorts"]
         +confirmed+actor_names)
     # YouTube's separate tags field is minor metadata; keep it compact.
     backend_tags=backend_tags[:15]
