@@ -75,7 +75,8 @@ def get_candidates(movie,channel,key,limit=10):
         score=round(views/max(days,7)**0.8 + likes*0.5,1)
         rows.append({"channel":channel,"movie":movie["movie"],"movie_year":movie["year"],
              "query":query,"video_id":vid,"url":"https://www.youtube.com/watch?v="+vid,
-             "title":snippet.get("title",""),"uploader":snippet.get("channelTitle",""),
+             "title":snippet.get("title",""),"description":snippet.get("description","")[:6000],
+             "uploader":snippet.get("channelTitle",""),
              "published_at":snippet.get("publishedAt",""),"views":views,"likes":likes,
              "score":score,"youtube_declared_license":video.get("status",{}).get("license","unknown"),
              "rights_verified":False,"upload_eligible":False,"source_type":"youtube_search_result"})
