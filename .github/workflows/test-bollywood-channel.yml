@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 12
     env:
-      YT_HI_CLIENT_ID: \${{ secrets.YT_HI_CLIENT_ID }}
-      YT_HI_CLIENT_SECRET: \${{ secrets.YT_HI_CLIENT_SECRET }}
-      YT_HI_REFRESH_TOKEN: \${{ secrets.YT_HI_REFRESH_TOKEN }}
+      YT_HI_CLIENT_ID: ${{ secrets.YT_HI_CLIENT_ID }}
+      YT_HI_CLIENT_SECRET: ${{ secrets.YT_HI_CLIENT_SECRET }}
+      YT_HI_REFRESH_TOKEN: ${{ secrets.YT_HI_REFRESH_TOKEN }}
       YT_PRIVACY_STATUS: private
       CONFIRM_PRIVATE_UPLOAD: "true"
     steps:
