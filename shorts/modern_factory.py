@@ -92,19 +92,48 @@ def fetch_licensed_source(entry, output_dir):
         temp.unlink(missing_ok=True)
 
 def transcribe_audio(media_path, model_name="tiny"):
-    """Optional free local speech recognition; GitHub preview tests use a fixed transcript."""
+    """Transcribe Hindi/Hinglish dialogue locally on the GitHub runner.
+
+    Word timestamps are grouped into short dialogue units for the scene
+    selector; no external paid speech API is required. Tiny is inexpensive,
+    but may mishear film audio. Increase WHISPER_MODEL for better accuracy.
+    """
     try:
         from faster_whisper import WhisperModel
     except ImportError as exc:
-        raise RuntimeError("Install optional dependency: pip install faster-whisper>=1.1,<2") from exc
+        raise RuntimeError("Install the optional dependency: pip install 'faster-whisper>=1.1,<2'") from exc
     model=WhisperModel(model_name,device="cpu",compute_type="int8")
-    segments,_=model.transcribe(str(media_path),language="hi",beam_size=1,
-                                vad_filter=True,condition_on_previous_text=False)
-    values=[{"start":float(s.start),"end":float(s.end),"text":s.text.strip()}
-            for s in segments if s.text.strip()]
-    if len(values)<2:
-        raise RuntimeError("Too little intelligible Hindi speech to select a comedy scene")
-    return values
+    transcribed,info=model.transcribe(
+        str(media_path),language="hi",beam_size=2,word_timestamps=True,
+        vad_filter=True,condition_on_previous_text=False)
+    units=[]
+    for segment in transcribed:
+        words=getattr(segment,"words",None) or []
+        if not words:
+            if segment.text.strip():
+                units.append({"start":float(segment.start),"end":float(segment.end),
+                              "text":segment.text.strip()})
+            continue
+        group=[]
+        for word in words:
+            if word.start is None or word.end is None or not word.word.strip():
+                continue
+            group.append(word)
+            elapsed=float(group[-1].end)-float(group[0].start)
+            # Cap each subtitle at around four seconds and keep natural pauses.
+            if elapsed>=3.5 or len(group)>=9 or word.word.strip().endswith(("।",".","!","?")):
+                units.append({"start":float(group[0].start),"end":float(group[-1].end),
+                              "text":" ".join(w.word.strip() for w in group)})
+                group=[]
+        if group:
+            units.append({"start":float(group[0].start),"end":float(group[-1].end),
+                          "text":" ".join(w.word.strip() for w in group)})
+    # Silence and music-only sources cannot yield reliable funny dialogue.
+    units=[s for s in units if s["end"]>s["start"] and s["text"]]
+    if not units:
+        raise RuntimeError("Hindi speech transcription returned no dialogue")
+    print(f"Transcribed {len(units)} caption units with model={model_name}")
+    return units
 
 def srt_time(t):
     milliseconds=max(0,int(round(t*1000)))
