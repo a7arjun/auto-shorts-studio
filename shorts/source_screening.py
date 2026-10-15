@@ -6,6 +6,7 @@ or guaranteed YouTube Shorts Remix eligibility.
 import argparse
 import csv
 import json
+import re
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -17,6 +18,24 @@ FIELDS=("priority","movie","year","title","video_url","uploader","views","likes"
         "score","declared_license","rights_owner_confirmed","license_status",
         "automated_repost_eligible","remix_eligibility","remix_action","licensing_action")
 
+def correct_film_candidate(item):
+    """A conservative title filter, not a copyright or content authenticity check."""
+    expected=str(item.get("movie") or "").casefold()
+    title=str(item.get("title") or "").casefold()
+    if not expected or not title:
+        return False
+    # Reject promotional videos and results from different franchise installments.
+    if re.search(r"\b(trailer|teaser|reaction|review|explained|interview|behind the scenes|promo)\b",title):
+        return False
+    if expected=="dhamaal":
+        return bool(re.search(r"\bdhamaal\b",title)) and not re.search(
+            r"\b(total|double|dhamaal\s*[234]|dhamaal\s*(two|three|four))\b",title)
+    if expected=="golmaal: fun unlimited":
+        return "golmaal" in title and not re.search(
+            r"\bgolmaal\s*[2345]\b|\bgolmaal\s+(returns|again)\b",title)
+    tokens=[x for x in re.findall(r"[a-z0-9]+",expected) if len(x)>2]
+    return bool(tokens) and all(re.search(r"\b"+re.escape(x)+r"\b",title) for x in tokens)
+
 def select_candidates(discovery,max_per_movie=3,max_total=18):
     if max_per_movie<1 or max_total<1:
         raise ValueError("Candidate limits must be positive")
@@ -26,7 +45,7 @@ def select_candidates(discovery,max_per_movie=3,max_total=18):
     rows=sorted(discovery.get("rows",[]),
                 key=lambda x:float(x.get("score") or 0),reverse=True)
     for item in rows:
-        if item.get("channel")!="bollywood" or not item.get("video_id"):
+        if item.get("channel")!="bollywood" or not item.get("video_id") or not correct_film_candidate(item):
             continue
         movie=str(item.get("movie") or "").strip()
         vid=str(item["video_id"])
