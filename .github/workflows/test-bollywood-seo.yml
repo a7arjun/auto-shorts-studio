@@ -1,0 +1,34 @@
+name: Test Bollywood SEO Metadata
+on:
+  push:
+    paths:
+      - 'shorts/seo.py'
+      - 'tests/test_seo.py'
+      - 'data/bollywood_seo_catalogue.json'
+      - '.github/workflows/test-bollywood-seo.yml'
+      - 'shorts/youtube.py'
+      - 'shorts/modern_factory.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test SEO metadata
+        run: python -m unittest discover -s tests -p 'test_seo.py' -v
+      - name: Export example Bollywood titles and hashtags
+        run: |
+          python -m shorts.seo --film "Hera Pheri" --scene "Baburao's Funniest Moment" --characters "Baburao"
+          python -m shorts.seo --film "Dhamaal" --scene "Funny Comedy Moment" --output output/seo/dhamaal.json
+      - name: Save example metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: bollywood-seo-previews
+          path: output/seo
+          retention-days: 3
