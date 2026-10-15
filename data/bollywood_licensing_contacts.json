@@ -1,0 +1,23 @@
+{
+  "description": "These organizations accept film rights enquiries. Do not assume they own any film found through YouTube search.",
+  "partners": [
+    {
+      "company": "Shemaroo Entertainment",
+      "url": "https://contentlicensing.shemarooent.com/Get_License.aspx",
+      "contact": "contentlicensing@shemaroo.com",
+      "purpose": "Ask about online excerpt licensing and approved source video delivery"
+    },
+    {
+      "company": "Ultra Media & Entertainment",
+      "url": "https://www.ultraindia.com/catalogue-rights-enquiry/",
+      "contact": "intl.sales@ultraindia.com",
+      "purpose": "Enquire which film titles in their film-rights catalogue can be licensed for Shorts"
+    },
+    {
+      "company": "Goldmines Telefilms",
+      "url": "https://goldmines.co.in/contact.html",
+      "contact": "Official enquiry form",
+      "purpose": "Enquire about digital clip rights for specific Hindi/dubbed titles"
+    }
+  ]
+}
