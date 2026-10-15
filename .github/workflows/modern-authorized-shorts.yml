@@ -1,0 +1,99 @@
+name: Modern Bollywood Authorized Shorts - Staged
+on:
+  schedule:
+    - cron: '37 10 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Process licensed sources only, optionally upload privately
+        type: choice
+        options: [preview, private_upload]
+        default: preview
+permissions:
+  contents: write
+concurrency:
+  group: bollywood-modern-authorized
+  cancel-in-progress: false
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    env:
+      MODERN_AUTOPUBLISH_ENABLED: ${{ vars.MODERN_AUTOPUBLISH_ENABLED }}
+      YT_HI_CLIENT_ID: ${{ secrets.YT_HI_CLIENT_ID }}
+      YT_HI_CLIENT_SECRET: ${{ secrets.YT_HI_CLIENT_SECRET }}
+      YT_HI_REFRESH_TOKEN: ${{ secrets.YT_HI_REFRESH_TOKEN }}
+      YT_PRIVACY_STATUS: private
+      WHISPER_MODEL: tiny
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test selection and publishing gates
+        run: |
+          python -m pip install -r requirements.txt
+          python -m unittest discover -s tests -p 'test_modern_factory.py' -v
+          python -m unittest discover -s tests -p 'test_upload_package.py' -v
+      - name: Verify source manifest and production controls
+        id: source
+        env:
+          REQUESTED_MODE: ${{ inputs.mode }}
+          RUN_EVENT: ${{ github.event_name }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          sources=json.loads(Path("data/authorized_modern_sources.json").read_text())["sources"]
+          count=sum(1 for x in sources if x.get("enabled") and x.get("usage_authorized") is True)
+          print("Explicitly enabled authorized source entries:", count)
+          mode=os.getenv("REQUESTED_MODE","preview") or "preview"
+          if os.getenv("RUN_EVENT")=="schedule":
+              mode="private_upload" if os.getenv("MODERN_AUTOPUBLISH_ENABLED")=="true" else "preview"
+          enabled=os.getenv("MODERN_AUTOPUBLISH_ENABLED")=="true"
+          if mode=="private_upload" and not enabled:
+              raise SystemExit("Upload requested but MODERN_AUTOPUBLISH_ENABLED is not true")
+          with open(os.environ["GITHUB_OUTPUT"],"a") as out:
+              print("sources_found="+("true" if count else "false"),file=out)
+              print("mode="+mode,file=out)
+          PY
+      - name: Install rendering and speech recognition dependencies
+        if: steps.source.outputs.sources_found == 'true'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-core
+          python -m pip install 'faster-whisper>=1.1,<2'
+      - name: Generate or privately upload licensed Short
+        if: steps.source.outputs.sources_found == 'true'
+        env:
+          MODE: ${{ steps.source.outputs.mode }}
+        run: |
+          if [[ "$MODE" == "private_upload" ]]; then
+            python -m shorts.modern_factory --publish
+          else
+            python -m shorts.modern_factory
+          fi
+      - name: Save generated production preview
+        if: steps.source.outputs.sources_found == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: authorized-bollywood-preview
+          path: |
+            output/authorized-modern/bollywood_short.mp4
+            output/authorized-modern/captions.srt
+            output/authorized-modern/render_report.json
+            output/authorized-modern/upload_package.json
+          retention-days: 3
+      - name: Save successful upload history
+        if: steps.source.outputs.sources_found == 'true' && steps.source.outputs.mode == 'private_upload' && success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/modern_publish_state.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record licensed Bollywood private Short upload'
+            git pull --rebase
+            git push
+          fi
