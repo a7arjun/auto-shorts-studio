@@ -112,9 +112,15 @@ def prepare(mode):
     raw=render_clip(video,OUT/"raw.mp4",start,end-start,keep_audio=True)
     subtitle=write_srt(segments,start,end,OUT/"captions.srt")
     rendered=add_captions(raw,subtitle,OUT/"short.mp4")
-    title,year=FILMS[movie_i]
-    episode=1+sum(x["movie_index"]==movie_i for x in d["published"])
-    metadata=build_metadata(title,year=year,scene_label="Funny Scene",episode_number=episode)
+    # Generic display metadata. Keep internal source identity in job history.
+    metadata={
+        "title":"When Everything Goes Wrong 😂 | Comedy Shorts",
+        "description":(
+            "One hilarious moment that gets completely out of control! 😂\n\n"
+            "#ComedyShorts #FunnyMoments #ComedyClips #Shorts"
+        ),
+        "tags":["comedy shorts","funny moments","comedy clips","shorts"],
+    }
     write_upload_package(OUT,rendered,metadata)
     job={"key":hashlib.sha256(f"{movie_i}:{start}:{end}".encode()).hexdigest()[:16],
          "movie_index":movie_i,"start":start,"end":end,"kind":mode,
