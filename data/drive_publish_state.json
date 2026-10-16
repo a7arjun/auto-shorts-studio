@@ -35,5 +35,14 @@
       "privacy": "private"
     }
   ],
-  "reservations": []
+  "reservations": [
+    {
+      "key": "23d5c465e75ecd94",
+      "movie_index": 1,
+      "start": 4482.91,
+      "end": 4503.49,
+      "kind": "public",
+      "created_at": "2026-10-16T09:07:46.452124+00:00"
+    }
+  ]
 }
