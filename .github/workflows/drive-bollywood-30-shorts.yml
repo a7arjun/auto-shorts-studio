@@ -1,8 +1,5 @@
 name: Bollywood Drive Shorts - 30 Video Batch
 on:
-  schedule:
-    - cron: '30 6 * * *'
-    - cron: '30 13 * * *'
   workflow_dispatch:
     inputs:
       mode:
@@ -24,7 +21,7 @@ jobs:
       YT_HI_REFRESH_TOKEN: ${{ secrets.YT_HI_REFRESH_TOKEN }}
       GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
       GDRIVE_SOURCE_FILE_IDS: ${{ secrets.GDRIVE_SOURCE_FILE_IDS }}
-      BOLLYWOOD_PUBLIC_ENABLED: "true"
+      BOLLYWOOD_PUBLIC_ENABLED: "false"
       BOLLYWOOD_RIGHTS_CONFIRMED: "true"
       BOLLYWOOD_PRIVATE_TEST_VERIFIED: "true"
     steps:
