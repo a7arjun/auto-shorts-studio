@@ -2,6 +2,7 @@
 import argparse
 from datetime import datetime, timezone
 import json
+import time
 from pathlib import Path
 from .pokemon_publish import Ledger, services, check_processed, verify_public
 
@@ -49,9 +50,18 @@ def operate(request,ledger,config,youtube,public,info):
         # Omitting publishAt while updating status removes the scheduled release.
         youtube.videos().update(part='status',body={'id':video_id,'status':{
             'privacyStatus':'private','selfDeclaredMadeForKids':config['made_for_kids']}}).execute()
-        items=youtube.videos().list(part='snippet,status',id=video_id).execute().get('items',[])
-        if (not items or items[0]['snippet']['channelId']!=info['channel_id'] or
-            items[0]['status'].get('privacyStatus')!='private' or items[0]['status'].get('publishAt')):
+        verified=False
+        for attempt in range(12):
+            items=youtube.videos().list(part='snippet,status',id=video_id).execute().get('items',[])
+            if items and items[0]['snippet']['channelId']!=info['channel_id']:
+                raise RuntimeError('Cancellation owner mismatch')
+            if (items and items[0]['status'].get('privacyStatus')=='private' and
+                not items[0]['status'].get('publishAt')):
+                verified=True
+                break
+            if attempt<11:
+                time.sleep(5)
+        if not verified:
             raise RuntimeError('Cancellation not verified')
         job['status']='cancelled'
         job['cancelled_at']=datetime.now(timezone.utc).isoformat()
