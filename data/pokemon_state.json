@@ -113,7 +113,7 @@
       ],
       "mode": "daily",
       "date": "2026-10-23",
-      "status": "scheduled",
+      "status": "cancelled",
       "created_at": "2026-10-22T17:57:21.348401+00:00",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "research": {
@@ -151,7 +151,9 @@
       },
       "slot": "2026-10-23T22:00+05:30",
       "publish_at": "2026-10-23T16:30:00Z",
-      "video_id": "_-EW1-ZZuAc"
+      "video_id": "_-EW1-ZZuAc",
+      "cancelled_at": "2026-10-22T18:26:25.083951+00:00",
+      "control_request_id": "hold-review-v2-1"
     }
   ],
   "pilot_verified": true
