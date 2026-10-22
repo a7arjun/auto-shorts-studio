@@ -1,5 +1,14 @@
 {
-  "request_id": "publish-first-pilot-20261022",
-  "action": "publish",
-  "video_id": "p54dCIM9LOY"
+  "requests": [
+    {
+      "request_id": "hold-review-v2-0",
+      "action": "cancel",
+      "video_id": "_kepcZR8V6g"
+    },
+    {
+      "request_id": "hold-review-v2-1",
+      "action": "cancel",
+      "video_id": "_-EW1-ZZuAc"
+    }
+  ]
 }

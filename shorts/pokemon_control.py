@@ -66,9 +66,12 @@ def main():
     parser=argparse.ArgumentParser();parser.add_argument('--request',default='data/pokemon_control.json')
     args=parser.parse_args()
     config=json.loads(Path('data/pokemon_channel.json').read_text())
-    request=json.loads(Path(args.request).read_text())
+    document=json.loads(Path(args.request).read_text())
+    requests=document.get('requests',[document])
     youtube,public,info=services(config)
-    operate(request,Ledger(),config,youtube,public,info)
+    ledger=Ledger()
+    for request in requests:
+        operate(request,ledger,config,youtube,public,info)
 
 
 if __name__=='__main__':
