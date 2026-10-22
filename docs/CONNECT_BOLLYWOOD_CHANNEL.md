@@ -1,5 +1,7 @@
 # Connect the first Bollywood YouTube channel
 
+> Historical setup. The channel now uses the Pokemon pipeline. Follow [Renew YouTube authorization](RENEW_YOUTUBE_AUTH.md) for the current management scope and connection-check workflow.
+
 ## Why one channel first
 Keep the existing Hollywood setup for later. We will connect one Gmail/YouTube channel before attempting fully automated uploads. The production modern-movie pipeline is **not enabled**: a YouTube API discovery result is not licensed footage.
 

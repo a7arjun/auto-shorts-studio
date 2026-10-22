@@ -18,5 +18,11 @@
     "10:00",
     "22:00"
   ],
-  "preparation_lead_minutes": 30
+  "preparation_lead_minutes": 30,
+  "research": {
+    "max_age_calendar_months": 4,
+    "search_calls_per_video": 9,
+    "paid_services": false,
+    "required_for_upload": true
+  }
 }

@@ -8,6 +8,7 @@ from pathlib import Path
 import subprocess
 from .pokemon_publish import Ledger, can_start, today, services, upload_private, check_processed, schedule_existing, verify_public, publication_slot, require_future_slot, parse_time, MissedPublicationSlot
 from .pokemon_story import make_story
+from .pokemon_research import select_researched_pair, apply_metadata
 
 OUT=Path('output/pokemon')
 
@@ -22,7 +23,7 @@ def choose_pair(state,date):
     return sorted(pairs,key=lambda p:hashlib.sha256((date+'|'.join(p)).encode()).hexdigest())[0]
 
 
-def prepare(pair,key,config):
+def prepare(pair,key,config,research=None):
     from .pokemon_assets import ensure_characters
     assets=ensure_characters(pair)
     OUT.mkdir(parents=True,exist_ok=True)
@@ -31,6 +32,9 @@ def prepare(pair,key,config):
     battle=json.loads(result.stdout)
     (OUT/'battle.json').write_text(json.dumps(battle,indent=2))
     story=make_story(battle,config['brand'],visual_assets=assets)
+    if research:
+        apply_metadata(story,battle,research)
+        (OUT/'research.json').write_text(json.dumps(research,indent=2))
     (OUT/'assets.json').write_text(json.dumps(assets,indent=2))
     from .pokemon_voice import synthesize
     from .pokemon_render import render
@@ -95,7 +99,12 @@ def run(mode):
             raise RuntimeError('Existing OAuth needs youtube.force-ssl authorization for verified public publishing')
     pair=('Charizard','Blastoise') if mode in ('pilot','preview') and not ledger.data['jobs'] else choose_pair(ledger.data,date)
     key='pilot-v1' if mode in ('pilot','preview') else slot['slot']
-    story=prepare(pair,key,config)
+    research=None
+    if mode!='preview':
+        pair,research=select_researched_pair(public,json.loads(Path('pokemon/builds.json').read_text()),
+                    ledger.data,key,info['channel_id'],fixed_pair=pair if mode=='pilot' else None)
+        (OUT/'research.json').write_text(json.dumps(research,indent=2))
+    story=prepare(pair,key,config,research=research)
     if mode=='preview':
         print('Preview ready:',OUT/'short.mp4');return
     if slot:
@@ -105,6 +114,9 @@ def run(mode):
             print('Preparation missed slot; no upload');return
     job={'key':key,'pair':list(pair),'mode':mode,'date':date,'status':'uploading',
          'created_at':datetime.now(timezone.utc).isoformat(),'channel_id':info['channel_id']}
+    if research:
+        job['research']={'checked_at':research['checked_at'],'video_ids':[r['id'] for r in research['references']],
+                         'title':story['title'],'hashtags':story.get('hashtags',[])}
     if slot:
         job.update(slot)
     ledger.data['jobs'].append(job)
