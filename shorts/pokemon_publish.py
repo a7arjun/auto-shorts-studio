@@ -1,6 +1,6 @@
 """Persistent upload ledger and explicit destination-channel binding."""
 import base64
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 import json
 import os
 from pathlib import Path
@@ -9,11 +9,38 @@ from zoneinfo import ZoneInfo
 import requests
 
 STATE_PATH = Path('data/pokemon_state.json')
-TERMINAL = {'published', 'private_verified', 'failed_before_upload', 'skipped'}
+TERMINAL = {'published', 'private_verified', 'failed_before_upload', 'skipped', 'scheduled', 'missed_slot'}
 
 
 def today():
     return datetime.now(ZoneInfo('Asia/Kolkata')).date().isoformat()
+
+
+def parse_time(value):
+    return datetime.fromisoformat(value.replace('Z','+00:00'))
+
+
+def publication_slot(config, now=None):
+    """Only prepare an upcoming slot; late/manual runs never publish immediately."""
+    now=now or datetime.now(timezone.utc)
+    local=now.astimezone(ZoneInfo('Asia/Kolkata'))
+    for day in (local.date(),local.date()+timedelta(days=1)):
+        for clock in sorted(config['publish_times_ist']):
+            target=datetime.fromisoformat(f'{day.isoformat()}T{clock}:00').replace(tzinfo=local.tzinfo)
+            minutes=(target-now).total_seconds()/60
+            if 5 <= minutes <= config['preparation_lead_minutes']+1:
+                return {'slot':f'{day.isoformat()}T{clock}+05:30','date':day.isoformat(),
+                        'publish_at':target.astimezone(timezone.utc).isoformat().replace('+00:00','Z')}
+    return None
+
+
+class MissedPublicationSlot(RuntimeError):
+    pass
+
+
+def require_future_slot(publish_at, now=None):
+    if (parse_time(publish_at)-(now or datetime.now(timezone.utc))).total_seconds()<300:
+        raise MissedPublicationSlot('Missed preparation deadline; refusing an immediate or late release')
 
 
 class Ledger:
@@ -51,7 +78,7 @@ class Ledger:
         self.path.write_text(content)
 
 
-def can_start(state,config,date,mode):
+def can_start(state,config,date,mode,slot=None):
     if mode=='preview':
         return True
     unresolved=[j for j in state['jobs'] if j['status'] not in TERMINAL]
@@ -61,7 +88,9 @@ def can_start(state,config,date,mode):
         return not any(j['mode']=='pilot' and j['status']=='private_verified' for j in state['jobs'])
     if not config['publication_enabled'] or not state.get('pilot_verified'):
         return False
-    public=[j for j in state['jobs'] if j['mode']=='daily' and j['status']=='published']
+    public=[j for j in state['jobs'] if j['mode']=='daily' and j['status'] in ('published','scheduled')]
+    if slot and any(j.get('slot')==slot for j in state['jobs']):
+        return False
     return (sum(j['date']==date for j in public)<config['daily_limit'] and
             sum(j['date'][:7]==date[:7] for j in public)<config['monthly_limit'])
 
@@ -139,11 +168,28 @@ def upload_private(youtube,video,story,config):
     return result['id']
 
 
-def publish_existing(youtube,public,video_id,config,channel_id):
-    check_processed(youtube,video_id,channel_id)
+def schedule_existing(youtube,video_id,config,channel_id,publish_at):
+    item=check_processed(youtube,video_id,channel_id)
+    status=item.get('status',{})
+    if status.get('privacyStatus')=='private' and status.get('publishAt'):
+        if parse_time(status['publishAt'])==parse_time(publish_at):
+            return item  # Idempotent reconciliation of an acknowledged schedule.
+        raise RuntimeError('Existing upload has an unexpected publication time')
+    require_future_slot(publish_at)
     youtube.videos().update(part='status',body={'id':video_id,'status':{
-        'privacyStatus':'public','selfDeclaredMadeForKids':config['made_for_kids']}}).execute()
-    # Verify actual public API visibility; an upload ID alone is not success.
+        'privacyStatus':'private','publishAt':publish_at,
+        'selfDeclaredMadeForKids':config['made_for_kids']}}).execute()
+    result=youtube.videos().list(part='snippet,status',id=video_id).execute()
+    items=result.get('items',[])
+    if (not items or items[0]['snippet']['channelId']!=channel_id or
+        items[0]['status'].get('privacyStatus')!='private' or
+        parse_time(items[0]['status'].get('publishAt','1970-01-01T00:00:00Z'))!=parse_time(publish_at)):
+        raise RuntimeError('YouTube publication schedule was not verified')
+    return items[0]
+
+
+def verify_public(public,video_id,channel_id):
+    # Verification only: a missed schedule never triggers an immediate publication.
     for attempt in range(12):
         result=public.videos().list(part='snippet,status,contentDetails',id=video_id).execute()
         if result.get('items'):
@@ -154,4 +200,4 @@ def publish_existing(youtube,public,video_id,config,channel_id):
                     raise RuntimeError('Public video has reported regional restrictions')
                 return item
         time.sleep(5)
-    raise RuntimeError('Public visibility not verified')
+    raise RuntimeError('Scheduled public visibility not verified; keep existing video ID')

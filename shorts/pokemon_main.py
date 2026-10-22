@@ -6,7 +6,7 @@ import itertools
 import json
 from pathlib import Path
 import subprocess
-from .pokemon_publish import Ledger, can_start, today, services, upload_private, check_processed, publish_existing
+from .pokemon_publish import Ledger, can_start, today, services, upload_private, check_processed, schedule_existing, verify_public, publication_slot, require_future_slot, parse_time, MissedPublicationSlot
 from .pokemon_story import make_story
 
 OUT=Path('output/pokemon')
@@ -52,23 +52,41 @@ def run(mode):
         _,_,info=services(config)
         (OUT/'connection.json').write_text(json.dumps(info,indent=2))
         print(json.dumps(info)); return
-    # Reconcile a known upload before considering another video. Never repeat insert.
-    pending=[j for j in ledger.data['jobs'] if j['status'] in ('uploaded','processing_pending','publishing')]
+    # Reconcile known IDs before allocating another slot. No second insert on retry.
+    pending=[j for j in ledger.data['jobs'] if j['status'] in ('uploaded','processing_pending','publishing') or
+             (j['status']=='scheduled' and parse_time(j['publish_at'])<=datetime.now(timezone.utc))]
     if pending and mode!='preview':
         youtube,public,info=services(config)
-        job=pending[0]
-        check_processed(youtube,job['video_id'],info['channel_id'])
-        if job['mode']=='daily':
-            if not config['publication_enabled'] or not info['can_manage']:
-                raise RuntimeError('Publication disabled or management scope missing')
-            publish_existing(youtube,public,job['video_id'],config,info['channel_id'])
-            job['status']='published'
-        else:
-            job['status']='private_verified';ledger.data['pilot_verified']=True
-        ledger.save('Reconcile Pokemon upload '+job['key'])
-        print('Reconciled https://youtu.be/'+job['video_id']);return
-    if not can_start(ledger.data,config,date,mode):
-        print('No upload due: pilot, publication or daily/monthly limit');return
+        for job in pending:
+            existing=check_processed(youtube,job['video_id'],info['channel_id'])
+            if job['mode']=='daily':
+                if not config['publication_enabled'] or not info['can_manage']:
+                    raise RuntimeError('Publication disabled or management scope missing')
+                if not job.get('publish_at'):
+                    raise RuntimeError('Legacy upload needs an explicit publication slot')
+                if parse_time(job['publish_at'])<=datetime.now(timezone.utc):
+                    if existing['status'].get('privacyStatus')=='private' and not existing['status'].get('publishAt'):
+                        job['status']='missed_slot'  # Leave a late unscheduled upload private.
+                    else:
+                        verify_public(public,job['video_id'],info['channel_id'])
+                        job['status']='published'
+                else:
+                    try:
+                        schedule_existing(youtube,job['video_id'],config,info['channel_id'],job['publish_at'])
+                        job['status']='scheduled'
+                    except MissedPublicationSlot:
+                        job['status']='missed_slot'
+            else:
+                job['status']='private_verified';ledger.data['pilot_verified']=True
+            ledger.save('Reconcile Pokemon upload '+job['key'])
+            print('Reconciled https://youtu.be/'+job['video_id'])
+    slot=publication_slot(config) if mode=='daily' else None
+    if mode=='daily' and slot is None:
+        print('No upload due: outside preparation window');return
+    if slot:
+        date=slot['date']
+    if not can_start(ledger.data,config,date,mode,slot['slot'] if slot else None):
+        print('No upload due: pilot, publication, occupied slot or daily/monthly limit');return
     youtube=public=info=None
     if mode!='preview':
         youtube,public,info=services(config)
@@ -76,12 +94,19 @@ def run(mode):
         if mode=='daily' and not info['can_manage']:
             raise RuntimeError('Existing OAuth needs youtube.force-ssl authorization for verified public publishing')
     pair=('Charizard','Blastoise') if mode in ('pilot','preview') and not ledger.data['jobs'] else choose_pair(ledger.data,date)
-    key='pilot-v1' if mode in ('pilot','preview') else date+'-'+'-'.join(pair).lower()
+    key='pilot-v1' if mode in ('pilot','preview') else slot['slot']
     story=prepare(pair,key,config)
     if mode=='preview':
         print('Preview ready:',OUT/'short.mp4');return
+    if slot:
+        try:
+            require_future_slot(slot['publish_at'])
+        except MissedPublicationSlot:
+            print('Preparation missed slot; no upload');return
     job={'key':key,'pair':list(pair),'mode':mode,'date':date,'status':'uploading',
          'created_at':datetime.now(timezone.utc).isoformat(),'channel_id':info['channel_id']}
+    if slot:
+        job.update(slot)
     ledger.data['jobs'].append(job)
     ledger.save('Reserve Pokemon upload '+key)
     video_id=upload_private(youtube,OUT/'short.mp4',story,config)
@@ -92,9 +117,11 @@ def run(mode):
     if mode=='pilot':
         job['status']='private_verified'; ledger.data['pilot_verified']=True
     else:
-        job['status']='publishing'; ledger.save('Publish verified Pokemon Short '+key)
-        publish_existing(youtube,public,video_id,config,info['channel_id'])
-        job['status']='published'
+        try:
+            schedule_existing(youtube,video_id,config,info['channel_id'],slot['publish_at'])
+            job['status']='scheduled'
+        except MissedPublicationSlot:
+            job['status']='missed_slot'
     ledger.save('Verify Pokemon upload '+key)
     print(job['status']+': https://youtu.be/'+video_id)
 

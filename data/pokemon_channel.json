@@ -5,13 +5,18 @@
   "reference_video_id": "1uvpsNPF63A",
   "voice": "am_michael",
   "voice_speed": 1.0,
-  "daily_limit": 1,
-  "monthly_limit": 30,
+  "daily_limit": 2,
+  "monthly_limit": 62,
   "trials": 100,
   "made_for_kids": false,
   "audience_rationale": "General audience competitive game analysis for teen and adult players; statistical comparisons, legal builds and conditional results. No child-directed songs, stories, thumbnails or calls to children.",
   "visual_mode": "pokeapi_mini_icons",
   "paid_apis": false,
   "publication_enabled": false,
-  "description": "English Pokemon battle analysis: legal builds, simulated matchups and the mechanics behind the result. Independent fan analysis; not affiliated with or endorsed by The Pokemon Company, Nintendo, Game Freak or Creatures. Results depend on the stated rules and strategy."
+  "description": "English Pokemon battle analysis: legal builds, simulated matchups and the mechanics behind the result. Independent fan analysis; not affiliated with or endorsed by The Pokemon Company, Nintendo, Game Freak or Creatures. Results depend on the stated rules and strategy.",
+  "publish_times_ist": [
+    "10:00",
+    "22:00"
+  ],
+  "preparation_lead_minutes": 30
 }

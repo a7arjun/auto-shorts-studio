@@ -57,8 +57,10 @@ class PokemonTests(unittest.TestCase):
     def test_daily_and_monthly_limits(self):
         config={**self.config,'publication_enabled':True}
         state={'pilot_verified':True,'jobs':[{'mode':'daily','status':'published','date':'2026-10-22'}]}
+        self.assertTrue(can_start(state,config,'2026-10-22','daily'))
+        state['jobs']*=2
         self.assertFalse(can_start(state,config,'2026-10-22','daily'))
-        state['jobs']=[{'mode':'daily','status':'published','date':'2026-10-01'} for _ in range(30)]
+        state['jobs']=[{'mode':'daily','status':'published','date':'2026-10-01'} for _ in range(62)]
         self.assertFalse(can_start(state,config,'2026-10-22','daily'))
         self.assertTrue(can_start(state,config,'2026-11-01','daily'))
 

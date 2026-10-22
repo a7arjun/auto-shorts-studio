@@ -9,9 +9,10 @@ on:
       - 'tests/test_pokemon*.py'
       - 'requirements-pokemon.txt'
       - 'package*.json'
+      - 'data/pokemon_channel.json'
       - '.github/workflows/pokemon-shorts.yml'
   schedule:
-    - cron: '47 12 * * *' # 18:17 IST; GitHub may delay scheduled jobs.
+    - cron: '0 4,16 * * *' # Prepare at 09:30/21:30 IST; YouTube releases at 10:00/22:00 IST.
   workflow_dispatch:
     inputs:
       mode:
