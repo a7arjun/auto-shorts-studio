@@ -32,7 +32,7 @@ jobs:
           from shorts.pokemon_publish import services
           try:
               config=json.loads(Path('data/pokemon_channel.json').read_text())
-              _,_,info=services(config)
+              youtube,_,info=services(config)
               if not info['can_manage']:
                   raise RuntimeError('Management scope missing; authorize youtube.force-ssl')
           except Exception as error:
@@ -45,6 +45,17 @@ jobs:
               print(message)
               sys.exit(1)
           print('AUTHORIZATION VERIFIED: correct destination and video-management scope.')
+          state=json.loads(Path('data/pokemon_state.json').read_text())
+          ids=[j['video_id'] for j in state['jobs'] if j.get('video_id')][-50:]
+          if ids:
+              result=youtube.videos().list(part='snippet,status',id=','.join(ids)).execute()
+              for item in result.get('items',[]):
+                  if item['snippet']['channelId']!=info['channel_id']:
+                      raise RuntimeError('Unexpected owner in video-status audit')
+                  status=item.get('status',{})
+                  print('VIDEO_STATUS '+json.dumps({'video_id':item['id'],
+                      'privacy':status.get('privacyStatus'),'publish_at':status.get('publishAt'),
+                      'upload_status':status.get('uploadStatus')}))
           with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as summary:
               summary.write('## YouTube authorization verified\n\n')
               summary.write('Channel ID: `'+info['channel_id']+'`\n\n')
