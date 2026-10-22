@@ -9,7 +9,7 @@
       ],
       "mode": "pilot",
       "date": "2026-10-22",
-      "status": "uploaded",
+      "status": "private_verified",
       "created_at": "2026-10-22T17:21:54.387373+00:00",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "research": {
@@ -48,5 +48,5 @@
       "video_id": "p54dCIM9LOY"
     }
   ],
-  "pilot_verified": false
+  "pilot_verified": true
 }
