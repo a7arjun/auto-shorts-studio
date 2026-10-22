@@ -54,7 +54,7 @@ No claim is made that the simulator's software licence licenses Pokemon artwork 
 
 ONNX telemetry is disabled before initialization with `ORT_DISABLE_TELEMETRY=1` and the runtime API. Voice-model files are SHA-256 pinned.
 
-## Verified setup status — 22 October 2026
+## Initial setup history — 22 October 2026
 
 - Local complete pilot rendered successfully: 51.875 seconds, 720x1280, H.264/AAC.
 - 4 Node tests and 45 Python tests passed locally and on GitHub. All 120 starting pairs resolved in a one-trial mechanics smoke test.
@@ -62,7 +62,7 @@ ONNX telemetry is disabled before initialization with `ORT_DISABLE_TELEMETRY=1` 
 - YouTube Studio requires Google sign-in in the available browser. Visible channel branding has not been changed. `Battle Logic Lab` is a prepared brand, not a claimed new channel.
 - Reauthorize the existing channel once with `youtube.force-ssl` (or `youtube`), using an appropriate durable OAuth configuration. Store the new refresh token securely in `YT_HI_REFRESH_TOKEN`; never send it in chat. Client ID/secret need replacing only if the OAuth client changes.
 - Production hosting is not connected. The software is free; zero-cost hosted production has not been established. See GitHub Actions terms: https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features.
-- Automatic public publishing remains disabled until authentication, a private processing check and production hosting are verified.
+- This initial authorization failure was resolved later the same day; see the verified rollout below. The production host gate remains disabled.
 
 ## Standalone worker
 
@@ -86,7 +86,7 @@ The renderer automatically retrieves transparent PNG/WebP mini/chibi icons throu
 - `python -m shorts.pokemon_assets --warm-roster` downloads/verifies the starting roster. Persistent cache path is `.cache/pokemon-images`; Actions restores/saves it, and a standalone worker should mount a persistent volume there.
 - The completed job writes `output/pokemon/assets.json`, and its description includes the actual image URLs. Image caches and image binaries are not committed to the repository.
 
-PokeAPI is free and requires no authentication: https://pokeapi.co/docs/v2. The repository licence explicitly says image copyright belongs to The Pokemon Company: https://raw.githubusercontent.com/PokeAPI/sprites/master/LICENCE.txt. This implementation records underlying rights as reserved. API access is **not** represented as a commercial artwork licence, a copyright exemption or a monetization guarantee. Public publishing remains disabled for the previously documented authorization/hosting setup.
+PokeAPI is free and requires no authentication: https://pokeapi.co/docs/v2. The repository licence explicitly says image copyright belongs to The Pokemon Company: https://raw.githubusercontent.com/PokeAPI/sprites/master/LICENCE.txt. This implementation records underlying rights as reserved. API access is **not** represented as a commercial artwork licence, a copyright exemption or a monetization guarantee. See the rollout below for current authorization, publication and hosting status.
 
 ## Fresh research before each upload
 
@@ -135,3 +135,7 @@ The two previously staged videos (`_kepcZR8V6g`, `_-EW1-ZZuAc`) were held privat
 Keep the requested two releases per day. YouTube’s 24-hour channel upload cap varies by channel history and region and also applies to API uploads; there is no documented universal allowance of 50. Bulk publication can suppress notifications, and subscribers receive at most three new-video notifications per channel per 24 hours. There is no supported fixed SEO penalty for exactly 50 uploads; assess audience response and avoid generic repetitive content. YouTube’s monetization rules exclude mass-produced/inauthentic content, so varied substantive analysis matters beyond different names in a template. A 50-video buffer would cover 25 days at two per day, but the current screened pool is smaller and has not been rendered as a batch.
 
 Official references: https://support.google.com/youtube/answer/10383400 ; https://support.google.com/youtube/answer/7389684 ; https://support.google.com/youtube/answer/1311392 .
+
+Validation for v2: 81 Python tests plus 5 Node tests passed; GitHub integration rendered the updated software preview successfully. The local Charizard–Sylveon preview is approximately 70.8 seconds at 720×1280 with AAC audio.
+
+The v2 replacement integration completed successfully (run 39832097273): `a5PWKN9vZXg` (Charizard–Tyranitar) is verified scheduled for 23 October 2026 at 10:00 IST, and `KfRaJ0nQWMM` (Charizard–Garchomp) at 22:00 IST. Both passed recent public-metadata research and the new presentation checks before rendering and upload. The production host gate remains false for subsequent daily generation.

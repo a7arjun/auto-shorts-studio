@@ -72,7 +72,7 @@ def paint_attack(image,event,phase,start,end):
                 r=2+i%3
                 d.ellipse((xx-r,yy-r*2,xx+r,yy+r*2),fill=(255,177,64,int(225*fade)))
         elif kind=='Water':
-            points=[(start[0]+(x-start[0])*i/13,start[1]+math.sin(i*1.1+phase*24)*7) for i in range(14)]
+            points=[(start[0]+(x-start[0])*i/13,start[1]+(y-start[1])*i/13+math.sin(i*1.1+phase*24)*7) for i in range(14)]
             line(points,16);line([(xx,yy-3) for xx,yy in points],4,bright)
             for i in range(7):
                 xx=x-direction*i*13;yy=y+math.sin(i*2+phase*19)*(12+i*2)
