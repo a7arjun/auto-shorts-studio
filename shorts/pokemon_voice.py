@@ -40,7 +40,8 @@ def synthesize(story, output, voice='am_michael', speed=1.05):
     import onnxruntime as ort
     ort.disable_telemetry_events()
     from kokoro_onnx import Kokoro
-    from .pokemon_story import spoken
+    from .pokemon_speech import lexicon, phonemes_for_text, speech_plan
+    rules = lexicon()
     directory = download_model()
     options = ort.SessionOptions()
     options.intra_op_num_threads = 2
@@ -50,14 +51,26 @@ def synthesize(story, output, voice='am_michael', speed=1.05):
     pieces=[]; start=0
     sample_rate=24000
     for segment in story['segments']:
-        audio, sample_rate = engine.create(spoken(segment['text']), voice=voice, speed=speed, lang='en-us')
-        gap = np.zeros(round(sample_rate * .18), dtype=np.float32)
-        audio = np.concatenate([audio, gap])
-        segment.update(start=round(start, 4), duration=round(len(audio)/sample_rate, 4))
+        phrase_audio=[]; phrase_start=0
+        segment['speech_parts']=[]
+        for phrase in speech_plan(segment['text'],rules):
+            phonemes=phonemes_for_text(phrase['text'],engine.tokenizer,rules)
+            audio,sample_rate=engine.create(phonemes,voice=voice,speed=speed,lang='en-us',is_phonemes=True,
+                                            sentence_pause=.24,clause_pause=.12)
+            duration=len(audio)/sample_rate
+            gap=np.zeros(round(sample_rate*phrase['pause_after']),dtype=np.float32)
+            segment['speech_parts'].append({**phrase,'start':round(phrase_start,4),
+                                            'spoken_duration':round(duration,4),'phonemes':phonemes})
+            audio=np.concatenate([audio,gap])
+            phrase_start += len(audio)/sample_rate
+            phrase_audio.append(audio)
+        audio=np.concatenate(phrase_audio)
+        segment.update(start=round(start,4),duration=round(len(audio)/sample_rate,4))
         start += len(audio)/sample_rate
         pieces.append(audio)
     sf.write(str(output), np.concatenate(pieces), sample_rate)
     story['duration'] = start
-    story['voice'] = {'engine':'kokoro-onnx', 'voice':voice, 'speed':speed,
+    story['voice'] = {'engine':'kokoro-onnx', 'voice':voice, 'speed':speed, 'pronunciation':'explicit-ipa-v1',
+                      'emphasis_pause_seconds':rules['emphasis_pause_seconds'],
                       'model_sha256':hashlib.sha256((directory/'kokoro-v1.0.onnx').read_bytes()).hexdigest()}
     return story

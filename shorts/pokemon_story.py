@@ -129,15 +129,3 @@ def make_story(battle, brand):
     return {'title': title[:100], 'description': description, 'segments': segments,
             'tags': ['Pokemon', 'Pokemon battle', a, b, 'game mechanics', 'battle simulation'],
             'language': 'en', 'brand': brand}
-
-
-PRONUNCIATION = {'Pokémon': 'Pokemon', 'Charizard': 'Char iz ard', 'Blastoise': 'Blast oys',
-                 'Gyarados': 'Gare uh dose', 'Garchomp': 'Gar chomp', 'Raichu': 'Rye choo',
-                 'Pikachu': 'Peek ah choo', 'Greninja': 'Greh ninja', 'Sylveon': 'Sil vee on',
-                 'Lucario': 'Loo car ee oh', 'Scizor': 'Siz or', 'Tyranitar': 'Tie ran ih tar'}
-
-
-def spoken(text):
-    for name, value in PRONUNCIATION.items():
-        text = re.sub(r'\b' + re.escape(name) + r'\b', value, text)
-    return text

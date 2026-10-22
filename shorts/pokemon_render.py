@@ -5,6 +5,7 @@ from pathlib import Path
 import subprocess
 import textwrap
 from PIL import Image, ImageDraw, ImageFont
+from .pokemon_assets import character_image
 
 W, H, FPS = 720, 1280, 24
 BG = '#0a101e'
@@ -97,7 +98,11 @@ def frame(battle, story, moment):
             shake=math.sin(moment*85)*7
         y=755+math.sin(moment*2+side)*5
         d.ellipse((x-90,824,x+90,850),fill='#1a2840',outline=colors[side],width=2)
-        emblem(d,x+shake,y,battle['types'][side][0],colors[side],48)
+        character=character_image(names[side])
+        if character is not None:
+            image.paste(character,(round(x+shake-character.width/2),round(846-character.height+math.sin(moment*2+side)*5)),character)
+        else:
+            emblem(d,x+shake,y,battle['types'][side][0],colors[side],48)
     text(d,(360,738),'VS',21,MUTED,True,True)
     if event and .2<progress<.7:
         p=(progress-.2)/.5; actor=event['actor']
@@ -115,8 +120,15 @@ def frame(battle, story, moment):
         text(d,(360,873),score,27,'#bcacff',True,True)
     elif event:
         text(d,(360,878),f"TURN {event['turn']}  /  REPRESENTATIVE SIMULATION",15,MUTED,False,True)
-    chunks=subtitle_chunks(seg['text'])
-    chunk=chunks[min(len(chunks)-1,int(progress*len(chunks)))]
+    speech=seg.get('speech_parts')
+    if speech:
+        phrase=next((p for p in reversed(speech) if p['start']<=local),speech[0])
+        chunks=subtitle_chunks(phrase['text'])
+        phrase_progress=max(0,min(.999,(local-phrase['start'])/max(.01,phrase['spoken_duration'])))
+        chunk=chunks[min(len(chunks)-1,int(phrase_progress*len(chunks)))]
+    else:
+        chunks=subtitle_chunks(seg['text'])
+        chunk=chunks[min(len(chunks)-1,int(progress*len(chunks)))]
     d.rounded_rectangle((36,963,684,1115),radius=20,fill='#18243c',outline='#354563',width=2)
     lines(d,(360,997),chunk,size=27,width=36,bold=True,center=True)
     text(d,(360,1150),'CONDITIONAL RESULT. BUILDS & RULES IN DESCRIPTION.',13,MUTED,False,True)

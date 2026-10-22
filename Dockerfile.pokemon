@@ -8,5 +8,6 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=optional --ignore-scripts
 COPY shorts/ ./shorts/
 COPY pokemon/ ./pokemon/
+COPY assets/pokemon/ ./assets/pokemon/
 COPY data/pokemon_channel.json data/pokemon_state.json ./data/
 CMD ["python", "-m", "shorts.pokemon_main", "--mode", "daily"]

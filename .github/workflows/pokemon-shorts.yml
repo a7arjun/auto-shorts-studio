@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'pokemon/**'
+      - 'assets/pokemon/**'
       - 'shorts/pokemon_*.py'
       - 'tests/test_pokemon*.py'
       - 'requirements-pokemon.txt'
