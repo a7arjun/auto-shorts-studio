@@ -45,3 +45,19 @@ class ControlTests(unittest.TestCase):
         self.assertNotIn('publishAt',youtube.videos().update.call_args.kwargs['body']['status'])
         self.assertEqual(ledger.data['jobs'][0]['status'],'cancelled')
         youtube.videos().insert.assert_not_called()
+
+class ScheduleConsistencyTests(unittest.TestCase):
+    @patch('shorts.pokemon_publish.time.sleep')
+    @patch('shorts.pokemon_publish.require_review_deadline')
+    @patch('shorts.pokemon_publish.require_future_slot')
+    @patch('shorts.pokemon_publish.check_processed',return_value={'status':{'privacyStatus':'private'}})
+    def test_status_read_can_lag_without_duplicate_update(self,processed,future,review,sleep):
+        from shorts.pokemon_publish import schedule_existing
+        client=MagicMock();stamp='2026-10-23T04:30:00Z'
+        client.videos().list().execute.side_effect=[
+            {'items':[{'snippet':{'channelId':'target'},'status':{'privacyStatus':'private'}}]},
+            {'items':[{'snippet':{'channelId':'target'},'status':{'privacyStatus':'private','publishAt':stamp}}]}]
+        schedule_existing(client,'video',{'made_for_kids':False},'target',stamp)
+        self.assertEqual(client.videos().update.call_count,1)
+        client.videos().insert.assert_not_called()
+        sleep.assert_called_once_with(5)

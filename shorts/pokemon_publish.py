@@ -180,13 +180,24 @@ def schedule_existing(youtube,video_id,config,channel_id,publish_at):
     youtube.videos().update(part='status',body={'id':video_id,'status':{
         'privacyStatus':'private','publishAt':publish_at,
         'selfDeclaredMadeForKids':config['made_for_kids']}}).execute()
-    result=youtube.videos().list(part='snippet,status',id=video_id).execute()
-    items=result.get('items',[])
-    if (not items or items[0]['snippet']['channelId']!=channel_id or
-        items[0]['status'].get('privacyStatus')!='private' or
-        parse_time(items[0]['status'].get('publishAt','1970-01-01T00:00:00Z'))!=parse_time(publish_at)):
-        raise RuntimeError('YouTube publication schedule was not verified')
-    return items[0]
+    observed={}
+    # YouTube's read endpoint can briefly lag an accepted status update.
+    for attempt in range(12):
+        result=youtube.videos().list(part='snippet,status',id=video_id).execute()
+        items=result.get('items',[])
+        if items and items[0]['snippet']['channelId']!=channel_id:
+            raise RuntimeError('Schedule verification found an unexpected channel')
+        if items:
+            observed=items[0].get('status',{})
+            actual=observed.get('publishAt')
+            if observed.get('privacyStatus')=='private' and actual and parse_time(actual)==parse_time(publish_at):
+                return items[0]
+            if observed.get('privacyStatus')=='public' or (actual and parse_time(actual)!=parse_time(publish_at)):
+                raise RuntimeError('YouTube returned an unexpected publication status or release time')
+        if attempt<11:
+            time.sleep(5)
+    raise RuntimeError('YouTube publication schedule was not verified; observed privacy='+
+                       str(observed.get('privacyStatus'))+'; publishAt='+str(observed.get('publishAt')))
 
 
 def verify_public(public,video_id,channel_id):
