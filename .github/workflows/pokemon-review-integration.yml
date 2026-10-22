@@ -45,7 +45,11 @@ jobs:
           path: .cache/pokemon-images
           key: pokemon-images-v1-${{ github.run_id }}
           restore-keys: pokemon-images-v1-
-      - name: Verify the v2 presentation and replacement release schedules
+      - name: Validate updated mechanics and publication guards
+        run: |
+          python -m pytest -q
+          node --test pokemon/simulate.test.cjs
+      - name: Verify full-turn v3 presentation and replacement release schedules
         run: |
           python -u - <<'PYREVIEW'
           from datetime import datetime, timezone
@@ -57,12 +61,13 @@ jobs:
           config=json.loads(Path('data/pokemon_channel.json').read_text())
           # Fixed date makes retries idempotent; this is not recurring production.
           stage_date='2026-10-23'
+          pairs={'10:00':('Charizard','Tyranitar'),'22:00':('Charizard','Garchomp')}
           for clock in config['publish_times_ist']:
               target=datetime.fromisoformat(stage_date+'T'+clock+':00').replace(tzinfo=ZoneInfo('Asia/Kolkata'))
               stamp=target.astimezone(timezone.utc).isoformat().replace('+00:00','Z')
               require_review_deadline(config,stamp)
               run('daily',requested_slot={'slot':target.isoformat(timespec='minutes'),
-                  'date':stage_date,'publish_at':stamp})
+                  'date':stage_date,'publish_at':stamp},requested_pair=pairs[clock])
           PYREVIEW
       - name: Save private integration-test evidence
         if: always()

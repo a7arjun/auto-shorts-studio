@@ -71,7 +71,7 @@ class ScheduleTests(unittest.TestCase):
               patch('shorts.pokemon_main.Path.read_text',return_value=json.dumps(self.config)),
               patch('shorts.pokemon_main.services',return_value=(MagicMock(),MagicMock(),{'can_manage':True,'channel_id':'target'})),
               patch('shorts.pokemon_main.choose_pair',return_value=('Charizard','Blastoise')),
-              patch('shorts.pokemon_main.prepare',return_value={}),
+              patch('shorts.pokemon_main.prepare',return_value={'playback_speed':1.5}),
               patch('shorts.pokemon_main.select_researched_pair',return_value=(('Charizard','Blastoise'),None)),
               patch('shorts.pokemon_main.require_future_slot'),
               patch('shorts.pokemon_main.upload_private',side_effect=['video1','video2']) as upload,

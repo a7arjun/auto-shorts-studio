@@ -4,16 +4,21 @@ const crypto = require('node:crypto');
 const {Battle, Dex, TeamValidator} = require('pokemon-showdown');
 const calc = require('@smogon/calc');
 const BUILDS = JSON.parse(fs.readFileSync(__dirname + '/builds.json', 'utf8'));
+const VARIANTS = JSON.parse(fs.readFileSync(__dirname + '/build_variants.json', 'utf8'));
 const FORMAT = 'gen9nationaldex';
 const POLICY = 'Greedy expected direct damage, with priority used for likely knockouts; no switching, Mega, Z-moves, Dynamax or Terastallization. Not perfect play.';
 
-function build(name) {
+function build(name,variant=null) {
   const row = BUILDS.find(b => b.species.toLowerCase() === name.toLowerCase());
   if (!row) throw new Error('No validated build for ' + name);
-  const set = {...row, level:100, gender:'M', ivs:{hp:31,atk:31,def:31,spa:31,spd:31,spe:31}};
+  const {id,...overrides}=variant||{};
+  const set = {...row,...overrides, level:100, gender:'M', ivs:{hp:31,atk:31,def:31,spa:31,spd:31,spe:31}};
   const errors = new TeamValidator(FORMAT).validateTeam([JSON.parse(JSON.stringify(set))]);
   if (errors) throw new Error(errors.join('; '));
   return set;
+}
+function buildOptions(name) {
+  return [{id:'original-offense',set:build(name)},...(VARIANTS[name]||[]).map(v=>({id:v.id,set:build(name,v)}))];
 }
 function seedFor(key) {
   const b = crypto.createHash('sha256').update(key).digest();
@@ -96,14 +101,21 @@ function exampleQuality(result, first, second) {
   return {attempts,successful,winner_side:side,
     eligible:side!==null && successful[side]>=2 && attempts[1-side]>=1};
 }
-function matchup(first,second,key,trials=100) {
+function matchup(first,second,key,trials=100,protocol='multi-build-v3') {
   if(first===second) throw new Error('Distinct species required');
   if(!Number.isInteger(trials)||trials<1||trials>500) throw new Error('Trial limit');
-  const a=build(first),b=build(second), wins={[first]:0,[second]:0,draws:0};
+  if(!['multi-build-v3','single-build-v1'].includes(protocol)) throw new Error('Unknown simulation protocol');
+  const options=[first,second].map(n=>protocol==='single-build-v1'?[{id:'original-offense',set:build(n)}]:buildOptions(n));
+  const combinations=options[0].flatMap(a=>options[1].map(b=>[a,b]));
+  const strata=combinations.map(c=>({build_ids:c.map(b=>b.id),trials:0,wins:{[first]:0,[second]:0,draws:0}}));
+  const wins={[first]:0,[second]:0,draws:0};
   let representative=null;
   const results=[];
   for(let i=0;i<trials;i++) {
-    const result=run(a,b,seedFor(key+':'+i)); results.push(result);
+    const index=i%combinations.length, combo=combinations[index];
+    const result=run(combo[0].set,combo[1].set,seedFor(key+':'+i));
+    result.builds=combo.map(b=>b.set);result.build_ids=combo.map(b=>b.id);results.push(result);
+    strata[index].trials++;strata[index].wins[result.winner||'draws']++;
     if(result.winner) wins[result.winner]++; else wins.draws++;
   }
   const favorite=wins[first]===wins[second]?null:(wins[first]>wins[second]?first:second);
@@ -116,12 +128,14 @@ function matchup(first,second,key,trials=100) {
     eligible_examples:eligible.length,both_sides_won:wins[first]>0&&wins[second]>0,
     selection:'Prefer a multi-attack winning example of the overall favorite; otherwise a qualifying example of the other winner. Aggregate trial outcomes are unchanged.'};
   return {schema:1,key,format:FORMAT,generation:9,level:100,policy:POLICY,
-    assumptions:'Fixed legal offensive builds; 31 IVs; 510 or fewer EVs; one item and ability; neutral starting field; abilities may change weather. These builds are not a proof of each species\u2019 absolute peak.',
-    builds:[a,b],types:[Dex.species.get(first).types,Dex.species.get(second).types],
+    assumptions:'Declared legal build catalogue; balanced round-robin build combinations across seeded trials; 31 IVs; legal EVs; neutral starting field. Catalogue weights are design choices, not measured real-world usage or proof of absolute peak.',
+    protocol,build_sampling:{counts:options.map(x=>x.length),combination_count:combinations.length,strata,
+      policy:'Round-robin equal allocation; counts differ by at most one. Never choose weights based on desired results or popularity.'},
+    tested_builds:options,builds:representative.builds,types:[Dex.species.get(first).types,Dex.species.get(second).types],
     trials,wins,favorite,representative,presentation,simulator_version:require('pokemon-showdown/package.json').version};
 }
-module.exports={build,matchup,run,cleanLog,BUILDS,choice,exampleQuality};
+module.exports={build,buildOptions,matchup,run,cleanLog,BUILDS,choice,exampleQuality};
 if(require.main===module) {
-  const [a='Charizard',b='Blastoise',key='pilot-v1',n='100']=process.argv.slice(2);
-  process.stdout.write(JSON.stringify(matchup(a,b,key,Number(n)),null,2)+'\n');
+  const [a='Charizard',b='Blastoise',key='pilot-v1',n='100',protocol='multi-build-v3']=process.argv.slice(2);
+  process.stdout.write(JSON.stringify(matchup(a,b,key,Number(n),protocol),null,2)+'\n');
 }

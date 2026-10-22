@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "checked_on": "2026-10-23",
+  "scope": "Named trainer Pokemon in base form. Editorial inference from listed feats; not a canon head-to-head result, popularity score, or win probability.",
+  "profiles": {
+    "Charizard": {
+      "trainer": "Ash",
+      "version": "Ash's Charizard",
+      "feat": "Ash's Charizard defeated Articuno in The Symbol Life.",
+      "sources": [
+        {
+          "title": "The Symbol Life \u2014 official episode synopsis",
+          "url": "https://www.pokemon.com/us/animation/seasons/8/episode-43-the-symbol-life"
+        },
+        {
+          "title": "The Symbol Life \u2014 episode outcome",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/AG136"
+        }
+      ]
+    },
+    "Garchomp": {
+      "trainer": "Cynthia",
+      "version": "Cynthia's Garchomp",
+      "feat": "Cynthia's Garchomp defeated four of Paul's Pokemon in Top-Down Training.",
+      "sources": [
+        {
+          "title": "Top-Down Training \u2014 official episode synopsis",
+          "url": "https://www.pokemon.com/us/animation/seasons/10/episode-40-top-down-training"
+        }
+      ]
+    },
+    "Tyranitar": {
+      "trainer": "Alain",
+      "version": "Alain's Tyranitar",
+      "feat": "Alain's Tyranitar lost to Ash's Pikachu in the Kalos League final.",
+      "sources": [
+        {
+          "title": "Finals Not for the Faint-Hearted! \u2014 official episode synopsis",
+          "url": "https://www.pokemon.com/us/animation/seasons/19/episode-37-finals-not-for-the-faint-hearted"
+        }
+      ]
+    }
+  },
+  "comparisons": [
+    {
+      "pair": [
+        "Charizard",
+        "Garchomp"
+      ],
+      "lean": "Cynthia's Garchomp",
+      "confidence": "low",
+      "reason": "Garchomp's demonstrated multi-opponent endurance gives it an editorial edge; Charizard's legendary win makes the comparison debatable.",
+      "spoken_take": "My anime lean is Cynthia's Garchomp for its multi-opponent endurance. Confidence is low; this is a debatable analysis, not a canon result."
+    },
+    {
+      "pair": [
+        "Charizard",
+        "Tyranitar"
+      ],
+      "lean": "Ash's Charizard",
+      "confidence": "low",
+      "reason": "Charizard has a documented legendary win; the selected Tyranitar evidence is a loss to Pikachu. Unequal evidence and different opponents prevent a firm conclusion.",
+      "spoken_take": "My anime lean is Ash's Charizard, but confidence is low. The evidence is uneven, and beating one opponent never proves another matchup."
+    }
+  ]
+}

@@ -139,3 +139,22 @@ Official references: https://support.google.com/youtube/answer/10383400 ; https:
 Validation for v2: 81 Python tests plus 5 Node tests passed; GitHub integration rendered the updated software preview successfully. The local Charizard–Sylveon preview is approximately 70.8 seconds at 720×1280 with AAC audio.
 
 The v2 replacement integration completed successfully (run 39832097273): `a5PWKN9vZXg` (Charizard–Tyranitar) is verified scheduled for 23 October 2026 at 10:00 IST, and `KfRaJ0nQWMM` (Charizard–Garchomp) at 22:00 IST. Both passed recent public-metadata research and the new presentation checks before rendering and upload. The production host gate remains false for subsequent daily generation.
+
+
+## Full-turn, faster dual-verdict presentation — v3 (23 October 2026)
+
+Every move from the selected example appears exactly once in simulator order, including misses and the opponent’s intervening attacks. The publication check compares the complete move sequence with the simulator log and rejects omissions. Narration no longer reads HP damage percentages; visible HP still comes from exact game health. Rules and build items remain on screen/in the description instead of delaying the first attack with spoken setup.
+
+Output playback is 1.5×: visual timestamps advance at 1.5× and FFmpeg uses `atempo=1.5` for audio without raising pitch. The voice synthesizer stays at its original rate; acceleration is applied once. Final duration, captions, impact effects and both media streams are checked after retiming.
+
+The game experiment now uses a declared build catalogue. Charizard, Garchomp and Tyranitar each have three legal builds, giving nine equally allocated build combinations per matchup; 100 trials allocate 11 or 12 runs to each combination. The displayed example uses its actual sampled items/natures/EVs. Other catalogue species still have their original one build and are identified by their actual coverage. All variants are legal offensive/bulky examples, not an exhaustive peak optimizer or measured ladder-usage distribution. The existing greedy policy, no-switching and no-transformations restrictions remain. Nothing is weighted by popularity or adjusted to get appealing counts. Source data, per-combination counts and wins are in `battle.json`.
+
+For keys `2026-10-23T10:00+05:30-r3` and `2026-10-23T22:00+05:30-r3`, the preflight measured Tyranitar 64–36 Charizard and Garchomp 80–20 Charizard. The previous 85/100 results were genuine single-build samples, not overall strength estimates.
+
+A separate anime section names trainer individuals. The current sourced comparisons are Ash’s Charizard vs Cynthia’s Garchomp, and Ash’s Charizard vs Alain’s Tyranitar. Their feat summaries cite official episode synopses and an episode-outcome cross-check. Anime leans are explicitly editorial, low confidence, and never expressed as simulated wins or exact odds. No transformations or another trainer’s feats are silently combined. The game build is not claimed to reproduce the named anime Pokemon. During the anime section, trainer names replace the game HP/item cards.
+
+The initial anime evidence catalogue covers these two comparisons. For an uncovered pairing the automatic fallback says the named anime verdict is unresolved; it never invents a feat or a probability. This avoids a human approval dependency but is a real coverage limit, not completed universal anime research. Evidence snapshot: 23 October 2026. `pokemon/anime_assessments.json` stores source URLs, scope, named versions and the reasoning behind each inference.
+
+Research recommendation: use a short immediate question, show the complete exchange, then resolve the game and anime questions separately. YouTube’s creator/product discussion recommends immediate hooks and concise mini-stories: https://blog.youtube/creator-and-artist-stories/youtube-shorts-deep-dive/ . At 1.5×, measure actual viewer retention/readability before raising speed further; no fixed viral performance is promised.
+
+Both v2 schedules were cancelled and verified private before revision. The first public pilot remains public. Production hosting is still not connected; a one-time date-fixed integration handles only the authorized replacements.

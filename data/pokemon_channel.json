@@ -36,6 +36,10 @@
     "winner_successful_moves_shown": 2,
     "opponent_must_attempt_attack": true,
     "change_simulated_damage": false,
-    "attack_effects": "resolved_move_type_v2"
-  }
+    "attack_effects": "resolved_move_type_v2",
+    "show_all_attacks": true,
+    "spoken_hp_percentages": false,
+    "verdict_mode": "game_and_named_anime_separate"
+  },
+  "playback_speed": 1.5
 }

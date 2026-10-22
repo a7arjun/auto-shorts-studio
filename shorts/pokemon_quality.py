@@ -44,3 +44,7 @@ def require_story(story,battle):
            s['event']['actor']==winner and s['event']['damage']>0}
     if len(shown)<2:
         raise BattleRejected('Video must show two distinct successful winning attacks')
+    actual=[s['event']['sequence'] for s in story['segments'] if s.get('event')]
+    expected=[e['sequence'] for e in battle_events(battle)]
+    if actual!=expected:
+        raise BattleRejected('Every attack must be shown once and in simulator order')

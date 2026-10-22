@@ -159,7 +159,7 @@ def apply_metadata(story,battle,research):
     story['description']=f'{a} vs {b}: a level-100 game battle simulation using the stated builds.\n\n'+story['description']+'\n\n'+' '.join(hashes)
     story['tags']=['Pokemon',a,b,f'{a} vs {b}','Pokemon battle','battle simulation','Pokemon Showdown']
     story['hashtags']=hashes
-    story['segments'][0]['text']=f'{a} versus {b}. We tested {battle["trials"]} battles with these builds. Who comes out ahead?'
+    story['segments'][0]['text']=f'{a} or {b}? Game battle, then anime verdict.'
     story['segments'][0]['heading']='WHO WINS?'
     story['research']={'checked_at':research['checked_at'],'reference_count':len(refs),'title_angle':kind}
     research['metadata']={'selected_title':title,'title_candidates':[t for _,t in candidates],

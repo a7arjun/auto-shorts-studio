@@ -37,7 +37,7 @@ class EffectsTests(unittest.TestCase):
         self.assertEqual(battle['wins'],before)
 
     def test_accepted_story_shows_two_successful_moves_from_the_winner(self):
-        battle=json.loads(subprocess.check_output(['node','pokemon/simulate.cjs','Charizard','Sylveon','quality-v2-screen','100']))
+        battle=json.loads(subprocess.check_output(['node','pokemon/simulate.cjs','Charizard','Sylveon','quality-v2-screen','100','single-build-v1']))
         require_battle(battle)
         story=make_story(battle,'Test')
         require_story(story,battle)

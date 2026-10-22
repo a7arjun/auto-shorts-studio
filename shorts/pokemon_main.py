@@ -39,16 +39,22 @@ def prepare(pair,key,config,research=None,battle=None):
     (OUT/'presentation_quality.json').write_text(json.dumps(presentation,indent=2))
     (OUT/'battle.json').write_text(json.dumps(battle,indent=2))
     story=make_story(battle,config['brand'],visual_assets=assets)
+    story['playback_speed']=config.get('playback_speed',1.5)
+    from .pokemon_anime import add_assessment
+    anime=add_assessment(story,battle)
     require_story(story,battle)
     if research:
         apply_metadata(story,battle,research)
         (OUT/'research.json').write_text(json.dumps(research,indent=2))
+    if len(story['description'])>5000:
+        raise ValueError('Sourced description exceeds YouTube length limit')
     (OUT/'assets.json').write_text(json.dumps(assets,indent=2))
+    (OUT/'anime_assessment.json').write_text(json.dumps(anime,indent=2))
     from .pokemon_voice import synthesize
     from .pokemon_render import render
     synthesize(story,OUT/'voice.wav',config['voice'],config['voice_speed'])
     # Long narration fails quality checks before reserving or uploading anything.
-    if not 20 <= story['duration'] <= 90:
+    if not 20 <= story['duration']/story['playback_speed'] <= 90:
         raise RuntimeError('Narration outside the supported Short length')
     (OUT/'story.json').write_text(json.dumps(story,indent=2))
     quality=render(battle,story,OUT/'voice.wav',OUT/'short.mp4')
@@ -56,7 +62,7 @@ def prepare(pair,key,config,research=None,battle=None):
     return story
 
 
-def run(mode,requested_slot=None):
+def run(mode,requested_slot=None,requested_pair=None):
     config=json.loads(Path('data/pokemon_channel.json').read_text()); date=today()
     ledger=Ledger()
     OUT.mkdir(parents=True,exist_ok=True)
@@ -106,6 +112,11 @@ def run(mode,requested_slot=None):
         if mode=='daily' and not info['can_manage']:
             raise RuntimeError('Existing OAuth needs youtube.force-ssl authorization for verified public publishing')
     pair=('Charizard','Blastoise') if mode in ('pilot','preview') and not ledger.data['jobs'] else choose_pair(ledger.data,date)
+    if requested_pair:
+        names={b['species'] for b in json.loads(Path('pokemon/builds.json').read_text())}
+        if len(requested_pair)!=2 or len(set(requested_pair))!=2 or not set(requested_pair)<=names:
+            raise ValueError('Replacement requires two distinct catalogue Pokemon')
+        pair=tuple(requested_pair)
     key='pilot-v1' if mode in ('pilot','preview') else slot['slot']
     if slot:
         revisions=sum(j.get('slot')==slot['slot'] for j in ledger.data['jobs'])
@@ -122,7 +133,7 @@ def run(mode,requested_slot=None):
         return quality['eligible']
     if mode!='preview':
         pair,research=select_researched_pair(public,json.loads(Path('pokemon/builds.json').read_text()),
-                    ledger.data,key,info['channel_id'],fixed_pair=pair if mode=='pilot' else None,
+                    ledger.data,key,info['channel_id'],fixed_pair=pair if mode=='pilot' or requested_pair else None,
                     candidate_filter=eligible)
         (OUT/'research.json').write_text(json.dumps(research,indent=2))
     else:
@@ -143,6 +154,11 @@ def run(mode,requested_slot=None):
             print('Preparation missed slot; no upload');return
     job={'key':key,'pair':list(pair),'mode':mode,'date':date,'status':'uploading',
          'created_at':datetime.now(timezone.utc).isoformat(),'channel_id':info['channel_id']}
+    job['presentation']={'version':3,'all_attacks_in_order':True,'spoken_hp_percentages':False,
+                         'playback_speed':story['playback_speed'],
+                         'game_wins':cache[tuple(pair)]['wins'] if tuple(pair) in cache else None,
+                         'anime_lean':story.get('anime_assessment',{}).get('lean'),
+                         'anime_confidence':story.get('anime_assessment',{}).get('confidence')}
     if research:
         job['research']={'checked_at':research['checked_at'],'video_ids':[r['id'] for r in research['references']],
                          'title':story['title'],'hashtags':story.get('hashtags',[])}

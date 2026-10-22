@@ -23,8 +23,9 @@ class PokemonTests(unittest.TestCase):
         for segment in story['segments']:
             if segment['kind']=='attack' and not segment['event']['miss']:
                 e=segment['event'];target=1-e['actor']
-                damage=round(100*e['damage'])
-                self.assertIn(f'{damage} percent',segment['text'])
+                self.assertNotIn('percent',segment['text'])
+                self.assertNotIn('maximum health',segment['text'])
+        self.assertEqual([s['event']['sequence'] for s in story['segments'] if s.get('event')],list(range(len(events))))
         self.assertEqual(story['language'],'en')
         self.assertLessEqual(len(story['title']),100)
         self.assertIn('not a canonical anime result',story['description'])

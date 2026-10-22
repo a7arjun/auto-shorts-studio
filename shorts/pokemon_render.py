@@ -63,13 +63,14 @@ def frame(battle, story, moment):
         d.line((xx,170,xx,1090),fill='#141f35')
     seg=next((s for s in story['segments'] if s['start']<=moment<s['start']+s['duration']),story['segments'][-1])
     local=max(0,moment-seg['start']); progress=min(1,local/max(.01,seg['duration']))
+    anime=seg['kind'].startswith('anime_')
     text(d,(38,32),story['brand'].upper(),21,'#b9adff',True)
     text(d,(500,34),'MATCHUP / 001' if battle['key']=='pilot-v1' else 'MATCHUP / LAB',14,MUTED,False)
     d.line((38,77,682,77),fill='#35425e',width=2)
-    text(d,(360,101),'POKEMON BATTLE ANALYSIS',17,MUTED,False,True)
+    text(d,(360,101),'ANIME ANALYSIS' if anime else 'GAME SIMULATION',17,MUTED,False,True)
     names=[b['species'] for b in battle['builds']]
     text(d,(360,142),f'{names[0]} vs {names[1]}',32,WHITE,True,True)
-    text(d,(360,196),'LEVEL 100  /  BASE FORMS  /  GEN 9 NATIONAL DEX',13,MUTED,False,True)
+    text(d,(360,196),'NAMED TRAINER VERSIONS / EDITORIAL INFERENCE' if anime else 'LEVEL 100 / BASE FORMS / NO TRANSFORMATIONS',13,MUTED,False,True)
     event=seg.get('event'); health=seg['health'].copy()
     phase,mix=timing(seg,local)
     if event:
@@ -81,6 +82,13 @@ def frame(battle, story, moment):
         d.rounded_rectangle((x+17,271,x+290,306),radius=10,fill=color)
         text(d,(x+153,278),' / '.join(battle['types'][side]).upper(),14,'#101624',True,True)
         text(d,(x+153,326),names[side],26,WHITE,True,True)
+        if anime:
+            profiles=story.get('anime_assessment',{}).get('profiles',[])
+            trainer=profiles[side]['trainer'] if len(profiles)>side else 'Unverified version'
+            text(d,(x+153,370),trainer+"'s Pokemon" if profiles else trainer,19,MUTED,True,True)
+            text(d,(x+153,414),'BASE FORM',15,MUTED,False,True)
+            text(d,(x+153,465),'FEATS / NO WIN PROBABILITY',12,color,True,True)
+            continue
         text(d,(x+153,369),build['ability'],17,MUTED,False,True)
         text(d,(x+153,400),build['item'],17,MUTED,False,True)
         d.rounded_rectangle((x+20,444,x+287,461),radius=8,fill='#060d19')
@@ -122,6 +130,12 @@ def frame(battle, story, moment):
         favorite=battle['favorite']
         score=f"{battle['wins'][favorite]} / {battle['trials']} wins" if favorite else 'Even trial results'
         text(d,(360,873),score,27,'#bcacff',True,True)
+        count=battle.get('build_sampling',{}).get('combination_count',1)
+        text(d,(360,912),f'{count} DECLARED BUILD COMBINATIONS / GAME TEST ONLY',13,MUTED,False,True)
+    elif anime:
+        confidence=story.get('anime_assessment',{}).get('confidence','insufficient evidence')
+        text(d,(360,875),'CONFIDENCE: '+confidence.upper(),15,'#ffce8a',True,True)
+        text(d,(360,909),'OPINION FROM LISTED FEATS / SOURCES IN DESCRIPTION',12,MUTED,False,True)
     elif event:
         text(d,(360,878),f"TURN {event['turn']}  /  REPRESENTATIVE SIMULATION",15,MUTED,False,True)
     speech=seg.get('speech_parts')
@@ -153,19 +167,25 @@ def verify_video(path):
 
 
 def render(battle,story,audio,output):
+    speed=float(story.get('playback_speed',1))
+    if not .5<=speed<=2:
+        raise ValueError('Unsupported playback speed')
     command=['ffmpeg','-hide_banner','-loglevel','error','-y','-f','rawvideo','-pixel_format','rgb24',
              '-video_size',f'{W}x{H}','-framerate',str(FPS),'-i','pipe:0','-i',str(audio),
              '-map','0:v','-map','1:a','-c:v','libx264','-preset','veryfast','-crf','21',
-             '-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-af','loudnorm=I=-16:TP=-1.5:LRA=9',
+             '-pix_fmt','yuv420p','-c:a','aac','-b:a','128k','-af',f'atempo={speed},loudnorm=I=-16:TP=-1.5:LRA=9',
              '-movflags','+faststart','-shortest',str(output)]
     with subprocess.Popen(command,stdin=subprocess.PIPE) as process:
         try:
-            for i in range(math.ceil(story['duration']*FPS)):
-                process.stdin.write(frame(battle,story,i/FPS).tobytes())
+            for i in range(math.ceil(story['duration']/speed*FPS)):
+                process.stdin.write(frame(battle,story,i/FPS*speed).tobytes())
         finally:
             process.stdin.close()
             code=process.wait()
         if code:
             raise RuntimeError('FFmpeg render failed')
-    frame(battle,story,story['segments'][3]['start']+1).save(output.with_suffix('.png'))
-    return verify_video(output)
+    first_attack=next(s for s in story['segments'] if s.get('event'))
+    frame(battle,story,first_attack['start']+.8).save(output.with_suffix('.png'))
+    quality=verify_video(output)
+    quality.update(playback_speed=speed,narration_seconds=story['duration'])
+    return quality

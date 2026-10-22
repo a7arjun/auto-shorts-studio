@@ -78,7 +78,7 @@ class ResearchTests(unittest.TestCase):
         self.assertIn('Who Wins',story['title'])
         self.assertLessEqual(len(story['title']),100)
         self.assertEqual(story['segments'][1:],segments)
-        self.assertIn('10 battles',story['segments'][0]['text'])
+        self.assertIn('Game battle, then anime verdict.',story['segments'][0]['text'])
         self.assertNotIn('#Viral',story['description'])
         self.assertNotIn('#Anime',story['description'])
         self.assertEqual(set(story['hashtags']),{'#Pokemon','#PokemonBattle','#Charizard','#Blastoise','#Shorts'})
