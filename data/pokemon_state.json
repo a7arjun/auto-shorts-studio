@@ -1,5 +1,51 @@
 {
   "version": 1,
-  "jobs": [],
+  "jobs": [
+    {
+      "key": "pilot-v1",
+      "pair": [
+        "Charizard",
+        "Blastoise"
+      ],
+      "mode": "pilot",
+      "date": "2026-10-22",
+      "status": "uploading",
+      "created_at": "2026-10-22T17:21:54.387373+00:00",
+      "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
+      "research": {
+        "checked_at": "2026-10-22T17:20:52.799571+00:00",
+        "video_ids": [
+          "FYvt38YPXEs",
+          "kXxdUNdiEC8",
+          "zEQQDoLEnoE",
+          "Y6PV-a6rQgA",
+          "t2BiogINcI0",
+          "gEhH330t6jc",
+          "DaEVtwq0BWI",
+          "HfqOsXmNc2U",
+          "X1yqo5iBssY",
+          "ua9kU0hJb34",
+          "qWnAtY0-f-Q",
+          "3tMKCvfuUm4",
+          "E4BdWa9U_QA",
+          "GOzWNatXsUY",
+          "daw4cEhBr2w",
+          "l4861U_J8rw",
+          "WyO91niQlVc",
+          "UaP0xyN3DAc",
+          "8V2iYULQIeI",
+          "ThhfhjEHXIA"
+        ],
+        "title": "Charizard vs Blastoise: Who Wins at Level 100?",
+        "hashtags": [
+          "#Pokemon",
+          "#Blastoise",
+          "#Charizard",
+          "#Shorts",
+          "#PokemonBattle"
+        ]
+      }
+    }
+  ],
   "pilot_verified": false
 }
