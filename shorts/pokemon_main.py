@@ -30,6 +30,15 @@ def simulate_pair(pair,key,config):
     return json.loads(result.stdout)
 
 
+def trial_key_for(state,slot,pair,fallback):
+    # Rendering/narration revisions must not reroll a v3 game experiment.
+    for job in reversed(state['jobs']):
+        if (slot and job.get('slot')==slot['slot'] and set(job.get('pair',[]))==set(pair) and
+            job.get('presentation',{}).get('version')==3):
+            return job.get('simulation_key',job['key'])
+    return fallback
+
+
 def prepare(pair,key,config,research=None,battle=None):
     battle=battle or simulate_pair(pair,key,config)
     presentation=require_battle(battle)
@@ -126,7 +135,8 @@ def run(mode,requested_slot=None,requested_pair=None):
     def eligible(candidate):
         identity=tuple(candidate)
         if identity not in cache:
-            cache[identity]=simulate_pair(candidate,key,config)
+            trial_key=trial_key_for(ledger.data,slot,candidate,key)
+            cache[identity]=simulate_pair(candidate,trial_key,config)
         quality=assess_battle(cache[identity])
         if not quality['eligible']:
             rejections.append({'pair':list(candidate),'reasons':quality['reasons'],'wins':quality['wins']})
@@ -159,6 +169,8 @@ def run(mode,requested_slot=None,requested_pair=None):
                          'game_wins':cache[tuple(pair)]['wins'] if tuple(pair) in cache else None,
                          'anime_lean':story.get('anime_assessment',{}).get('lean'),
                          'anime_confidence':story.get('anime_assessment',{}).get('confidence')}
+    if tuple(pair) in cache:
+        job.update(simulation_key=cache[tuple(pair)]['key'],simulation_protocol=cache[tuple(pair)].get('protocol'))
     if research:
         job['research']={'checked_at':research['checked_at'],'video_ids':[r['id'] for r in research['references']],
                          'title':story['title'],'hashtags':story.get('hashtags',[])}

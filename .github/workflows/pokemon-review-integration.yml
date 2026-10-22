@@ -1,8 +1,5 @@
 name: Pokemon Review Schedule Integration
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/pokemon-review-integration.yml']
   workflow_dispatch:
 permissions:
   contents: write

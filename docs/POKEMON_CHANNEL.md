@@ -158,3 +158,7 @@ The initial anime evidence catalogue covers these two comparisons. For an uncove
 Research recommendation: use a short immediate question, show the complete exchange, then resolve the game and anime questions separately. YouTube’s creator/product discussion recommends immediate hooks and concise mini-stories: https://blog.youtube/creator-and-artist-stories/youtube-shorts-deep-dive/ . At 1.5×, measure actual viewer retention/readability before raising speed further; no fixed viral performance is promised.
 
 Both v2 schedules were cancelled and verified private before revision. The first public pilot remains public. Production hosting is still not connected; a one-time date-fixed integration handles only the authorized replacements.
+
+V3 publication records retain their measured game counts and anime evidence label. Later presentation-only revisions reuse the same v3 experiment key for the same pair and slot, so correcting narration or visuals does not reroll the game result.
+
+Verified v3 replacement integration run 39837763873 completed successfully: `V7TqJALrQGk` is scheduled for 23 October 2026 at 10:00 IST (Charizard–Tyranitar), and `I32IkX9-aRQ` at 22:00 IST (Charizard–Garchomp). Both record all-attack sequencing, no spoken HP percentages, 1.5× playback, actual multi-build game counts, and the separate named anime assessment. The old v2 IDs remain cancelled/private. The date-fixed integration workflow is manual-only again.

@@ -13,6 +13,12 @@ from shorts.pokemon_anime import assessment,add_assessment
 
 
 class ReviewV3Tests(unittest.TestCase):
+    def test_narration_revision_reuses_the_same_game_experiment(self):
+        from shorts.pokemon_main import trial_key_for
+        state={'jobs':[{'key':'slot-r3','slot':'slot','pair':['Charizard','Garchomp'],
+                        'presentation':{'version':3},'status':'cancelled'}]}
+        self.assertEqual(trial_key_for(state,{'slot':'slot'},('Charizard','Garchomp'),'slot-r4'),'slot-r3')
+        self.assertEqual(trial_key_for(state,{'slot':'slot'},('Charizard','Tyranitar'),'slot-r4'),'slot-r4')
     def test_exact_skipped_garchomp_attack_is_now_shown_in_order(self):
         battle=json.loads(subprocess.check_output(['node','pokemon/simulate.cjs','Charizard','Garchomp',
                   '2026-10-23T22:00+05:30-r2','100','single-build-v1']))
