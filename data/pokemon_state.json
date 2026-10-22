@@ -9,7 +9,7 @@
       ],
       "mode": "pilot",
       "date": "2026-10-22",
-      "status": "private_verified",
+      "status": "published",
       "created_at": "2026-10-22T17:21:54.387373+00:00",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "research": {
@@ -45,7 +45,15 @@
           "#PokemonBattle"
         ]
       },
-      "video_id": "p54dCIM9LOY"
+      "video_id": "p54dCIM9LOY",
+      "short_eligibility": {
+        "width": 720,
+        "height": 1280,
+        "duration": 54.583,
+        "note": "Eligible media format; YouTube controls actual Shorts classification."
+      },
+      "public_verified_at": "2026-10-22T17:34:14.884580+00:00",
+      "control_request_id": "publish-first-pilot-20261022"
     }
   ],
   "pilot_verified": true
