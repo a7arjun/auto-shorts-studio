@@ -7,7 +7,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: pokemon-channel-single-flight
+  group: pokemon-video-control
   cancel-in-progress: false
 jobs:
   verify-publication-control:
