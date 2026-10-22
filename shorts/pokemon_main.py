@@ -6,7 +6,7 @@ import itertools
 import json
 from pathlib import Path
 import subprocess
-from .pokemon_publish import Ledger, can_start, today, services, upload_private, check_processed, schedule_existing, verify_public, publication_slot, require_future_slot, parse_time, MissedPublicationSlot
+from .pokemon_publish import Ledger, can_start, today, services, upload_private, check_processed, schedule_existing, verify_public, publication_slot, require_future_slot, parse_time, MissedPublicationSlot, daily_review_slots, require_review_deadline
 from .pokemon_story import make_story
 from .pokemon_research import select_researched_pair, apply_metadata
 
@@ -48,7 +48,7 @@ def prepare(pair,key,config,research=None):
     return story
 
 
-def run(mode):
+def run(mode,requested_slot=None):
     config=json.loads(Path('data/pokemon_channel.json').read_text()); date=today()
     ledger=Ledger()
     OUT.mkdir(parents=True,exist_ok=True)
@@ -84,7 +84,7 @@ def run(mode):
                 job['status']='private_verified';ledger.data['pilot_verified']=True
             ledger.save('Reconcile Pokemon upload '+job['key'])
             print('Reconciled https://youtu.be/'+job['video_id'])
-    slot=publication_slot(config) if mode=='daily' else None
+    slot=(requested_slot or publication_slot(config)) if mode=='daily' else None
     if mode=='daily' and slot is None:
         print('No upload due: outside preparation window');return
     if slot:
@@ -110,6 +110,7 @@ def run(mode):
     if slot:
         try:
             require_future_slot(slot['publish_at'])
+            require_review_deadline(config,slot['publish_at'])
         except MissedPublicationSlot:
             print('Preparation missed slot; no upload');return
     job={'key':key,'pair':list(pair),'mode':mode,'date':date,'status':'uploading',
@@ -138,6 +139,18 @@ def run(mode):
     print(job['status']+': https://youtu.be/'+video_id)
 
 
+def run_daily_batch():
+    config=json.loads(Path('data/pokemon_channel.json').read_text())
+    if not config['publication_enabled'] or not config.get('production_runner_ready',False):
+        print('Daily posting requested but production runner is not ready; no upload');return
+    slots=daily_review_slots(config)
+    if not slots:
+        print('Outside the morning preparation window; no upload');return
+    for slot in slots:
+        run('daily',requested_slot=slot)
+
+
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--mode',choices=['preview','probe','pilot','daily'],default='preview')
-    run(parser.parse_args().mode)
+    mode=parser.parse_args().mode
+    run_daily_batch() if mode=='daily' else run(mode)

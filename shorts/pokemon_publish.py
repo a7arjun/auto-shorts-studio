@@ -9,7 +9,7 @@ from zoneinfo import ZoneInfo
 import requests
 
 STATE_PATH = Path('data/pokemon_state.json')
-TERMINAL = {'published', 'private_verified', 'failed_before_upload', 'skipped', 'scheduled', 'missed_slot'}
+TERMINAL = {'published', 'private_verified', 'failed_before_upload', 'skipped', 'scheduled', 'missed_slot', 'cancelled'}
 
 
 def today():
@@ -85,7 +85,7 @@ def can_start(state,config,date,mode,slot=None):
     if unresolved:
         raise RuntimeError('An earlier upload needs reconciliation; refusing a possible duplicate')
     if mode=='pilot':
-        return not any(j['mode']=='pilot' and j['status']=='private_verified' for j in state['jobs'])
+        return not state.get('pilot_verified') and not any(j['mode']=='pilot' and j['status'] in ('private_verified','published') for j in state['jobs'])
     if not config['publication_enabled'] or not state.get('pilot_verified'):
         return False
     public=[j for j in state['jobs'] if j['mode']=='daily' and j['status'] in ('published','scheduled')]
@@ -176,6 +176,7 @@ def schedule_existing(youtube,video_id,config,channel_id,publish_at):
             return item  # Idempotent reconciliation of an acknowledged schedule.
         raise RuntimeError('Existing upload has an unexpected publication time')
     require_future_slot(publish_at)
+    require_review_deadline(config,publish_at)
     youtube.videos().update(part='status',body={'id':video_id,'status':{
         'privacyStatus':'private','publishAt':publish_at,
         'selfDeclaredMadeForKids':config['made_for_kids']}}).execute()
@@ -201,3 +202,30 @@ def verify_public(public,video_id,channel_id):
                 return item
         time.sleep(5)
     raise RuntimeError('Scheduled public visibility not verified; keep existing video ID')
+
+
+def review_deadline(config,publish_at):
+    local=parse_time(publish_at).astimezone(ZoneInfo('Asia/Kolkata'))
+    return datetime.fromisoformat(local.date().isoformat()+'T'+config['review_time_ist']+':00').replace(tzinfo=local.tzinfo)
+
+
+def require_review_deadline(config,publish_at,now=None):
+    if config.get('review_before_publish') and (now or datetime.now(timezone.utc))>=review_deadline(config,publish_at):
+        raise MissedPublicationSlot('Missed review deadline; leave the upload private')
+
+
+def daily_review_slots(config,now=None):
+    now=now or datetime.now(timezone.utc)
+    local=now.astimezone(ZoneInfo('Asia/Kolkata'))
+    review=datetime.fromisoformat(local.date().isoformat()+'T'+config['review_time_ist']+':00').replace(tzinfo=local.tzinfo)
+    start=review-timedelta(minutes=config['review_preparation_minutes'])
+    if not start-timedelta(minutes=1)<=now<=review-timedelta(minutes=10):
+        return []
+    slots=[]
+    for clock in sorted(config['publish_times_ist']):
+        target=datetime.fromisoformat(local.date().isoformat()+'T'+clock+':00').replace(tzinfo=local.tzinfo)
+        if target<=review:
+            raise ValueError('Publication must follow the daily review time')
+        slots.append({'slot':target.isoformat(timespec='minutes'),'date':local.date().isoformat(),
+                      'publish_at':target.astimezone(timezone.utc).isoformat().replace('+00:00','Z')})
+    return slots

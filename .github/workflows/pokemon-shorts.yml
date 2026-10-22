@@ -12,7 +12,7 @@ on:
       - 'data/pokemon_channel.json'
       - '.github/workflows/pokemon-shorts.yml'
   schedule:
-    - cron: '0 4,16 * * *' # Prepare at 09:30/21:30 IST; YouTube releases at 10:00/22:00 IST.
+    - cron: '0 3 * * *' # Prepare both videos at 08:30 IST for 09:30 review; release 10:00/22:00 IST.
   workflow_dispatch:
     inputs:
       mode:
@@ -48,7 +48,7 @@ jobs:
           event=os.environ['EVENT']
           mode='preview' if event=='push' else ('daily' if event=='schedule' else os.getenv('REQUESTED','preview'))
           production=mode=='daily'
-          skip=production and not config['publication_enabled']
+          skip=production and (not config['publication_enabled'] or not config.get('production_runner_ready',False))
           runner=['self-hosted','linux','pokemon-renderer'] if production else ['ubuntu-latest']
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:
               f.write(f'mode={mode}\nskip={str(skip).lower()}\nrunner={json.dumps(runner)}\n')

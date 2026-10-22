@@ -1,0 +1,32 @@
+name: Pokemon Video Publication Control
+on:
+  push:
+    branches: [main]
+    paths: ['data/pokemon_control.json', '.github/workflows/pokemon-video-control.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pokemon-channel-single-flight
+  cancel-in-progress: false
+jobs:
+  verify-publication-control:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: python -m pip install -r requirements.txt
+      - name: Apply and verify the explicitly requested video action
+        env:
+          YT_HI_CLIENT_ID: ${{ secrets.YT_HI_CLIENT_ID }}
+          YT_HI_CLIENT_SECRET: ${{ secrets.YT_HI_CLIENT_SECRET }}
+          YT_HI_REFRESH_TOKEN: ${{ secrets.YT_HI_REFRESH_TOKEN }}
+          YOUTUBE_DATA_API_KEY: ${{ secrets.YOUTUBE_DATA_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -m shorts.pokemon_control

@@ -12,6 +12,7 @@ class ScheduleTests(unittest.TestCase):
     def setUp(self):
         self.config=json.loads(Path('data/pokemon_channel.json').read_text())
         self.config['publication_enabled']=True
+        self.config['review_before_publish']=False
 
     def test_requested_ist_slots_have_correct_utc_times(self):
         for hour,target in ((4,'04:30'),(16,'16:30')):
