@@ -102,6 +102,53 @@
       "slot": "2026-10-23T10:00+05:30",
       "publish_at": "2026-10-23T04:30:00Z",
       "video_id": "_kepcZR8V6g"
+    },
+    {
+      "key": "2026-10-23T22:00+05:30",
+      "pair": [
+        "Charizard",
+        "Pikachu"
+      ],
+      "mode": "daily",
+      "date": "2026-10-23",
+      "status": "uploading",
+      "created_at": "2026-10-22T17:57:21.348401+00:00",
+      "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
+      "research": {
+        "checked_at": "2026-10-22T17:56:28.916251+00:00",
+        "video_ids": [
+          "Kqaz9CQHFok",
+          "RnlrRuvYylg",
+          "uWx6a67tUyg",
+          "ePekyIUACdA",
+          "2rRrS4TtMiE",
+          "jx1Jc_pAG08",
+          "fMoeA4trRCc",
+          "QDZi2Cak6tE",
+          "3i92PcPBId0",
+          "kbNqVx5N5As",
+          "YLDCjLx1I6U",
+          "YVdGRTx54LE",
+          "I9K5Qs5jmzk",
+          "vgymj3Rk9WU",
+          "NbiUXxBi3-U",
+          "Cf_xNKsOYz0",
+          "RcwxgetYNBU",
+          "bTG8WR4RC5k",
+          "_g0hxFLHiks",
+          "LNCeFuonNqA"
+        ],
+        "title": "Charizard vs Pikachu: Who Wins at Level 100?",
+        "hashtags": [
+          "#Pokemon",
+          "#Pikachu",
+          "#Charizard",
+          "#Shorts",
+          "#PokemonBattle"
+        ]
+      },
+      "slot": "2026-10-23T22:00+05:30",
+      "publish_at": "2026-10-23T16:30:00Z"
     }
   ],
   "pilot_verified": true
