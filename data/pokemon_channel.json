@@ -21,12 +21,21 @@
   "preparation_lead_minutes": 30,
   "research": {
     "max_age_calendar_months": 4,
-    "search_calls_per_video": 9,
+    "search_calls_per_video": 15,
     "paid_services": false,
     "required_for_upload": true
   },
   "production_runner_ready": false,
   "review_before_publish": true,
   "review_time_ist": "09:30",
-  "review_preparation_minutes": 60
+  "review_preparation_minutes": 60,
+  "presentation_policy": {
+    "trials": 100,
+    "exclude_unanimous_results": true,
+    "both_pokemon_must_win": true,
+    "winner_successful_moves_shown": 2,
+    "opponent_must_attempt_attack": true,
+    "change_simulated_damage": false,
+    "attack_effects": "resolved_move_type_v2"
+  }
 }

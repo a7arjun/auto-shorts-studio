@@ -47,6 +47,19 @@ class ControlTests(unittest.TestCase):
         youtube.videos().insert.assert_not_called()
 
 class ScheduleConsistencyTests(unittest.TestCase):
+    @patch('shorts.pokemon_control.time.sleep')
+    @patch('shorts.pokemon_control.check_processed',return_value={'status':{'privacyStatus':'private'}})
+    def test_cancel_waits_for_schedule_removal_without_another_update(self,processed,sleep):
+        youtube=MagicMock();ledger=MagicMock()
+        ledger.data={'jobs':[{'video_id':'video','channel_id':'target','mode':'daily','status':'scheduled'}]}
+        youtube.videos().list().execute.side_effect=[
+            {'items':[{'snippet':{'channelId':'target'},'status':{'privacyStatus':'private','publishAt':'future'}}]},
+            {'items':[{'snippet':{'channelId':'target'},'status':{'privacyStatus':'private'}}]}]
+        operate({'action':'cancel','video_id':'video','request_id':'stop'},ledger,{'made_for_kids':False},youtube,MagicMock(),{'can_manage':True,'channel_id':'target'})
+        self.assertEqual(ledger.data['jobs'][0]['status'],'cancelled')
+        self.assertEqual(youtube.videos().update.call_count,1)
+        sleep.assert_called_once_with(5)
+
     @patch('shorts.pokemon_publish.time.sleep')
     @patch('shorts.pokemon_publish.require_review_deadline')
     @patch('shorts.pokemon_publish.require_future_slot')

@@ -90,7 +90,7 @@ def collect(youtube,queries,now):
     return items,requests
 
 
-def select_researched_pair(youtube,builds,state,key,own_channel=None,fixed_pair=None,now=None):
+def select_researched_pair(youtube,builds,state,key,own_channel=None,fixed_pair=None,now=None,candidate_filter=None):
     now=now or datetime.now(timezone.utc)
     used={tuple(sorted(j['pair'])) for j in state['jobs'] if j.get('pair')}
     pairs=[p for p in itertools.combinations([b['species'] for b in builds],2) if tuple(sorted(p)) not in used]
@@ -109,13 +109,21 @@ def select_researched_pair(youtube,builds,state,key,own_channel=None,fixed_pair=
                 channels.setdefault(row['channel_id'],row['score'])
             return sum(sorted(channels.values(),reverse=True)[:5])
         pairs.sort(key=lambda p:(-pair_score(p),hashlib.sha256((key+'|'.join(p)).encode()).hexdigest()))
-        pair=pairs[0]
-        # Exact matchup checks on EVERY video, including a fixed private pilot.
-        more,extra=collect(youtube,[f'Pokemon {pair[0]} vs {pair[1]} battle'],now)
-        rows=evidence(items+more,now,own_channel)
-        matches=[r for r in rows if all(mentions(r['title'],n) for n in pair)]
+        exact_attempts=0;matches=[];rejected=[]
+        for pair in pairs:
+            if candidate_filter is not None and not candidate_filter(pair):
+                rejected.append(list(pair));continue
+            exact_attempts+=1
+            more,extra=collect(youtube,[f'Pokemon {pair[0]} vs {pair[1]} battle'],now)
+            calls+=extra
+            rows=evidence(items+more,now,own_channel)
+            matches=[r for r in rows if all(mentions(r['title'],n) for n in pair)]
+            if matches:
+                break
+            if exact_attempts>=3:
+                break
         if not matches:
-            raise ResearchUnavailable('No relevant recent matchup references; skip rather than claim a trend')
+            raise ResearchUnavailable('No eligible multi-attack matchup with recent references; skip upload')
     except ResearchUnavailable:
         raise
     except Exception:
@@ -123,7 +131,7 @@ def select_researched_pair(youtube,builds,state,key,own_channel=None,fixed_pair=
         raise ResearchUnavailable('Recent YouTube research failed; no video will be uploaded') from None
     return pair,{'status':'researched','checked_at':now.isoformat(),
                  'published_after':cutoff_time(now).isoformat(),'pair':list(pair),
-                 'search_calls':calls+extra,'matched_video_count':len(matches),'references':matches[:20],
+                 'search_calls':calls,'mechanically_rejected_pairs':rejected,'matched_video_count':len(matches),'references':matches[:20],
                  'method':'Relevant public metadata; lifetime average views/day, capped engagement and recency. Not verified recent growth or a complete census.',
                  'language_note':'English query preference; explicitly non-English metadata excluded; missing language is not proof of English audio.'}
 

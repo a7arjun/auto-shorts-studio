@@ -19,6 +19,7 @@ def battle_events(battle):
     events = []
     turn = 0
     current = None
+    attack_index=0
     for line in battle['representative']['log']:
         parts = line.split('|')
         kind = parts[1] if len(parts) > 1 else ''
@@ -30,6 +31,14 @@ def battle_events(battle):
                        'before': health.copy(), 'after': health.copy(),
                        'miss': False, 'critical': False, 'super_effective': False,
                        'resisted': False, 'immune': False, 'recoil': False, 'damage': 0.0, 'knockout': False}
+            metadata=battle['representative'].get('attacks',[])
+            if attack_index<len(metadata):
+                move=metadata[attack_index]
+                if move['actor']!=actor or move['move']!=parts[3]:
+                    raise ValueError('Move metadata does not match the simulator log')
+                current.update(move_type=move['type'],move_category=move['category'])
+            current['sequence']=attack_index
+            attack_index+=1
             events.append(current)
         elif kind in ('-damage', '-heal'):
             side = 0 if parts[2].startswith('p1') else 1
@@ -42,6 +51,7 @@ def battle_events(battle):
                 current['after'] = health.copy()
                 if side == current['actor'] and kind == '-damage':
                     current['recoil'] = True
+                    current['self_damage_source']=next((p.replace('[from] ','') for p in parts[4:] if p.startswith('[from] ')), 'follow-up damage')
         elif current and kind in ('-miss', '-crit', '-supereffective', '-resisted', '-immune'):
             current[{'-miss': 'miss', '-crit': 'critical', '-supereffective': 'super_effective',
                      '-resisted': 'resisted', '-immune': 'immune'}[kind]] = True
@@ -77,13 +87,21 @@ def make_story(battle, brand, visual_assets=None):
     else:
         detail = f"Both carry Life Orb, boosting damage at a health cost. {a} has {first['ability']}; {b} has {second['ability']}."
     segments.append({'kind': 'builds', 'heading': 'THE LOADOUT', 'health': [1, 1], 'text': detail})
-    # Show a contiguous prefix and the final decisive event. Clearly label omitted turns.
-    selected = events if len(events) <= 3 else [events[0], events[1], events[-1]]
+    # Show two genuine damaging moves by the winner and the decisive event.
+    actual_winner=battle['representative']['winner']
+    winner_side=[a,b].index(actual_winner)
+    damaging=[e for e in events if e['actor']==winner_side and e['damage']>0]
+    opponent=[e for e in events if e['actor']!=winner_side]
+    if len(damaging)>=2 and opponent:
+        indices={events.index(damaging[0]),events.index(damaging[-1]),events.index(opponent[0]),len(events)-1}
+        selected=[events[i] for i in sorted(indices)]
+    else:
+        selected=events if len(events)<=3 else [events[0],events[1],events[-1]]
     previous = None
     for event in selected:
         actor = event['actor']; target = 1 - actor
         names = [a, b]
-        jump = previous is not None and events.index(event) > events.index(previous) + 1
+        jump = events.index(event)>0 and (previous is None or events.index(event)>events.index(previous)+1)
         lead = f"Later, on turn {event['turn']}, " if jump else ''
         if event['miss']:
             text = f"{lead}{names[actor]} uses {event['move']}, but misses. Accuracy can change the result."
@@ -101,6 +119,10 @@ def make_story(battle, brand, visual_assets=None):
                 text += ' The target resists this attack.'
             if event['critical']:
                 text += ' This hit was critical.'
+        if event['recoil'] and event['after'][actor]==0:
+            source=event.get('self_damage_source','follow-up damage')
+            source='Life Orb recoil' if source=='item: Life Orb' else source.removeprefix('item: ')
+            text += f' {names[actor]} then faints from {source}.'
         segments.append({'kind': 'attack', 'heading': event['move'].upper(),
                          'text': text, 'health': event['after'], 'event': event})
         previous = event
@@ -112,6 +134,7 @@ def make_story(battle, brand, visual_assets=None):
     else:
         verdict = f"Across {battle['trials']} seeded simulations, neither side leads. This matchup depends on the builds, the strategy, and the rolls."
         heading = 'NO CLEAR FAVORITE'
+    verdict=f'{actual_winner} wins this example. '+verdict
     segments.append({'kind': 'verdict', 'heading': heading, 'text': verdict,
                      'health': events[-1]['after']})
     title = f'{a} vs {b}: Who Wins This Build Matchup? #Shorts'
@@ -119,7 +142,7 @@ def make_story(battle, brand, visual_assets=None):
                    f"{battle['trials']} seeded simulations; wins: {json.dumps(battle['wins'])}.\n"
                    f"Rules: {battle['format']}, level 100. {battle['assumptions']}\n"
                    f"Strategy: {battle['policy']}\n\n"
-                   'The video shows selected turns from one representative simulation. Percentages are rounded from exact HP, not invented. '
+                   'The video shows selected turns from one simulated battle. A multi-attack example is selected when available; aggregate trial results include all runs. Percentages are rounded from exact HP, not invented. '
                    'This is a conditional game simulation, not a canonical anime result or proof of absolute peak strength.\n\n'
                    'Builds:\n' + '\n'.join(f"{r['species']}: {r['nature']}; {r['ability']}; {r['item']}; EVs {r['evs']}; moves {', '.join(r['moves'])}." for r in battle['builds']) +
                    '\n\nOriginal layout and synthesized narration. No anime clips or franchise music. '

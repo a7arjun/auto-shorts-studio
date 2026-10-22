@@ -28,3 +28,12 @@ test('all catalogue matchups resolve under the documented policy',()=>{
     assert.ok(b.representative.winner,`${BUILDS[i].species} vs ${BUILDS[j].species}`);
   }
 });
+
+test('resolved move types include Pixilate, without changing battle outcomes',()=>{
+  const battle=matchup('Sylveon','Dragonite','type-test',10);
+  const voice=battle.representative.attacks.find(a=>a.move==='Hyper Voice');
+  assert.ok(voice);
+  assert.equal(voice.type,'Fairy');
+  assert.equal(voice.category,'Special');
+  assert.equal(Object.values(battle.wins).reduce((a,b)=>a+b,0),10);
+});

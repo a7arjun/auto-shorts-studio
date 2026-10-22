@@ -1,5 +1,8 @@
 name: Pokemon Review Schedule Integration
 on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/pokemon-review-integration.yml']
   workflow_dispatch:
 permissions:
   contents: write
@@ -45,7 +48,7 @@ jobs:
           path: .cache/pokemon-images
           key: pokemon-images-v1-${{ github.run_id }}
           restore-keys: pokemon-images-v1-
-      - name: Stage the first review batch and verify native release schedules
+      - name: Verify the v2 presentation and replacement release schedules
         run: |
           python -u - <<'PYREVIEW'
           from datetime import datetime, timezone

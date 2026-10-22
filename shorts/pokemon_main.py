@@ -9,6 +9,7 @@ import subprocess
 from .pokemon_publish import Ledger, can_start, today, services, upload_private, check_processed, schedule_existing, verify_public, publication_slot, require_future_slot, parse_time, MissedPublicationSlot, daily_review_slots, require_review_deadline
 from .pokemon_story import make_story
 from .pokemon_research import select_researched_pair, apply_metadata
+from .pokemon_quality import assess_battle, require_battle, require_story, BattleRejected
 
 OUT=Path('output/pokemon')
 
@@ -23,15 +24,22 @@ def choose_pair(state,date):
     return sorted(pairs,key=lambda p:hashlib.sha256((date+'|'.join(p)).encode()).hexdigest())[0]
 
 
-def prepare(pair,key,config,research=None):
+def simulate_pair(pair,key,config):
+    result=subprocess.run(['node','pokemon/simulate.cjs',*pair,key,str(config['trials'])],
+                          check=True,capture_output=True,text=True,timeout=120)
+    return json.loads(result.stdout)
+
+
+def prepare(pair,key,config,research=None,battle=None):
+    battle=battle or simulate_pair(pair,key,config)
+    presentation=require_battle(battle)
     from .pokemon_assets import ensure_characters
     assets=ensure_characters(pair)
     OUT.mkdir(parents=True,exist_ok=True)
-    result=subprocess.run(['node','pokemon/simulate.cjs',*pair,key,str(config['trials'])],
-                          check=True,capture_output=True,text=True,timeout=120)
-    battle=json.loads(result.stdout)
+    (OUT/'presentation_quality.json').write_text(json.dumps(presentation,indent=2))
     (OUT/'battle.json').write_text(json.dumps(battle,indent=2))
     story=make_story(battle,config['brand'],visual_assets=assets)
+    require_story(story,battle)
     if research:
         apply_metadata(story,battle,research)
         (OUT/'research.json').write_text(json.dumps(research,indent=2))
@@ -99,12 +107,32 @@ def run(mode,requested_slot=None):
             raise RuntimeError('Existing OAuth needs youtube.force-ssl authorization for verified public publishing')
     pair=('Charizard','Blastoise') if mode in ('pilot','preview') and not ledger.data['jobs'] else choose_pair(ledger.data,date)
     key='pilot-v1' if mode in ('pilot','preview') else slot['slot']
-    research=None
+    if slot:
+        revisions=sum(j.get('slot')==slot['slot'] for j in ledger.data['jobs'])
+        if revisions:
+            key+='-r'+str(revisions+1)
+    research=None;cache={};rejections=[]
+    def eligible(candidate):
+        identity=tuple(candidate)
+        if identity not in cache:
+            cache[identity]=simulate_pair(candidate,key,config)
+        quality=assess_battle(cache[identity])
+        if not quality['eligible']:
+            rejections.append({'pair':list(candidate),'reasons':quality['reasons'],'wins':quality['wins']})
+        return quality['eligible']
     if mode!='preview':
         pair,research=select_researched_pair(public,json.loads(Path('pokemon/builds.json').read_text()),
-                    ledger.data,key,info['channel_id'],fixed_pair=pair if mode=='pilot' else None)
+                    ledger.data,key,info['channel_id'],fixed_pair=pair if mode=='pilot' else None,
+                    candidate_filter=eligible)
         (OUT/'research.json').write_text(json.dumps(research,indent=2))
-    story=prepare(pair,key,config,research=research)
+    else:
+        # Offline software preview follows the same editorial checks, without a trend claim.
+        selection={'jobs':list(ledger.data['jobs'])}
+        while not eligible(pair):
+            selection['jobs'].append({'pair':list(pair)})
+            pair=choose_pair(selection,key)
+    (OUT/'rejected_matchups.json').write_text(json.dumps(rejections,indent=2))
+    story=prepare(pair,key,config,research=research,battle=cache.get(tuple(pair)))
     if mode=='preview':
         print('Preview ready:',OUT/'short.mp4');return
     if slot:

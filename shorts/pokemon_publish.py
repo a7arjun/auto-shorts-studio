@@ -89,7 +89,7 @@ def can_start(state,config,date,mode,slot=None):
     if not config['publication_enabled'] or not state.get('pilot_verified'):
         return False
     public=[j for j in state['jobs'] if j['mode']=='daily' and j['status'] in ('published','scheduled')]
-    if slot and any(j.get('slot')==slot for j in state['jobs']):
+    if slot and any(j.get('slot')==slot and j['status'] not in ('cancelled','skipped','failed_before_upload','missed_slot') for j in state['jobs']):
         return False
     return (sum(j['date']==date for j in public)<config['daily_limit'] and
             sum(j['date'][:7]==date[:7] for j in public)<config['monthly_limit'])

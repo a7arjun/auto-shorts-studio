@@ -1,4 +1,4 @@
-"""Original data graphics and procedural attack animation; no franchise assets."""
+"""Original data graphics and procedural attack effects alongside sourced mini-icons."""
 import json
 import math
 from pathlib import Path
@@ -6,14 +6,13 @@ import subprocess
 import textwrap
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 from .pokemon_assets import character_image
+from .pokemon_effects import TYPE_COLORS, paint_attack, timing
 
 W, H, FPS = 720, 1280, 24
 BG = '#0a101e'
 WHITE = '#f3f5ff'
 MUTED = '#a4b1ce'
-COLORS = {'Fire':'#ff8951','Water':'#55c7ff','Grass':'#9deb79','Electric':'#ffe373',
-          'Ghost':'#bf9aff','Dragon':'#abacff','Normal':'#d5c9b9','Rock':'#ddbd81',
-          'Bug':'#b5d96b','Fairy':'#ffb2df','Fighting':'#ff9c97','Dark':'#b9a7c6'}
+COLORS = TYPE_COLORS
 FONTROOT = Path('/usr/share/fonts/truetype/dejavu')
 
 
@@ -72,8 +71,8 @@ def frame(battle, story, moment):
     text(d,(360,142),f'{names[0]} vs {names[1]}',32,WHITE,True,True)
     text(d,(360,196),'LEVEL 100  /  BASE FORMS  /  GEN 9 NATIONAL DEX',13,MUTED,False,True)
     event=seg.get('event'); health=seg['health'].copy()
+    phase,mix=timing(seg,local)
     if event:
-        mix=max(0,min(1,(progress-.35)/.3))
         health=[before+(after-before)*mix for before,after in zip(event['before'],event['after'])]
     colors=[COLORS.get(types[0],'#b5a3ff') for types in battle['types']]
     for side,x in enumerate([38,375]):
@@ -91,10 +90,10 @@ def frame(battle, story, moment):
         text(d,(x+153,474),f'{round(hp*100)}% HP',15,color,True,True)
     heading=seg['heading']
     lines(d,(360,541),heading,size=28,width=30,bold=True,center=True)
-    # Arena markers and travelling energy pulse.
+    # Arena, characters and resolved-move elemental effects.
     for side,x in enumerate([164,556]):
         shake=0
-        if event and side!=event['actor'] and .55<progress<.7:
+        if event and side!=event['actor'] and phase is not None and .72<phase<.96 and not event['miss'] and not event['immune']:
             shake=math.sin(moment*85)*7
         y=755+math.sin(moment*2+side)*5
         d.ellipse((x-90,824,x+90,850),fill='#1a2840',outline=colors[side],width=2)
@@ -105,15 +104,18 @@ def frame(battle, story, moment):
             image.paste(character,(round(x+shake-character.width/2),round(846-character.height+math.sin(moment*2+side)*5)),character)
         else:
             emblem(d,x+shake,y,battle['types'][side][0],colors[side],48)
-    text(d,(360,738),'VS',21,MUTED,True,True)
-    if event and .2<progress<.7:
-        p=(progress-.2)/.5; actor=event['actor']
-        left,right=(164,556) if actor==0 else (556,164)
-        x=left+(right-left)*p; y=755-math.sin(p*math.pi)*45
-        for radius in [23,15,7]:
-            d.ellipse((x-radius,y-radius,x+radius,y+radius),fill=colors[actor])
+    if event:
+        actor=event['actor']
+        start,end=((213,755),(507,755)) if actor==0 else ((507,755),(213,755))
+        image=paint_attack(image,event,phase,start,end)
+        d=ImageDraw.Draw(image)
+        text(d,(360,864),event.get('move_type','').upper()+' ATTACK',14,TYPE_COLORS.get(event.get('move_type'),'#ffffff'),True,True)
         if event['miss']:
-            text(d,(360,864),'MISSED',20,'#ffd278',True,True)
+            text(d,(360,837),'MISSED',18,'#ffd278',True,True)
+        elif event['immune']:
+            text(d,(360,837),'IMMUNE',18,'#d2c6ff',True,True)
+    else:
+        text(d,(360,738),'VS',21,MUTED,True,True)
     if seg['kind']=='rules':
         lines(d,(360,878),'NO MEGA / NO TERA / NO Z-MOVES',16,40,MUTED,center=True)
     elif seg['kind']=='verdict':

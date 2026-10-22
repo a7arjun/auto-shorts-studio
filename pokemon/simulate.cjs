@@ -54,6 +54,15 @@ function choice(battle, side) {
 }
 function run(a,b,seed) {
   const battle = new Battle({formatid:FORMAT, seed, send:()=>{}});
+  const attacks=[];
+  const addMove=battle.addMove;
+  battle.addMove=function(...args) {
+    if(args[0]==='move' && this.activeMove) {
+      attacks.push({actor:args[1].side.n,move:args[2],type:this.activeMove.type,
+        category:this.activeMove.category,turn:this.turn});
+    }
+    return addMove.apply(this,args);
+  };
   battle.setPlayer('p1',{name:a.species,team:[a]});
   battle.setPlayer('p2',{name:b.species,team:[b]});
   if(battle.requestState === 'teampreview') battle.makeChoices('team 1','team 1');
@@ -64,9 +73,28 @@ function run(a,b,seed) {
     if(errors.length) throw new Error(errors.join('\n'));
   }
   const result={winner:battle.ended ? battle.winner : null,turns:battle.turn,
-    log:cleanLog(battle.log),seed};
+    log:cleanLog(battle.log),seed,attacks};
   battle.destroy();
   return result;
+}
+function exampleQuality(result, first, second) {
+  const attempts=[0,0], successful=[0,0];
+  let current=null;
+  for(const line of result.log) {
+    const parts=line.split('|');
+    if(parts[1]==='move') {
+      const actor=parts[2].startsWith('p1')?0:1;
+      attempts[actor]++;
+      current={actor,counted:false};
+    } else if(parts[1]==='-damage' && current && !current.counted &&
+              !parts.slice(4).some(p=>p.includes('[from]'))) {
+      const target=parts[2].startsWith('p1')?0:1;
+      if(target!==current.actor) { successful[current.actor]++;current.counted=true; }
+    }
+  }
+  const side=result.winner===first?0:(result.winner===second?1:null);
+  return {attempts,successful,winner_side:side,
+    eligible:side!==null && successful[side]>=2 && attempts[1-side]>=1};
 }
 function matchup(first,second,key,trials=100) {
   if(first===second) throw new Error('Distinct species required');
@@ -79,14 +107,20 @@ function matchup(first,second,key,trials=100) {
     if(result.winner) wins[result.winner]++; else wins.draws++;
   }
   const favorite=wins[first]===wins[second]?null:(wins[first]>wins[second]?first:second);
-  const candidates=results.filter(r=>r.winner===favorite);
-  representative=(candidates.length?candidates:results).sort((x,y)=>x.turns-y.turns)[Math.floor((candidates.length||results.length)/2)];
+  const eligible=results.filter(r=>exampleQuality(r,first,second).eligible);
+  const favored=eligible.filter(r=>r.winner===favorite);
+  const candidates=favored.length?favored:(eligible.length?eligible:results.filter(r=>r.winner===favorite));
+  const pool=(candidates.length?candidates:results).sort((x,y)=>x.turns-y.turns);
+  representative=pool[Math.floor(pool.length/2)];
+  const presentation={...exampleQuality(representative,first,second),
+    eligible_examples:eligible.length,both_sides_won:wins[first]>0&&wins[second]>0,
+    selection:'Prefer a multi-attack winning example of the overall favorite; otherwise a qualifying example of the other winner. Aggregate trial outcomes are unchanged.'};
   return {schema:1,key,format:FORMAT,generation:9,level:100,policy:POLICY,
     assumptions:'Fixed legal offensive builds; 31 IVs; 510 or fewer EVs; one item and ability; neutral starting field; abilities may change weather. These builds are not a proof of each species\u2019 absolute peak.',
     builds:[a,b],types:[Dex.species.get(first).types,Dex.species.get(second).types],
-    trials,wins,favorite,representative,simulator_version:require('pokemon-showdown/package.json').version};
+    trials,wins,favorite,representative,presentation,simulator_version:require('pokemon-showdown/package.json').version};
 }
-module.exports={build,matchup,run,cleanLog,BUILDS,choice};
+module.exports={build,matchup,run,cleanLog,BUILDS,choice,exampleQuality};
 if(require.main===module) {
   const [a='Charizard',b='Blastoise',key='pilot-v1',n='100']=process.argv.slice(2);
   process.stdout.write(JSON.stringify(matchup(a,b,key,Number(n)),null,2)+'\n');
