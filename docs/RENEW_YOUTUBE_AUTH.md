@@ -2,6 +2,8 @@
 
 Use the existing Google Cloud project and OAuth client used by `YT_HI_CLIENT_ID`. This reconnects the former Bollywood channel for the English Pokemon pipeline. Do not use the retired Bollywood test workflow.
 
+If Google disables **Publish app** because Branding is incomplete, first follow [Enable the separate app information site](ENABLE_APP_SITE.md).
+
 1. Open https://console.cloud.google.com/auth/audience and select the existing project. Check the publishing status. External **Testing** grants for YouTube scopes expire after seven days. For durable personal operation, use **In production** before generating the replacement token. If Google presents verification requirements, follow them; changing status is not the same as completing verification and does not guarantee a non-expiring token. Do not delete the project or create another channel.
 2. Open https://console.cloud.google.com/auth/clients and select the existing **Web application** client. Ensure its authorized redirect URIs include exactly `https://developers.google.com/oauthplayground` (no trailing slash). Save if you add it. Keep client credentials in the provider UI and secret store.
 3. Open https://developers.google.com/oauthplayground/ . Gear/settings: enable **Use your own OAuth credentials** and enter the matching client ID and secret. Keep **Access type: Offline**, **Force prompt: Consent Screen**, Google endpoints and server-side flow. Using Playground's default client instead can cause automatic token revocation after 24 hours.
