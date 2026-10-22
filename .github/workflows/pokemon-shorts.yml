@@ -95,6 +95,11 @@ jobs:
         with:
           path: .cache/kokoro
           key: kokoro-onnx-v1-voice-files-1
+      - uses: actions/cache@v4
+        with:
+          path: .cache/pokemon-images
+          key: pokemon-images-v1-${{ github.run_id }}
+          restore-keys: pokemon-images-v1-
       - name: Generate and run selected operation
         env:
           MODE: ${{ needs.plan.outputs.mode }}

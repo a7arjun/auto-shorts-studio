@@ -4,7 +4,7 @@ import math
 from pathlib import Path
 import subprocess
 import textwrap
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 from .pokemon_assets import character_image
 
 W, H, FPS = 720, 1280, 24
@@ -100,6 +100,8 @@ def frame(battle, story, moment):
         d.ellipse((x-90,824,x+90,850),fill='#1a2840',outline=colors[side],width=2)
         character=character_image(names[side])
         if character is not None:
+            if side==0:
+                character=ImageOps.mirror(character)
             image.paste(character,(round(x+shake-character.width/2),round(846-character.height+math.sin(moment*2+side)*5)),character)
         else:
             emblem(d,x+shake,y,battle['types'][side][0],colors[side],48)
@@ -134,7 +136,7 @@ def frame(battle, story, moment):
     text(d,(360,1150),'CONDITIONAL RESULT. BUILDS & RULES IN DESCRIPTION.',13,MUTED,False,True)
     d.rounded_rectangle((38,1200,682,1206),radius=3,fill='#26334b')
     d.rounded_rectangle((38,1200,38+644*min(1,moment/story['duration']),1206),radius=3,fill='#bca7ff')
-    text(d,(38,1230),'ORIGINAL GRAPHICS / SIMULATED GAMEPLAY',12,MUTED)
+    text(d,(38,1230),'SIMULATED BATTLE / INDEPENDENT ANALYSIS',12,MUTED)
     return image
 
 

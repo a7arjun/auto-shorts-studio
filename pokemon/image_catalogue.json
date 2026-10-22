@@ -1,0 +1,501 @@
+{
+  "version": 1,
+  "notes": "API-discovered fallback icon URLs for the starting roster. These are source pointers, not a grant of image rights. Live PokeAPI is the primary resolver.",
+  "entries": {
+    "Charizard": {
+      "id": 6,
+      "name": "charizard",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/6.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/6.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/6.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/6.png"
+            }
+          }
+        }
+      }
+    },
+    "Blastoise": {
+      "id": 9,
+      "name": "blastoise",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/9.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/9.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/9.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/9.png"
+            }
+          }
+        }
+      }
+    },
+    "Venusaur": {
+      "id": 3,
+      "name": "venusaur",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/3.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/3.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/3.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/3.png"
+            }
+          }
+        }
+      }
+    },
+    "Pikachu": {
+      "id": 25,
+      "name": "pikachu",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/25.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/25.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/25.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/25.png"
+            }
+          }
+        }
+      }
+    },
+    "Raichu": {
+      "id": 26,
+      "name": "raichu",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/26.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/26.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/26.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/26.png"
+            }
+          }
+        }
+      }
+    },
+    "Gengar": {
+      "id": 94,
+      "name": "gengar",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/94.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/94.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/94.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/94.png"
+            }
+          }
+        }
+      }
+    },
+    "Gyarados": {
+      "id": 130,
+      "name": "gyarados",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/130.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/130.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/130.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/130.png"
+            }
+          }
+        }
+      }
+    },
+    "Dragonite": {
+      "id": 149,
+      "name": "dragonite",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/149.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/149.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/149.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/149.png"
+            }
+          }
+        }
+      }
+    },
+    "Lucario": {
+      "id": 448,
+      "name": "lucario",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/448.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/448.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/448.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/448.png"
+            }
+          }
+        }
+      }
+    },
+    "Garchomp": {
+      "id": 445,
+      "name": "garchomp",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/445.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/445.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/445.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/445.png"
+            }
+          }
+        }
+      }
+    },
+    "Snorlax": {
+      "id": 143,
+      "name": "snorlax",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/143.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/143.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/143.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/143.png"
+            }
+          }
+        }
+      }
+    },
+    "Tyranitar": {
+      "id": 248,
+      "name": "tyranitar",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/248.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/248.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/248.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/248.png"
+            }
+          }
+        }
+      }
+    },
+    "Scizor": {
+      "id": 212,
+      "name": "scizor",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/212.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/212.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/212.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/212.png"
+            }
+          }
+        }
+      }
+    },
+    "Greninja": {
+      "id": 658,
+      "name": "greninja",
+      "sprites": {
+        "versions": {
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/658.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/658.png"
+            }
+          }
+        }
+      }
+    },
+    "Sylveon": {
+      "id": 700,
+      "name": "sylveon",
+      "sprites": {
+        "versions": {
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/700.png"
+              }
+            }
+          },
+          "generation-viii": {
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/700.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/700.png"
+            }
+          }
+        }
+      }
+    },
+    "Arcanine": {
+      "id": 59,
+      "name": "arcanine",
+      "sprites": {
+        "versions": {
+          "generation-viii": {
+            "brilliant-diamond-shining-pearl": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/brilliant-diamond-shining-pearl/icons/59.png"
+              }
+            },
+            "sword-shield": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/sword-shield/icons/59.png"
+              }
+            }
+          },
+          "generation-ix": {
+            "scarlet-violet": {
+              "icons": {
+                "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-ix/scarlet-violet/icons/59.png"
+              }
+            }
+          },
+          "generation-vii": {
+            "icons": {
+              "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/59.png"
+            }
+          }
+        }
+      }
+    }
+  }
+}

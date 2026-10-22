@@ -48,7 +48,7 @@ def battle_events(battle):
     return events
 
 
-def make_story(battle, brand):
+def make_story(battle, brand, visual_assets=None):
     a, b = [row['species'] for row in battle['builds']]
     events = battle_events(battle)
     if not events or not battle['representative']['winner']:
@@ -122,10 +122,12 @@ def make_story(battle, brand):
                    'The video shows selected turns from one representative simulation. Percentages are rounded from exact HP, not invented. '
                    'This is a conditional game simulation, not a canonical anime result or proof of absolute peak strength.\n\n'
                    'Builds:\n' + '\n'.join(f"{r['species']}: {r['nature']}; {r['ability']}; {r['item']}; EVs {r['evs']}; moves {', '.join(r['moves'])}." for r in battle['builds']) +
-                   '\n\nOriginal graphics and synthesized narration. No anime clips, official artwork or franchise music. '
+                   '\n\nOriginal layout and synthesized narration. No anime clips or franchise music. '
                    'Not affiliated with or endorsed by The Pokemon Company, Nintendo, Game Freak or Creatures.\n'
                    'Simulator: Pokemon Showdown (MIT); damage calculator: @smogon/calc (MIT); voice: Kokoro (Apache-2.0 weights).\n'
                    '#Pokemon #PokemonBattle #Shorts')
+    if visual_assets:
+        description += '\n\nPokemon mini-icons retrieved through PokeAPI; underlying character artwork remains with its respective rights holders.\nCharacter image sources:\n' + '\n'.join(a['species']+': '+a['source_url'] for a in visual_assets)
     return {'title': title[:100], 'description': description, 'segments': segments,
             'tags': ['Pokemon', 'Pokemon battle', a, b, 'game mechanics', 'battle simulation'],
-            'language': 'en', 'brand': brand}
+            'language': 'en', 'brand': brand, 'visual_assets': visual_assets or []}

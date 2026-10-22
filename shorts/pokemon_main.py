@@ -22,18 +22,16 @@ def choose_pair(state,date):
     return sorted(pairs,key=lambda p:hashlib.sha256((date+'|'.join(p)).encode()).hexdigest())[0]
 
 
-def prepare(pair,key,config,require_images=False):
-    if require_images and config.get('require_character_images',False):
-        from .pokemon_assets import character_image
-        missing=[name for name in pair if character_image(name) is None]
-        if missing:
-            raise RuntimeError('Chibi character images pending for: '+', '.join(missing))
+def prepare(pair,key,config):
+    from .pokemon_assets import ensure_characters
+    assets=ensure_characters(pair)
     OUT.mkdir(parents=True,exist_ok=True)
     result=subprocess.run(['node','pokemon/simulate.cjs',*pair,key,str(config['trials'])],
                           check=True,capture_output=True,text=True,timeout=120)
     battle=json.loads(result.stdout)
     (OUT/'battle.json').write_text(json.dumps(battle,indent=2))
-    story=make_story(battle,config['brand'])
+    story=make_story(battle,config['brand'],visual_assets=assets)
+    (OUT/'assets.json').write_text(json.dumps(assets,indent=2))
     from .pokemon_voice import synthesize
     from .pokemon_render import render
     synthesize(story,OUT/'voice.wav',config['voice'],config['voice_speed'])
@@ -79,7 +77,7 @@ def run(mode):
             raise RuntimeError('Existing OAuth needs youtube.force-ssl authorization for verified public publishing')
     pair=('Charizard','Blastoise') if mode in ('pilot','preview') and not ledger.data['jobs'] else choose_pair(ledger.data,date)
     key='pilot-v1' if mode in ('pilot','preview') else date+'-'+'-'.join(pair).lower()
-    story=prepare(pair,key,config,require_images=mode!='preview')
+    story=prepare(pair,key,config)
     if mode=='preview':
         print('Preview ready:',OUT/'short.mp4');return
     job={'key':key,'pair':list(pair),'mode':mode,'date':date,'status':'uploading',
