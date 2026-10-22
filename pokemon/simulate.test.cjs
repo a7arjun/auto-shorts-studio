@@ -1,0 +1,30 @@
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const {BUILDS,build,matchup,cleanLog}=require('./simulate.cjs');
+
+test('every published build is legal in the selected generation and format',()=>{
+  for(const row of BUILDS) {
+    const set=build(row.species);
+    assert.equal(set.level,100);
+    assert.equal(set.moves.length,4);
+    assert.ok(Object.values(set.evs).reduce((a,b)=>a+b,0)<=510);
+  }
+});
+test('repeat seed gives same outcomes and damage events',()=>{
+  const a=matchup('Charizard','Blastoise','regression',20);
+  const b=matchup('Charizard','Blastoise','regression',20);
+  assert.deepEqual(a.wins,b.wins);
+  assert.deepEqual(a.representative.log.filter(l=>!l.startsWith('|t:|')),
+                   b.representative.log.filter(l=>!l.startsWith('|t:|')));
+  assert.equal(a.wins.Charizard+a.wins.Blastoise+a.wins.draws,20);
+  assert.ok(a.representative.log.some(l=>l.startsWith('|win|')));
+});
+test('exact HP events retained once, excluding public rounded duplicate',()=>{
+  assert.deepEqual(cleanLog(['|split|p1','|-damage|p1a: A|33/100','|-damage|p1a: A|34/100']),['|-damage|p1a: A|33/100']);
+});
+test('all catalogue matchups resolve under the documented policy',()=>{
+  for(let i=0;i<BUILDS.length;i++) for(let j=i+1;j<BUILDS.length;j++) {
+    const b=matchup(BUILDS[i].species,BUILDS[j].species,'smoke',1);
+    assert.ok(b.representative.winner,`${BUILDS[i].species} vs ${BUILDS[j].species}`);
+  }
+});

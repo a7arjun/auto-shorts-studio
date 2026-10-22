@@ -1,0 +1,100 @@
+name: English Pokemon Battle Shorts
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pokemon/**'
+      - 'shorts/pokemon_*.py'
+      - 'tests/test_pokemon*.py'
+      - 'requirements-pokemon.txt'
+      - 'package*.json'
+      - '.github/workflows/pokemon-shorts.yml'
+  schedule:
+    - cron: '47 12 * * *' # 18:17 IST; GitHub may delay scheduled jobs.
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Preview, connection check, one-time private pilot or daily public job
+        type: choice
+        options: [preview, probe, pilot, daily]
+        default: preview
+permissions:
+  contents: write
+concurrency:
+  group: pokemon-channel-single-flight
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      YT_HI_CLIENT_ID: ${{ secrets.YT_HI_CLIENT_ID }}
+      YT_HI_CLIENT_SECRET: ${{ secrets.YT_HI_CLIENT_SECRET }}
+      YT_HI_REFRESH_TOKEN: ${{ secrets.YT_HI_REFRESH_TOKEN }}
+      YOUTUBE_DATA_API_KEY: ${{ secrets.YOUTUBE_DATA_API_KEY }}
+      GITHUB_TOKEN: ${{ github.token }}
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      ONNX_PROVIDER: CPUExecutionProvider
+      ORT_DISABLE_TELEMETRY: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Select operation
+        id: operation
+        env:
+          EVENT: ${{ github.event_name }}
+          REQUESTED: ${{ inputs.mode }}
+        run: |
+          python - <<'PY'
+          import json,os
+          config=json.load(open('data/pokemon_channel.json'))
+          event=os.environ['EVENT']
+          mode='pilot' if event=='push' else ('daily' if event=='schedule' else os.getenv('REQUESTED','preview'))
+          skip=event=='schedule' and not config['publication_enabled']
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write(f'mode={mode}\nskip={str(skip).lower()}\n')
+          print('Operation:',mode,'; disabled schedule:',skip)
+          PY
+      - uses: actions/setup-python@v5
+        if: steps.operation.outputs.skip != 'true'
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-pokemon.txt
+      - uses: actions/setup-node@v4
+        if: steps.operation.outputs.skip != 'true'
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install free rendering and speech tools
+        if: steps.operation.outputs.skip != 'true'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core libsndfile1
+          python -m pip install -r requirements-pokemon.txt
+          npm ci --omit=optional
+      - name: Validate mechanics, metadata and publishing guards
+        if: steps.operation.outputs.skip != 'true'
+        run: |
+          npm test
+          python -m unittest discover -s tests -p 'test_*.py'
+      - uses: actions/cache@v4
+        if: steps.operation.outputs.skip != 'true'
+        with:
+          path: .cache/kokoro
+          key: kokoro-onnx-v1-voice-files-1
+      - name: Generate and run selected operation
+        if: steps.operation.outputs.skip != 'true'
+        env:
+          MODE: ${{ steps.operation.outputs.mode }}
+        run: python -m shorts.pokemon_main --mode "$MODE"
+      - name: Save prototype, battle evidence and connection result
+        if: always() && steps.operation.outputs.skip != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: english-pokemon-pilot-${{ github.run_id }}
+          path: output/pokemon/
+          retention-days: 2
+          if-no-files-found: warn

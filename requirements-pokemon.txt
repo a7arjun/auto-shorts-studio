@@ -1,0 +1,5 @@
+-r requirements.txt
+Pillow==11.3.0
+kokoro-onnx==0.6.1
+soundfile==0.13.1
+onnxruntime==1.31.0

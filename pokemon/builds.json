@@ -1,0 +1,18 @@
+[
+  {"species":"Charizard","ability":"Blaze","item":"Life Orb","nature":"Timid","evs":{"spa":252,"spd":4,"spe":252},"moves":["Flamethrower","Air Slash","Dragon Pulse","Focus Blast"]},
+  {"species":"Blastoise","ability":"Torrent","item":"Assault Vest","nature":"Modest","evs":{"hp":252,"spa":252,"spd":4},"moves":["Hydro Pump","Ice Beam","Aura Sphere","Dark Pulse"]},
+  {"species":"Venusaur","ability":"Overgrow","item":"Life Orb","nature":"Modest","evs":{"hp":252,"spa":252,"spd":4},"moves":["Giga Drain","Sludge Bomb","Earth Power","Energy Ball"]},
+  {"species":"Pikachu","ability":"Static","item":"Light Ball","nature":"Timid","evs":{"spa":252,"spd":4,"spe":252},"moves":["Thunderbolt","Surf","Grass Knot","Discharge"]},
+  {"species":"Raichu","ability":"Static","item":"Life Orb","nature":"Timid","evs":{"spa":252,"spd":4,"spe":252},"moves":["Thunderbolt","Surf","Grass Knot","Focus Blast"]},
+  {"species":"Gengar","ability":"Cursed Body","item":"Life Orb","nature":"Timid","evs":{"spa":252,"spd":4,"spe":252},"moves":["Shadow Ball","Sludge Bomb","Focus Blast","Thunderbolt"]},
+  {"species":"Gyarados","ability":"Intimidate","item":"Life Orb","nature":"Adamant","evs":{"atk":252,"spd":4,"spe":252},"moves":["Waterfall","Earthquake","Ice Fang","Crunch"]},
+  {"species":"Dragonite","ability":"Multiscale","item":"Life Orb","nature":"Adamant","evs":{"atk":252,"spd":4,"spe":252},"moves":["Dragon Claw","Extreme Speed","Earthquake","Fire Punch"]},
+  {"species":"Lucario","ability":"Inner Focus","item":"Life Orb","nature":"Jolly","evs":{"atk":252,"spd":4,"spe":252},"moves":["Close Combat","Meteor Mash","Extreme Speed","Ice Punch"]},
+  {"species":"Garchomp","ability":"Rough Skin","item":"Life Orb","nature":"Jolly","evs":{"atk":252,"spd":4,"spe":252},"moves":["Earthquake","Dragon Claw","Stone Edge","Fire Fang"]},
+  {"species":"Snorlax","ability":"Thick Fat","item":"Assault Vest","nature":"Adamant","evs":{"hp":252,"atk":252,"spd":4},"moves":["Body Slam","Earthquake","Crunch","Ice Punch"]},
+  {"species":"Tyranitar","ability":"Sand Stream","item":"Assault Vest","nature":"Adamant","evs":{"hp":252,"atk":252,"spd":4},"moves":["Stone Edge","Crunch","Earthquake","Ice Punch"]},
+  {"species":"Scizor","ability":"Technician","item":"Life Orb","nature":"Adamant","evs":{"hp":252,"atk":252,"spd":4},"moves":["Bullet Punch","X-Scissor","Close Combat","Iron Head"]},
+  {"species":"Greninja","ability":"Torrent","item":"Life Orb","nature":"Timid","evs":{"spa":252,"spd":4,"spe":252},"moves":["Hydro Pump","Dark Pulse","Ice Beam","Grass Knot"]},
+  {"species":"Sylveon","ability":"Pixilate","item":"Assault Vest","nature":"Modest","evs":{"hp":252,"spa":252,"spd":4},"moves":["Hyper Voice","Moonblast","Shadow Ball","Psyshock"]},
+  {"species":"Arcanine","ability":"Intimidate","item":"Life Orb","nature":"Adamant","evs":{"atk":252,"spd":4,"spe":252},"moves":["Flare Blitz","Extreme Speed","Wild Charge","Close Combat"]}
+]

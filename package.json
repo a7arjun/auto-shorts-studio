@@ -1,0 +1,30 @@
+{
+  "name": "auto-shorts-studio",
+  "version": "1.0.0",
+  "description": "Fully automated, low-cost YouTube Shorts pipeline using GitHub Actions, Python and FFmpeg.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node --test pokemon/*.test.cjs",
+    "simulate": "node pokemon/simulate.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a7arjun/auto-shorts-studio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/a7arjun/auto-shorts-studio/issues"
+  },
+  "homepage": "https://github.com/a7arjun/auto-shorts-studio#readme",
+  "dependencies": {
+    "@smogon/calc": "0.12.0",
+    "pokemon-showdown": "0.11.11"
+  },
+  "private": true
+}

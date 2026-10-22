@@ -1,0 +1,17 @@
+{
+  "brand": "Battle Logic Lab",
+  "language": "en-US",
+  "credential_prefix": "YT_HI",
+  "reference_video_id": "1uvpsNPF63A",
+  "voice": "am_michael",
+  "voice_speed": 1.05,
+  "daily_limit": 1,
+  "monthly_limit": 30,
+  "trials": 100,
+  "made_for_kids": false,
+  "audience_rationale": "General audience competitive game analysis for teen and adult players; statistical comparisons, legal builds and conditional results. No child-directed songs, stories, thumbnails or calls to children.",
+  "visual_mode": "original_data_graphics",
+  "paid_apis": false,
+  "publication_enabled": false,
+  "description": "English Pokemon battle analysis: legal builds, simulated matchups and the mechanics behind the result. Independent fan analysis; not affiliated with or endorsed by The Pokemon Company, Nintendo, Game Freak or Creatures. Results depend on the stated rules and strategy."
+}

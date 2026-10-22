@@ -10,3 +10,5 @@ output/
 *.token
 client_secret*.json
 credentials*.json
+
+node_modules/

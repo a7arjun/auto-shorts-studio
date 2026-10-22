@@ -1,8 +1,7 @@
-# Auto Shorts Studio
+# Battle Logic Lab — automated English Pokemon Shorts
 
-Fully automated, low-cost YouTube Shorts pipeline using GitHub Actions, Python and FFmpeg.
+Free CPU narration, original animated graphics and game-mechanics simulations, reusing the existing YouTube channel connection.
 
-## Project status
-The repository is being configured. The pipeline will use movie excerpts only from sources with appropriate reuse rights; no scraping or reposting of unauthorized modern movie clips.
+See [setup, operating rules and current limitations](docs/POKEMON_CHANNEL.md). Code and publishing state are separate from secrets. The public scheduler remains gated until the private pilot and account connection are verified.
 
-Live YouTube publishing will remain disabled until OAuth credentials and source rights are configured. The workflow itself is designed to run without per-video approvals.
+The previous movie workflows are preserved under `docs/legacy-workflows/` and cannot run. Existing videos and history are untouched.
