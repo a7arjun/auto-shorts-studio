@@ -110,3 +110,13 @@ To stop an already scheduled video directly, open its YouTube Studio edit page a
 `data/pokemon_control.json` supports an explicit `publish` of the existing verified first pilot or `cancel` of a recorded video. Change `request_id`, `action` and `video_id` for the operator's current request; the publication-control workflow updates that existing video ID, checks ownership and verifies the result. It never calls videos.insert. To stop all queued releases, cancel every scheduled video and disable new publication. Scheduled/cancelled slots retain their records to avoid replacement duplicates.
 
 Shorts eligibility is determined by the uploaded media and YouTube's classification, not a separate upload endpoint or a title hashtag. The publication integration check reads owner file details and requires a square/vertical file no longer than three minutes. This is media eligibility evidence, not an API Shorts classification flag. The current pilot is approximately 55 seconds at 720×1280.
+
+
+## Verified rollout on 22 October 2026
+
+- Renewed OAuth refresh, exact destination channel ownership and `youtube.force-ssl` scope passed.
+- First pilot `p54dCIM9LOY` was processed privately, then made public at the operator's request. Owner media details confirmed 720×1280 and approximately 54.6 seconds; public API visibility was verified.
+- One-time review integration staged two private videos for 23 October: `_kepcZR8V6g` (Lucario vs Greninja) at 10:00 IST and `_-EW1-ZZuAc` (Charizard vs Pikachu) at 22:00 IST. Each native `publishAt` was verified before marking its ledger row scheduled. The initial status read lag was recovered without duplicate uploads; verification now uses bounded retries.
+- A daily 09:30 AM IST reminder was created to display recorded previews, publication times and direct Studio cancellation links, starting 23 October.
+- The date-fixed review integration workflow is now manual-only with non-interrupting concurrency. It is not an ongoing production host.
+- **Still required for generation after the staged day:** a connected production host. `publication_enabled` expresses the operator's authorization; `production_runner_ready` remains false. GitHub scheduled production is skipped before queuing until that actual resource is ready. Already accepted native YouTube schedules are independent of this gate.
