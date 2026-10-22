@@ -1,0 +1,58 @@
+name: Pokemon Private Integration Pilot
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/pokemon-private-pilot.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: pokemon-channel-single-flight
+  cancel-in-progress: false
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      YT_HI_CLIENT_ID: ${{ secrets.YT_HI_CLIENT_ID }}
+      YT_HI_CLIENT_SECRET: ${{ secrets.YT_HI_CLIENT_SECRET }}
+      YT_HI_REFRESH_TOKEN: ${{ secrets.YT_HI_REFRESH_TOKEN }}
+      YOUTUBE_DATA_API_KEY: ${{ secrets.YOUTUBE_DATA_API_KEY }}
+      GITHUB_TOKEN: ${{ github.token }}
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      ONNX_PROVIDER: CPUExecutionProvider
+      ORT_DISABLE_TELEMETRY: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements-pokemon.txt
+      - uses: actions/setup-node@v4
+        with: {node-version: '22', cache: npm}
+      - name: Install integration-test rendering and speech tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core libsndfile1
+          python -m pip install -r requirements-pokemon.txt
+          npm ci --omit=optional
+      - uses: actions/cache@v4
+        with: {path: .cache/kokoro, key: kokoro-onnx-v1-voice-files-1}
+      - uses: actions/cache@v4
+        with:
+          path: .cache/pokemon-images
+          key: pokemon-images-v1-${{ github.run_id }}
+          restore-keys: pokemon-images-v1-
+      - name: Research, render, upload privately and verify processing
+        run: python -m shorts.pokemon_main --mode pilot
+      - name: Save private integration-test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pokemon-private-pilot-${{ github.run_id }}
+          path: output/pokemon/
+          retention-days: 2
+          if-no-files-found: warn
