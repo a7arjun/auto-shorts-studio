@@ -19,7 +19,7 @@ def today():
 class Ledger:
     def __init__(self, path=STATE_PATH):
         self.path=path; self.sha=None
-        self.remote=os.getenv('GITHUB_ACTIONS')=='true'
+        self.remote=os.getenv('GITHUB_ACTIONS')=='true' or os.getenv('POKEMON_REMOTE_STATE')=='true'
         self.token=os.getenv('GITHUB_TOKEN')
         self.repository=os.getenv('GITHUB_REPOSITORY','a7arjun/auto-shorts-studio')
         if self.remote:

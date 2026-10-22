@@ -27,7 +27,7 @@ Linux packages: ffmpeg, fonts-dejavu-core, libsndfile1. Model files download onc
 
 ## Launch and ongoing operation
 
-`pokemon-shorts.yml` runs a private pilot when implementation files change on main. It also has a daily 12:47 UTC / 18:17 IST trigger. Scheduled publication is initially disabled by `publication_enabled: false`, until a successful rendered pilot and YouTube connection are checked. One daily public upload, maximum 30 per calendar month (IST), is enforced in code. The exact schedule may be delayed by GitHub. Public repository scheduled workflows can be disabled after 60 days of repository inactivity; successful publishing ledger commits normally provide activity, but provider/auth/account failures can still need maintenance.
+`pokemon-shorts.yml` renders a software integration preview when implementation files change on main; the private YouTube pilot is a separate one-time operation. It also has a daily 12:47 UTC / 18:17 IST trigger, with production dispatched only to a separately configured Linux runner labelled `pokemon-renderer`. GitHub-hosted runners are used only for software tests and the one-time private integration pilot. They are not offered as indefinite free production media hosting. Scheduled publication is initially disabled by `publication_enabled: false`, until a successful rendered pilot and YouTube connection are checked. One daily public upload, maximum 30 per calendar month (IST), is enforced in code. The exact schedule may be delayed by GitHub. A suitable production runner has not yet been connected. An existing personal always-on computer can run it without a hosting subscription, but consumes electricity and internet. A cloud runner needs a separate account and its own free-tier/billing verification; no paid host has been enabled. Public repository scheduled workflows can be disabled after 60 days of repository inactivity; successful publishing ledger commits normally provide activity, but provider/auth/account failures can still need maintenance.
 
 Existing secret names: `YT_HI_CLIENT_ID`, `YT_HI_CLIENT_SECRET`, `YT_HI_REFRESH_TOKEN`, `YOUTUBE_DATA_API_KEY`. `GITHUB_TOKEN` is the workflow's automatic repository token, used to persist the upload ledger with compare-and-swap. No new paid account is required.
 
@@ -53,3 +53,17 @@ Channel branding draft: **Battle Logic Lab**. Description is in `data/pokemon_ch
 No claim is made that the simulator's software licence licenses Pokemon artwork or anime. No external footage permission is assumed by this implementation.
 
 ONNX telemetry is disabled before initialization with `ORT_DISABLE_TELEMETRY=1` and the runtime API. Voice-model files are SHA-256 pinned.
+
+## Verified setup status — 22 October 2026
+
+- Local complete pilot rendered successfully: 51.875 seconds, 720x1280, H.264/AAC.
+- 4 Node tests and 45 Python tests passed locally and on GitHub. All 120 starting pairs resolved in a one-trial mechanics smoke test.
+- GitHub integration run 39802221855 reached Google OAuth refresh and stopped with `invalid_grant: Token has been expired or revoked`. No new upload was created; no publishing reservation was written.
+- YouTube Studio requires Google sign-in in the available browser. Visible channel branding has not been changed. `Battle Logic Lab` is a prepared brand, not a claimed new channel.
+- Reauthorize the existing channel once with `youtube.force-ssl` (or `youtube`), using an appropriate durable OAuth configuration. Store the new refresh token securely in `YT_HI_REFRESH_TOKEN`; never send it in chat. Client ID/secret need replacing only if the OAuth client changes.
+- Production hosting is not connected. The software is free; zero-cost hosted production has not been established. See GitHub Actions terms: https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features.
+- Automatic public publishing remains disabled until authentication, a private processing check and production hosting are verified.
+
+## Standalone worker
+
+`Dockerfile.pokemon` (not yet built/tested as a container) packages the daily worker independently of GitHub-hosted compute. Build it with `docker build -f Dockerfile.pokemon -t pokemon-shorts .`. Supply the existing YouTube OAuth values, metadata API key and a narrowly scoped token for this repository's publishing ledger through the host's secret store/environment. The container runs `python -m shorts.pokemon_main --mode daily`. Run it once daily through the host's scheduler; persisted ledger limits prevent repeated publication. Keep a cache volume at `/app/.cache/kokoro` to avoid repeated model downloads. No credentials are built into the image. A real host and runtime credentials are still required.

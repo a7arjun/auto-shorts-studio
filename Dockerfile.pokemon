@@ -1,0 +1,12 @@
+FROM python:3.11-slim-bookworm
+ENV PYTHONUNBUFFERED=1 ORT_DISABLE_TELEMETRY=1 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 POKEMON_REMOTE_STATE=true
+WORKDIR /app
+RUN apt-get update -qq && apt-get install -y --no-install-recommends nodejs npm ffmpeg fonts-dejavu-core libsndfile1 ca-certificates && rm -rf /var/lib/apt/lists/*
+COPY requirements.txt requirements-pokemon.txt ./
+RUN python -m pip install --no-cache-dir -r requirements-pokemon.txt
+COPY package.json package-lock.json ./
+RUN npm ci --omit=optional --ignore-scripts
+COPY shorts/ ./shorts/
+COPY pokemon/ ./pokemon/
+COPY data/pokemon_channel.json data/pokemon_state.json ./data/
+CMD ["python", "-m", "shorts.pokemon_main", "--mode", "daily"]
