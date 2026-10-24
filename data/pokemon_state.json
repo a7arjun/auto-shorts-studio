@@ -384,7 +384,7 @@
       "date": "2026-10-24",
       "slot": "2026-10-24T22:00+05:30",
       "publish_at": "2026-10-24T16:30:00Z",
-      "status": "uploading",
+      "status": "uploaded",
       "created_at": "2026-10-24T05:14:14.064Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -413,7 +413,10 @@
           "Greninja": 85,
           "draws": 0
         }
-      }
+      },
+      "video_id": "o1Yux78zBAA",
+      "title": "Gyarados vs Greninja: Who Wins at Level 100?",
+      "duration_seconds": 21
     }
   ],
   "pilot_verified": true
