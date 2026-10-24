@@ -329,12 +329,18 @@
       ],
       "mode": "browser_test",
       "date": "2026-10-24",
-      "status": "uploading",
+      "status": "private_verified",
       "created_at": "2026-10-24T04:50:43.612Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
       "simulation_key": "chat-direct-upload-test-20261024",
-      "research_status": "private technical test; no trend-backed claim"
+      "research_status": "private technical test; no trend-backed claim",
+      "video_id": "F-kyX-O0Shc",
+      "private_verified_at": "2026-10-24T04:54:14.440Z",
+      "title": "Charizard vs Blastoise — Revised Upload Test (Private)",
+      "duration_seconds": 32.083333,
+      "verification_source": "YouTube Studio saved as private; playable 0:33 media; copyright no issues, community check pending",
+      "publication_scheduled": false
     }
   ],
   "pilot_verified": true
