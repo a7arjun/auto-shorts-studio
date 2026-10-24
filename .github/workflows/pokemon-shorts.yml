@@ -11,8 +11,7 @@ on:
       - 'package*.json'
       - 'data/pokemon_channel.json'
       - '.github/workflows/pokemon-shorts.yml'
-  schedule:
-    - cron: '0 3 * * *' # Prepare both videos at 08:30 IST for 09:30 review; release 10:00/22:00 IST.
+  # Recurring production runs from the ChatGPT task through Studio; CI stays here.
   workflow_dispatch:
     inputs:
       mode:

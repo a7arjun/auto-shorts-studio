@@ -30,8 +30,11 @@ def assess(config, state, now=None, require_coverage=False):
     blockers = []
     if not config.get('publication_enabled'):
         blockers.append('publication_disabled')
-    if not config.get('production_runner_ready'):
-        blockers.append('production_host_not_connected')
+    browser_provider = config.get('production_provider') == 'chatgpt_browser'
+    provider_ready = (config.get('chat_production', {}).get('enabled', False) if browser_provider
+                      else config.get('production_runner_ready', False))
+    if not provider_ready:
+        blockers.append('chat_production_disabled' if browser_provider else 'production_host_not_connected')
     # Missing previews are actionable before the review, but not during early preparation.
     review_hour, review_minute = map(int, config['review_time_ist'].split(':'))
     review_minutes = review_hour * 60 + review_minute
@@ -39,7 +42,7 @@ def assess(config, state, now=None, require_coverage=False):
     if coverage_due and any(not s['covered'] for s in slots):
         blockers.append('daily_preview_coverage_incomplete')
     return {'checked_at': local.isoformat(), 'date_ist': date, 'slots': slots,
-            'generation_ready': bool(config.get('publication_enabled') and config.get('production_runner_ready')),
+            'generation_ready': bool(config.get('publication_enabled') and provider_ready),
             'today_fully_covered': all(s['covered'] for s in slots),
             'blockers': blockers, 'healthy': not blockers,
             'evidence': 'repository records; not a fresh YouTube API verification'}

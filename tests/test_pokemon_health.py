@@ -46,6 +46,17 @@ class HealthTests(unittest.TestCase):
         self.assertTrue(result['today_fully_covered'])
         self.assertEqual(result['blockers'], ['production_host_not_connected'])
 
+    def test_browser_provider_does_not_require_legacy_host(self):
+        self.cover('10:00'); self.cover('22:00')
+        self.config.update(production_runner_ready=False, production_provider='chatgpt_browser',
+                           chat_production={'enabled': True})
+        self.assertTrue(self.check()['generation_ready'])
+        self.assertTrue(self.check()['healthy'])
+
+    def test_disabled_browser_provider_is_a_blocker(self):
+        self.config.update(production_provider='chatgpt_browser', chat_production={'enabled': False})
+        self.assertIn('chat_production_disabled', self.check()['blockers'])
+
     def test_cancelled_and_failed_are_not_coverage(self):
         self.cover('10:00', 'cancelled'); self.cover('22:00', 'missed_slot')
         self.assertFalse(any(s['covered'] for s in self.check()['slots']))

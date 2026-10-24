@@ -171,3 +171,12 @@ A missing production host is now a failed scheduled operation instead of a succe
 The 09:30 IST ChatGPT review reminder is restored and reports blockers as well as previews. A separate hourly health check reports new failures, daily missing coverage and verified recoveries; unchanged incidents are suppressed. Its prompt permits one bounded retry only for a clearly transient pre-upload failure with a real production host and enough review lead time, never an ambiguous upload. ChatGPT checks are polling and cannot guarantee instant delivery. GitHub marks blocked scheduled jobs failed, subject to the account's Actions notification settings.
 
 Remaining deployment prerequisite: connect a real Linux production host with the `pokemon-renderer` label and existing secrets before setting `production_runner_ready` true. No hosting purchase or fake readiness change was made. The existing Dockerfile and standalone-worker instructions remain the deployment package. Restoring notifications does not create this missing compute resource or cancel already accepted YouTube schedules.
+
+
+## ChatGPT production route — 24 October 2026
+
+The user declined Google Cloud billing and requested an actual in-chat production task at 09:30 IST. The production provider is now `chatgpt_browser`; the previous separate-host requirement describes the legacy GitHub daily worker only. That worker's recurring cron is removed, and `production_runner_ready` remains false. CI previews still run only as software validation.
+
+A fresh Charizard–Blastoise video rendered in the ChatGPT execution workspace and uploaded directly through the signed-in cloud browser to the bound Pokemon channel. Studio saved `F-kyX-O0Shc` privately with playable 0:33 media. This was a technical upload test, with no native public schedule and no new trend-backed claim. It does not prove an unattended recurring run or exact-time delivery.
+
+The existing 09:30 chat task now performs production rather than just review. It rehydrates source, researches recent public YouTube references, renders in ChatGPT and uploads through Studio, preserving measured battle rules and duplicate protection. It attempts same-day 10:00 and 22:00 native releases; a missed morning cutoff leaves the file private and reports an error rather than publishing late. See [the execution runbook](CHAT_PRODUCTION.md). This route uses the existing ChatGPT plan and its limits; no additional paid hosting or Google billing is enabled. Authentication/session interruptions and runtime/usage limits remain possible.

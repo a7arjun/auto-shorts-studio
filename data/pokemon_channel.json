@@ -4,7 +4,7 @@
   "credential_prefix": "YT_HI",
   "reference_video_id": "1uvpsNPF63A",
   "voice": "am_michael",
-  "voice_speed": 1.0,
+  "voice_speed": 1,
   "daily_limit": 2,
   "monthly_limit": 62,
   "trials": 100,
@@ -41,5 +41,16 @@
     "spoken_hp_percentages": false,
     "verdict_mode": "game_and_named_anime_separate"
   },
-  "playback_speed": 1.5
+  "playback_speed": 1.5,
+  "production_provider": "chatgpt_browser",
+  "chat_production": {
+    "enabled": true,
+    "start_time_ist": "09:30",
+    "morning_upload_cutoff_ist": "09:55",
+    "runbook": "docs/CHAT_PRODUCTION.md",
+    "private_upload_test_id": "F-kyX-O0Shc",
+    "manual_route_verified_at": "2026-10-24T04:57:07.260Z",
+    "unattended_run_verified": false,
+    "additional_paid_services": false
+  }
 }
