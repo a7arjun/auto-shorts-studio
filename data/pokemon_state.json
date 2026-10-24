@@ -436,7 +436,7 @@
       ],
       "slot": "2026-10-24T22:00+05:30",
       "requested_publish_at": "2026-10-24T16:30:00Z",
-      "status": "uploaded",
+      "status": "private_verified",
       "created_at": "2026-10-24T17:11:50.040Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -447,12 +447,17 @@
       "source_library_file_id": "libfile_5cca1ac115e88191849dc56d687e97d3",
       "publication_scheduled": false,
       "schedule_verified": false,
-      "release_blocker": "Requested 24 October 22:00 IST slot is past; current IST verified at 22:40. Original older video is already Public. Upload new approved video privately; late release/replacement needs explicit decision.",
-      "authorization": "User explicitly approved uploading the 62.75-second tactical sample for the 10 PM slot. No late public release or hiding of an already-public video inferred.",
+      "release_blocker": "24 October 22:00 IST has passed and older ID o1Yux78zBAA is already Public. Automatic approval review rejected changing the old video's visibility because the user explicitly authorized the new upload but did not unambiguously authorize hiding the already-public video. New video remains Private; request explicit approval for immediate public release and making old video Private.",
+      "authorization": "Approved file upload completed. Late public replacement and old-video privacy change await explicit approval after automatic review rejection.",
       "video_id": "E8PsFuSoHPo",
       "uploaded_at": "2026-10-24T17:13:36.941Z",
-      "verification_source": "YouTube Studio upload dialog: Saved as private; video link returned; processing pending",
-      "processing_status": "processing"
+      "verification_source": "YouTube Studio: 1:03 duration, approved title and filename, SD complete, Visibility Private, Save disabled; no notices shown",
+      "processing_status": "SD_complete",
+      "private_verified_at": "2026-10-24T17:20:56.854Z",
+      "checks": {
+        "copyright": "No issues found in upload wizard",
+        "community_guidelines": "Was pending in wizard; no notices shown on saved video details"
+      }
     }
   ],
   "pilot_verified": true,
@@ -516,7 +521,7 @@
     {
       "key": "tactical-v1-reference-20261024",
       "mode": "reference_only",
-      "status": "rendered_verified",
+      "status": "uploaded_private",
       "format_approved_for_daily": true,
       "approved_on_ist": "2026-10-24",
       "pair": [
@@ -528,7 +533,8 @@
       "video_library_file_id": "libfile_5cca1ac115e88191849dc56d687e97d3",
       "bundle_library_file_id": "libfile_a2069d5060f4819197daae2a092ae1d8",
       "source": "examples/tactical_v1",
-      "note": "Reference only; no YouTube ID or schedule exists for this tactical sample. Do not confuse with the older scheduled Gyarados/Greninja ID."
+      "note": "Approved tactical reference uploaded on 24 October 2026 as E8PsFuSoHPo, verified Private. Not a confirmed public release or native schedule; separate from the older public 22-second video.",
+      "uploaded_video_id": "E8PsFuSoHPo"
     }
   ]
 }
