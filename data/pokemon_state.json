@@ -384,7 +384,7 @@
       "date": "2026-10-24",
       "slot": "2026-10-24T22:00+05:30",
       "publish_at": "2026-10-24T16:30:00Z",
-      "status": "uploaded",
+      "status": "scheduled",
       "created_at": "2026-10-24T05:14:14.064Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -417,10 +417,71 @@
       "video_id": "o1Yux78zBAA",
       "title": "Gyarados vs Greninja: Who Wins at Level 100?",
       "duration_seconds": 21,
-      "publication_scheduled": false,
-      "schedule_verified": false,
-      "scheduling_blocker": "Final Studio scheduling controls were not executed: automatic approval review could not complete due to ChatGPT account usage limit. Upload saved as private; 22:00 IST is requested only, not an accepted native schedule. Reconcile this same ID in Studio before retrying. Do not duplicate upload."
+      "publication_scheduled": true,
+      "schedule_verified": true,
+      "verified_at": "2026-10-24T10:56:02.313Z",
+      "verification_source": "YouTube Studio: Video scheduled confirmation for Oct 24 2026 9:30 AM GMT-0700; saved Visibility Scheduled and reopened time 9:30 AM. Equals 22:00 Asia/Kolkata. Original scheduling form explicitly set Kolkata, Oct 24, 10 PM.",
+      "scheduling_blocker_resolved": true,
+      "previous_scheduling_blocker": "Final Studio scheduling controls were not executed: automatic approval review could not complete due to ChatGPT account usage limit. Upload saved as private; 22:00 IST is requested only, not an accepted native schedule. Reconcile this same ID in Studio before retrying. Do not duplicate upload."
     }
   ],
-  "pilot_verified": true
+  "pilot_verified": true,
+  "review_batches": [
+    {
+      "key": "storytelling-five-styles-20261024",
+      "mode": "review_only",
+      "created_at": "2026-10-24T10:56:02.313Z",
+      "status": "rendered_verified",
+      "public_uploads": 0,
+      "format": "720x1280 H264 AAC, 24fps, three rounds, six scenes, fictional fan stories",
+      "previews": [
+        {
+          "pair": [
+            "Pikachu",
+            "Lucario"
+          ],
+          "style": "Painted anime",
+          "duration_seconds": 28.42,
+          "library_file_id": "libfile_2b007f1c9554819184306a09008cb48a"
+        },
+        {
+          "pair": [
+            "Greninja",
+            "Gengar"
+          ],
+          "style": "Neon comic",
+          "duration_seconds": 30.5,
+          "library_file_id": "libfile_075d4396b2908191ad630ad546a315ae"
+        },
+        {
+          "pair": [
+            "Charizard",
+            "Blastoise"
+          ],
+          "style": "Watercolor",
+          "duration_seconds": 29.92,
+          "library_file_id": "libfile_851e9acd14dc8191bffaae8bd479dcc8"
+        },
+        {
+          "pair": [
+            "Eevee",
+            "Meowth"
+          ],
+          "style": "Clay diorama",
+          "duration_seconds": 25.67,
+          "library_file_id": "libfile_030751c11f2c819191136be151615130"
+        },
+        {
+          "pair": [
+            "Dragonite",
+            "Garchomp"
+          ],
+          "style": "Pixel art",
+          "duration_seconds": 30.83,
+          "library_file_id": "libfile_f4cdf89e993881919432f1a0fd4640b0"
+        }
+      ],
+      "bundle_library_file_id": "libfile_bb51d990c2548191a48c3237d88cbb01"
+    }
+  ]
 }
