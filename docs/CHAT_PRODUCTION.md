@@ -35,3 +35,6 @@ In the same chat provide both actual titles, private Shorts links, verified nati
 ## Known revised release
 F-kyX-O0Shc: Charizard vs Blastoise, 32.08 seconds, rendered in ChatGPT and initially saved privately on 24 October 2026. Later that day the user explicitly requested one immediate release and one at 22:00 IST. After current title research, the existing ID was updated and verified Public in Studio. It is already used; never duplicate it for another daily slot. The immediate release is a user-authorized one-day exception, not permission for future late catch-up publication.
 
+
+## Storytelling update — 24 October 2026
+The user's latest direction is compact, cinematic fan-battle storytelling with charge, dodge, feint and counter sequences, more rounds, fewer filler words and richer pictures. For the browser production provider, read docs/POKEMON_STORYTELLING.md before writing. That document supersedes the old v3 narration/presentation constraints above for newly created story-mode videos only. Existing uploaded or scheduled IDs remain unchanged. Fictional choreography must be labeled as a fictional fan battle and must not be presented as a measured level-100 simulation, official episode or sourced anime verdict. Keep all scheduling, research, duplicate prevention, cancellation, cost and verification controls above.
