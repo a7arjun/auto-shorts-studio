@@ -373,6 +373,47 @@
           "draws": 0
         }
       }
+    },
+    {
+      "key": "2026-10-24T22:00+05:30",
+      "mode": "daily",
+      "pair": [
+        "Gyarados",
+        "Greninja"
+      ],
+      "date": "2026-10-24",
+      "slot": "2026-10-24T22:00+05:30",
+      "publish_at": "2026-10-24T16:30:00Z",
+      "status": "uploading",
+      "created_at": "2026-10-24T05:14:14.064Z",
+      "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
+      "upload_provider": "chatgpt_browser",
+      "simulation_key": "2026-10-24T22:00+05:30",
+      "research": {
+        "checked_at": "2026-10-24T05:14:14.064Z",
+        "method": "Bounded browser YouTube topic/title comparison; not mechanics evidence or a measured trend",
+        "references": [
+          {
+            "id": "nluG6KncGtI",
+            "url": "https://www.youtube.com/watch?v=nluG6KncGtI",
+            "published_date": "2026-06-29",
+            "views": 22751,
+            "likes": 761,
+            "comments": 12
+          }
+        ]
+      },
+      "presentation": {
+        "version": 3,
+        "all_attacks_in_order": true,
+        "spoken_hp_percentages": false,
+        "playback_speed": 1.5,
+        "game_wins": {
+          "Gyarados": 15,
+          "Greninja": 85,
+          "draws": 0
+        }
+      }
     }
   ],
   "pilot_verified": true
