@@ -235,7 +235,7 @@
       ],
       "mode": "daily",
       "date": "2026-10-23",
-      "status": "scheduled",
+      "status": "published",
       "created_at": "2026-10-22T19:12:32.896157+00:00",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "presentation": {
@@ -269,7 +269,9 @@
       },
       "slot": "2026-10-23T10:00+05:30",
       "publish_at": "2026-10-23T04:30:00Z",
-      "video_id": "V7TqJALrQGk"
+      "video_id": "V7TqJALrQGk",
+      "public_verified_at": "2026-10-24T04:59:22.363Z",
+      "verification_source": "YouTube Studio Shorts content row shows Public"
     },
     {
       "key": "2026-10-23T22:00+05:30-r3",
@@ -279,7 +281,7 @@
       ],
       "mode": "daily",
       "date": "2026-10-23",
-      "status": "scheduled",
+      "status": "published",
       "created_at": "2026-10-22T19:13:59.260601+00:00",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "presentation": {
@@ -319,7 +321,9 @@
       },
       "slot": "2026-10-23T22:00+05:30",
       "publish_at": "2026-10-23T16:30:00Z",
-      "video_id": "I32IkX9-aRQ"
+      "video_id": "I32IkX9-aRQ",
+      "public_verified_at": "2026-10-24T04:59:22.363Z",
+      "verification_source": "YouTube Studio Shorts content row shows Public"
     },
     {
       "key": "chat-browser-test-20261024",
@@ -336,10 +340,10 @@
       "simulation_key": "chat-direct-upload-test-20261024",
       "research_status": "private technical test; no trend-backed claim",
       "video_id": "F-kyX-O0Shc",
-      "private_verified_at": "2026-10-24T04:54:14.440Z",
+      "private_verified_at": "2026-10-24T04:59:22.363Z",
       "title": "Charizard vs Blastoise — Revised Upload Test (Private)",
       "duration_seconds": 32.083333,
-      "verification_source": "YouTube Studio saved as private; playable 0:33 media; copyright no issues, community check pending",
+      "verification_source": "YouTube Studio Shorts content row shows Private and 0:33; owner Shorts preview playable",
       "publication_scheduled": false
     }
   ],
