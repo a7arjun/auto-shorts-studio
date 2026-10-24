@@ -162,3 +162,12 @@ Both v2 schedules were cancelled and verified private before revision. The first
 V3 publication records retain their measured game counts and anime evidence label. Later presentation-only revisions reuse the same v3 experiment key for the same pair and slot, so correcting narration or visuals does not reroll the game result.
 
 Verified v3 replacement integration run 39837763873 completed successfully: `V7TqJALrQGk` is scheduled for 23 October 2026 at 10:00 IST (Charizard–Tyranitar), and `I32IkX9-aRQ` at 22:00 IST (Charizard–Garchomp). Both record all-attack sequencing, no spoken HP percentages, 1.5× playback, actual multi-build game counts, and the separate named anime assessment. The old v2 IDs remain cancelled/private. The date-fixed integration workflow is manual-only again.
+
+
+## Production health correction — 24 October 2026
+
+A missing production host is now a failed scheduled operation instead of a successful run with rendering silently skipped. `shorts/channel_health.py` reports host readiness and each IST slot's recorded coverage independently, including existing native YouTube schedules when generation is blocked. Missing coverage becomes actionable at 09:15 IST; a completed batch always requires both slots. These are ledger checks, not fresh owner-API verification. The daily batch attempts the second slot after a first-slot exception, subject to the existing unresolved-upload guards, and fails if any slot fails or silently produces no schedule. Late publication remains prohibited.
+
+The 09:30 IST ChatGPT review reminder is restored and reports blockers as well as previews. A separate hourly health check reports new failures, daily missing coverage and verified recoveries; unchanged incidents are suppressed. Its prompt permits one bounded retry only for a clearly transient pre-upload failure with a real production host and enough review lead time, never an ambiguous upload. ChatGPT checks are polling and cannot guarantee instant delivery. GitHub marks blocked scheduled jobs failed, subject to the account's Actions notification settings.
+
+Remaining deployment prerequisite: connect a real Linux production host with the `pokemon-renderer` label and existing secrets before setting `production_runner_ready` true. No hosting purchase or fake readiness change was made. The existing Dockerfile and standalone-worker instructions remain the deployment package. Restoring notifications does not create this missing compute resource or cancel already accepted YouTube schedules.

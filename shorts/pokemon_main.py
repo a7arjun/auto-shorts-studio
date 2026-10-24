@@ -198,15 +198,28 @@ def run(mode,requested_slot=None,requested_pair=None):
 def run_daily_batch():
     config=json.loads(Path('data/pokemon_channel.json').read_text())
     if not config['publication_enabled'] or not config.get('production_runner_ready',False):
-        print('Daily posting requested but production runner is not ready; no upload');return
+        raise RuntimeError('Daily publication blocked: publication disabled or production host not connected')
     slots=daily_review_slots(config)
     if not slots:
-        print('Outside the morning preparation window; no upload');return
+        raise RuntimeError('Daily preparation window missed; no new upload or late publication attempted')
+    failures=[]
     for slot in slots:
-        run('daily',requested_slot=slot)
+        try:
+            run('daily',requested_slot=slot)
+        except Exception as exc:
+            # Still try the other slot; existing ledger reservations prevent duplicate inserts.
+            failures.append((slot['slot'],type(exc).__name__))
+            print('Slot preparation failed:',slot['slot'],type(exc).__name__)
+    if failures:
+        raise RuntimeError('Daily slot failures: '+repr(failures))
+    from .channel_health import assess
+    health=assess(config,Ledger().data,require_coverage=True)
+    if not health['today_fully_covered']:
+        raise RuntimeError('Daily preview coverage incomplete; check slot ledger before retrying')
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--mode',choices=['preview','probe','pilot','daily'],default='preview')
     mode=parser.parse_args().mode
     run_daily_batch() if mode=='daily' else run(mode)
+

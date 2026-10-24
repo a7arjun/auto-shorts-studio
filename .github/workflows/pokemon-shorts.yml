@@ -54,6 +54,9 @@ jobs:
               f.write(f'mode={mode}\nskip={str(skip).lower()}\nrunner={json.dumps(runner)}\n')
           print('Operation:',mode,'; disabled publication:',skip)
           PYPLAN
+      - name: Report blocked production as a failure
+        if: steps.operation.outputs.skip == 'true'
+        run: python -m shorts.channel_health
   build:
     needs: plan
     if: needs.plan.outputs.skip != 'true'
@@ -105,6 +108,9 @@ jobs:
         env:
           MODE: ${{ needs.plan.outputs.mode }}
         run: python -m shorts.pokemon_main --mode "$MODE"
+      - name: Verify both daily preview schedules exist
+        if: needs.plan.outputs.mode == 'daily'
+        run: python -m shorts.channel_health --require-coverage
       - name: Save prototype, battle evidence and connection result
         if: always()
         uses: actions/upload-artifact@v4
@@ -113,3 +119,4 @@ jobs:
           path: output/pokemon/
           retention-days: 2
           if-no-files-found: warn
+
