@@ -331,20 +331,48 @@
         "Charizard",
         "Blastoise"
       ],
-      "mode": "browser_test",
+      "mode": "daily",
       "date": "2026-10-24",
-      "status": "private_verified",
+      "status": "published",
       "created_at": "2026-10-24T04:50:43.612Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
       "simulation_key": "chat-direct-upload-test-20261024",
-      "research_status": "private technical test; no trend-backed claim",
+      "research_status": "researched",
       "video_id": "F-kyX-O0Shc",
       "private_verified_at": "2026-10-24T04:59:22.363Z",
-      "title": "Charizard vs Blastoise — Revised Upload Test (Private)",
+      "title": "Charizard vs Blastoise: Who Wins at Level 100?",
       "duration_seconds": 32.083333,
-      "verification_source": "YouTube Studio Shorts content row shows Private and 0:33; owner Shorts preview playable",
-      "publication_scheduled": false
+      "verification_source": "YouTube Studio video details: All changes saved; Visibility Public",
+      "publication_scheduled": false,
+      "slot": "2026-10-24Texplicit-immediate",
+      "publication_override": "Explicit immediate release authorized in chat on 24 October 2026",
+      "public_verified_at": "2026-10-24T05:07:13.954Z",
+      "research": {
+        "checked_at": "2026-10-24T05:07:13.954Z",
+        "method": "bounded public YouTube title-reference sample; AI fan battle used for phrasing only, not mechanics",
+        "references": [
+          {
+            "id": "btE9E39swIE",
+            "url": "https://www.youtube.com/watch?v=btE9E39swIE",
+            "published_date": "2026-10-05",
+            "views": 32,
+            "likes": 0,
+            "source": "YouTube expanded description observed"
+          }
+        ]
+      },
+      "presentation": {
+        "version": 3,
+        "playback_speed": 1.5,
+        "all_attacks_in_order": true,
+        "spoken_hp_percentages": false,
+        "game_wins": {
+          "Charizard": 6,
+          "Blastoise": 94,
+          "draws": 0
+        }
+      }
     }
   ],
   "pilot_verified": true
