@@ -1,0 +1,750 @@
+{
+  "title": "Gyarados vs Greninja: one type change decides the fight",
+  "duration": 62.74999999999999,
+  "segments": [
+    {
+      "index": 0,
+      "title": "GRASS KNOT",
+      "text": "Grass Knot punishes Gyarados's weight. Protean turns Greninja into Grass type. The hit takes thirty-seven percent. Grass damage is neutral here: Water's weakness and Flying's resistance cancel out.",
+      "note": "120 POWER  /  100% ACC  /  1x",
+      "accent": "#92EF77",
+      "start": 0,
+      "duration": 12.958333333333334,
+      "captions": [
+        {
+          "text": "Grass Knot punishes Gyarados's weight.",
+          "start": 0,
+          "duration": 2.488
+        },
+        {
+          "text": "Protean turns Greninja into Grass type.",
+          "start": 2.488,
+          "duration": 2.8933333333333335
+        },
+        {
+          "text": "The hit takes thirty-seven percent.",
+          "start": 5.381333333333334,
+          "duration": 2.168
+        },
+        {
+          "text": "Grass damage is neutral here: Water's weakness and Flying's resistance cancel out.",
+          "start": 7.549333333333334,
+          "duration": 5.163333333333333
+        }
+      ],
+      "event": {
+        "turn": 1,
+        "actor": "Greninja",
+        "move": "Grass Knot",
+        "before": [
+          {
+            "name": "Gyarados",
+            "hp": 394,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 261
+          },
+          {
+            "name": "Greninja",
+            "hp": 286,
+            "max_hp": 286,
+            "types": [
+              "Water",
+              "Dark"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage": [
+          {
+            "target": "Gyarados",
+            "hp_after": 249,
+            "max_hp": 394,
+            "hp_lost": 145,
+            "percent_max_hp": 36.8
+          }
+        ],
+        "after": [
+          {
+            "name": "Gyarados",
+            "hp": 249,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 261
+          },
+          {
+            "name": "Greninja",
+            "hp": 286,
+            "max_hp": 286,
+            "types": [
+              "Grass"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage_total": 145
+      }
+    },
+    {
+      "index": 1,
+      "title": "DRAGON DANCE",
+      "text": "Gyarados uses Dragon Dance instead of striking back. Attack and Speed rise. It is now faster than Greninja.",
+      "note": "ATTACK +1  /  SPEED +1",
+      "accent": "#FFC47A",
+      "start": 12.958333333333334,
+      "duration": 7.666666666666667,
+      "captions": [
+        {
+          "text": "Gyarados uses Dragon Dance instead of striking back.",
+          "start": 0,
+          "duration": 3.4693333333333336
+        },
+        {
+          "text": "Attack and Speed rise.",
+          "start": 3.469333333333333,
+          "duration": 1.6560000000000001
+        },
+        {
+          "text": "It is now faster than Greninja.",
+          "start": 5.125333333333333,
+          "duration": 2.2746666666666666
+        }
+      ],
+      "event": {
+        "turn": 1,
+        "actor": "Gyarados",
+        "move": "Dragon Dance",
+        "before": [
+          {
+            "name": "Gyarados",
+            "hp": 249,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 261
+          },
+          {
+            "name": "Greninja",
+            "hp": 286,
+            "max_hp": 286,
+            "types": [
+              "Grass"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage": [],
+        "after": [
+          {
+            "name": "Gyarados",
+            "hp": 249,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 391
+          },
+          {
+            "name": "Greninja",
+            "hp": 286,
+            "max_hp": 286,
+            "types": [
+              "Grass"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage_total": 0
+      }
+    },
+    {
+      "index": 2,
+      "title": "ICE FANG",
+      "text": "That type change backfires. Ice Fang is now super effective against Grass. It lands for seventy-two percent. Greninja has twenty-eight percent left.",
+      "note": "95% ACC  /  2x VS GRASS",
+      "accent": "#A8F3FF",
+      "start": 20.625,
+      "duration": 10.041666666666666,
+      "captions": [
+        {
+          "text": "That type change backfires.",
+          "start": 0,
+          "duration": 1.9333333333333331
+        },
+        {
+          "text": "Ice Fang is now super effective against Grass.",
+          "start": 1.9333333333333333,
+          "duration": 3.0853333333333333
+        },
+        {
+          "text": "It lands for seventy-two percent.",
+          "start": 5.018666666666666,
+          "duration": 2.2746666666666666
+        },
+        {
+          "text": "Greninja has twenty-eight percent left.",
+          "start": 7.293333333333333,
+          "duration": 2.488
+        }
+      ],
+      "event": {
+        "turn": 2,
+        "actor": "Gyarados",
+        "move": "Ice Fang",
+        "before": [
+          {
+            "name": "Gyarados",
+            "hp": 249,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 391
+          },
+          {
+            "name": "Greninja",
+            "hp": 286,
+            "max_hp": 286,
+            "types": [
+              "Grass"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage": [
+          {
+            "target": "Greninja",
+            "hp_after": 80,
+            "max_hp": 286,
+            "hp_lost": 206,
+            "percent_max_hp": 72.03
+          }
+        ],
+        "after": [
+          {
+            "name": "Gyarados",
+            "hp": 249,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 391
+          },
+          {
+            "name": "Greninja",
+            "hp": 80,
+            "max_hp": 286,
+            "types": [
+              "Grass"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage_total": 206
+      }
+    },
+    {
+      "index": 3,
+      "title": "ROCK SLIDE",
+      "text": "Rock Slide exploits the Flying weakness, but Greninja's physical Attack is lower. Ninety percent accurate. It lands for twenty-nine percent.",
+      "note": "90% ACC  /  2x VS WATER-FLYING",
+      "accent": "#E9C797",
+      "start": 30.666666666666664,
+      "duration": 9.291666666666666,
+      "captions": [
+        {
+          "text": "Rock Slide exploits the Flying weakness, but Greninja's physical Attack is lower.",
+          "start": 0,
+          "duration": 5.110666666666667
+        },
+        {
+          "text": "Ninety percent accurate.",
+          "start": 5.110666666666667,
+          "duration": 1.7413333333333334
+        },
+        {
+          "text": "It lands for twenty-nine percent.",
+          "start": 6.852,
+          "duration": 2.1893333333333334
+        }
+      ],
+      "event": {
+        "turn": 2,
+        "actor": "Greninja",
+        "move": "Rock Slide",
+        "before": [
+          {
+            "name": "Gyarados",
+            "hp": 249,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 391
+          },
+          {
+            "name": "Greninja",
+            "hp": 80,
+            "max_hp": 286,
+            "types": [
+              "Grass"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage": [
+          {
+            "target": "Gyarados",
+            "hp_after": 133,
+            "max_hp": 394,
+            "hp_lost": 116,
+            "percent_max_hp": 29.44
+          }
+        ],
+        "after": [
+          {
+            "name": "Gyarados",
+            "hp": 133,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 391
+          },
+          {
+            "name": "Greninja",
+            "hp": 80,
+            "max_hp": 286,
+            "types": [
+              "Grass"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage_total": 116
+      }
+    },
+    {
+      "index": 4,
+      "title": "WATER SHURIKEN",
+      "text": "Water Shuriken moves first despite the speed gap. But Gyarados resists Water. Two hits take only three percent.",
+      "note": "PRIORITY +1  /  0.5x  /  2 HITS",
+      "accent": "#8EDCFF",
+      "start": 39.95833333333333,
+      "duration": 7.708333333333333,
+      "captions": [
+        {
+          "text": "Water Shuriken moves first despite the speed gap.",
+          "start": 0,
+          "duration": 3.2986666666666666
+        },
+        {
+          "text": "But Gyarados resists Water.",
+          "start": 3.2986666666666666,
+          "duration": 2.018666666666667
+        },
+        {
+          "text": "Two hits take only three percent.",
+          "start": 5.317333333333334,
+          "duration": 2.146666666666667
+        }
+      ],
+      "event": {
+        "turn": 3,
+        "actor": "Greninja",
+        "move": "Water Shuriken",
+        "before": [
+          {
+            "name": "Gyarados",
+            "hp": 133,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 391
+          },
+          {
+            "name": "Greninja",
+            "hp": 80,
+            "max_hp": 286,
+            "types": [
+              "Grass"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage": [
+          {
+            "target": "Gyarados",
+            "hp_after": 127,
+            "max_hp": 394,
+            "hp_lost": 6,
+            "percent_max_hp": 1.52
+          },
+          {
+            "target": "Gyarados",
+            "hp_after": 121,
+            "max_hp": 394,
+            "hp_lost": 6,
+            "percent_max_hp": 1.52
+          }
+        ],
+        "after": [
+          {
+            "name": "Gyarados",
+            "hp": 121,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 391
+          },
+          {
+            "name": "Greninja",
+            "hp": 80,
+            "max_hp": 286,
+            "types": [
+              "Grass"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage_total": 12
+      }
+    },
+    {
+      "index": 5,
+      "title": "CRUNCH",
+      "text": "Gyarados chooses Crunch: neutral damage, one hundred percent accuracy, and enough power to finish Greninja's remaining health.",
+      "note": "100% ACC  /  1x  /  FINISHER",
+      "accent": "#D2AAFF",
+      "start": 47.666666666666664,
+      "duration": 8.041666666666666,
+      "captions": [
+        {
+          "text": "Gyarados chooses Crunch: neutral damage, one hundred percent accuracy, and enough power to finish Greninja's remaining health.",
+          "start": 0,
+          "duration": 7.784666666666666
+        }
+      ],
+      "event": {
+        "turn": 3,
+        "actor": "Gyarados",
+        "move": "Crunch",
+        "before": [
+          {
+            "name": "Gyarados",
+            "hp": 121,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 391
+          },
+          {
+            "name": "Greninja",
+            "hp": 80,
+            "max_hp": 286,
+            "types": [
+              "Grass"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage": [
+          {
+            "target": "Greninja",
+            "hp_after": 0,
+            "max_hp": 286,
+            "hp_lost": 80,
+            "percent_max_hp": 27.97
+          }
+        ],
+        "after": [
+          {
+            "name": "Gyarados",
+            "hp": 121,
+            "max_hp": 394,
+            "types": [
+              "Water",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 391
+          },
+          {
+            "name": "Greninja",
+            "hp": 0,
+            "max_hp": 286,
+            "types": [
+              "Water",
+              "Dark"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 377
+          }
+        ],
+        "damage_total": 80
+      }
+    },
+    {
+      "index": 6,
+      "title": "GYARADOS WINS",
+      "text": "Gyarados wins this example with thirty-one percent health. The turning point? Dragon Dance, then Ice Fang.",
+      "note": "THIS BUILD. THIS BATTLE. THIS RESULT.",
+      "accent": "#FFD777",
+      "start": 55.70833333333333,
+      "duration": 7.041666666666667,
+      "captions": [
+        {
+          "text": "Gyarados wins this example with thirty-one percent health.",
+          "start": 0,
+          "duration": 3.490666666666667
+        },
+        {
+          "text": "The turning point?",
+          "start": 3.490666666666667,
+          "duration": 1.2719999999999998
+        },
+        {
+          "text": "Dragon Dance, then Ice Fang.",
+          "start": 4.762666666666667,
+          "duration": 2.018666666666667
+        }
+      ],
+      "event": null
+    }
+  ],
+  "mode": "Scripted tactical choices; engine-resolved damage",
+  "generation": 9
+}

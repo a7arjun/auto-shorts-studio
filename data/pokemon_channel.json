@@ -51,6 +51,29 @@
     "private_upload_test_id": "F-kyX-O0Shc",
     "manual_route_verified_at": "2026-10-24T04:57:07.260Z",
     "unattended_run_verified": false,
-    "additional_paid_services": false
+    "additional_paid_services": false,
+    "format": "tactical_v1",
+    "format_approved_on": "2026-10-24",
+    "format_effective_from_ist": "2026-10-25",
+    "format_runbook": "docs/TACTICAL_PRODUCTION.md",
+    "move_catalogue": "pokemon/tactical_moves.json",
+    "reference_example": "examples/tactical_v1",
+    "presentation": {
+      "mode": "scripted_tactical_example_with_engine_resolved_damage",
+      "visual_mode": "generated_full_scene_illustrations",
+      "target_duration_seconds": [
+        45,
+        75
+      ],
+      "target_rounds": 3,
+      "equipped_moves_per_pokemon": 4,
+      "move_options_per_pokemon": 5,
+      "spoken_hp_percentages": true,
+      "explain_move_choices": true,
+      "show_winner_and_defeated_opponent": true,
+      "blanket_playback_acceleration": false,
+      "requires_native_schedule_verification": true
+    },
+    "unattended_tactical_run_verified": false
   }
 }

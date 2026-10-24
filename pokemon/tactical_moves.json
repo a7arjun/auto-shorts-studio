@@ -1,0 +1,4012 @@
+{
+  "version": 1,
+  "format": "gen9nationaldex",
+  "simulator_version": "0.11.11",
+  "scope": "50 species, five legal move options each, equip only four. All five four-of-five subsets validated with the stated ability and baseline build. Curated options are not usage rankings or proof of optimal play. Revalidate changed ability/build/rules before production.",
+  "validated_sets": 250,
+  "pokemon": [
+    {
+      "species": "Pikachu",
+      "types": [
+        "Electric"
+      ],
+      "weight_kg": 6,
+      "base_stats": {
+        "hp": 35,
+        "atk": 55,
+        "def": 40,
+        "spa": 50,
+        "spd": 50,
+        "spe": 90
+      },
+      "validated_ability": "Static",
+      "available_abilities": {
+        "0": "Static",
+        "H": "Lightning Rod"
+      },
+      "moves": [
+        {
+          "name": "Thunderbolt",
+          "id": "thunderbolt",
+          "type": "Electric",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to paralyze the target."
+        },
+        {
+          "name": "Quick Attack",
+          "id": "quickattack",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        },
+        {
+          "name": "Iron Tail",
+          "id": "irontail",
+          "type": "Steel",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 75,
+          "priority": 0,
+          "description": "30% chance to lower the target's Defense by 1."
+        },
+        {
+          "name": "Electro Ball",
+          "id": "electroball",
+          "type": "Electric",
+          "category": "Special",
+          "base_power": 0,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "More power the faster the user is than the target.",
+          "selection_note": "Variable power: resolve in engine before explaining damage."
+        },
+        {
+          "name": "Grass Knot",
+          "id": "grassknot",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 0,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "More power the heavier the target.",
+          "selection_note": "Variable power: resolve in engine before explaining damage."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Raichu",
+      "types": [
+        "Electric"
+      ],
+      "weight_kg": 30,
+      "base_stats": {
+        "hp": 60,
+        "atk": 90,
+        "def": 55,
+        "spa": 90,
+        "spd": 80,
+        "spe": 110
+      },
+      "validated_ability": "Static",
+      "available_abilities": {
+        "0": "Static",
+        "H": "Lightning Rod"
+      },
+      "moves": [
+        {
+          "name": "Thunderbolt",
+          "id": "thunderbolt",
+          "type": "Electric",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to paralyze the target."
+        },
+        {
+          "name": "Volt Switch",
+          "id": "voltswitch",
+          "type": "Electric",
+          "category": "Special",
+          "base_power": 70,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "User switches out after damaging the target."
+        },
+        {
+          "name": "Focus Blast",
+          "id": "focusblast",
+          "type": "Fighting",
+          "category": "Special",
+          "base_power": 120,
+          "accuracy": 70,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Grass Knot",
+          "id": "grassknot",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 0,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "More power the heavier the target.",
+          "selection_note": "Variable power: resolve in engine before explaining damage."
+        },
+        {
+          "name": "Nasty Plot",
+          "id": "nastyplot",
+          "type": "Dark",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Sp. Atk by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Charizard",
+      "types": [
+        "Fire",
+        "Flying"
+      ],
+      "weight_kg": 90.5,
+      "base_stats": {
+        "hp": 78,
+        "atk": 84,
+        "def": 78,
+        "spa": 109,
+        "spd": 85,
+        "spe": 100
+      },
+      "validated_ability": "Blaze",
+      "available_abilities": {
+        "0": "Blaze",
+        "H": "Solar Power"
+      },
+      "moves": [
+        {
+          "name": "Flamethrower",
+          "id": "flamethrower",
+          "type": "Fire",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to burn the target."
+        },
+        {
+          "name": "Air Slash",
+          "id": "airslash",
+          "type": "Flying",
+          "category": "Special",
+          "base_power": 75,
+          "accuracy": 95,
+          "priority": 0,
+          "description": "30% chance to make the target flinch."
+        },
+        {
+          "name": "Dragon Pulse",
+          "id": "dragonpulse",
+          "type": "Dragon",
+          "category": "Special",
+          "base_power": 85,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Solar Beam",
+          "id": "solarbeam",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Charges turn 1. Hits turn 2. No charge in sunlight."
+        },
+        {
+          "name": "Roost",
+          "id": "roost",
+          "type": "Flying",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Heals 50% HP. Flying-type removed 'til turn ends."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Blastoise",
+      "types": [
+        "Water"
+      ],
+      "weight_kg": 85.5,
+      "base_stats": {
+        "hp": 79,
+        "atk": 83,
+        "def": 100,
+        "spa": 85,
+        "spd": 105,
+        "spe": 78
+      },
+      "validated_ability": "Torrent",
+      "available_abilities": {
+        "0": "Torrent",
+        "H": "Rain Dish"
+      },
+      "moves": [
+        {
+          "name": "Hydro Pump",
+          "id": "hydropump",
+          "type": "Water",
+          "category": "Special",
+          "base_power": 110,
+          "accuracy": 80,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Ice Beam",
+          "id": "icebeam",
+          "type": "Ice",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze the target."
+        },
+        {
+          "name": "Dark Pulse",
+          "id": "darkpulse",
+          "type": "Dark",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to make the target flinch."
+        },
+        {
+          "name": "Aura Sphere",
+          "id": "aurasphere",
+          "type": "Fighting",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": true,
+          "priority": 0,
+          "description": "This move does not check accuracy."
+        },
+        {
+          "name": "Shell Smash",
+          "id": "shellsmash",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Lowers Def, SpD by 1; raises Atk, SpA, Spe by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Venusaur",
+      "types": [
+        "Grass",
+        "Poison"
+      ],
+      "weight_kg": 100,
+      "base_stats": {
+        "hp": 80,
+        "atk": 82,
+        "def": 83,
+        "spa": 100,
+        "spd": 100,
+        "spe": 80
+      },
+      "validated_ability": "Overgrow",
+      "available_abilities": {
+        "0": "Overgrow",
+        "H": "Chlorophyll"
+      },
+      "moves": [
+        {
+          "name": "Giga Drain",
+          "id": "gigadrain",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 75,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "User recovers 50% of the damage dealt."
+        },
+        {
+          "name": "Sludge Bomb",
+          "id": "sludgebomb",
+          "type": "Poison",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "30% chance to poison the target."
+        },
+        {
+          "name": "Earth Power",
+          "id": "earthpower",
+          "type": "Ground",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Sleep Powder",
+          "id": "sleeppowder",
+          "type": "Grass",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": 75,
+          "priority": 0,
+          "description": "Causes the target to fall asleep."
+        },
+        {
+          "name": "Synthesis",
+          "id": "synthesis",
+          "type": "Grass",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Heals the user by a weather-dependent amount."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Gyarados",
+      "types": [
+        "Water",
+        "Flying"
+      ],
+      "weight_kg": 235,
+      "base_stats": {
+        "hp": 95,
+        "atk": 125,
+        "def": 79,
+        "spa": 60,
+        "spd": 100,
+        "spe": 81
+      },
+      "validated_ability": "Moxie",
+      "available_abilities": {
+        "0": "Intimidate",
+        "H": "Moxie"
+      },
+      "moves": [
+        {
+          "name": "Dragon Dance",
+          "id": "dragondance",
+          "type": "Dragon",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack and Speed by 1."
+        },
+        {
+          "name": "Ice Fang",
+          "id": "icefang",
+          "type": "Ice",
+          "category": "Physical",
+          "base_power": 65,
+          "accuracy": 95,
+          "priority": 0,
+          "description": "10% chance to freeze. 10% chance to flinch."
+        },
+        {
+          "name": "Crunch",
+          "id": "crunch",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Defense by 1."
+        },
+        {
+          "name": "Waterfall",
+          "id": "waterfall",
+          "type": "Water",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to make the target flinch."
+        },
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Greninja",
+      "types": [
+        "Water",
+        "Dark"
+      ],
+      "weight_kg": 40,
+      "base_stats": {
+        "hp": 72,
+        "atk": 95,
+        "def": 67,
+        "spa": 103,
+        "spd": 71,
+        "spe": 122
+      },
+      "validated_ability": "Protean",
+      "available_abilities": {
+        "0": "Torrent",
+        "H": "Protean",
+        "S": "Battle Bond"
+      },
+      "moves": [
+        {
+          "name": "Grass Knot",
+          "id": "grassknot",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 0,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "More power the heavier the target.",
+          "selection_note": "Variable power: resolve in engine before explaining damage."
+        },
+        {
+          "name": "Rock Slide",
+          "id": "rockslide",
+          "type": "Rock",
+          "category": "Physical",
+          "base_power": 75,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "30% chance to make the foe(s) flinch."
+        },
+        {
+          "name": "Water Shuriken",
+          "id": "watershuriken",
+          "type": "Water",
+          "category": "Special",
+          "base_power": 15,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first. Hits 2-5 times in one turn."
+        },
+        {
+          "name": "Dark Pulse",
+          "id": "darkpulse",
+          "type": "Dark",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to make the target flinch."
+        },
+        {
+          "name": "Ice Beam",
+          "id": "icebeam",
+          "type": "Ice",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze the target."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Dragonite",
+      "types": [
+        "Dragon",
+        "Flying"
+      ],
+      "weight_kg": 210,
+      "base_stats": {
+        "hp": 91,
+        "atk": 134,
+        "def": 95,
+        "spa": 100,
+        "spd": 100,
+        "spe": 80
+      },
+      "validated_ability": "Inner Focus",
+      "available_abilities": {
+        "0": "Inner Focus",
+        "H": "Multiscale"
+      },
+      "moves": [
+        {
+          "name": "Dragon Claw",
+          "id": "dragonclaw",
+          "type": "Dragon",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Extreme Speed",
+          "id": "extremespeed",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 2,
+          "description": "Nearly always goes first."
+        },
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        },
+        {
+          "name": "Fire Punch",
+          "id": "firepunch",
+          "type": "Fire",
+          "category": "Physical",
+          "base_power": 75,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to burn the target."
+        },
+        {
+          "name": "Dragon Dance",
+          "id": "dragondance",
+          "type": "Dragon",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack and Speed by 1."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Garchomp",
+      "types": [
+        "Dragon",
+        "Ground"
+      ],
+      "weight_kg": 95,
+      "base_stats": {
+        "hp": 108,
+        "atk": 130,
+        "def": 95,
+        "spa": 80,
+        "spd": 85,
+        "spe": 102
+      },
+      "validated_ability": "Rough Skin",
+      "available_abilities": {
+        "0": "Sand Veil",
+        "H": "Rough Skin"
+      },
+      "moves": [
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        },
+        {
+          "name": "Dragon Claw",
+          "id": "dragonclaw",
+          "type": "Dragon",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Rock Slide",
+          "id": "rockslide",
+          "type": "Rock",
+          "category": "Physical",
+          "base_power": 75,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "30% chance to make the foe(s) flinch."
+        },
+        {
+          "name": "Poison Jab",
+          "id": "poisonjab",
+          "type": "Poison",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "30% chance to poison the target."
+        },
+        {
+          "name": "Swords Dance",
+          "id": "swordsdance",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Lucario",
+      "types": [
+        "Fighting",
+        "Steel"
+      ],
+      "weight_kg": 54,
+      "base_stats": {
+        "hp": 70,
+        "atk": 110,
+        "def": 70,
+        "spa": 115,
+        "spd": 70,
+        "spe": 90
+      },
+      "validated_ability": "Steadfast",
+      "available_abilities": {
+        "0": "Steadfast",
+        "1": "Inner Focus",
+        "H": "Justified"
+      },
+      "moves": [
+        {
+          "name": "Aura Sphere",
+          "id": "aurasphere",
+          "type": "Fighting",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": true,
+          "priority": 0,
+          "description": "This move does not check accuracy."
+        },
+        {
+          "name": "Close Combat",
+          "id": "closecombat",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Lowers the user's Defense and Sp. Def by 1."
+        },
+        {
+          "name": "Flash Cannon",
+          "id": "flashcannon",
+          "type": "Steel",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Extreme Speed",
+          "id": "extremespeed",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 2,
+          "description": "Nearly always goes first."
+        },
+        {
+          "name": "Swords Dance",
+          "id": "swordsdance",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Gengar",
+      "types": [
+        "Ghost",
+        "Poison"
+      ],
+      "weight_kg": 40.5,
+      "base_stats": {
+        "hp": 60,
+        "atk": 65,
+        "def": 60,
+        "spa": 130,
+        "spd": 75,
+        "spe": 110
+      },
+      "validated_ability": "Cursed Body",
+      "available_abilities": {
+        "0": "Cursed Body"
+      },
+      "moves": [
+        {
+          "name": "Shadow Ball",
+          "id": "shadowball",
+          "type": "Ghost",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Sludge Bomb",
+          "id": "sludgebomb",
+          "type": "Poison",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "30% chance to poison the target."
+        },
+        {
+          "name": "Focus Blast",
+          "id": "focusblast",
+          "type": "Fighting",
+          "category": "Special",
+          "base_power": 120,
+          "accuracy": 70,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Thunderbolt",
+          "id": "thunderbolt",
+          "type": "Electric",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to paralyze the target."
+        },
+        {
+          "name": "Destiny Bond",
+          "id": "destinybond",
+          "type": "Ghost",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "If an opponent knocks out the user, it also faints."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Alakazam",
+      "types": [
+        "Psychic"
+      ],
+      "weight_kg": 48,
+      "base_stats": {
+        "hp": 55,
+        "atk": 50,
+        "def": 45,
+        "spa": 135,
+        "spd": 95,
+        "spe": 120
+      },
+      "validated_ability": "Synchronize",
+      "available_abilities": {
+        "0": "Synchronize",
+        "1": "Inner Focus",
+        "H": "Magic Guard"
+      },
+      "moves": [
+        {
+          "name": "Psychic",
+          "id": "psychic",
+          "type": "Psychic",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Shadow Ball",
+          "id": "shadowball",
+          "type": "Ghost",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Focus Blast",
+          "id": "focusblast",
+          "type": "Fighting",
+          "category": "Special",
+          "base_power": 120,
+          "accuracy": 70,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Energy Ball",
+          "id": "energyball",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Calm Mind",
+          "id": "calmmind",
+          "type": "Psychic",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Sp. Atk and Sp. Def by 1."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Machamp",
+      "types": [
+        "Fighting"
+      ],
+      "weight_kg": 130,
+      "base_stats": {
+        "hp": 90,
+        "atk": 130,
+        "def": 80,
+        "spa": 65,
+        "spd": 85,
+        "spe": 55
+      },
+      "validated_ability": "Guts",
+      "available_abilities": {
+        "0": "Guts",
+        "1": "No Guard",
+        "H": "Steadfast"
+      },
+      "moves": [
+        {
+          "name": "Close Combat",
+          "id": "closecombat",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Lowers the user's Defense and Sp. Def by 1."
+        },
+        {
+          "name": "Dynamic Punch",
+          "id": "dynamicpunch",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 50,
+          "priority": 0,
+          "description": "100% chance to confuse the target."
+        },
+        {
+          "name": "Stone Edge",
+          "id": "stoneedge",
+          "type": "Rock",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 80,
+          "priority": 0,
+          "description": "High critical hit ratio."
+        },
+        {
+          "name": "Ice Punch",
+          "id": "icepunch",
+          "type": "Ice",
+          "category": "Physical",
+          "base_power": 75,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze the target."
+        },
+        {
+          "name": "Bullet Punch",
+          "id": "bulletpunch",
+          "type": "Steel",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Arcanine",
+      "types": [
+        "Fire"
+      ],
+      "weight_kg": 155,
+      "base_stats": {
+        "hp": 90,
+        "atk": 110,
+        "def": 80,
+        "spa": 100,
+        "spd": 80,
+        "spe": 95
+      },
+      "validated_ability": "Intimidate",
+      "available_abilities": {
+        "0": "Intimidate",
+        "1": "Flash Fire",
+        "H": "Justified"
+      },
+      "moves": [
+        {
+          "name": "Flare Blitz",
+          "id": "flareblitz",
+          "type": "Fire",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Has 33% recoil. 10% chance to burn. Thaws user."
+        },
+        {
+          "name": "Extreme Speed",
+          "id": "extremespeed",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 2,
+          "description": "Nearly always goes first."
+        },
+        {
+          "name": "Crunch",
+          "id": "crunch",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Defense by 1."
+        },
+        {
+          "name": "Wild Charge",
+          "id": "wildcharge",
+          "type": "Electric",
+          "category": "Physical",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Has 1/4 recoil."
+        },
+        {
+          "name": "Will-O-Wisp",
+          "id": "willowisp",
+          "type": "Fire",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": 85,
+          "priority": 0,
+          "description": "Burns the target."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Ninetales",
+      "types": [
+        "Fire"
+      ],
+      "weight_kg": 19.9,
+      "base_stats": {
+        "hp": 73,
+        "atk": 76,
+        "def": 75,
+        "spa": 81,
+        "spd": 100,
+        "spe": 100
+      },
+      "validated_ability": "Flash Fire",
+      "available_abilities": {
+        "0": "Flash Fire",
+        "H": "Drought"
+      },
+      "moves": [
+        {
+          "name": "Flamethrower",
+          "id": "flamethrower",
+          "type": "Fire",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to burn the target."
+        },
+        {
+          "name": "Energy Ball",
+          "id": "energyball",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Solar Beam",
+          "id": "solarbeam",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Charges turn 1. Hits turn 2. No charge in sunlight."
+        },
+        {
+          "name": "Will-O-Wisp",
+          "id": "willowisp",
+          "type": "Fire",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": 85,
+          "priority": 0,
+          "description": "Burns the target."
+        },
+        {
+          "name": "Nasty Plot",
+          "id": "nastyplot",
+          "type": "Dark",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Sp. Atk by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Snorlax",
+      "types": [
+        "Normal"
+      ],
+      "weight_kg": 460,
+      "base_stats": {
+        "hp": 160,
+        "atk": 110,
+        "def": 65,
+        "spa": 65,
+        "spd": 110,
+        "spe": 30
+      },
+      "validated_ability": "Immunity",
+      "available_abilities": {
+        "0": "Immunity",
+        "1": "Thick Fat",
+        "H": "Gluttony"
+      },
+      "moves": [
+        {
+          "name": "Body Slam",
+          "id": "bodyslam",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 85,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "30% chance to paralyze the target."
+        },
+        {
+          "name": "Crunch",
+          "id": "crunch",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Defense by 1."
+        },
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        },
+        {
+          "name": "Rest",
+          "id": "rest",
+          "type": "Psychic",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "User sleeps 2 turns and restores HP and status."
+        },
+        {
+          "name": "Curse",
+          "id": "curse",
+          "type": "Ghost",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Curses if Ghost, else -1 Spe, +1 Atk, +1 Def."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Lapras",
+      "types": [
+        "Water",
+        "Ice"
+      ],
+      "weight_kg": 220,
+      "base_stats": {
+        "hp": 130,
+        "atk": 85,
+        "def": 80,
+        "spa": 85,
+        "spd": 95,
+        "spe": 60
+      },
+      "validated_ability": "Water Absorb",
+      "available_abilities": {
+        "0": "Water Absorb",
+        "1": "Shell Armor",
+        "H": "Hydration"
+      },
+      "moves": [
+        {
+          "name": "Surf",
+          "id": "surf",
+          "type": "Water",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dive."
+        },
+        {
+          "name": "Ice Beam",
+          "id": "icebeam",
+          "type": "Ice",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze the target."
+        },
+        {
+          "name": "Thunderbolt",
+          "id": "thunderbolt",
+          "type": "Electric",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to paralyze the target."
+        },
+        {
+          "name": "Freeze-Dry",
+          "id": "freezedry",
+          "type": "Ice",
+          "category": "Special",
+          "base_power": 70,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze. Super effective on Water."
+        },
+        {
+          "name": "Sing",
+          "id": "sing",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": 55,
+          "priority": 0,
+          "description": "Causes the target to fall asleep."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Jolteon",
+      "types": [
+        "Electric"
+      ],
+      "weight_kg": 24.5,
+      "base_stats": {
+        "hp": 65,
+        "atk": 65,
+        "def": 60,
+        "spa": 110,
+        "spd": 95,
+        "spe": 130
+      },
+      "validated_ability": "Volt Absorb",
+      "available_abilities": {
+        "0": "Volt Absorb",
+        "H": "Quick Feet"
+      },
+      "moves": [
+        {
+          "name": "Thunderbolt",
+          "id": "thunderbolt",
+          "type": "Electric",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to paralyze the target."
+        },
+        {
+          "name": "Shadow Ball",
+          "id": "shadowball",
+          "type": "Ghost",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Volt Switch",
+          "id": "voltswitch",
+          "type": "Electric",
+          "category": "Special",
+          "base_power": 70,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "User switches out after damaging the target."
+        },
+        {
+          "name": "Hyper Voice",
+          "id": "hypervoice",
+          "type": "Normal",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect. Hits adjacent foes."
+        },
+        {
+          "name": "Substitute",
+          "id": "substitute",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "User takes 1/4 its max HP to put in a substitute."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Vaporeon",
+      "types": [
+        "Water"
+      ],
+      "weight_kg": 29,
+      "base_stats": {
+        "hp": 130,
+        "atk": 65,
+        "def": 60,
+        "spa": 110,
+        "spd": 95,
+        "spe": 65
+      },
+      "validated_ability": "Water Absorb",
+      "available_abilities": {
+        "0": "Water Absorb",
+        "H": "Hydration"
+      },
+      "moves": [
+        {
+          "name": "Surf",
+          "id": "surf",
+          "type": "Water",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dive."
+        },
+        {
+          "name": "Ice Beam",
+          "id": "icebeam",
+          "type": "Ice",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze the target."
+        },
+        {
+          "name": "Shadow Ball",
+          "id": "shadowball",
+          "type": "Ghost",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Wish",
+          "id": "wish",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Next turn, 50% of the user's max HP is restored."
+        },
+        {
+          "name": "Protect",
+          "id": "protect",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 4,
+          "description": "Prevents moves from affecting the user this turn."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Flareon",
+      "types": [
+        "Fire"
+      ],
+      "weight_kg": 25,
+      "base_stats": {
+        "hp": 65,
+        "atk": 130,
+        "def": 60,
+        "spa": 95,
+        "spd": 110,
+        "spe": 65
+      },
+      "validated_ability": "Flash Fire",
+      "available_abilities": {
+        "0": "Flash Fire",
+        "H": "Guts"
+      },
+      "moves": [
+        {
+          "name": "Flare Blitz",
+          "id": "flareblitz",
+          "type": "Fire",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Has 33% recoil. 10% chance to burn. Thaws user."
+        },
+        {
+          "name": "Superpower",
+          "id": "superpower",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Lowers the user's Attack and Defense by 1."
+        },
+        {
+          "name": "Quick Attack",
+          "id": "quickattack",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        },
+        {
+          "name": "Will-O-Wisp",
+          "id": "willowisp",
+          "type": "Fire",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": 85,
+          "priority": 0,
+          "description": "Burns the target."
+        },
+        {
+          "name": "Wish",
+          "id": "wish",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Next turn, 50% of the user's max HP is restored."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Espeon",
+      "types": [
+        "Psychic"
+      ],
+      "weight_kg": 26.5,
+      "base_stats": {
+        "hp": 65,
+        "atk": 65,
+        "def": 60,
+        "spa": 130,
+        "spd": 95,
+        "spe": 110
+      },
+      "validated_ability": "Synchronize",
+      "available_abilities": {
+        "0": "Synchronize",
+        "H": "Magic Bounce"
+      },
+      "moves": [
+        {
+          "name": "Psychic",
+          "id": "psychic",
+          "type": "Psychic",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Dazzling Gleam",
+          "id": "dazzlinggleam",
+          "type": "Fairy",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect. Hits adjacent foes."
+        },
+        {
+          "name": "Shadow Ball",
+          "id": "shadowball",
+          "type": "Ghost",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Morning Sun",
+          "id": "morningsun",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Heals the user by a weather-dependent amount."
+        },
+        {
+          "name": "Calm Mind",
+          "id": "calmmind",
+          "type": "Psychic",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Sp. Atk and Sp. Def by 1."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Umbreon",
+      "types": [
+        "Dark"
+      ],
+      "weight_kg": 27,
+      "base_stats": {
+        "hp": 95,
+        "atk": 65,
+        "def": 110,
+        "spa": 60,
+        "spd": 130,
+        "spe": 65
+      },
+      "validated_ability": "Synchronize",
+      "available_abilities": {
+        "0": "Synchronize",
+        "H": "Inner Focus"
+      },
+      "moves": [
+        {
+          "name": "Foul Play",
+          "id": "foulplay",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 95,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Uses target's Attack stat in damage calculation."
+        },
+        {
+          "name": "Dark Pulse",
+          "id": "darkpulse",
+          "type": "Dark",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to make the target flinch."
+        },
+        {
+          "name": "Wish",
+          "id": "wish",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Next turn, 50% of the user's max HP is restored."
+        },
+        {
+          "name": "Protect",
+          "id": "protect",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 4,
+          "description": "Prevents moves from affecting the user this turn."
+        },
+        {
+          "name": "Toxic",
+          "id": "toxic",
+          "type": "Poison",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "Badly poisons the target. Poison types can't miss."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Leafeon",
+      "types": [
+        "Grass"
+      ],
+      "weight_kg": 25.5,
+      "base_stats": {
+        "hp": 65,
+        "atk": 110,
+        "def": 130,
+        "spa": 60,
+        "spd": 65,
+        "spe": 95
+      },
+      "validated_ability": "Leaf Guard",
+      "available_abilities": {
+        "0": "Leaf Guard",
+        "H": "Chlorophyll"
+      },
+      "moves": [
+        {
+          "name": "Leaf Blade",
+          "id": "leafblade",
+          "type": "Grass",
+          "category": "Physical",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "High critical hit ratio."
+        },
+        {
+          "name": "X-Scissor",
+          "id": "xscissor",
+          "type": "Bug",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Knock Off",
+          "id": "knockoff",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 65,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "1.5x damage if foe holds an item. Removes item."
+        },
+        {
+          "name": "Quick Attack",
+          "id": "quickattack",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        },
+        {
+          "name": "Swords Dance",
+          "id": "swordsdance",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Glaceon",
+      "types": [
+        "Ice"
+      ],
+      "weight_kg": 25.9,
+      "base_stats": {
+        "hp": 65,
+        "atk": 60,
+        "def": 110,
+        "spa": 130,
+        "spd": 95,
+        "spe": 65
+      },
+      "validated_ability": "Ice Body",
+      "available_abilities": {
+        "0": "Snow Cloak",
+        "H": "Ice Body"
+      },
+      "moves": [
+        {
+          "name": "Ice Beam",
+          "id": "icebeam",
+          "type": "Ice",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze the target."
+        },
+        {
+          "name": "Freeze-Dry",
+          "id": "freezedry",
+          "type": "Ice",
+          "category": "Special",
+          "base_power": 70,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze. Super effective on Water."
+        },
+        {
+          "name": "Shadow Ball",
+          "id": "shadowball",
+          "type": "Ghost",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Water Pulse",
+          "id": "waterpulse",
+          "type": "Water",
+          "category": "Special",
+          "base_power": 60,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to confuse the target."
+        },
+        {
+          "name": "Wish",
+          "id": "wish",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Next turn, 50% of the user's max HP is restored."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Sylveon",
+      "types": [
+        "Fairy"
+      ],
+      "weight_kg": 23.5,
+      "base_stats": {
+        "hp": 95,
+        "atk": 65,
+        "def": 65,
+        "spa": 110,
+        "spd": 130,
+        "spe": 60
+      },
+      "validated_ability": "Cute Charm",
+      "available_abilities": {
+        "0": "Cute Charm",
+        "H": "Pixilate"
+      },
+      "moves": [
+        {
+          "name": "Moonblast",
+          "id": "moonblast",
+          "type": "Fairy",
+          "category": "Special",
+          "base_power": 95,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "30% chance to lower the target's Sp. Atk by 1."
+        },
+        {
+          "name": "Hyper Voice",
+          "id": "hypervoice",
+          "type": "Normal",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect. Hits adjacent foes."
+        },
+        {
+          "name": "Mystical Fire",
+          "id": "mysticalfire",
+          "type": "Fire",
+          "category": "Special",
+          "base_power": 75,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "100% chance to lower the target's Sp. Atk by 1."
+        },
+        {
+          "name": "Quick Attack",
+          "id": "quickattack",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        },
+        {
+          "name": "Calm Mind",
+          "id": "calmmind",
+          "type": "Psychic",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Sp. Atk and Sp. Def by 1."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Eevee",
+      "types": [
+        "Normal"
+      ],
+      "weight_kg": 6.5,
+      "base_stats": {
+        "hp": 55,
+        "atk": 55,
+        "def": 50,
+        "spa": 45,
+        "spd": 65,
+        "spe": 55
+      },
+      "validated_ability": "Run Away",
+      "available_abilities": {
+        "0": "Run Away",
+        "1": "Adaptability",
+        "H": "Anticipation"
+      },
+      "moves": [
+        {
+          "name": "Quick Attack",
+          "id": "quickattack",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        },
+        {
+          "name": "Bite",
+          "id": "bite",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 60,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "30% chance to make the target flinch."
+        },
+        {
+          "name": "Swift",
+          "id": "swift",
+          "type": "Normal",
+          "category": "Special",
+          "base_power": 60,
+          "accuracy": true,
+          "priority": 0,
+          "description": "This move does not check accuracy. Hits foes."
+        },
+        {
+          "name": "Sand Attack",
+          "id": "sandattack",
+          "type": "Ground",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Lowers the target's accuracy by 1."
+        },
+        {
+          "name": "Tackle",
+          "id": "tackle",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Meowth",
+      "types": [
+        "Normal"
+      ],
+      "weight_kg": 4.2,
+      "base_stats": {
+        "hp": 40,
+        "atk": 45,
+        "def": 35,
+        "spa": 40,
+        "spd": 40,
+        "spe": 90
+      },
+      "validated_ability": "Pickup",
+      "available_abilities": {
+        "0": "Pickup",
+        "1": "Technician",
+        "H": "Unnerve"
+      },
+      "moves": [
+        {
+          "name": "Fake Out",
+          "id": "fakeout",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 3,
+          "description": "Hits first. First turn out only. 100% flinch chance."
+        },
+        {
+          "name": "Pay Day",
+          "id": "payday",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Scatters coins."
+        },
+        {
+          "name": "Fury Swipes",
+          "id": "furyswipes",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 18,
+          "accuracy": 80,
+          "priority": 0,
+          "description": "Hits 2-5 times in one turn."
+        },
+        {
+          "name": "Bite",
+          "id": "bite",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 60,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "30% chance to make the target flinch."
+        },
+        {
+          "name": "Taunt",
+          "id": "taunt",
+          "type": "Dark",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Target can't use status moves its next 3 turns."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Tyranitar",
+      "types": [
+        "Rock",
+        "Dark"
+      ],
+      "weight_kg": 202,
+      "base_stats": {
+        "hp": 100,
+        "atk": 134,
+        "def": 110,
+        "spa": 95,
+        "spd": 100,
+        "spe": 61
+      },
+      "validated_ability": "Sand Stream",
+      "available_abilities": {
+        "0": "Sand Stream",
+        "H": "Unnerve"
+      },
+      "moves": [
+        {
+          "name": "Stone Edge",
+          "id": "stoneedge",
+          "type": "Rock",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 80,
+          "priority": 0,
+          "description": "High critical hit ratio."
+        },
+        {
+          "name": "Crunch",
+          "id": "crunch",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Defense by 1."
+        },
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        },
+        {
+          "name": "Ice Punch",
+          "id": "icepunch",
+          "type": "Ice",
+          "category": "Physical",
+          "base_power": 75,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze the target."
+        },
+        {
+          "name": "Dragon Dance",
+          "id": "dragondance",
+          "type": "Dragon",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack and Speed by 1."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Scizor",
+      "types": [
+        "Bug",
+        "Steel"
+      ],
+      "weight_kg": 118,
+      "base_stats": {
+        "hp": 70,
+        "atk": 130,
+        "def": 100,
+        "spa": 55,
+        "spd": 80,
+        "spe": 65
+      },
+      "validated_ability": "Swarm",
+      "available_abilities": {
+        "0": "Swarm",
+        "1": "Technician",
+        "H": "Light Metal"
+      },
+      "moves": [
+        {
+          "name": "Bullet Punch",
+          "id": "bulletpunch",
+          "type": "Steel",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        },
+        {
+          "name": "U-turn",
+          "id": "uturn",
+          "type": "Bug",
+          "category": "Physical",
+          "base_power": 70,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "User switches out after damaging the target."
+        },
+        {
+          "name": "Close Combat",
+          "id": "closecombat",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Lowers the user's Defense and Sp. Def by 1."
+        },
+        {
+          "name": "Knock Off",
+          "id": "knockoff",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 65,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "1.5x damage if foe holds an item. Removes item."
+        },
+        {
+          "name": "Swords Dance",
+          "id": "swordsdance",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Heracross",
+      "types": [
+        "Bug",
+        "Fighting"
+      ],
+      "weight_kg": 54,
+      "base_stats": {
+        "hp": 80,
+        "atk": 125,
+        "def": 75,
+        "spa": 40,
+        "spd": 95,
+        "spe": 85
+      },
+      "validated_ability": "Swarm",
+      "available_abilities": {
+        "0": "Swarm",
+        "1": "Guts",
+        "H": "Moxie"
+      },
+      "moves": [
+        {
+          "name": "Megahorn",
+          "id": "megahorn",
+          "type": "Bug",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 85,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Close Combat",
+          "id": "closecombat",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Lowers the user's Defense and Sp. Def by 1."
+        },
+        {
+          "name": "Stone Edge",
+          "id": "stoneedge",
+          "type": "Rock",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 80,
+          "priority": 0,
+          "description": "High critical hit ratio."
+        },
+        {
+          "name": "Knock Off",
+          "id": "knockoff",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 65,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "1.5x damage if foe holds an item. Removes item."
+        },
+        {
+          "name": "Swords Dance",
+          "id": "swordsdance",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Gardevoir",
+      "types": [
+        "Psychic",
+        "Fairy"
+      ],
+      "weight_kg": 48.4,
+      "base_stats": {
+        "hp": 68,
+        "atk": 65,
+        "def": 65,
+        "spa": 125,
+        "spd": 115,
+        "spe": 80
+      },
+      "validated_ability": "Synchronize",
+      "available_abilities": {
+        "0": "Synchronize",
+        "1": "Trace",
+        "H": "Telepathy"
+      },
+      "moves": [
+        {
+          "name": "Moonblast",
+          "id": "moonblast",
+          "type": "Fairy",
+          "category": "Special",
+          "base_power": 95,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "30% chance to lower the target's Sp. Atk by 1."
+        },
+        {
+          "name": "Psychic",
+          "id": "psychic",
+          "type": "Psychic",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Shadow Ball",
+          "id": "shadowball",
+          "type": "Ghost",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Mystical Fire",
+          "id": "mysticalfire",
+          "type": "Fire",
+          "category": "Special",
+          "base_power": 75,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "100% chance to lower the target's Sp. Atk by 1."
+        },
+        {
+          "name": "Calm Mind",
+          "id": "calmmind",
+          "type": "Psychic",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Sp. Atk and Sp. Def by 1."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Gallade",
+      "types": [
+        "Psychic",
+        "Fighting"
+      ],
+      "weight_kg": 52,
+      "base_stats": {
+        "hp": 68,
+        "atk": 125,
+        "def": 65,
+        "spa": 65,
+        "spd": 115,
+        "spe": 80
+      },
+      "validated_ability": "Steadfast",
+      "available_abilities": {
+        "0": "Steadfast",
+        "1": "Sharpness",
+        "H": "Justified"
+      },
+      "moves": [
+        {
+          "name": "Psycho Cut",
+          "id": "psychocut",
+          "type": "Psychic",
+          "category": "Physical",
+          "base_power": 70,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "High critical hit ratio."
+        },
+        {
+          "name": "Close Combat",
+          "id": "closecombat",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Lowers the user's Defense and Sp. Def by 1."
+        },
+        {
+          "name": "Leaf Blade",
+          "id": "leafblade",
+          "type": "Grass",
+          "category": "Physical",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "High critical hit ratio."
+        },
+        {
+          "name": "Shadow Sneak",
+          "id": "shadowsneak",
+          "type": "Ghost",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        },
+        {
+          "name": "Swords Dance",
+          "id": "swordsdance",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Salamence",
+      "types": [
+        "Dragon",
+        "Flying"
+      ],
+      "weight_kg": 102.6,
+      "base_stats": {
+        "hp": 95,
+        "atk": 135,
+        "def": 80,
+        "spa": 110,
+        "spd": 80,
+        "spe": 100
+      },
+      "validated_ability": "Intimidate",
+      "available_abilities": {
+        "0": "Intimidate",
+        "H": "Moxie"
+      },
+      "moves": [
+        {
+          "name": "Dragon Claw",
+          "id": "dragonclaw",
+          "type": "Dragon",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Dual Wingbeat",
+          "id": "dualwingbeat",
+          "type": "Flying",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "Hits 2 times in one turn."
+        },
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        },
+        {
+          "name": "Flamethrower",
+          "id": "flamethrower",
+          "type": "Fire",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to burn the target."
+        },
+        {
+          "name": "Dragon Dance",
+          "id": "dragondance",
+          "type": "Dragon",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack and Speed by 1."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Metagross",
+      "types": [
+        "Steel",
+        "Psychic"
+      ],
+      "weight_kg": 550,
+      "base_stats": {
+        "hp": 80,
+        "atk": 135,
+        "def": 130,
+        "spa": 95,
+        "spd": 90,
+        "spe": 70
+      },
+      "validated_ability": "Clear Body",
+      "available_abilities": {
+        "0": "Clear Body",
+        "H": "Light Metal"
+      },
+      "moves": [
+        {
+          "name": "Meteor Mash",
+          "id": "meteormash",
+          "type": "Steel",
+          "category": "Physical",
+          "base_power": 90,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "20% chance to raise the user's Attack by 1."
+        },
+        {
+          "name": "Zen Headbutt",
+          "id": "zenheadbutt",
+          "type": "Psychic",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "20% chance to make the target flinch."
+        },
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        },
+        {
+          "name": "Bullet Punch",
+          "id": "bulletpunch",
+          "type": "Steel",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        },
+        {
+          "name": "Agility",
+          "id": "agility",
+          "type": "Psychic",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Speed by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Milotic",
+      "types": [
+        "Water"
+      ],
+      "weight_kg": 162,
+      "base_stats": {
+        "hp": 95,
+        "atk": 60,
+        "def": 79,
+        "spa": 100,
+        "spd": 125,
+        "spe": 81
+      },
+      "validated_ability": "Marvel Scale",
+      "available_abilities": {
+        "0": "Marvel Scale",
+        "1": "Competitive",
+        "H": "Cute Charm"
+      },
+      "moves": [
+        {
+          "name": "Surf",
+          "id": "surf",
+          "type": "Water",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dive."
+        },
+        {
+          "name": "Ice Beam",
+          "id": "icebeam",
+          "type": "Ice",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze the target."
+        },
+        {
+          "name": "Dragon Pulse",
+          "id": "dragonpulse",
+          "type": "Dragon",
+          "category": "Special",
+          "base_power": 85,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Recover",
+          "id": "recover",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Heals the user by 50% of its max HP."
+        },
+        {
+          "name": "Haze",
+          "id": "haze",
+          "type": "Ice",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Eliminates all stat changes."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Sceptile",
+      "types": [
+        "Grass"
+      ],
+      "weight_kg": 52.2,
+      "base_stats": {
+        "hp": 70,
+        "atk": 85,
+        "def": 65,
+        "spa": 105,
+        "spd": 85,
+        "spe": 120
+      },
+      "validated_ability": "Overgrow",
+      "available_abilities": {
+        "0": "Overgrow",
+        "H": "Unburden"
+      },
+      "moves": [
+        {
+          "name": "Leaf Blade",
+          "id": "leafblade",
+          "type": "Grass",
+          "category": "Physical",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "High critical hit ratio."
+        },
+        {
+          "name": "Dragon Pulse",
+          "id": "dragonpulse",
+          "type": "Dragon",
+          "category": "Special",
+          "base_power": 85,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Focus Blast",
+          "id": "focusblast",
+          "type": "Fighting",
+          "category": "Special",
+          "base_power": 120,
+          "accuracy": 70,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Acrobatics",
+          "id": "acrobatics",
+          "type": "Flying",
+          "category": "Physical",
+          "base_power": 55,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Power doubles if the user has no held item."
+        },
+        {
+          "name": "Swords Dance",
+          "id": "swordsdance",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Blaziken",
+      "types": [
+        "Fire",
+        "Fighting"
+      ],
+      "weight_kg": 52,
+      "base_stats": {
+        "hp": 80,
+        "atk": 120,
+        "def": 70,
+        "spa": 110,
+        "spd": 70,
+        "spe": 80
+      },
+      "validated_ability": "Blaze",
+      "available_abilities": {
+        "0": "Blaze",
+        "H": "Speed Boost"
+      },
+      "moves": [
+        {
+          "name": "Flare Blitz",
+          "id": "flareblitz",
+          "type": "Fire",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Has 33% recoil. 10% chance to burn. Thaws user."
+        },
+        {
+          "name": "Close Combat",
+          "id": "closecombat",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Lowers the user's Defense and Sp. Def by 1."
+        },
+        {
+          "name": "Thunder Punch",
+          "id": "thunderpunch",
+          "type": "Electric",
+          "category": "Physical",
+          "base_power": 75,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to paralyze the target."
+        },
+        {
+          "name": "Stone Edge",
+          "id": "stoneedge",
+          "type": "Rock",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 80,
+          "priority": 0,
+          "description": "High critical hit ratio."
+        },
+        {
+          "name": "Swords Dance",
+          "id": "swordsdance",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Swampert",
+      "types": [
+        "Water",
+        "Ground"
+      ],
+      "weight_kg": 81.9,
+      "base_stats": {
+        "hp": 100,
+        "atk": 110,
+        "def": 90,
+        "spa": 85,
+        "spd": 90,
+        "spe": 60
+      },
+      "validated_ability": "Torrent",
+      "available_abilities": {
+        "0": "Torrent",
+        "H": "Damp"
+      },
+      "moves": [
+        {
+          "name": "Waterfall",
+          "id": "waterfall",
+          "type": "Water",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to make the target flinch."
+        },
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        },
+        {
+          "name": "Ice Punch",
+          "id": "icepunch",
+          "type": "Ice",
+          "category": "Physical",
+          "base_power": 75,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze the target."
+        },
+        {
+          "name": "Rock Slide",
+          "id": "rockslide",
+          "type": "Rock",
+          "category": "Physical",
+          "base_power": 75,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "30% chance to make the foe(s) flinch."
+        },
+        {
+          "name": "Stealth Rock",
+          "id": "stealthrock",
+          "type": "Rock",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Hurts foes on switch-in. Factors Rock weakness."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Infernape",
+      "types": [
+        "Fire",
+        "Fighting"
+      ],
+      "weight_kg": 55,
+      "base_stats": {
+        "hp": 76,
+        "atk": 104,
+        "def": 71,
+        "spa": 104,
+        "spd": 71,
+        "spe": 108
+      },
+      "validated_ability": "Blaze",
+      "available_abilities": {
+        "0": "Blaze",
+        "H": "Iron Fist"
+      },
+      "moves": [
+        {
+          "name": "Flare Blitz",
+          "id": "flareblitz",
+          "type": "Fire",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Has 33% recoil. 10% chance to burn. Thaws user."
+        },
+        {
+          "name": "Close Combat",
+          "id": "closecombat",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Lowers the user's Defense and Sp. Def by 1."
+        },
+        {
+          "name": "Mach Punch",
+          "id": "machpunch",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        },
+        {
+          "name": "Grass Knot",
+          "id": "grassknot",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 0,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "More power the heavier the target.",
+          "selection_note": "Variable power: resolve in engine before explaining damage."
+        },
+        {
+          "name": "U-turn",
+          "id": "uturn",
+          "type": "Bug",
+          "category": "Physical",
+          "base_power": 70,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "User switches out after damaging the target."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Empoleon",
+      "types": [
+        "Water",
+        "Steel"
+      ],
+      "weight_kg": 84.5,
+      "base_stats": {
+        "hp": 84,
+        "atk": 86,
+        "def": 88,
+        "spa": 111,
+        "spd": 101,
+        "spe": 60
+      },
+      "validated_ability": "Torrent",
+      "available_abilities": {
+        "0": "Torrent",
+        "H": "Competitive"
+      },
+      "moves": [
+        {
+          "name": "Surf",
+          "id": "surf",
+          "type": "Water",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dive."
+        },
+        {
+          "name": "Flash Cannon",
+          "id": "flashcannon",
+          "type": "Steel",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Ice Beam",
+          "id": "icebeam",
+          "type": "Ice",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to freeze the target."
+        },
+        {
+          "name": "Grass Knot",
+          "id": "grassknot",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 0,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "More power the heavier the target.",
+          "selection_note": "Variable power: resolve in engine before explaining damage."
+        },
+        {
+          "name": "Roost",
+          "id": "roost",
+          "type": "Flying",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Heals 50% HP. Flying-type removed 'til turn ends."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Torterra",
+      "types": [
+        "Grass",
+        "Ground"
+      ],
+      "weight_kg": 310,
+      "base_stats": {
+        "hp": 95,
+        "atk": 109,
+        "def": 105,
+        "spa": 75,
+        "spd": 85,
+        "spe": 56
+      },
+      "validated_ability": "Overgrow",
+      "available_abilities": {
+        "0": "Overgrow",
+        "H": "Shell Armor"
+      },
+      "moves": [
+        {
+          "name": "Wood Hammer",
+          "id": "woodhammer",
+          "type": "Grass",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Has 33% recoil."
+        },
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        },
+        {
+          "name": "Stone Edge",
+          "id": "stoneedge",
+          "type": "Rock",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 80,
+          "priority": 0,
+          "description": "High critical hit ratio."
+        },
+        {
+          "name": "Crunch",
+          "id": "crunch",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Defense by 1."
+        },
+        {
+          "name": "Shell Smash",
+          "id": "shellsmash",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Lowers Def, SpD by 1; raises Atk, SpA, Spe by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Luxray",
+      "types": [
+        "Electric"
+      ],
+      "weight_kg": 42,
+      "base_stats": {
+        "hp": 80,
+        "atk": 120,
+        "def": 79,
+        "spa": 95,
+        "spd": 79,
+        "spe": 70
+      },
+      "validated_ability": "Rivalry",
+      "available_abilities": {
+        "0": "Rivalry",
+        "1": "Intimidate",
+        "H": "Guts"
+      },
+      "moves": [
+        {
+          "name": "Wild Charge",
+          "id": "wildcharge",
+          "type": "Electric",
+          "category": "Physical",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Has 1/4 recoil."
+        },
+        {
+          "name": "Crunch",
+          "id": "crunch",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Defense by 1."
+        },
+        {
+          "name": "Ice Fang",
+          "id": "icefang",
+          "type": "Ice",
+          "category": "Physical",
+          "base_power": 65,
+          "accuracy": 95,
+          "priority": 0,
+          "description": "10% chance to freeze. 10% chance to flinch."
+        },
+        {
+          "name": "Play Rough",
+          "id": "playrough",
+          "type": "Fairy",
+          "category": "Physical",
+          "base_power": 90,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "10% chance to lower the target's Attack by 1."
+        },
+        {
+          "name": "Thunder Wave",
+          "id": "thunderwave",
+          "type": "Electric",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "Paralyzes the target."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Weavile",
+      "types": [
+        "Dark",
+        "Ice"
+      ],
+      "weight_kg": 34,
+      "base_stats": {
+        "hp": 70,
+        "atk": 120,
+        "def": 65,
+        "spa": 45,
+        "spd": 85,
+        "spe": 125
+      },
+      "validated_ability": "Pressure",
+      "available_abilities": {
+        "0": "Pressure",
+        "H": "Pickpocket"
+      },
+      "moves": [
+        {
+          "name": "Icicle Crash",
+          "id": "iciclecrash",
+          "type": "Ice",
+          "category": "Physical",
+          "base_power": 85,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "30% chance to make the target flinch."
+        },
+        {
+          "name": "Knock Off",
+          "id": "knockoff",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 65,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "1.5x damage if foe holds an item. Removes item."
+        },
+        {
+          "name": "Ice Shard",
+          "id": "iceshard",
+          "type": "Ice",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        },
+        {
+          "name": "Low Kick",
+          "id": "lowkick",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 0,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "More power the heavier the target.",
+          "selection_note": "Variable power: resolve in engine before explaining damage."
+        },
+        {
+          "name": "Swords Dance",
+          "id": "swordsdance",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Mamoswine",
+      "types": [
+        "Ice",
+        "Ground"
+      ],
+      "weight_kg": 291,
+      "base_stats": {
+        "hp": 110,
+        "atk": 130,
+        "def": 80,
+        "spa": 70,
+        "spd": 60,
+        "spe": 80
+      },
+      "validated_ability": "Oblivious",
+      "available_abilities": {
+        "0": "Oblivious",
+        "1": "Snow Cloak",
+        "H": "Thick Fat"
+      },
+      "moves": [
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        },
+        {
+          "name": "Icicle Crash",
+          "id": "iciclecrash",
+          "type": "Ice",
+          "category": "Physical",
+          "base_power": 85,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "30% chance to make the target flinch."
+        },
+        {
+          "name": "Ice Shard",
+          "id": "iceshard",
+          "type": "Ice",
+          "category": "Physical",
+          "base_power": 40,
+          "accuracy": 100,
+          "priority": 1,
+          "description": "Usually goes first."
+        },
+        {
+          "name": "Stone Edge",
+          "id": "stoneedge",
+          "type": "Rock",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 80,
+          "priority": 0,
+          "description": "High critical hit ratio."
+        },
+        {
+          "name": "Stealth Rock",
+          "id": "stealthrock",
+          "type": "Rock",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Hurts foes on switch-in. Factors Rock weakness."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Togekiss",
+      "types": [
+        "Fairy",
+        "Flying"
+      ],
+      "weight_kg": 38,
+      "base_stats": {
+        "hp": 85,
+        "atk": 50,
+        "def": 95,
+        "spa": 120,
+        "spd": 115,
+        "spe": 80
+      },
+      "validated_ability": "Hustle",
+      "available_abilities": {
+        "0": "Hustle",
+        "1": "Serene Grace",
+        "H": "Super Luck"
+      },
+      "moves": [
+        {
+          "name": "Air Slash",
+          "id": "airslash",
+          "type": "Flying",
+          "category": "Special",
+          "base_power": 75,
+          "accuracy": 95,
+          "priority": 0,
+          "description": "30% chance to make the target flinch."
+        },
+        {
+          "name": "Dazzling Gleam",
+          "id": "dazzlinggleam",
+          "type": "Fairy",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect. Hits adjacent foes."
+        },
+        {
+          "name": "Aura Sphere",
+          "id": "aurasphere",
+          "type": "Fighting",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": true,
+          "priority": 0,
+          "description": "This move does not check accuracy."
+        },
+        {
+          "name": "Roost",
+          "id": "roost",
+          "type": "Flying",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Heals 50% HP. Flying-type removed 'til turn ends."
+        },
+        {
+          "name": "Thunder Wave",
+          "id": "thunderwave",
+          "type": "Electric",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "Paralyzes the target."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Excadrill",
+      "types": [
+        "Ground",
+        "Steel"
+      ],
+      "weight_kg": 40.4,
+      "base_stats": {
+        "hp": 110,
+        "atk": 135,
+        "def": 60,
+        "spa": 50,
+        "spd": 65,
+        "spe": 88
+      },
+      "validated_ability": "Sand Rush",
+      "available_abilities": {
+        "0": "Sand Rush",
+        "1": "Sand Force",
+        "H": "Mold Breaker"
+      },
+      "moves": [
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        },
+        {
+          "name": "Iron Head",
+          "id": "ironhead",
+          "type": "Steel",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "30% chance to make the target flinch."
+        },
+        {
+          "name": "Rock Slide",
+          "id": "rockslide",
+          "type": "Rock",
+          "category": "Physical",
+          "base_power": 75,
+          "accuracy": 90,
+          "priority": 0,
+          "description": "30% chance to make the foe(s) flinch."
+        },
+        {
+          "name": "Rapid Spin",
+          "id": "rapidspin",
+          "type": "Normal",
+          "category": "Physical",
+          "base_power": 50,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Free user from hazards/bind/Leech Seed; +1 Spe."
+        },
+        {
+          "name": "Swords Dance",
+          "id": "swordsdance",
+          "type": "Normal",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Chandelure",
+      "types": [
+        "Ghost",
+        "Fire"
+      ],
+      "weight_kg": 34.3,
+      "base_stats": {
+        "hp": 60,
+        "atk": 55,
+        "def": 90,
+        "spa": 145,
+        "spd": 90,
+        "spe": 80
+      },
+      "validated_ability": "Flash Fire",
+      "available_abilities": {
+        "0": "Flash Fire",
+        "1": "Flame Body",
+        "H": "Infiltrator"
+      },
+      "moves": [
+        {
+          "name": "Flamethrower",
+          "id": "flamethrower",
+          "type": "Fire",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to burn the target."
+        },
+        {
+          "name": "Shadow Ball",
+          "id": "shadowball",
+          "type": "Ghost",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Energy Ball",
+          "id": "energyball",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Psychic",
+          "id": "psychic",
+          "type": "Psychic",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Calm Mind",
+          "id": "calmmind",
+          "type": "Psychic",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Sp. Atk and Sp. Def by 1."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Haxorus",
+      "types": [
+        "Dragon"
+      ],
+      "weight_kg": 105.5,
+      "base_stats": {
+        "hp": 76,
+        "atk": 147,
+        "def": 90,
+        "spa": 60,
+        "spd": 70,
+        "spe": 97
+      },
+      "validated_ability": "Rivalry",
+      "available_abilities": {
+        "0": "Rivalry",
+        "1": "Mold Breaker",
+        "H": "Unnerve"
+      },
+      "moves": [
+        {
+          "name": "Dragon Claw",
+          "id": "dragonclaw",
+          "type": "Dragon",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Earthquake",
+          "id": "earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Hits adjacent Pokemon. Double damage on Dig."
+        },
+        {
+          "name": "Poison Jab",
+          "id": "poisonjab",
+          "type": "Poison",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "30% chance to poison the target."
+        },
+        {
+          "name": "Close Combat",
+          "id": "closecombat",
+          "type": "Fighting",
+          "category": "Physical",
+          "base_power": 120,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "Lowers the user's Defense and Sp. Def by 1."
+        },
+        {
+          "name": "Dragon Dance",
+          "id": "dragondance",
+          "type": "Dragon",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Attack and Speed by 1."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Hydreigon",
+      "types": [
+        "Dark",
+        "Dragon"
+      ],
+      "weight_kg": 160,
+      "base_stats": {
+        "hp": 92,
+        "atk": 105,
+        "def": 90,
+        "spa": 125,
+        "spd": 90,
+        "spe": 98
+      },
+      "validated_ability": "Levitate",
+      "available_abilities": {
+        "0": "Levitate"
+      },
+      "moves": [
+        {
+          "name": "Dark Pulse",
+          "id": "darkpulse",
+          "type": "Dark",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "20% chance to make the target flinch."
+        },
+        {
+          "name": "Dragon Pulse",
+          "id": "dragonpulse",
+          "type": "Dragon",
+          "category": "Special",
+          "base_power": 85,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Flamethrower",
+          "id": "flamethrower",
+          "type": "Fire",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to burn the target."
+        },
+        {
+          "name": "Earth Power",
+          "id": "earthpower",
+          "type": "Ground",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to lower the target's Sp. Def by 1."
+        },
+        {
+          "name": "Nasty Plot",
+          "id": "nastyplot",
+          "type": "Dark",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0,
+          "description": "Raises the user's Sp. Atk by 2."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    },
+    {
+      "species": "Goodra",
+      "types": [
+        "Dragon"
+      ],
+      "weight_kg": 150.5,
+      "base_stats": {
+        "hp": 90,
+        "atk": 100,
+        "def": 70,
+        "spa": 110,
+        "spd": 150,
+        "spe": 80
+      },
+      "validated_ability": "Sap Sipper",
+      "available_abilities": {
+        "0": "Sap Sipper",
+        "1": "Hydration",
+        "H": "Gooey"
+      },
+      "moves": [
+        {
+          "name": "Dragon Pulse",
+          "id": "dragonpulse",
+          "type": "Dragon",
+          "category": "Special",
+          "base_power": 85,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "No additional effect."
+        },
+        {
+          "name": "Sludge Bomb",
+          "id": "sludgebomb",
+          "type": "Poison",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "30% chance to poison the target."
+        },
+        {
+          "name": "Flamethrower",
+          "id": "flamethrower",
+          "type": "Fire",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to burn the target."
+        },
+        {
+          "name": "Thunderbolt",
+          "id": "thunderbolt",
+          "type": "Electric",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0,
+          "description": "10% chance to paralyze the target."
+        },
+        {
+          "name": "Hydro Pump",
+          "id": "hydropump",
+          "type": "Water",
+          "category": "Special",
+          "base_power": 110,
+          "accuracy": 80,
+          "priority": 0,
+          "description": "No additional effect."
+        }
+      ],
+      "validation": {
+        "all_five_four_move_subsets": true,
+        "level": 100,
+        "no_items": true,
+        "nature": "Serious",
+        "evs": "4 HP baseline; validate the final production build separately"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "decode": "passed",
+  "duration_seconds": 62.75,
+  "width": 720,
+  "height": 1280,
+  "fps": "24/1",
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "audio_peak": 0.8545699119567871,
+  "audio_rms": 0.16718965768814087,
+  "full_illustrations": 7,
+  "rounds": 3,
+  "unique_moves": 6,
+  "engine_hp_conservation": "passed",
+  "water_shuriken_hits": 2,
+  "published": false
+}

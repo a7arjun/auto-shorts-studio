@@ -1,0 +1,1026 @@
+{
+  "schema": 1,
+  "format": "gen9nationaldex",
+  "generation": 9,
+  "seed": [
+    2026,
+    10,
+    24,
+    1
+  ],
+  "policy": "Scripted tactical demonstration; all accuracy, damage rolls, priority, abilities and effects resolved by the pinned Showdown engine. No random-seed search. No items, switching, Mega or Tera. Not optimal-play proof or aggregate win probability.",
+  "builds": [
+    {
+      "name": "Gyarados",
+      "species": "Gyarados",
+      "level": 100,
+      "ability": "Moxie",
+      "item": "",
+      "nature": "Adamant",
+      "evs": {
+        "hp": 252,
+        "atk": 4,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "moves": [
+        "Dragon Dance",
+        "Ice Fang",
+        "Crunch",
+        "Waterfall"
+      ]
+    },
+    {
+      "name": "Greninja",
+      "species": "Greninja",
+      "level": 100,
+      "ability": "Protean",
+      "item": "",
+      "nature": "Timid",
+      "evs": {
+        "hp": 4,
+        "atk": 0,
+        "def": 252,
+        "spa": 0,
+        "spd": 0,
+        "spe": 252
+      },
+      "ivs": {
+        "hp": 31,
+        "atk": 31,
+        "def": 31,
+        "spa": 31,
+        "spd": 31,
+        "spe": 31
+      },
+      "moves": [
+        "Grass Knot",
+        "Rock Slide",
+        "Water Shuriken",
+        "Dark Pulse"
+      ]
+    }
+  ],
+  "moveBanks": [
+    {
+      "pokemon": "Gyarados",
+      "equipped": [
+        "Dragon Dance",
+        "Ice Fang",
+        "Crunch",
+        "Waterfall"
+      ],
+      "reserve": "Earthquake",
+      "moves": [
+        {
+          "name": "Dragon Dance",
+          "type": "Dragon",
+          "category": "Status",
+          "base_power": 0,
+          "accuracy": true,
+          "priority": 0
+        },
+        {
+          "name": "Ice Fang",
+          "type": "Ice",
+          "category": "Physical",
+          "base_power": 65,
+          "accuracy": 95,
+          "priority": 0
+        },
+        {
+          "name": "Crunch",
+          "type": "Dark",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0
+        },
+        {
+          "name": "Waterfall",
+          "type": "Water",
+          "category": "Physical",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0
+        },
+        {
+          "name": "Earthquake",
+          "type": "Ground",
+          "category": "Physical",
+          "base_power": 100,
+          "accuracy": 100,
+          "priority": 0
+        }
+      ]
+    },
+    {
+      "pokemon": "Greninja",
+      "equipped": [
+        "Grass Knot",
+        "Rock Slide",
+        "Water Shuriken",
+        "Dark Pulse"
+      ],
+      "reserve": "Ice Beam",
+      "moves": [
+        {
+          "name": "Grass Knot",
+          "type": "Grass",
+          "category": "Special",
+          "base_power": 0,
+          "accuracy": 100,
+          "priority": 0
+        },
+        {
+          "name": "Rock Slide",
+          "type": "Rock",
+          "category": "Physical",
+          "base_power": 75,
+          "accuracy": 90,
+          "priority": 0
+        },
+        {
+          "name": "Water Shuriken",
+          "type": "Water",
+          "category": "Special",
+          "base_power": 15,
+          "accuracy": 100,
+          "priority": 1
+        },
+        {
+          "name": "Dark Pulse",
+          "type": "Dark",
+          "category": "Special",
+          "base_power": 80,
+          "accuracy": 100,
+          "priority": 0
+        },
+        {
+          "name": "Ice Beam",
+          "type": "Ice",
+          "category": "Special",
+          "base_power": 90,
+          "accuracy": 100,
+          "priority": 0
+        }
+      ]
+    }
+  ],
+  "initial": [
+    {
+      "name": "Gyarados",
+      "hp": 394,
+      "max_hp": 394,
+      "types": [
+        "Water",
+        "Flying"
+      ],
+      "boosts": {
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0,
+        "accuracy": 0,
+        "evasion": 0
+      },
+      "speed": 261
+    },
+    {
+      "name": "Greninja",
+      "hp": 286,
+      "max_hp": 286,
+      "types": [
+        "Water",
+        "Dark"
+      ],
+      "boosts": {
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0,
+        "accuracy": 0,
+        "evasion": 0
+      },
+      "speed": 377
+    }
+  ],
+  "events": [
+    {
+      "turn": 1,
+      "actor": "Greninja",
+      "move": "Grass Knot",
+      "before": [
+        {
+          "name": "Gyarados",
+          "hp": 394,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 261
+        },
+        {
+          "name": "Greninja",
+          "hp": 286,
+          "max_hp": 286,
+          "types": [
+            "Water",
+            "Dark"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage": [
+        {
+          "target": "Gyarados",
+          "hp_after": 249,
+          "max_hp": 394,
+          "hp_lost": 145,
+          "percent_max_hp": 36.8
+        }
+      ],
+      "after": [
+        {
+          "name": "Gyarados",
+          "hp": 249,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 261
+        },
+        {
+          "name": "Greninja",
+          "hp": 286,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage_total": 145
+    },
+    {
+      "turn": 1,
+      "actor": "Gyarados",
+      "move": "Dragon Dance",
+      "before": [
+        {
+          "name": "Gyarados",
+          "hp": 249,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 261
+        },
+        {
+          "name": "Greninja",
+          "hp": 286,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage": [],
+      "after": [
+        {
+          "name": "Gyarados",
+          "hp": 249,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 286,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage_total": 0
+    },
+    {
+      "turn": 2,
+      "actor": "Gyarados",
+      "move": "Ice Fang",
+      "before": [
+        {
+          "name": "Gyarados",
+          "hp": 249,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 286,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage": [
+        {
+          "target": "Greninja",
+          "hp_after": 80,
+          "max_hp": 286,
+          "hp_lost": 206,
+          "percent_max_hp": 72.03
+        }
+      ],
+      "after": [
+        {
+          "name": "Gyarados",
+          "hp": 249,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 80,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage_total": 206
+    },
+    {
+      "turn": 2,
+      "actor": "Greninja",
+      "move": "Rock Slide",
+      "before": [
+        {
+          "name": "Gyarados",
+          "hp": 249,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 80,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage": [
+        {
+          "target": "Gyarados",
+          "hp_after": 133,
+          "max_hp": 394,
+          "hp_lost": 116,
+          "percent_max_hp": 29.44
+        }
+      ],
+      "after": [
+        {
+          "name": "Gyarados",
+          "hp": 133,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 80,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage_total": 116
+    },
+    {
+      "turn": 3,
+      "actor": "Greninja",
+      "move": "Water Shuriken",
+      "before": [
+        {
+          "name": "Gyarados",
+          "hp": 133,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 80,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage": [
+        {
+          "target": "Gyarados",
+          "hp_after": 127,
+          "max_hp": 394,
+          "hp_lost": 6,
+          "percent_max_hp": 1.52
+        },
+        {
+          "target": "Gyarados",
+          "hp_after": 121,
+          "max_hp": 394,
+          "hp_lost": 6,
+          "percent_max_hp": 1.52
+        }
+      ],
+      "after": [
+        {
+          "name": "Gyarados",
+          "hp": 121,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 80,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage_total": 12
+    },
+    {
+      "turn": 3,
+      "actor": "Gyarados",
+      "move": "Crunch",
+      "before": [
+        {
+          "name": "Gyarados",
+          "hp": 121,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 80,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage": [
+        {
+          "target": "Greninja",
+          "hp_after": 0,
+          "max_hp": 286,
+          "hp_lost": 80,
+          "percent_max_hp": 27.97
+        }
+      ],
+      "after": [
+        {
+          "name": "Gyarados",
+          "hp": 121,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 0,
+          "max_hp": 286,
+          "types": [
+            "Water",
+            "Dark"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ],
+      "damage_total": 80
+    }
+  ],
+  "turns": [
+    {
+      "turn": 1,
+      "planned": [
+        "Dragon Dance",
+        "Grass Knot"
+      ],
+      "after": [
+        {
+          "name": "Gyarados",
+          "hp": 249,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 286,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "planned": [
+        "Ice Fang",
+        "Rock Slide"
+      ],
+      "after": [
+        {
+          "name": "Gyarados",
+          "hp": 133,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 80,
+          "max_hp": 286,
+          "types": [
+            "Grass"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ]
+    },
+    {
+      "turn": 3,
+      "planned": [
+        "Crunch",
+        "Water Shuriken"
+      ],
+      "after": [
+        {
+          "name": "Gyarados",
+          "hp": 121,
+          "max_hp": 394,
+          "types": [
+            "Water",
+            "Flying"
+          ],
+          "boosts": {
+            "atk": 1,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 1,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 391
+        },
+        {
+          "name": "Greninja",
+          "hp": 0,
+          "max_hp": 286,
+          "types": [
+            "Water",
+            "Dark"
+          ],
+          "boosts": {
+            "atk": 0,
+            "def": 0,
+            "spa": 0,
+            "spd": 0,
+            "spe": 0,
+            "accuracy": 0,
+            "evasion": 0
+          },
+          "speed": 377
+        }
+      ]
+    }
+  ],
+  "winner": "Gyarados",
+  "ended": true,
+  "log": [
+    "|t:|1792841360",
+    "|gametype|singles",
+    "|player|p1|Gyarados||",
+    "|player|p2|Greninja||",
+    "|gen|9",
+    "|tier|[Gen 9] National Dex",
+    "|rule|HP Percentage Mod: HP is shown in percentages",
+    "|rule|Endless Battle Clause: Forcing endless battles is banned",
+    "|rule|Species Clause: Limit one of each Pokémon",
+    "|rule|OHKO Clause: OHKO moves are banned",
+    "|rule|Evasion Clause: Evasion abilities, items, and moves are banned",
+    "|rule|Evasion Abilities Clause: Evasion abilities are banned",
+    "|rule|Evasion Items Clause: Evasion items are banned",
+    "|rule|Evasion Moves Clause: Evasion moves are banned",
+    "|rule|Sleep Clause Mod: Limit one foe put to sleep",
+    "|rule|Terastal Clause: You cannot Terastallize",
+    "|clearpoke",
+    "|poke|p1|Gyarados, M|",
+    "|poke|p2|Greninja-*, M|",
+    "|teampreview",
+    "|",
+    "|t:|1792841360",
+    "|teamsize|p1|1",
+    "|teamsize|p2|1",
+    "|start",
+    "|split|p1",
+    "|switch|p1a: Gyarados|Gyarados, M|394/394",
+    "|switch|p1a: Gyarados|Gyarados, M|100/100",
+    "|split|p2",
+    "|switch|p2a: Greninja|Greninja, M|286/286",
+    "|switch|p2a: Greninja|Greninja, M|100/100",
+    "|turn|1",
+    "|",
+    "|t:|1792841360",
+    "|move|p2a: Greninja|Grass Knot|p1a: Gyarados",
+    "|-start|p2a: Greninja|typechange|Grass|[from] ability: Protean",
+    "|split|p1",
+    "|-damage|p1a: Gyarados|249/394",
+    "|-damage|p1a: Gyarados|64/100",
+    "|move|p1a: Gyarados|Dragon Dance|p1a: Gyarados",
+    "|-boost|p1a: Gyarados|atk|1",
+    "|-boost|p1a: Gyarados|spe|1",
+    "|",
+    "|upkeep",
+    "|turn|2",
+    "|",
+    "|t:|1792841360",
+    "|move|p1a: Gyarados|Ice Fang|p2a: Greninja",
+    "|-supereffective|p2a: Greninja",
+    "|split|p2",
+    "|-damage|p2a: Greninja|80/286",
+    "|-damage|p2a: Greninja|28/100",
+    "|move|p2a: Greninja|Rock Slide|p1a: Gyarados",
+    "|-supereffective|p1a: Gyarados",
+    "|split|p1",
+    "|-damage|p1a: Gyarados|133/394",
+    "|-damage|p1a: Gyarados|34/100",
+    "|",
+    "|upkeep",
+    "|turn|3",
+    "|",
+    "|t:|1792841360",
+    "|move|p2a: Greninja|Water Shuriken|p1a: Gyarados",
+    "|-resisted|p1a: Gyarados",
+    "|split|p1",
+    "|-damage|p1a: Gyarados|127/394",
+    "|-damage|p1a: Gyarados|33/100",
+    "|-resisted|p1a: Gyarados",
+    "|split|p1",
+    "|-damage|p1a: Gyarados|121/394",
+    "|-damage|p1a: Gyarados|31/100",
+    "|-hitcount|p1a: Gyarados|2",
+    "|move|p1a: Gyarados|Crunch|p2a: Greninja",
+    "|split|p2",
+    "|-damage|p2a: Greninja|0 fnt",
+    "|-damage|p2a: Greninja|0 fnt",
+    "|faint|p2a: Greninja",
+    "|",
+    "|win|Gyarados"
+  ],
+  "simulator_version": "0.11.11",
+  "finish_comparison": {
+    "defender_types": [
+      "Grass"
+    ],
+    "greninja_remaining_hp": 80,
+    "ranges": {
+      "Crunch": [
+        117,
+        138
+      ],
+      "Ice Fang": [
+        190,
+        224
+      ],
+      "Waterfall": [
+        87,
+        103
+      ]
+    }
+  }
+}

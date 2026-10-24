@@ -1,0 +1,37 @@
+{
+  "language": "en-US",
+  "notes": "Explicit IPA for the model; display text retains the proper spelling. Initial English targets require listening review rather than a claim of perfect pronunciation in every voice.",
+  "references": [
+    "https://www.serebii.net/pokemon/pronunciation/gen1pokemon.shtml",
+    "https://www.mcdonalds.com/content/dam/sites/uk/nfl/pdf/ehub/happyreaders/pokemon-ultimate-edition-book.pdf"
+  ],
+  "names": {
+    "Charizard": "tʃˈɑːɹɪzɑːɹd",
+    "Blastoise": "blˈæstɔɪs",
+    "Venusaur": "vˈiːnəsɔːɹ",
+    "Pikachu": "pˈiːkətʃuː",
+    "Raichu": "ɹˈaɪtʃuː",
+    "Gengar": "ɡˈɛŋɡɑːɹ",
+    "Gyarados": "ɡˈæɹədoʊs",
+    "Dragonite": "dɹˈæɡənaɪt",
+    "Lucario": "luːkˈɑːɹioʊ",
+    "Garchomp": "ɡˈɑːɹtʃɑmp",
+    "Snorlax": "snˈɔːɹlæks",
+    "Tyranitar": "taɪɹˈænɪtɑːɹ",
+    "Scizor": "sˈɪzɔːɹ",
+    "Greninja": "ɡɹɛnˈɪndʒə",
+    "Sylveon": "sˈɪlviːɑn",
+    "Arcanine": "ˈɑːɹkənaɪn"
+  },
+  "terms": {
+    "Life Orb": "lˈaɪf ˌɔːɹb",
+    "Assault Vest": "əsˈɔːlt vˌɛst",
+    "Light Ball": "lˈaɪt bˌɔːl",
+    "Air Slash": "ˈɛɹ slˌæʃ",
+    "Hydro Pump": "hˈaɪdɹoʊ pˌʌmp",
+    "Flamethrower": "flˈeɪmθɹoʊɚ"
+  },
+  "emphasis_pause_seconds": 0.35,
+  "segment_pause_seconds": 0.28
+}
+

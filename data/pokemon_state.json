@@ -482,6 +482,23 @@
         }
       ],
       "bundle_library_file_id": "libfile_bb51d990c2548191a48c3237d88cbb01"
+    },
+    {
+      "key": "tactical-v1-reference-20261024",
+      "mode": "reference_only",
+      "status": "rendered_verified",
+      "format_approved_for_daily": true,
+      "approved_on_ist": "2026-10-24",
+      "pair": [
+        "Gyarados",
+        "Greninja"
+      ],
+      "duration_seconds": 62.75,
+      "public_uploads": 0,
+      "video_library_file_id": "libfile_5cca1ac115e88191849dc56d687e97d3",
+      "bundle_library_file_id": "libfile_a2069d5060f4819197daae2a092ae1d8",
+      "source": "examples/tactical_v1",
+      "note": "Reference only; no YouTube ID or schedule exists for this tactical sample. Do not confuse with the older scheduled Gyarados/Greninja ID."
     }
   ]
 }
