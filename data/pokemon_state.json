@@ -436,7 +436,7 @@
       ],
       "slot": "2026-10-24T22:00+05:30",
       "requested_publish_at": "2026-10-24T16:30:00Z",
-      "status": "uploading",
+      "status": "uploaded",
       "created_at": "2026-10-24T17:11:50.040Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -448,7 +448,11 @@
       "publication_scheduled": false,
       "schedule_verified": false,
       "release_blocker": "Requested 24 October 22:00 IST slot is past; current IST verified at 22:40. Original older video is already Public. Upload new approved video privately; late release/replacement needs explicit decision.",
-      "authorization": "User explicitly approved uploading the 62.75-second tactical sample for the 10 PM slot. No late public release or hiding of an already-public video inferred."
+      "authorization": "User explicitly approved uploading the 62.75-second tactical sample for the 10 PM slot. No late public release or hiding of an already-public video inferred.",
+      "video_id": "E8PsFuSoHPo",
+      "uploaded_at": "2026-10-24T17:13:36.941Z",
+      "verification_source": "YouTube Studio upload dialog: Saved as private; video link returned; processing pending",
+      "processing_status": "processing"
     }
   ],
   "pilot_verified": true,
