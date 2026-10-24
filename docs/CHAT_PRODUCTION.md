@@ -32,6 +32,6 @@ The public-production ledger stays compatible with existing daily/monthly limits
 ## Report
 In the same chat provide both actual titles, private Shorts links, verified native dates/times and Studio edit links. Distinguish confirmed schedules from an uploaded private draft or failed slot. Explain native schedules release without another approval, and how to remove schedules in Studio. Report errors and missing access promptly, with concrete next actions. No invented success or repeated unchanged incident alerts. Browser/session interruptions and ChatGPT usage limits remain possible; no guaranteed second-exact execution or unlimited free hosting claim.
 
-## Known private test
-F-kyX-O0Shc: Charizard vs Blastoise, 32.08 seconds, rendered in the ChatGPT workspace and saved privately in Studio on 24 October 2026. It has no public schedule and no fresh trend-backed claim. Do not publish it as part of the daily task without first satisfying research requirements and an explicit revised-release decision.
+## Known revised release
+F-kyX-O0Shc: Charizard vs Blastoise, 32.08 seconds, rendered in ChatGPT and initially saved privately on 24 October 2026. Later that day the user explicitly requested one immediate release and one at 22:00 IST. After current title research, the existing ID was updated and verified Public in Studio. It is already used; never duplicate it for another daily slot. The immediate release is a user-authorized one-day exception, not permission for future late catch-up publication.
 
