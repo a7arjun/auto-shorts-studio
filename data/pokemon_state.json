@@ -416,7 +416,10 @@
       },
       "video_id": "o1Yux78zBAA",
       "title": "Gyarados vs Greninja: Who Wins at Level 100?",
-      "duration_seconds": 21
+      "duration_seconds": 21,
+      "publication_scheduled": false,
+      "schedule_verified": false,
+      "scheduling_blocker": "Final Studio scheduling controls were not executed: automatic approval review could not complete due to ChatGPT account usage limit. Upload saved as private; 22:00 IST is requested only, not an accepted native schedule. Reconcile this same ID in Studio before retrying. Do not duplicate upload."
     }
   ],
   "pilot_verified": true
