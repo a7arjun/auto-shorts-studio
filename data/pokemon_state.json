@@ -436,7 +436,7 @@
       ],
       "slot": "2026-10-24T22:00+05:30",
       "requested_publish_at": "2026-10-24T16:30:00Z",
-      "status": "private_verified",
+      "status": "published",
       "created_at": "2026-10-24T17:11:50.040Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -447,17 +447,20 @@
       "source_library_file_id": "libfile_5cca1ac115e88191849dc56d687e97d3",
       "publication_scheduled": false,
       "schedule_verified": false,
-      "release_blocker": "24 October 22:00 IST has passed and older ID o1Yux78zBAA is already Public. Automatic approval review rejected changing the old video's visibility because the user explicitly authorized the new upload but did not unambiguously authorize hiding the already-public video. New video remains Private; request explicit approval for immediate public release and making old video Private.",
-      "authorization": "Approved file upload completed. Late public replacement and old-video privacy change await explicit approval after automatic review rejection.",
+      "authorization": "Immediate publication of E8PsFuSoHPo explicitly authorized. No change to older video o1Yux78zBAA authorized or performed.",
       "video_id": "E8PsFuSoHPo",
       "uploaded_at": "2026-10-24T17:13:36.941Z",
-      "verification_source": "YouTube Studio: 1:03 duration, approved title and filename, SD complete, Visibility Private, Save disabled; no notices shown",
+      "verification_source": "YouTube Studio video details: All changes saved; Save disabled; Visibility Public; approved title, 1:03 duration and filename gyarados-greninja-tactical.mp4. Shorts watch page opened with matching title.",
       "processing_status": "SD_complete",
       "private_verified_at": "2026-10-24T17:20:56.854Z",
       "checks": {
         "copyright": "No issues found in upload wizard",
         "community_guidelines": "Was pending in wizard; no notices shown on saved video details"
-      }
+      },
+      "public_verified_on_ist": "2026-10-25",
+      "publication_override": "User explicitly requested immediate publication in chat: Publish now gyarados vs greninja.",
+      "release_blocker_resolved": true,
+      "actual_publication_note": "Published immediately on user request; not a confirmed release at the original 24 October 22:00 IST slot. Exact publication timestamp not recorded."
     }
   ],
   "pilot_verified": true,
@@ -521,7 +524,7 @@
     {
       "key": "tactical-v1-reference-20261024",
       "mode": "reference_only",
-      "status": "uploaded_private",
+      "status": "published",
       "format_approved_for_daily": true,
       "approved_on_ist": "2026-10-24",
       "pair": [
@@ -529,12 +532,13 @@
         "Greninja"
       ],
       "duration_seconds": 62.75,
-      "public_uploads": 0,
+      "public_uploads": 1,
       "video_library_file_id": "libfile_5cca1ac115e88191849dc56d687e97d3",
       "bundle_library_file_id": "libfile_a2069d5060f4819197daae2a092ae1d8",
       "source": "examples/tactical_v1",
-      "note": "Approved tactical reference uploaded on 24 October 2026 as E8PsFuSoHPo, verified Private. Not a confirmed public release or native schedule; separate from the older public 22-second video.",
-      "uploaded_video_id": "E8PsFuSoHPo"
+      "note": "Approved 62.75-second tactical reference E8PsFuSoHPo published immediately after explicit user instruction and verified Public in YouTube Studio. Older 22-second video visibility was not changed.",
+      "uploaded_video_id": "E8PsFuSoHPo",
+      "public_verified_on_ist": "2026-10-25"
     }
   ]
 }
