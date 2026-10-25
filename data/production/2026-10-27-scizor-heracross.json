@@ -1,0 +1,1745 @@
+{
+  "battle": {
+    "schema": 2,
+    "format": "gen9nationaldex",
+    "seed": [
+      28084,
+      61280,
+      27307,
+      25239
+    ],
+    "simulation_key": "2026-10-27T10:00+05:30|Scizor|Heracross",
+    "builds": [
+      {
+        "name": "Scizor",
+        "species": "Scizor",
+        "gender": "M",
+        "level": 100,
+        "ability": "Swarm",
+        "item": "",
+        "nature": "Serious",
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "atk": 4,
+          "spe": 0,
+          "spa": 0,
+          "spd": 0
+        },
+        "ivs": {
+          "hp": 31,
+          "atk": 31,
+          "def": 31,
+          "spa": 31,
+          "spd": 31,
+          "spe": 31
+        },
+        "moves": [
+          "Bullet Punch",
+          "Close Combat",
+          "Knock Off",
+          "Swords Dance"
+        ]
+      },
+      {
+        "name": "Heracross",
+        "species": "Heracross",
+        "gender": "M",
+        "level": 100,
+        "ability": "Swarm",
+        "item": "",
+        "nature": "Serious",
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "atk": 4,
+          "spe": 0,
+          "spa": 0,
+          "spd": 0
+        },
+        "ivs": {
+          "hp": 31,
+          "atk": 31,
+          "def": 31,
+          "spa": 31,
+          "spd": 31,
+          "spe": 31
+        },
+        "moves": [
+          "Megahorn",
+          "Close Combat",
+          "Stone Edge",
+          "Swords Dance"
+        ]
+      }
+    ],
+    "moveBanks": [
+      {
+        "species": "Scizor",
+        "types": [
+          "Bug",
+          "Steel"
+        ],
+        "weight_kg": 118,
+        "base_stats": {
+          "hp": 70,
+          "atk": 130,
+          "def": 100,
+          "spa": 55,
+          "spd": 80,
+          "spe": 65
+        },
+        "validated_ability": "Swarm",
+        "available_abilities": {
+          "0": "Swarm",
+          "1": "Technician",
+          "H": "Light Metal"
+        },
+        "moves": [
+          {
+            "name": "Bullet Punch",
+            "id": "bulletpunch",
+            "type": "Steel",
+            "category": "Physical",
+            "base_power": 40,
+            "accuracy": 100,
+            "priority": 1,
+            "description": "Usually goes first."
+          },
+          {
+            "name": "U-turn",
+            "id": "uturn",
+            "type": "Bug",
+            "category": "Physical",
+            "base_power": 70,
+            "accuracy": 100,
+            "priority": 0,
+            "description": "User switches out after damaging the target."
+          },
+          {
+            "name": "Close Combat",
+            "id": "closecombat",
+            "type": "Fighting",
+            "category": "Physical",
+            "base_power": 120,
+            "accuracy": 100,
+            "priority": 0,
+            "description": "Lowers the user's Defense and Sp. Def by 1."
+          },
+          {
+            "name": "Knock Off",
+            "id": "knockoff",
+            "type": "Dark",
+            "category": "Physical",
+            "base_power": 65,
+            "accuracy": 100,
+            "priority": 0,
+            "description": "1.5x damage if foe holds an item. Removes item."
+          },
+          {
+            "name": "Swords Dance",
+            "id": "swordsdance",
+            "type": "Normal",
+            "category": "Status",
+            "base_power": 0,
+            "accuracy": true,
+            "priority": 0,
+            "description": "Raises the user's Attack by 2."
+          }
+        ],
+        "validation": {
+          "all_five_four_move_subsets": true,
+          "level": 100,
+          "no_items": true,
+          "nature": "Serious",
+          "evs": "4 HP baseline; validate the final production build separately"
+        }
+      },
+      {
+        "species": "Heracross",
+        "types": [
+          "Bug",
+          "Fighting"
+        ],
+        "weight_kg": 54,
+        "base_stats": {
+          "hp": 80,
+          "atk": 125,
+          "def": 75,
+          "spa": 40,
+          "spd": 95,
+          "spe": 85
+        },
+        "validated_ability": "Swarm",
+        "available_abilities": {
+          "0": "Swarm",
+          "1": "Guts",
+          "H": "Moxie"
+        },
+        "moves": [
+          {
+            "name": "Megahorn",
+            "id": "megahorn",
+            "type": "Bug",
+            "category": "Physical",
+            "base_power": 120,
+            "accuracy": 85,
+            "priority": 0,
+            "description": "No additional effect."
+          },
+          {
+            "name": "Close Combat",
+            "id": "closecombat",
+            "type": "Fighting",
+            "category": "Physical",
+            "base_power": 120,
+            "accuracy": 100,
+            "priority": 0,
+            "description": "Lowers the user's Defense and Sp. Def by 1."
+          },
+          {
+            "name": "Stone Edge",
+            "id": "stoneedge",
+            "type": "Rock",
+            "category": "Physical",
+            "base_power": 100,
+            "accuracy": 80,
+            "priority": 0,
+            "description": "High critical hit ratio."
+          },
+          {
+            "name": "Knock Off",
+            "id": "knockoff",
+            "type": "Dark",
+            "category": "Physical",
+            "base_power": 65,
+            "accuracy": 100,
+            "priority": 0,
+            "description": "1.5x damage if foe holds an item. Removes item."
+          },
+          {
+            "name": "Swords Dance",
+            "id": "swordsdance",
+            "type": "Normal",
+            "category": "Status",
+            "base_power": 0,
+            "accuracy": true,
+            "priority": 0,
+            "description": "Raises the user's Attack by 2."
+          }
+        ],
+        "validation": {
+          "all_five_four_move_subsets": true,
+          "level": 100,
+          "no_items": true,
+          "nature": "Serious",
+          "evs": "4 HP baseline; validate the final production build separately"
+        }
+      }
+    ],
+    "initial": [
+      {
+        "name": "Scizor",
+        "hp": 344,
+        "max_hp": 344,
+        "types": [
+          "Bug",
+          "Steel"
+        ],
+        "status": "",
+        "boosts": {
+          "atk": 0,
+          "def": 0,
+          "spa": 0,
+          "spd": 0,
+          "spe": 0,
+          "accuracy": 0,
+          "evasion": 0
+        },
+        "speed": 166,
+        "stats": {
+          "atk": 297,
+          "def": 299,
+          "spa": 146,
+          "spd": 196
+        }
+      },
+      {
+        "name": "Heracross",
+        "hp": 364,
+        "max_hp": 364,
+        "types": [
+          "Bug",
+          "Fighting"
+        ],
+        "status": "",
+        "boosts": {
+          "atk": 0,
+          "def": 0,
+          "spa": 0,
+          "spd": 0,
+          "spe": 0,
+          "accuracy": 0,
+          "evasion": 0
+        },
+        "speed": 206,
+        "stats": {
+          "atk": 287,
+          "def": 249,
+          "spa": 116,
+          "spd": 226
+        }
+      }
+    ],
+    "events": [
+      {
+        "turn": 1,
+        "actor": "Heracross",
+        "move": "Megahorn",
+        "before": [
+          {
+            "name": "Scizor",
+            "hp": 344,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 297,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 364,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 249,
+              "spa": 116,
+              "spd": 226
+            }
+          }
+        ],
+        "damage": [
+          {
+            "target": "Scizor",
+            "hp_after": 272,
+            "max_hp": 344,
+            "hp_lost": 72,
+            "percent_max_hp": 20.93
+          }
+        ],
+        "after": [
+          {
+            "name": "Scizor",
+            "hp": 272,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 297,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 364,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 249,
+              "spa": 116,
+              "spd": 226
+            }
+          }
+        ],
+        "damage_total": 72,
+        "move_info": {
+          "type": "Bug",
+          "category": "Physical",
+          "accuracy": 85,
+          "priority": 0,
+          "base_power": 120
+        }
+      },
+      {
+        "turn": 1,
+        "actor": "Scizor",
+        "move": "Swords Dance",
+        "before": [
+          {
+            "name": "Scizor",
+            "hp": 272,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 297,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 364,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 249,
+              "spa": 116,
+              "spd": 226
+            }
+          }
+        ],
+        "damage": [],
+        "after": [
+          {
+            "name": "Scizor",
+            "hp": 272,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 364,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 249,
+              "spa": 116,
+              "spd": 226
+            }
+          }
+        ],
+        "damage_total": 0,
+        "move_info": {
+          "type": "Normal",
+          "category": "Status",
+          "accuracy": true,
+          "priority": 0,
+          "base_power": 0
+        }
+      },
+      {
+        "turn": 2,
+        "actor": "Scizor",
+        "move": "Bullet Punch",
+        "before": [
+          {
+            "name": "Scizor",
+            "hp": 272,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 364,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 249,
+              "spa": 116,
+              "spd": 226
+            }
+          }
+        ],
+        "damage": [
+          {
+            "target": "Heracross",
+            "hp_after": 252,
+            "max_hp": 364,
+            "hp_lost": 112,
+            "percent_max_hp": 30.77
+          }
+        ],
+        "after": [
+          {
+            "name": "Scizor",
+            "hp": 272,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 252,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 249,
+              "spa": 116,
+              "spd": 226
+            }
+          }
+        ],
+        "damage_total": 112,
+        "move_info": {
+          "type": "Steel",
+          "category": "Physical",
+          "accuracy": 100,
+          "priority": 1,
+          "base_power": 40
+        }
+      },
+      {
+        "turn": 2,
+        "actor": "Heracross",
+        "move": "Close Combat",
+        "before": [
+          {
+            "name": "Scizor",
+            "hp": 272,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 252,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 249,
+              "spa": 116,
+              "spd": 226
+            }
+          }
+        ],
+        "damage": [
+          {
+            "target": "Scizor",
+            "hp_after": 139,
+            "max_hp": 344,
+            "hp_lost": 133,
+            "percent_max_hp": 38.66
+          }
+        ],
+        "after": [
+          {
+            "name": "Scizor",
+            "hp": 139,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 252,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 166,
+              "spa": 116,
+              "spd": 150
+            }
+          }
+        ],
+        "damage_total": 133,
+        "move_info": {
+          "type": "Fighting",
+          "category": "Physical",
+          "accuracy": 100,
+          "priority": 0,
+          "base_power": 120
+        }
+      },
+      {
+        "turn": 3,
+        "actor": "Scizor",
+        "move": "Bullet Punch",
+        "before": [
+          {
+            "name": "Scizor",
+            "hp": 139,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 252,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 166,
+              "spa": 116,
+              "spd": 150
+            }
+          }
+        ],
+        "damage": [
+          {
+            "target": "Heracross",
+            "hp_after": 93,
+            "max_hp": 364,
+            "hp_lost": 159,
+            "percent_max_hp": 43.68
+          }
+        ],
+        "after": [
+          {
+            "name": "Scizor",
+            "hp": 139,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 93,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 166,
+              "spa": 116,
+              "spd": 150
+            }
+          }
+        ],
+        "damage_total": 159,
+        "move_info": {
+          "type": "Steel",
+          "category": "Physical",
+          "accuracy": 100,
+          "priority": 1,
+          "base_power": 40
+        }
+      },
+      {
+        "turn": 3,
+        "actor": "Heracross",
+        "move": "Close Combat",
+        "before": [
+          {
+            "name": "Scizor",
+            "hp": 139,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 93,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 166,
+              "spa": 116,
+              "spd": 150
+            }
+          }
+        ],
+        "damage": [
+          {
+            "target": "Scizor",
+            "hp_after": 10,
+            "max_hp": 344,
+            "hp_lost": 129,
+            "percent_max_hp": 37.5
+          }
+        ],
+        "after": [
+          {
+            "name": "Scizor",
+            "hp": 10,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 93,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": -2,
+              "spa": 0,
+              "spd": -2,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 124,
+              "spa": 116,
+              "spd": 113
+            }
+          }
+        ],
+        "damage_total": 129,
+        "move_info": {
+          "type": "Fighting",
+          "category": "Physical",
+          "accuracy": 100,
+          "priority": 0,
+          "base_power": 120
+        }
+      },
+      {
+        "turn": 4,
+        "actor": "Heracross",
+        "move": "Close Combat",
+        "before": [
+          {
+            "name": "Scizor",
+            "hp": 10,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 93,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": -2,
+              "spa": 0,
+              "spd": -2,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 124,
+              "spa": 116,
+              "spd": 113
+            }
+          }
+        ],
+        "damage": [
+          {
+            "target": "Scizor",
+            "hp_after": 0,
+            "max_hp": 344,
+            "hp_lost": 10,
+            "percent_max_hp": 2.91
+          }
+        ],
+        "after": [
+          {
+            "name": "Scizor",
+            "hp": 0,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 297,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 93,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": -3,
+              "spa": 0,
+              "spd": -3,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 99,
+              "spa": 116,
+              "spd": 90
+            }
+          }
+        ],
+        "damage_total": 10,
+        "move_info": {
+          "type": "Fighting",
+          "category": "Physical",
+          "accuracy": 100,
+          "priority": 0,
+          "base_power": 120
+        }
+      }
+    ],
+    "turns": [
+      {
+        "turn": 1,
+        "planned": [
+          "Swords Dance",
+          "Megahorn"
+        ],
+        "after": [
+          {
+            "name": "Scizor",
+            "hp": 272,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 364,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 249,
+              "spa": 116,
+              "spd": 226
+            }
+          }
+        ],
+        "log": [
+          "|",
+          "|t:|1792955492",
+          "|move|p2a: Heracross|Megahorn|p1a: Scizor",
+          "|-resisted|p1a: Scizor",
+          "|split|p1",
+          "|-damage|p1a: Scizor|272/344",
+          "|-damage|p1a: Scizor|80/100",
+          "|move|p1a: Scizor|Swords Dance|p1a: Scizor",
+          "|-boost|p1a: Scizor|atk|2",
+          "|",
+          "|upkeep",
+          "|turn|2"
+        ]
+      },
+      {
+        "turn": 2,
+        "planned": [
+          "Bullet Punch",
+          "Close Combat"
+        ],
+        "after": [
+          {
+            "name": "Scizor",
+            "hp": 139,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 252,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 166,
+              "spa": 116,
+              "spd": 150
+            }
+          }
+        ],
+        "log": [
+          "|",
+          "|t:|1792955492",
+          "|move|p1a: Scizor|Bullet Punch|p2a: Heracross",
+          "|split|p2",
+          "|-damage|p2a: Heracross|252/364",
+          "|-damage|p2a: Heracross|70/100",
+          "|move|p2a: Heracross|Close Combat|p1a: Scizor",
+          "|split|p1",
+          "|-damage|p1a: Scizor|139/344",
+          "|-damage|p1a: Scizor|41/100",
+          "|-unboost|p2a: Heracross|def|1",
+          "|-unboost|p2a: Heracross|spd|1",
+          "|",
+          "|upkeep",
+          "|turn|3"
+        ]
+      },
+      {
+        "turn": 3,
+        "planned": [
+          "Bullet Punch",
+          "Close Combat"
+        ],
+        "after": [
+          {
+            "name": "Scizor",
+            "hp": 10,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 594,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 93,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": -2,
+              "spa": 0,
+              "spd": -2,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 124,
+              "spa": 116,
+              "spd": 113
+            }
+          }
+        ],
+        "log": [
+          "|",
+          "|t:|1792955492",
+          "|move|p1a: Scizor|Bullet Punch|p2a: Heracross",
+          "|split|p2",
+          "|-damage|p2a: Heracross|93/364",
+          "|-damage|p2a: Heracross|26/100",
+          "|move|p2a: Heracross|Close Combat|p1a: Scizor",
+          "|split|p1",
+          "|-damage|p1a: Scizor|10/344",
+          "|-damage|p1a: Scizor|3/100",
+          "|-unboost|p2a: Heracross|def|1",
+          "|-unboost|p2a: Heracross|spd|1",
+          "|",
+          "|upkeep",
+          "|turn|4"
+        ]
+      },
+      {
+        "turn": 4,
+        "planned": [
+          "Close Combat",
+          "Close Combat"
+        ],
+        "after": [
+          {
+            "name": "Scizor",
+            "hp": 0,
+            "max_hp": 344,
+            "types": [
+              "Bug",
+              "Steel"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 166,
+            "stats": {
+              "atk": 297,
+              "def": 299,
+              "spa": 146,
+              "spd": 196
+            }
+          },
+          {
+            "name": "Heracross",
+            "hp": 93,
+            "max_hp": 364,
+            "types": [
+              "Bug",
+              "Fighting"
+            ],
+            "status": "",
+            "boosts": {
+              "atk": 0,
+              "def": -3,
+              "spa": 0,
+              "spd": -3,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 206,
+            "stats": {
+              "atk": 287,
+              "def": 99,
+              "spa": 116,
+              "spd": 90
+            }
+          }
+        ],
+        "log": [
+          "|",
+          "|t:|1792955492",
+          "|move|p2a: Heracross|Close Combat|p1a: Scizor",
+          "|split|p1",
+          "|-damage|p1a: Scizor|0 fnt",
+          "|-damage|p1a: Scizor|0 fnt",
+          "|-unboost|p2a: Heracross|def|1",
+          "|-unboost|p2a: Heracross|spd|1",
+          "|faint|p1a: Scizor",
+          "|",
+          "|win|Heracross"
+        ]
+      }
+    ],
+    "ended": true,
+    "winner": "Heracross",
+    "log": [
+      "|t:|1792955492",
+      "|gametype|singles",
+      "|player|p1|Scizor||",
+      "|player|p2|Heracross||",
+      "|gen|9",
+      "|tier|[Gen 9] National Dex",
+      "|rule|HP Percentage Mod: HP is shown in percentages",
+      "|rule|Endless Battle Clause: Forcing endless battles is banned",
+      "|rule|Species Clause: Limit one of each Pokémon",
+      "|rule|OHKO Clause: OHKO moves are banned",
+      "|rule|Evasion Clause: Evasion abilities, items, and moves are banned",
+      "|rule|Evasion Abilities Clause: Evasion abilities are banned",
+      "|rule|Evasion Items Clause: Evasion items are banned",
+      "|rule|Evasion Moves Clause: Evasion moves are banned",
+      "|rule|Sleep Clause Mod: Limit one foe put to sleep",
+      "|rule|Terastal Clause: You cannot Terastallize",
+      "|clearpoke",
+      "|poke|p1|Scizor, M|",
+      "|poke|p2|Heracross, M|",
+      "|teampreview",
+      "|",
+      "|t:|1792955492",
+      "|teamsize|p1|1",
+      "|teamsize|p2|1",
+      "|start",
+      "|split|p1",
+      "|switch|p1a: Scizor|Scizor, M|344/344",
+      "|switch|p1a: Scizor|Scizor, M|100/100",
+      "|split|p2",
+      "|switch|p2a: Heracross|Heracross, M|364/364",
+      "|switch|p2a: Heracross|Heracross, M|100/100",
+      "|turn|1",
+      "|",
+      "|t:|1792955492",
+      "|move|p2a: Heracross|Megahorn|p1a: Scizor",
+      "|-resisted|p1a: Scizor",
+      "|split|p1",
+      "|-damage|p1a: Scizor|272/344",
+      "|-damage|p1a: Scizor|80/100",
+      "|move|p1a: Scizor|Swords Dance|p1a: Scizor",
+      "|-boost|p1a: Scizor|atk|2",
+      "|",
+      "|upkeep",
+      "|turn|2",
+      "|",
+      "|t:|1792955492",
+      "|move|p1a: Scizor|Bullet Punch|p2a: Heracross",
+      "|split|p2",
+      "|-damage|p2a: Heracross|252/364",
+      "|-damage|p2a: Heracross|70/100",
+      "|move|p2a: Heracross|Close Combat|p1a: Scizor",
+      "|split|p1",
+      "|-damage|p1a: Scizor|139/344",
+      "|-damage|p1a: Scizor|41/100",
+      "|-unboost|p2a: Heracross|def|1",
+      "|-unboost|p2a: Heracross|spd|1",
+      "|",
+      "|upkeep",
+      "|turn|3",
+      "|",
+      "|t:|1792955492",
+      "|move|p1a: Scizor|Bullet Punch|p2a: Heracross",
+      "|split|p2",
+      "|-damage|p2a: Heracross|93/364",
+      "|-damage|p2a: Heracross|26/100",
+      "|move|p2a: Heracross|Close Combat|p1a: Scizor",
+      "|split|p1",
+      "|-damage|p1a: Scizor|10/344",
+      "|-damage|p1a: Scizor|3/100",
+      "|-unboost|p2a: Heracross|def|1",
+      "|-unboost|p2a: Heracross|spd|1",
+      "|",
+      "|upkeep",
+      "|turn|4",
+      "|",
+      "|t:|1792955492",
+      "|move|p2a: Heracross|Close Combat|p1a: Scizor",
+      "|split|p1",
+      "|-damage|p1a: Scizor|0 fnt",
+      "|-damage|p1a: Scizor|0 fnt",
+      "|-unboost|p2a: Heracross|def|1",
+      "|-unboost|p2a: Heracross|spd|1",
+      "|faint|p1a: Scizor",
+      "|",
+      "|win|Heracross"
+    ],
+    "simulator_version": "0.11.11",
+    "policy": "Predeclared teaching sequence: Heracross tests resisted Bug STAB against Bug/Steel while Scizor sets up, then changes to neutral Fighting STAB; Scizor uses boosted Steel STAB priority to overcome slower normal speed. Fixed seed; no seed search; not optimal play."
+  },
+  "script": {
+    "title": "Scizor vs Heracross: The Cost of Giving Up Priority",
+    "pair": [
+      "Scizor",
+      "Heracross"
+    ],
+    "slot": "2026-10-27T10:00+05:30",
+    "publish_at": "2026-10-27T04:30:00Z",
+    "output": "scizor-heracross-tactical.mp4",
+    "segments": [
+      {
+        "title": "MATCHUP",
+        "text": "Scizor faces Heracross. Steel pincers against horn power. Let us battle.",
+        "note": "BOTH AT FULL HP",
+        "kind": "intro",
+        "event_index": null,
+        "image_key": "intro"
+      },
+      {
+        "title": "MEGAHORN",
+        "text": "Heracross is faster. Megahorn lands, but Scizor resists Bug damage. Twenty-one percent lost.",
+        "note": "85% ACC / BUG STAB / 72 HP",
+        "kind": "move",
+        "event_index": 0,
+        "image_key": "megahorn"
+      },
+      {
+        "title": "SWORDS DANCE",
+        "text": "Scizor uses Swords Dance. Its physical Attack doubles; its Speed stays the same.",
+        "note": "ATTACK +2 / SPEED UNCHANGED",
+        "kind": "move",
+        "event_index": 1,
+        "image_key": "setup"
+      },
+      {
+        "title": "BULLET PUNCH",
+        "text": "Bullet Punch jumps the queue with plus-one priority. Boosted Steel STAB removes thirty-one percent.",
+        "note": "PRIORITY +1 / STEEL STAB / 112 HP",
+        "kind": "move",
+        "event_index": 2,
+        "image_key": "bullet"
+      },
+      {
+        "title": "CLOSE COMBAT",
+        "text": "Heracross changes to Close Combat. Fighting hits Bug and Steel neutrally, removing thirty-nine percent. Both defenses fall.",
+        "note": "NEUTRAL STAB / 133 HP / DEFENSES -1",
+        "kind": "move",
+        "event_index": 3,
+        "image_key": "combat"
+      },
+      {
+        "title": "BULLET PUNCH",
+        "text": "Another priority strike hits the lowered Defense harder: forty-four percent. Heracross has ninety-three HP.",
+        "note": "PRIORITY +1 / 159 HP REMOVED",
+        "kind": "move",
+        "event_index": 4,
+        "image_key": "bullet"
+      },
+      {
+        "title": "CLOSE COMBAT",
+        "text": "Heracross repeats Close Combat. Scizor survives on ten HP; Heracross loses another stage of both defenses.",
+        "note": "129 HP REMOVED / SCIZOR: 10 HP",
+        "kind": "move",
+        "event_index": 5,
+        "image_key": "combat"
+      },
+      {
+        "title": "PRIORITY ABANDONED",
+        "text": "Scizor chooses Close Combat, giving up priority. Faster Heracross strikes first and takes the last ten HP.",
+        "note": "TEACHING MISTAKE / HERACROSS ACTS FIRST",
+        "kind": "move",
+        "event_index": 6,
+        "image_key": "combat"
+      },
+      {
+        "title": "HERACROSS WINS",
+        "text": "Heracross wins with twenty-six percent health. This planned mistake shows why move order matters. Simulated example, not perfect play.",
+        "note": "HERACROSS: 93 HP / SCIZOR FAINTED",
+        "kind": "result",
+        "event_index": null,
+        "image_key": "result"
+      }
+    ]
+  },
+  "validation": {
+    "legality": "passed pinned TeamValidator 0.11.11, gen9nationaldex",
+    "hp_conservation": "passed",
+    "all_actual_move_events_in_order": true,
+    "event_count": 7,
+    "rounds": 4,
+    "seed": [
+      28084,
+      61280,
+      27307,
+      25239
+    ],
+    "winner": "Heracross",
+    "final_hp": {
+      "Scizor": 0,
+      "Heracross": 93
+    },
+    "damage_totals": {
+      "Scizor": 344,
+      "Heracross": 271
+    },
+    "intro": "separate, no attack or damage, full starting HP",
+    "planned_not_perfect_play": true
+  },
+  "research": {
+    "checked_on_ist": "2026-10-26",
+    "matched_video_count": 1,
+    "method": "Bounded web search followed by direct YouTube expanded description. AI fan comparison used for title/topic framing only, not mechanics or trend proof.",
+    "references": [
+      {
+        "id": "NSp-9WMYYLc",
+        "url": "https://www.youtube.com/watch?v=NSp-9WMYYLc",
+        "title": "Heracross vs Scizor: Horn Power Meets Steel Speed | Real Life Pokémon Park",
+        "published_date": "2026-10-07",
+        "views": 7125,
+        "likes": 773,
+        "comments": null
+      }
+    ],
+    "candidate_rejected": {
+      "pair": [
+        "Lucario",
+        "Machamp"
+      ],
+      "reason": "Fixed seeded teaching sequence ended in two rounds; replaced with alternative, not rerolled."
+    }
+  },
+  "source": {
+    "produce/render.py": "\"\"\"Tactical motion comic with a pre-battle introduction and engine HP snapshots.\"\"\"\nfrom pathlib import Path\nimport json,math,os,re,sys,subprocess\nfrom functools import lru_cache\nimport numpy as np\nimport soundfile as sf\nfrom PIL import Image,ImageDraw,ImageFont,ImageOps\nBASE=Path(__file__).resolve().parents[1]\nsys.path.insert(0,str(BASE/'examples/tactical_v1'))\nfrom render_support import speech_engine,phonemes\nROOT=Path(sys.argv[1]).resolve()\nW,H,FPS,SR=720,1280,24,24000\n@lru_cache(maxsize=20)\ndef font(n):return ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',n)\ndef voice():\n c=json.loads((ROOT/'script.json').read_text());engine=speech_engine();pieces=[];start=0\n for i,s in enumerate(c['segments']):\n  s['index']=i;s['start']=start;s['captions']=[];cursor=0;parts=[]\n  for phrase in re.split(r'(?<=[.!?])\\s+',s['text']):\n   a,sr=engine.create(phonemes(phrase,engine),voice='am_michael',speed=1.12,lang='en-us',is_phonemes=True,sentence_pause=.14,clause_pause=.08)\n   assert sr==SR\n   a=np.concatenate([a,np.zeros(round(.12*SR),np.float32)])\n   s['captions'].append(dict(text=phrase,start=cursor,duration=len(a)/SR));cursor+=len(a)/SR;parts.append(a)\n  a=np.concatenate(parts+[np.zeros(round(.18*SR),np.float32)])\n  frames=math.ceil(len(a)/SR*FPS);a=np.pad(a,(0,round(frames/FPS*SR)-len(a)))\n  s['duration']=len(a)/SR;start+=s['duration'];pieces.append(a)\n c['duration']=start;c['voice']={'engine':'Kokoro ONNX','voice':'am_michael','speed':1.12}\n sf.write(ROOT/'narration.wav',np.concatenate(pieces),SR)\n (ROOT/'story.json').write_text(json.dumps(c,indent=2));print('NARRATION',ROOT.name,round(start,2),flush=True)\n if not 45<=start<=75:raise RuntimeError('Duration outside target; revise narration')\ndef wrap(d,text,x,y,width,size,fill='white',center=False):\n f=font(size);lines=[];line=''\n for w in text.split():\n  trial=(line+' '+w).strip()\n  if d.textlength(trial,font=f)>width and line:lines.append(line);line=w\n  else:line=trial\n if line:lines.append(line)\n for line in lines:\n  xx=x+(width-d.textlength(line,font=f))/2 if center else x\n  d.text((xx,y),line,font=f,fill=fill,stroke_width=1,stroke_fill='#080D19');y+=size+10\n return y\ndef hp(d,p,hp,x,color):\n pct=100*max(0,hp)/p['max_hp'];d.text((x,49),p['name'].upper(),font=font(22),fill='white')\n d.text((x+230,49),str(round(pct))+'%',font=font(21),fill='white')\n d.rounded_rectangle((x,82,x+290,97),radius=6,fill='#354052')\n if pct>0:d.rounded_rectangle((x,82,x+max(1,round(290*pct/100)),97),radius=6,fill=color)\n d.text((x,105),' / '.join(p['types']).upper(),font=font(14),fill='#D3DAE6')\n d.text((x,124),f\"{round(hp)} / {p['max_hp']} HP\",font=font(13),fill='#D3DAE6')\nOVERLAY=Image.new('RGBA',(W,H));od=ImageDraw.Draw(OVERLAY);od.rectangle((0,0,W,147),fill=(6,11,21,241))\nfor yy in range(930,H):od.line((0,yy,W,yy),fill=(6,11,21,round(min(242,(yy-930)*1.65))))\ndef frame(c,s,art,t,b):\n p=t/s['duration'];accent='#FFD777' if s['kind'] in ['intro','result'] else '#A8EEFF'\n zoom=1.012+.025*p;scaled=art.resize((round(W*zoom),round(1080*zoom)),Image.Resampling.BICUBIC)\n im=Image.new('RGB',(W,H),'#080D19');im.paste(scaled,((W-scaled.width)//2,145-(scaled.height-1080)//2))\n im=Image.alpha_composite(im.convert('RGBA'),OVERLAY);d=ImageDraw.Draw(im)\n d.text((30,14),' vs '.join(c['pair']).upper(),font=font(22),fill='white')\n if s['kind']=='intro':before=after=b['initial'];label='MATCHUP'\n elif s['kind']=='result':before=after=b['turns'][-1]['after'];label='RESULT'\n else:\n  e=b['events'][s['event_index']];before=e['before'];after=e['after'];label=f\"ROUND {e['turn']} / {len(b['turns'])}\"\n mix=max(0,min(1,(t-.35)/.8)) if s['kind']=='move' else 0\n for k,(a,z) in enumerate(zip(before,after)):hp(d,z,a['hp']+(z['hp']-a['hp'])*mix,30 if k==0 else 392,['#6BD6FA','#8EEC79'][k])\n d.rounded_rectangle((30,167,245,207),radius=8,fill='#080D19',outline=accent,width=2);d.text((44,176),label,font=font(20),fill='white')\n if s['kind']=='intro':\n  d.rounded_rectangle((30,227,690,279),radius=8,fill='#10182A');wrap(d,' vs '.join(c['pair']),45,237,630,27,accent,True)\n if s['kind']=='result':\n  loser=next(x for x in c['pair'] if x!=b['winner'])\n  d.rounded_rectangle((30,227,630,283),radius=9,fill='#211B0C',outline=accent,width=2);d.text((45,241),'WINNER: '+b['winner'].upper(),font=font(27),fill=accent)\n  d.rounded_rectangle((30,300,630,347),radius=9,fill='#10182A');d.text((45,312),loser.upper()+': FAINTED',font=font(23),fill='white')\n wrap(d,s['title'],30,942,660,30,accent)\n wrap(d,s['note'],30,991,660,19,accent)\n chosen=s['captions'][-1]\n for cap in s['captions']:\n  if cap['start']<=t<cap['start']+cap['duration']:chosen=cap;break\n words=chosen['text'].split();chunks=[' '.join(words[k:k+6]) for k in range(0,len(words),6)]\n q=max(0,min(.999,(t-chosen['start'])/chosen['duration']));wrap(d,chunks[min(len(chunks)-1,int(q*len(chunks)))],36,1053,648,35,'white',True)\n d.rectangle((30,1200,690,1204),fill='#334057');d.rectangle((30,1200,30+660*(s['start']+t)/c['duration'],1204),fill=accent)\n d.text((30,1226),'LV100  /  GEN9  /  NO ITEMS',font=font(17),fill='#D7DFEC');d.text((30,1253),'PLANNED CHOICES  /  SIMULATED DAMAGE',font=font(14),fill='#AAB7CC')\n return im.convert('RGB')\ndef render():\n c=json.loads((ROOT/'story.json').read_text());b=json.loads((ROOT/'battle.json').read_text());images=json.loads((ROOT/'images.json').read_text());assert len([s for s in c['segments'] if s['kind']=='move'])==len(b['events'])\n cmd=['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','pipe:0','-i',str(ROOT/'narration.wav'),'-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-af','loudnorm=I=-16:TP=-1.5:LRA=9','-ar','48000','-movflags','+faststart','-shortest',str(ROOT/c['output'])]\n proc=subprocess.Popen(cmd,stdin=subprocess.PIPE);arts={k:ImageOps.fit(Image.open(ROOT/v).convert('RGB'),(W,1080),Image.Resampling.LANCZOS) for k,v in images.items()}\n for s in c['segments']:\n  for n in range(round(s['duration']*FPS)):\n   im=frame(c,s,arts[s['image_key']],n/FPS,b);proc.stdin.write(im.tobytes())\n   if n==min(round(s['duration']*FPS)-1,round(1.5*FPS)):im.save(ROOT/f\"review-{s['index']:02d}.jpg\",quality=92)\n  print('SCENE',ROOT.name,s['index'],flush=True)\n proc.stdin.close();assert proc.wait()==0;print('RENDERED',ROOT/c['output'],flush=True)\nif '--render' in sys.argv:render()\nelse:voice()\n",
+    "produce/simulate.cjs": "const fs=require('fs'),path=require('path');\nconst {Battle,Dex,TeamValidator}=require('pokemon-showdown');\nconst cfg=JSON.parse(fs.readFileSync(process.argv[2]));const format='gen9nationaldex';\nconst validator=new TeamValidator(format);\nfor(const set of cfg.builds){const errors=validator.validateTeam([structuredClone(set)]);if(errors?.length)throw Error(errors.join('\\n'));}\nconst catalogue=JSON.parse(fs.readFileSync(path.join(__dirname,'../pokemon/tactical_moves.json'))).pokemon;\nfor(const b of cfg.builds){const c=catalogue.find(x=>x.species===b.species);if(!c||b.moves.length!==4||b.moves.some(m=>!c.moves.some(x=>x.name===m)))throw Error('Invalid equipped catalogue moves');}\nconst seed=Array.from({length:4},(_,i)=>require('crypto').createHash('sha256').update(cfg.simulation_key).digest().readUInt16BE(i*2));\nconst battle=new Battle({formatid:format,seed,send:()=>{}});const events=[];let current=null;\nconst snap=p=>({name:p.name,hp:p.hp,max_hp:p.maxhp,types:p.getTypes(),status:p.status,boosts:{...p.boosts},speed:p.getStat('spe'),stats:{atk:p.getStat('atk',false,true),def:p.getStat('def',false,true),spa:p.getStat('spa',false,true),spd:p.getStat('spd',false,true)}});\nconst addMove=battle.addMove;battle.addMove=function(...args){if(args[0]==='move'){current={turn:this.turn,actor:args[1].name,move:args[2],before:this.sides.map(s=>snap(s.active[0])),damage:[]};events.push(current);}return addMove.apply(this,args);};\nconst add=battle.add;battle.add=function(...args){if(args[0]==='-damage'&&current&&args[1]?.side){const p=args[1];current.damage.push({target:p.name,hp_after:p.hp,max_hp:p.maxhp});}if(args[0]==='-miss'&&current)current.missed=true;return add.apply(this,args);};\nbattle.setPlayer('p1',{name:cfg.builds[0].species,team:[cfg.builds[0]]});battle.setPlayer('p2',{name:cfg.builds[1].species,team:[cfg.builds[1]]});if(battle.requestState==='teampreview')battle.makeChoices('team 1','team 1');\nconst initial=battle.sides.map(s=>snap(s.active[0]));const turns=[];\nfor(let i=0;i<cfg.plans.length&&!battle.ended;i++){const from=battle.log.length;const choices=cfg.plans[i].map((m,s)=>'move '+(battle.sides[s].active[0].moveSlots.findIndex(x=>x.id===Dex.moves.get(m).id)+1));battle.makeChoices(...choices);turns.push({turn:i+1,planned:cfg.plans[i],after:battle.sides.map(s=>snap(s.active[0])),log:battle.log.slice(from)});if(battle.log.some(x=>x.startsWith('|error|')))throw Error('Battle engine error');}\nfor(let i=0;i<events.length;i++){const e=events[i];e.after=i+1<events.length?events[i+1].before:turns.at(-1).after;const hp=Object.fromEntries(e.before.map(p=>[p.name,p.hp]));const seen=new Set();e.damage=e.damage.filter(d=>{const k=d.target+':'+d.hp_after;if(seen.has(k))return false;seen.add(k);return true;});for(const d of e.damage){d.hp_lost=hp[d.target]-d.hp_after;hp[d.target]=d.hp_after;d.percent_max_hp=+(100*d.hp_lost/d.max_hp).toFixed(2);}e.damage_total=e.damage.reduce((s,d)=>s+d.hp_lost,0);const m=Dex.moves.get(e.move);e.move_info={type:m.type,category:m.category,accuracy:m.accuracy,priority:m.priority,base_power:m.basePower};}\nconst out={schema:2,format,seed,simulation_key:cfg.simulation_key,builds:cfg.builds,moveBanks:cfg.builds.map(b=>catalogue.find(x=>x.species===b.species)),initial,events,turns,ended:battle.ended,winner:battle.winner,log:battle.log,simulator_version:require('pokemon-showdown/package.json').version,policy:cfg.policy};fs.writeFileSync(path.join(path.dirname(process.argv[2]),'battle.json'),JSON.stringify(out,null,2));console.log(JSON.stringify({seed,initial,events:events.map(e=>({turn:e.turn,actor:e.actor,move:e.move,damage:e.damage,missed:e.missed,after:e.after.map(p=>({name:p.name,hp:p.hp,boosts:p.boosts,status:p.status}))})),winner:out.winner,ended:out.ended,turns:turns.length,log:battle.log},null,2));battle.destroy();\n",
+    "examples/tactical_v1/pronunciation.json": "{\n  \"language\": \"en-US\",\n  \"notes\": \"Explicit IPA for the model; display text retains the proper spelling. Initial English targets require listening review rather than a claim of perfect pronunciation in every voice.\",\n  \"references\": [\n    \"https://www.serebii.net/pokemon/pronunciation/gen1pokemon.shtml\",\n    \"https://www.mcdonalds.com/content/dam/sites/uk/nfl/pdf/ehub/happyreaders/pokemon-ultimate-edition-book.pdf\"\n  ],\n  \"names\": {\n    \"Charizard\": \"t\\u0283\\u02c8\\u0251\\u02d0\\u0279\\u026az\\u0251\\u02d0\\u0279d\",\n    \"Blastoise\": \"bl\\u02c8\\u00e6st\\u0254\\u026as\",\n    \"Venusaur\": \"v\\u02c8i\\u02d0n\\u0259s\\u0254\\u02d0\\u0279\",\n    \"Pikachu\": \"p\\u02c8i\\u02d0k\\u0259t\\u0283u\\u02d0\",\n    \"Raichu\": \"\\u0279\\u02c8a\\u026at\\u0283u\\u02d0\",\n    \"Gengar\": \"\\u0261\\u02c8\\u025b\\u014b\\u0261\\u0251\\u02d0\\u0279\",\n    \"Gyarados\": \"\\u0261\\u02c8\\u00e6\\u0279\\u0259do\\u028as\",\n    \"Dragonite\": \"d\\u0279\\u02c8\\u00e6\\u0261\\u0259na\\u026at\",\n    \"Lucario\": \"lu\\u02d0k\\u02c8\\u0251\\u02d0\\u0279io\\u028a\",\n    \"Garchomp\": \"\\u0261\\u02c8\\u0251\\u02d0\\u0279t\\u0283\\u0251mp\",\n    \"Snorlax\": \"sn\\u02c8\\u0254\\u02d0\\u0279l\\u00e6ks\",\n    \"Tyranitar\": \"ta\\u026a\\u0279\\u02c8\\u00e6n\\u026at\\u0251\\u02d0\\u0279\",\n    \"Scizor\": \"s\\u02c8\\u026az\\u0254\\u02d0\\u0279\",\n    \"Greninja\": \"\\u0261\\u0279\\u025bn\\u02c8\\u026and\\u0292\\u0259\",\n    \"Sylveon\": \"s\\u02c8\\u026alvi\\u02d0\\u0251n\",\n    \"Arcanine\": \"\\u02c8\\u0251\\u02d0\\u0279k\\u0259na\\u026an\",\n    \"Heracross\": \"h\\u02c8\\u025b\\u0279\\u0259k\\u0279\\u0254\\u02d0s\",\n    \"Gardevoir\": \"\\u0261\\u02c8\\u0251\\u02d0\\u0279d\\u0259vw\\u0251\\u02d0\\u0279\"\n  },\n  \"terms\": {\n    \"Life Orb\": \"l\\u02c8a\\u026af \\u02cc\\u0254\\u02d0\\u0279b\",\n    \"Assault Vest\": \"\\u0259s\\u02c8\\u0254\\u02d0lt v\\u02cc\\u025bst\",\n    \"Light Ball\": \"l\\u02c8a\\u026at b\\u02cc\\u0254\\u02d0l\",\n    \"Air Slash\": \"\\u02c8\\u025b\\u0279 sl\\u02cc\\u00e6\\u0283\",\n    \"Hydro Pump\": \"h\\u02c8a\\u026ad\\u0279o\\u028a p\\u02cc\\u028cmp\",\n    \"Flamethrower\": \"fl\\u02c8e\\u026am\\u03b8\\u0279o\\u028a\\u025a\"\n  },\n  \"emphasis_pause_seconds\": 0.35,\n  \"segment_pause_seconds\": 0.28\n}"
+  },
+  "image_prompts": [
+    "Use case: illustration-story. A single full-scene vertical cinematic anime illustration for a tactical Pokémon motion comic, 9:16 portrait. Canonical Scizor, red metallic insect Pokémon with two large pincer claws, and canonical Heracross, blue beetle Pokémon with one large central horn. Both adult-sized fantasy creatures stand apart in a friendly sporting face-off, Scizor left and Heracross right, no attack yet. Sunset forest clearing, mossy stone arena, golden rim light, polished cel shading and detailed painted background. Both whole characters recognizable, clear silhouettes, no humans, no extra characters, no text, no logos, no panel grid. Consistent canonical anatomy, two arms each. Calm pre-battle establishing composition.",
+    "Use case: illustration-story. Single full-scene vertical 9:16 cinematic anime frame. Canonical Heracross blue beetle at right lunges horn-first with glowing emerald Bug energy, performing Megahorn toward canonical red metallic Scizor at left, who braces behind its large pincer claws. Friendly fantasy sporting contest, no injury, no gore. Sunset forest clearing with mossy stone arena, warm golden rim light, painted background, crisp cel shading. Both recognizable and visible, correct two-arm anatomy, Scizor red metal and Heracross blue carapace with one horn. Distinct dynamic action pose, one horn strike, no duplicate limbs, no text, no logos, no grid.",
+    "Use case: illustration-story. Single full-scene vertical cinematic anime 9:16 frame. Canonical red metallic Scizor left performs Swords Dance: focused standing stance, raised pincer claws, luminous spectral sword-shaped golden energy circling it as an abstract power-up, not held weapons. Canonical blue beetle Heracross watches from right across the arena, no attack and no contact. Friendly sporting fantasy contest. Sunset forest clearing, mossy stone floor, warm rim light, painted scenery, polished cel shading. Both recognizable, consistent canonical anatomy, no humans, no extra characters, no text, no watermark, no panels.",
+    "Use case: illustration-story. Single 9:16 full-scene cinematic anime illustration. Canonical red metallic Scizor at left darts forward and delivers one glowing silver Bullet Punch with its pincer toward canonical blue beetle Heracross at right. Silver motion streak, a small stylized spark at the sporting impact, Heracross braced upright with its horn clearly visible. No injury or gore, friendly fantasy tournament. Sunset mossy stone forest arena, golden rim light, vivid cel shading and painted forest background. Both canonical creatures fully recognizable with two arms, consistent designs, no humans, no text, no logos, no panels.",
+    "Use case: illustration-story. Single full-scene 9:16 cinematic anime illustration. Canonical blue beetle Pokémon Heracross at right uses Close Combat, a short martial-arts palm strike toward canonical red metallic Pokémon Scizor at left, who guards with its two large pincers. One clear contact, stylized amber fighting-energy burst, dynamic footwork and dust, no injury or gore, friendly sporting fantasy tournament. Same sunset forest clearing and mossy stone arena, warm rim lighting, polished cel shading, detailed painted background. Both creatures clearly recognizable, consistent anatomy, no humans, no extra characters, no text, no panel grid.",
+    "Use case: illustration-story. Single full-scene portrait 9:16 cinematic anime result composition in a sunset forest clearing with mossy stone arena. Canonical blue beetle Pokémon Heracross at right stands upright as the winner, tired but proud, horn and both arms recognizable. Canonical red metallic Scizor at left sits safely resting on the arena floor, pincers lowered, eyes gently closed in a sporting defeat, unharmed. Clear winner and resting defeated opponent in the same frame, warm golden rim light, consistent canonical designs, rich painted background, polished anime cel shading. No humans, no injuries, no text, no watermark, no panels."
+  ],
+  "status": "art_generation_and_rendering",
+  "format": "tactical_v1_with_matchup_intro",
+  "authorized_publish_at": "2026-10-27T04:30:00Z",
+  "publication_scheduled": false
+}
