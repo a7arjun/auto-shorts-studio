@@ -1606,11 +1606,26 @@
     "segments": [
       {
         "title": "MATCHUP",
-        "text": "Scizor faces Heracross. Steel pincers against horn power. Let us battle.",
+        "text": "Scizor faces Heracross. Let us battle.",
         "note": "BOTH AT FULL HP",
         "kind": "intro",
         "event_index": null,
-        "image_key": "intro"
+        "image_key": "intro",
+        "index": 0,
+        "start": 0,
+        "captions": [
+          {
+            "text": "Scizor faces Heracross.",
+            "start": 0,
+            "duration": 2.04
+          },
+          {
+            "text": "Let us battle.",
+            "start": 2.04,
+            "duration": 1.3786666666666667
+          }
+        ],
+        "duration": 3.625
       },
       {
         "title": "MEGAHORN",
@@ -1618,7 +1633,27 @@
         "note": "85% ACC / BUG STAB / 72 HP",
         "kind": "move",
         "event_index": 0,
-        "image_key": "megahorn"
+        "image_key": "megahorn",
+        "index": 1,
+        "start": 3.625,
+        "captions": [
+          {
+            "text": "Heracross is faster.",
+            "start": 0,
+            "duration": 1.784
+          },
+          {
+            "text": "Megahorn lands, but Scizor resists Bug damage.",
+            "start": 1.784,
+            "duration": 3.532
+          },
+          {
+            "text": "Twenty-one percent lost.",
+            "start": 5.316,
+            "duration": 1.8053333333333332
+          }
+        ],
+        "duration": 7.333333333333333
       },
       {
         "title": "SWORDS DANCE",
@@ -1626,7 +1661,22 @@
         "note": "ATTACK +2 / SPEED UNCHANGED",
         "kind": "move",
         "event_index": 1,
-        "image_key": "setup"
+        "image_key": "setup",
+        "index": 2,
+        "start": 10.958333333333332,
+        "captions": [
+          {
+            "text": "Scizor uses Swords Dance.",
+            "start": 0,
+            "duration": 2.04
+          },
+          {
+            "text": "Its physical Attack doubles; its Speed stays the same.",
+            "start": 2.04,
+            "duration": 3.6826666666666665
+          }
+        ],
+        "duration": 5.916666666666667
       },
       {
         "title": "BULLET PUNCH",
@@ -1634,7 +1684,22 @@
         "note": "PRIORITY +1 / STEEL STAB / 112 HP",
         "kind": "move",
         "event_index": 2,
-        "image_key": "bullet"
+        "image_key": "bullet",
+        "index": 3,
+        "start": 16.875,
+        "captions": [
+          {
+            "text": "Bullet Punch jumps the queue with plus-one priority.",
+            "start": 0,
+            "duration": 3.32
+          },
+          {
+            "text": "Boosted Steel STAB removes thirty-one percent.",
+            "start": 3.32,
+            "duration": 3.192
+          }
+        ],
+        "duration": 6.708333333333333
       },
       {
         "title": "CLOSE COMBAT",
@@ -1642,7 +1707,27 @@
         "note": "NEUTRAL STAB / 133 HP / DEFENSES -1",
         "kind": "move",
         "event_index": 3,
-        "image_key": "combat"
+        "image_key": "combat",
+        "index": 4,
+        "start": 23.583333333333332,
+        "captions": [
+          {
+            "text": "Heracross changes to Close Combat.",
+            "start": 0,
+            "duration": 2.530666666666667
+          },
+          {
+            "text": "Fighting hits Bug and Steel neutrally, removing thirty-nine percent.",
+            "start": 2.530666666666667,
+            "duration": 4.258666666666667
+          },
+          {
+            "text": "Both defenses fall.",
+            "start": 6.789333333333333,
+            "duration": 1.6986666666666668
+          }
+        ],
+        "duration": 8.708333333333334
       },
       {
         "title": "BULLET PUNCH",
@@ -1650,7 +1735,22 @@
         "note": "PRIORITY +1 / 159 HP REMOVED",
         "kind": "move",
         "event_index": 4,
-        "image_key": "bullet"
+        "image_key": "bullet",
+        "index": 5,
+        "start": 32.291666666666664,
+        "captions": [
+          {
+            "text": "Another priority strike hits the lowered Defense harder: forty-four percent.",
+            "start": 0,
+            "duration": 4.8133333333333335
+          },
+          {
+            "text": "Heracross has ninety-three HP.",
+            "start": 4.8133333333333335,
+            "duration": 2.445333333333333
+          }
+        ],
+        "duration": 7.458333333333333
       },
       {
         "title": "CLOSE COMBAT",
@@ -1658,15 +1758,45 @@
         "note": "129 HP REMOVED / SCIZOR: 10 HP",
         "kind": "move",
         "event_index": 5,
-        "image_key": "combat"
+        "image_key": "combat",
+        "index": 6,
+        "start": 39.75,
+        "captions": [
+          {
+            "text": "Heracross repeats Close Combat.",
+            "start": 0,
+            "duration": 2.36
+          },
+          {
+            "text": "Scizor survives on ten HP; Heracross loses another stage of both defenses.",
+            "start": 2.36,
+            "duration": 5.772
+          }
+        ],
+        "duration": 8.333333333333334
       },
       {
-        "title": "PRIORITY ABANDONED",
+        "title": "HERACROSS: CLOSE COMBAT",
         "text": "Scizor chooses Close Combat, giving up priority. Faster Heracross strikes first and takes the last ten HP.",
-        "note": "TEACHING MISTAKE / HERACROSS ACTS FIRST",
+        "note": "10 HP / SCIZOR'S PLANNED ATTACK DENIED",
         "kind": "move",
         "event_index": 6,
-        "image_key": "combat"
+        "image_key": "combat",
+        "index": 7,
+        "start": 48.083333333333336,
+        "captions": [
+          {
+            "text": "Scizor chooses Close Combat, giving up priority.",
+            "start": 0,
+            "duration": 3.490666666666667
+          },
+          {
+            "text": "Faster Heracross strikes first and takes the last ten HP.",
+            "start": 3.490666666666667,
+            "duration": 4.066666666666666
+          }
+        ],
+        "duration": 7.75
       },
       {
         "title": "HERACROSS WINS",
@@ -1674,9 +1804,35 @@
         "note": "HERACROSS: 93 HP / SCIZOR FAINTED",
         "kind": "result",
         "event_index": null,
-        "image_key": "result"
+        "image_key": "result",
+        "index": 8,
+        "start": 55.833333333333336,
+        "captions": [
+          {
+            "text": "Heracross wins with twenty-six percent health.",
+            "start": 0,
+            "duration": 2.8293333333333335
+          },
+          {
+            "text": "This planned mistake shows why move order matters.",
+            "start": 2.8293333333333335,
+            "duration": 3.2346666666666666
+          },
+          {
+            "text": "Simulated example, not perfect play.",
+            "start": 6.064,
+            "duration": 2.8293333333333335
+          }
+        ],
+        "duration": 9.083333333333334
       }
-    ]
+    ],
+    "duration": 64.91666666666667,
+    "voice": {
+      "engine": "Kokoro ONNX",
+      "voice": "am_michael",
+      "speed": 1.12
+    }
   },
   "validation": {
     "legality": "passed pinned TeamValidator 0.11.11, gen9nationaldex",
@@ -1726,7 +1882,7 @@
     }
   },
   "source": {
-    "produce/render.py": "\"\"\"Tactical motion comic with a pre-battle introduction and engine HP snapshots.\"\"\"\nfrom pathlib import Path\nimport json,math,os,re,sys,subprocess\nfrom functools import lru_cache\nimport numpy as np\nimport soundfile as sf\nfrom PIL import Image,ImageDraw,ImageFont,ImageOps\nBASE=Path(__file__).resolve().parents[1]\nsys.path.insert(0,str(BASE/'examples/tactical_v1'))\nfrom render_support import speech_engine,phonemes\nROOT=Path(sys.argv[1]).resolve()\nW,H,FPS,SR=720,1280,24,24000\n@lru_cache(maxsize=20)\ndef font(n):return ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',n)\ndef voice():\n c=json.loads((ROOT/'script.json').read_text());engine=speech_engine();pieces=[];start=0\n for i,s in enumerate(c['segments']):\n  s['index']=i;s['start']=start;s['captions']=[];cursor=0;parts=[]\n  for phrase in re.split(r'(?<=[.!?])\\s+',s['text']):\n   a,sr=engine.create(phonemes(phrase,engine),voice='am_michael',speed=1.12,lang='en-us',is_phonemes=True,sentence_pause=.14,clause_pause=.08)\n   assert sr==SR\n   a=np.concatenate([a,np.zeros(round(.12*SR),np.float32)])\n   s['captions'].append(dict(text=phrase,start=cursor,duration=len(a)/SR));cursor+=len(a)/SR;parts.append(a)\n  a=np.concatenate(parts+[np.zeros(round(.18*SR),np.float32)])\n  frames=math.ceil(len(a)/SR*FPS);a=np.pad(a,(0,round(frames/FPS*SR)-len(a)))\n  s['duration']=len(a)/SR;start+=s['duration'];pieces.append(a)\n c['duration']=start;c['voice']={'engine':'Kokoro ONNX','voice':'am_michael','speed':1.12}\n sf.write(ROOT/'narration.wav',np.concatenate(pieces),SR)\n (ROOT/'story.json').write_text(json.dumps(c,indent=2));print('NARRATION',ROOT.name,round(start,2),flush=True)\n if not 45<=start<=75:raise RuntimeError('Duration outside target; revise narration')\ndef wrap(d,text,x,y,width,size,fill='white',center=False):\n f=font(size);lines=[];line=''\n for w in text.split():\n  trial=(line+' '+w).strip()\n  if d.textlength(trial,font=f)>width and line:lines.append(line);line=w\n  else:line=trial\n if line:lines.append(line)\n for line in lines:\n  xx=x+(width-d.textlength(line,font=f))/2 if center else x\n  d.text((xx,y),line,font=f,fill=fill,stroke_width=1,stroke_fill='#080D19');y+=size+10\n return y\ndef hp(d,p,hp,x,color):\n pct=100*max(0,hp)/p['max_hp'];d.text((x,49),p['name'].upper(),font=font(22),fill='white')\n d.text((x+230,49),str(round(pct))+'%',font=font(21),fill='white')\n d.rounded_rectangle((x,82,x+290,97),radius=6,fill='#354052')\n if pct>0:d.rounded_rectangle((x,82,x+max(1,round(290*pct/100)),97),radius=6,fill=color)\n d.text((x,105),' / '.join(p['types']).upper(),font=font(14),fill='#D3DAE6')\n d.text((x,124),f\"{round(hp)} / {p['max_hp']} HP\",font=font(13),fill='#D3DAE6')\nOVERLAY=Image.new('RGBA',(W,H));od=ImageDraw.Draw(OVERLAY);od.rectangle((0,0,W,147),fill=(6,11,21,241))\nfor yy in range(930,H):od.line((0,yy,W,yy),fill=(6,11,21,round(min(242,(yy-930)*1.65))))\ndef frame(c,s,art,t,b):\n p=t/s['duration'];accent='#FFD777' if s['kind'] in ['intro','result'] else '#A8EEFF'\n zoom=1.012+.025*p;scaled=art.resize((round(W*zoom),round(1080*zoom)),Image.Resampling.BICUBIC)\n im=Image.new('RGB',(W,H),'#080D19');im.paste(scaled,((W-scaled.width)//2,145-(scaled.height-1080)//2))\n im=Image.alpha_composite(im.convert('RGBA'),OVERLAY);d=ImageDraw.Draw(im)\n d.text((30,14),' vs '.join(c['pair']).upper(),font=font(22),fill='white')\n if s['kind']=='intro':before=after=b['initial'];label='MATCHUP'\n elif s['kind']=='result':before=after=b['turns'][-1]['after'];label='RESULT'\n else:\n  e=b['events'][s['event_index']];before=e['before'];after=e['after'];label=f\"ROUND {e['turn']} / {len(b['turns'])}\"\n mix=max(0,min(1,(t-.35)/.8)) if s['kind']=='move' else 0\n for k,(a,z) in enumerate(zip(before,after)):hp(d,z,a['hp']+(z['hp']-a['hp'])*mix,30 if k==0 else 392,['#6BD6FA','#8EEC79'][k])\n d.rounded_rectangle((30,167,245,207),radius=8,fill='#080D19',outline=accent,width=2);d.text((44,176),label,font=font(20),fill='white')\n if s['kind']=='intro':\n  d.rounded_rectangle((30,227,690,279),radius=8,fill='#10182A');wrap(d,' vs '.join(c['pair']),45,237,630,27,accent,True)\n if s['kind']=='result':\n  loser=next(x for x in c['pair'] if x!=b['winner'])\n  d.rounded_rectangle((30,227,630,283),radius=9,fill='#211B0C',outline=accent,width=2);d.text((45,241),'WINNER: '+b['winner'].upper(),font=font(27),fill=accent)\n  d.rounded_rectangle((30,300,630,347),radius=9,fill='#10182A');d.text((45,312),loser.upper()+': FAINTED',font=font(23),fill='white')\n wrap(d,s['title'],30,942,660,30,accent)\n wrap(d,s['note'],30,991,660,19,accent)\n chosen=s['captions'][-1]\n for cap in s['captions']:\n  if cap['start']<=t<cap['start']+cap['duration']:chosen=cap;break\n words=chosen['text'].split();chunks=[' '.join(words[k:k+6]) for k in range(0,len(words),6)]\n q=max(0,min(.999,(t-chosen['start'])/chosen['duration']));wrap(d,chunks[min(len(chunks)-1,int(q*len(chunks)))],36,1053,648,35,'white',True)\n d.rectangle((30,1200,690,1204),fill='#334057');d.rectangle((30,1200,30+660*(s['start']+t)/c['duration'],1204),fill=accent)\n d.text((30,1226),'LV100  /  GEN9  /  NO ITEMS',font=font(17),fill='#D7DFEC');d.text((30,1253),'PLANNED CHOICES  /  SIMULATED DAMAGE',font=font(14),fill='#AAB7CC')\n return im.convert('RGB')\ndef render():\n c=json.loads((ROOT/'story.json').read_text());b=json.loads((ROOT/'battle.json').read_text());images=json.loads((ROOT/'images.json').read_text());assert len([s for s in c['segments'] if s['kind']=='move'])==len(b['events'])\n cmd=['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','pipe:0','-i',str(ROOT/'narration.wav'),'-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-af','loudnorm=I=-16:TP=-1.5:LRA=9','-ar','48000','-movflags','+faststart','-shortest',str(ROOT/c['output'])]\n proc=subprocess.Popen(cmd,stdin=subprocess.PIPE);arts={k:ImageOps.fit(Image.open(ROOT/v).convert('RGB'),(W,1080),Image.Resampling.LANCZOS) for k,v in images.items()}\n for s in c['segments']:\n  for n in range(round(s['duration']*FPS)):\n   im=frame(c,s,arts[s['image_key']],n/FPS,b);proc.stdin.write(im.tobytes())\n   if n==min(round(s['duration']*FPS)-1,round(1.5*FPS)):im.save(ROOT/f\"review-{s['index']:02d}.jpg\",quality=92)\n  print('SCENE',ROOT.name,s['index'],flush=True)\n proc.stdin.close();assert proc.wait()==0;print('RENDERED',ROOT/c['output'],flush=True)\nif '--render' in sys.argv:render()\nelse:voice()\n",
+    "produce/render.py": "\"\"\"Tactical motion comic with a pre-battle introduction and engine HP snapshots.\"\"\"\nfrom pathlib import Path\nimport json,math,os,re,sys,subprocess\nfrom functools import lru_cache\nimport numpy as np\nimport soundfile as sf\nfrom PIL import Image,ImageDraw,ImageFont,ImageOps\nBASE=Path(__file__).resolve().parents[1]\nsys.path.insert(0,str(BASE/'examples/tactical_v1'))\nfrom render_support import speech_engine,phonemes\nROOT=Path(sys.argv[1]).resolve()\nW,H,FPS,SR=720,1280,24,24000\n@lru_cache(maxsize=20)\ndef font(n):return ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',n)\ndef voice():\n c=json.loads((ROOT/'script.json').read_text());engine=speech_engine();pieces=[];start=0\n for i,s in enumerate(c['segments']):\n  s['index']=i;s['start']=start;s['captions']=[];cursor=0;parts=[]\n  for phrase in re.split(r'(?<=[.!?])\\s+',s['text']):\n   a,sr=engine.create(phonemes(phrase,engine),voice='am_michael',speed=1.12,lang='en-us',is_phonemes=True,sentence_pause=.14,clause_pause=.08)\n   assert sr==SR\n   a=np.concatenate([a,np.zeros(round(.12*SR),np.float32)])\n   s['captions'].append(dict(text=phrase,start=cursor,duration=len(a)/SR));cursor+=len(a)/SR;parts.append(a)\n  a=np.concatenate(parts+[np.zeros(round(.18*SR),np.float32)])\n  frames=math.ceil(len(a)/SR*FPS);a=np.pad(a,(0,round(frames/FPS*SR)-len(a)))\n  s['duration']=len(a)/SR;start+=s['duration'];pieces.append(a)\n c['duration']=start;c['voice']={'engine':'Kokoro ONNX','voice':'am_michael','speed':1.12}\n sf.write(ROOT/'narration.wav',np.concatenate(pieces),SR)\n (ROOT/'story.json').write_text(json.dumps(c,indent=2));print('NARRATION',ROOT.name,round(start,2),flush=True)\n if not 45<=start<=75:raise RuntimeError('Duration outside target; revise narration')\ndef wrap(d,text,x,y,width,size,fill='white',center=False):\n f=font(size);lines=[];line=''\n for w in text.split():\n  trial=(line+' '+w).strip()\n  if d.textlength(trial,font=f)>width and line:lines.append(line);line=w\n  else:line=trial\n if line:lines.append(line)\n for line in lines:\n  xx=x+(width-d.textlength(line,font=f))/2 if center else x\n  d.text((xx,y),line,font=f,fill=fill,stroke_width=1,stroke_fill='#080D19');y+=size+10\n return y\ndef hp(d,p,hp,x,color):\n pct=100*max(0,hp)/p['max_hp'];d.text((x,49),p['name'].upper(),font=font(22),fill='white')\n d.text((x+230,49),str(round(pct))+'%',font=font(21),fill='white')\n d.rounded_rectangle((x,82,x+290,97),radius=6,fill='#354052')\n if pct>0:d.rounded_rectangle((x,82,x+max(1,round(290*pct/100)),97),radius=6,fill=color)\n d.text((x,105),' / '.join(p['types']).upper(),font=font(14),fill='#D3DAE6')\n d.text((x,124),f\"{round(hp)} / {p['max_hp']} HP\",font=font(13),fill='#D3DAE6')\nOVERLAY=Image.new('RGBA',(W,H));od=ImageDraw.Draw(OVERLAY);od.rectangle((0,0,W,147),fill=(6,11,21,241))\nfor yy in range(930,H):od.line((0,yy,W,yy),fill=(6,11,21,round(min(242,(yy-930)*1.65))))\ndef frame(c,s,art,t,b):\n p=t/s['duration'];accent='#FFD777' if s['kind'] in ['intro','result'] else '#A8EEFF'\n zoom=1.012+.025*p;scaled=art.resize((round(W*zoom),round(1080*zoom)),Image.Resampling.BICUBIC)\n im=Image.new('RGB',(W,H),'#080D19');im.paste(scaled,((W-scaled.width)//2,145-(scaled.height-1080)//2))\n im=Image.alpha_composite(im.convert('RGBA'),OVERLAY);d=ImageDraw.Draw(im)\n d.text((30,14),' vs '.join(c['pair']).upper(),font=font(22),fill='white')\n if s['kind']=='intro':before=after=b['initial'];label='MATCHUP'\n elif s['kind']=='result':before=after=b['turns'][-1]['after'];label='RESULT'\n else:\n  e=b['events'][s['event_index']];before=e['before'];after=e['after'];label=f\"ROUND {e['turn']} / {len(b['turns'])}\"\n mix=max(0,min(1,(t-.35)/.8)) if s['kind']=='move' else 0\n for k,(a,z) in enumerate(zip(before,after)):hp(d,z,a['hp']+(z['hp']-a['hp'])*mix,30 if k==0 else 392,['#6BD6FA','#8EEC79'][k])\n d.rounded_rectangle((30,167,245,207),radius=8,fill='#080D19',outline=accent,width=2);d.text((44,176),label,font=font(20),fill='white')\n if s['kind']=='intro':\n  d.rounded_rectangle((30,227,690,279),radius=8,fill='#10182A');wrap(d,' vs '.join(c['pair']),45,237,630,27,accent,True)\n if s['kind']=='result':\n  loser=next(x for x in c['pair'] if x!=b['winner'])\n  d.rounded_rectangle((30,227,354,279),radius=9,fill='#211B0C',outline=accent,width=2);d.text((45,241),'WINNER: '+b['winner'].upper(),font=font(22),fill=accent)\n  d.rounded_rectangle((30,293,354,339),radius=9,fill='#10182A');d.text((45,306),loser.upper()+': FAINTED',font=font(20),fill='white')\n wrap(d,s['title'],30,942,660,30,accent)\n wrap(d,s['note'],30,991,660,19,accent)\n chosen=s['captions'][-1]\n for cap in s['captions']:\n  if cap['start']<=t<cap['start']+cap['duration']:chosen=cap;break\n words=chosen['text'].split();chunks=[' '.join(words[k:k+6]) for k in range(0,len(words),6)]\n q=max(0,min(.999,(t-chosen['start'])/chosen['duration']));wrap(d,chunks[min(len(chunks)-1,int(q*len(chunks)))],36,1053,648,35,'white',True)\n d.rectangle((30,1200,690,1204),fill='#334057');d.rectangle((30,1200,30+660*(s['start']+t)/c['duration'],1204),fill=accent)\n d.text((30,1226),'LV100  /  GEN9  /  NO ITEMS',font=font(17),fill='#D7DFEC');d.text((30,1253),'PLANNED CHOICES  /  SIMULATED DAMAGE',font=font(14),fill='#AAB7CC')\n return im.convert('RGB')\ndef render():\n c=json.loads((ROOT/'story.json').read_text());b=json.loads((ROOT/'battle.json').read_text());images=json.loads((ROOT/'images.json').read_text());assert len([s for s in c['segments'] if s['kind']=='move'])==len(b['events'])\n cmd=['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','pipe:0','-i',str(ROOT/'narration.wav'),'-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-af','loudnorm=I=-16:TP=-1.5:LRA=9','-ar','48000','-movflags','+faststart','-shortest',str(ROOT/c['output'])]\n proc=subprocess.Popen(cmd,stdin=subprocess.PIPE);arts={k:ImageOps.fit(Image.open(ROOT/v).convert('RGB'),(W,1080),Image.Resampling.LANCZOS) for k,v in images.items()}\n for s in c['segments']:\n  for n in range(round(s['duration']*FPS)):\n   im=frame(c,s,arts[s['image_key']],n/FPS,b);proc.stdin.write(im.tobytes())\n   if n==min(round(s['duration']*FPS)-1,round(1.5*FPS)):im.save(ROOT/f\"review-{s['index']:02d}.jpg\",quality=92)\n  print('SCENE',ROOT.name,s['index'],flush=True)\n proc.stdin.close();assert proc.wait()==0;print('RENDERED',ROOT/c['output'],flush=True)\nif '--render' in sys.argv:render()\nelse:voice()\n",
     "produce/simulate.cjs": "const fs=require('fs'),path=require('path');\nconst {Battle,Dex,TeamValidator}=require('pokemon-showdown');\nconst cfg=JSON.parse(fs.readFileSync(process.argv[2]));const format='gen9nationaldex';\nconst validator=new TeamValidator(format);\nfor(const set of cfg.builds){const errors=validator.validateTeam([structuredClone(set)]);if(errors?.length)throw Error(errors.join('\\n'));}\nconst catalogue=JSON.parse(fs.readFileSync(path.join(__dirname,'../pokemon/tactical_moves.json'))).pokemon;\nfor(const b of cfg.builds){const c=catalogue.find(x=>x.species===b.species);if(!c||b.moves.length!==4||b.moves.some(m=>!c.moves.some(x=>x.name===m)))throw Error('Invalid equipped catalogue moves');}\nconst seed=Array.from({length:4},(_,i)=>require('crypto').createHash('sha256').update(cfg.simulation_key).digest().readUInt16BE(i*2));\nconst battle=new Battle({formatid:format,seed,send:()=>{}});const events=[];let current=null;\nconst snap=p=>({name:p.name,hp:p.hp,max_hp:p.maxhp,types:p.getTypes(),status:p.status,boosts:{...p.boosts},speed:p.getStat('spe'),stats:{atk:p.getStat('atk',false,true),def:p.getStat('def',false,true),spa:p.getStat('spa',false,true),spd:p.getStat('spd',false,true)}});\nconst addMove=battle.addMove;battle.addMove=function(...args){if(args[0]==='move'){current={turn:this.turn,actor:args[1].name,move:args[2],before:this.sides.map(s=>snap(s.active[0])),damage:[]};events.push(current);}return addMove.apply(this,args);};\nconst add=battle.add;battle.add=function(...args){if(args[0]==='-damage'&&current&&args[1]?.side){const p=args[1];current.damage.push({target:p.name,hp_after:p.hp,max_hp:p.maxhp});}if(args[0]==='-miss'&&current)current.missed=true;return add.apply(this,args);};\nbattle.setPlayer('p1',{name:cfg.builds[0].species,team:[cfg.builds[0]]});battle.setPlayer('p2',{name:cfg.builds[1].species,team:[cfg.builds[1]]});if(battle.requestState==='teampreview')battle.makeChoices('team 1','team 1');\nconst initial=battle.sides.map(s=>snap(s.active[0]));const turns=[];\nfor(let i=0;i<cfg.plans.length&&!battle.ended;i++){const from=battle.log.length;const choices=cfg.plans[i].map((m,s)=>'move '+(battle.sides[s].active[0].moveSlots.findIndex(x=>x.id===Dex.moves.get(m).id)+1));battle.makeChoices(...choices);turns.push({turn:i+1,planned:cfg.plans[i],after:battle.sides.map(s=>snap(s.active[0])),log:battle.log.slice(from)});if(battle.log.some(x=>x.startsWith('|error|')))throw Error('Battle engine error');}\nfor(let i=0;i<events.length;i++){const e=events[i];e.after=i+1<events.length?events[i+1].before:turns.at(-1).after;const hp=Object.fromEntries(e.before.map(p=>[p.name,p.hp]));const seen=new Set();e.damage=e.damage.filter(d=>{const k=d.target+':'+d.hp_after;if(seen.has(k))return false;seen.add(k);return true;});for(const d of e.damage){d.hp_lost=hp[d.target]-d.hp_after;hp[d.target]=d.hp_after;d.percent_max_hp=+(100*d.hp_lost/d.max_hp).toFixed(2);}e.damage_total=e.damage.reduce((s,d)=>s+d.hp_lost,0);const m=Dex.moves.get(e.move);e.move_info={type:m.type,category:m.category,accuracy:m.accuracy,priority:m.priority,base_power:m.basePower};}\nconst out={schema:2,format,seed,simulation_key:cfg.simulation_key,builds:cfg.builds,moveBanks:cfg.builds.map(b=>catalogue.find(x=>x.species===b.species)),initial,events,turns,ended:battle.ended,winner:battle.winner,log:battle.log,simulator_version:require('pokemon-showdown/package.json').version,policy:cfg.policy};fs.writeFileSync(path.join(path.dirname(process.argv[2]),'battle.json'),JSON.stringify(out,null,2));console.log(JSON.stringify({seed,initial,events:events.map(e=>({turn:e.turn,actor:e.actor,move:e.move,damage:e.damage,missed:e.missed,after:e.after.map(p=>({name:p.name,hp:p.hp,boosts:p.boosts,status:p.status}))})),winner:out.winner,ended:out.ended,turns:turns.length,log:battle.log},null,2));battle.destroy();\n",
     "examples/tactical_v1/pronunciation.json": "{\n  \"language\": \"en-US\",\n  \"notes\": \"Explicit IPA for the model; display text retains the proper spelling. Initial English targets require listening review rather than a claim of perfect pronunciation in every voice.\",\n  \"references\": [\n    \"https://www.serebii.net/pokemon/pronunciation/gen1pokemon.shtml\",\n    \"https://www.mcdonalds.com/content/dam/sites/uk/nfl/pdf/ehub/happyreaders/pokemon-ultimate-edition-book.pdf\"\n  ],\n  \"names\": {\n    \"Charizard\": \"t\\u0283\\u02c8\\u0251\\u02d0\\u0279\\u026az\\u0251\\u02d0\\u0279d\",\n    \"Blastoise\": \"bl\\u02c8\\u00e6st\\u0254\\u026as\",\n    \"Venusaur\": \"v\\u02c8i\\u02d0n\\u0259s\\u0254\\u02d0\\u0279\",\n    \"Pikachu\": \"p\\u02c8i\\u02d0k\\u0259t\\u0283u\\u02d0\",\n    \"Raichu\": \"\\u0279\\u02c8a\\u026at\\u0283u\\u02d0\",\n    \"Gengar\": \"\\u0261\\u02c8\\u025b\\u014b\\u0261\\u0251\\u02d0\\u0279\",\n    \"Gyarados\": \"\\u0261\\u02c8\\u00e6\\u0279\\u0259do\\u028as\",\n    \"Dragonite\": \"d\\u0279\\u02c8\\u00e6\\u0261\\u0259na\\u026at\",\n    \"Lucario\": \"lu\\u02d0k\\u02c8\\u0251\\u02d0\\u0279io\\u028a\",\n    \"Garchomp\": \"\\u0261\\u02c8\\u0251\\u02d0\\u0279t\\u0283\\u0251mp\",\n    \"Snorlax\": \"sn\\u02c8\\u0254\\u02d0\\u0279l\\u00e6ks\",\n    \"Tyranitar\": \"ta\\u026a\\u0279\\u02c8\\u00e6n\\u026at\\u0251\\u02d0\\u0279\",\n    \"Scizor\": \"s\\u02c8\\u026az\\u0254\\u02d0\\u0279\",\n    \"Greninja\": \"\\u0261\\u0279\\u025bn\\u02c8\\u026and\\u0292\\u0259\",\n    \"Sylveon\": \"s\\u02c8\\u026alvi\\u02d0\\u0251n\",\n    \"Arcanine\": \"\\u02c8\\u0251\\u02d0\\u0279k\\u0259na\\u026an\",\n    \"Heracross\": \"h\\u02c8\\u025b\\u0279\\u0259k\\u0279\\u0254\\u02d0s\",\n    \"Gardevoir\": \"\\u0261\\u02c8\\u0251\\u02d0\\u0279d\\u0259vw\\u0251\\u02d0\\u0279\"\n  },\n  \"terms\": {\n    \"Life Orb\": \"l\\u02c8a\\u026af \\u02cc\\u0254\\u02d0\\u0279b\",\n    \"Assault Vest\": \"\\u0259s\\u02c8\\u0254\\u02d0lt v\\u02cc\\u025bst\",\n    \"Light Ball\": \"l\\u02c8a\\u026at b\\u02cc\\u0254\\u02d0l\",\n    \"Air Slash\": \"\\u02c8\\u025b\\u0279 sl\\u02cc\\u00e6\\u0283\",\n    \"Hydro Pump\": \"h\\u02c8a\\u026ad\\u0279o\\u028a p\\u02cc\\u028cmp\",\n    \"Flamethrower\": \"fl\\u02c8e\\u026am\\u03b8\\u0279o\\u028a\\u025a\"\n  },\n  \"emphasis_pause_seconds\": 0.35,\n  \"segment_pause_seconds\": 0.28\n}"
   },
@@ -1738,8 +1894,302 @@
     "Use case: illustration-story. Single full-scene 9:16 cinematic anime illustration. Canonical blue beetle Pokémon Heracross at right uses Close Combat, a short martial-arts palm strike toward canonical red metallic Pokémon Scizor at left, who guards with its two large pincers. One clear contact, stylized amber fighting-energy burst, dynamic footwork and dust, no injury or gore, friendly sporting fantasy tournament. Same sunset forest clearing and mossy stone arena, warm rim lighting, polished cel shading, detailed painted background. Both creatures clearly recognizable, consistent anatomy, no humans, no extra characters, no text, no panel grid.",
     "Use case: illustration-story. Single full-scene portrait 9:16 cinematic anime result composition in a sunset forest clearing with mossy stone arena. Canonical blue beetle Pokémon Heracross at right stands upright as the winner, tired but proud, horn and both arms recognizable. Canonical red metallic Scizor at left sits safely resting on the arena floor, pincers lowered, eyes gently closed in a sporting defeat, unharmed. Clear winner and resting defeated opponent in the same frame, warm golden rim light, consistent canonical designs, rich painted background, polished anime cel shading. No humans, no injuries, no text, no watermark, no panels."
   ],
-  "status": "art_generation_and_rendering",
+  "status": "scheduled",
   "format": "tactical_v1_with_matchup_intro",
   "authorized_publish_at": "2026-10-27T04:30:00Z",
-  "publication_scheduled": false
+  "publication_scheduled": true,
+  "story": {
+    "title": "Scizor vs Heracross: The Cost of Giving Up Priority",
+    "pair": [
+      "Scizor",
+      "Heracross"
+    ],
+    "slot": "2026-10-27T10:00+05:30",
+    "publish_at": "2026-10-27T04:30:00Z",
+    "output": "scizor-heracross-tactical.mp4",
+    "segments": [
+      {
+        "title": "MATCHUP",
+        "text": "Scizor faces Heracross. Let us battle.",
+        "note": "BOTH AT FULL HP",
+        "kind": "intro",
+        "event_index": null,
+        "image_key": "intro",
+        "index": 0,
+        "start": 0,
+        "captions": [
+          {
+            "text": "Scizor faces Heracross.",
+            "start": 0,
+            "duration": 2.04
+          },
+          {
+            "text": "Let us battle.",
+            "start": 2.04,
+            "duration": 1.3786666666666667
+          }
+        ],
+        "duration": 3.625
+      },
+      {
+        "title": "MEGAHORN",
+        "text": "Heracross is faster. Megahorn lands, but Scizor resists Bug damage. Twenty-one percent lost.",
+        "note": "85% ACC / BUG STAB / 72 HP",
+        "kind": "move",
+        "event_index": 0,
+        "image_key": "megahorn",
+        "index": 1,
+        "start": 3.625,
+        "captions": [
+          {
+            "text": "Heracross is faster.",
+            "start": 0,
+            "duration": 1.784
+          },
+          {
+            "text": "Megahorn lands, but Scizor resists Bug damage.",
+            "start": 1.784,
+            "duration": 3.532
+          },
+          {
+            "text": "Twenty-one percent lost.",
+            "start": 5.316,
+            "duration": 1.8053333333333332
+          }
+        ],
+        "duration": 7.333333333333333
+      },
+      {
+        "title": "SWORDS DANCE",
+        "text": "Scizor uses Swords Dance. Its physical Attack doubles; its Speed stays the same.",
+        "note": "ATTACK +2 / SPEED UNCHANGED",
+        "kind": "move",
+        "event_index": 1,
+        "image_key": "setup",
+        "index": 2,
+        "start": 10.958333333333332,
+        "captions": [
+          {
+            "text": "Scizor uses Swords Dance.",
+            "start": 0,
+            "duration": 2.04
+          },
+          {
+            "text": "Its physical Attack doubles; its Speed stays the same.",
+            "start": 2.04,
+            "duration": 3.6826666666666665
+          }
+        ],
+        "duration": 5.916666666666667
+      },
+      {
+        "title": "BULLET PUNCH",
+        "text": "Bullet Punch jumps the queue with plus-one priority. Boosted Steel STAB removes thirty-one percent.",
+        "note": "PRIORITY +1 / STEEL STAB / 112 HP",
+        "kind": "move",
+        "event_index": 2,
+        "image_key": "bullet",
+        "index": 3,
+        "start": 16.875,
+        "captions": [
+          {
+            "text": "Bullet Punch jumps the queue with plus-one priority.",
+            "start": 0,
+            "duration": 3.32
+          },
+          {
+            "text": "Boosted Steel STAB removes thirty-one percent.",
+            "start": 3.32,
+            "duration": 3.192
+          }
+        ],
+        "duration": 6.708333333333333
+      },
+      {
+        "title": "CLOSE COMBAT",
+        "text": "Heracross changes to Close Combat. Fighting hits Bug and Steel neutrally, removing thirty-nine percent. Both defenses fall.",
+        "note": "NEUTRAL STAB / 133 HP / DEFENSES -1",
+        "kind": "move",
+        "event_index": 3,
+        "image_key": "combat",
+        "index": 4,
+        "start": 23.583333333333332,
+        "captions": [
+          {
+            "text": "Heracross changes to Close Combat.",
+            "start": 0,
+            "duration": 2.530666666666667
+          },
+          {
+            "text": "Fighting hits Bug and Steel neutrally, removing thirty-nine percent.",
+            "start": 2.530666666666667,
+            "duration": 4.258666666666667
+          },
+          {
+            "text": "Both defenses fall.",
+            "start": 6.789333333333333,
+            "duration": 1.6986666666666668
+          }
+        ],
+        "duration": 8.708333333333334
+      },
+      {
+        "title": "BULLET PUNCH",
+        "text": "Another priority strike hits the lowered Defense harder: forty-four percent. Heracross has ninety-three HP.",
+        "note": "PRIORITY +1 / 159 HP REMOVED",
+        "kind": "move",
+        "event_index": 4,
+        "image_key": "bullet",
+        "index": 5,
+        "start": 32.291666666666664,
+        "captions": [
+          {
+            "text": "Another priority strike hits the lowered Defense harder: forty-four percent.",
+            "start": 0,
+            "duration": 4.8133333333333335
+          },
+          {
+            "text": "Heracross has ninety-three HP.",
+            "start": 4.8133333333333335,
+            "duration": 2.445333333333333
+          }
+        ],
+        "duration": 7.458333333333333
+      },
+      {
+        "title": "CLOSE COMBAT",
+        "text": "Heracross repeats Close Combat. Scizor survives on ten HP; Heracross loses another stage of both defenses.",
+        "note": "129 HP REMOVED / SCIZOR: 10 HP",
+        "kind": "move",
+        "event_index": 5,
+        "image_key": "combat",
+        "index": 6,
+        "start": 39.75,
+        "captions": [
+          {
+            "text": "Heracross repeats Close Combat.",
+            "start": 0,
+            "duration": 2.36
+          },
+          {
+            "text": "Scizor survives on ten HP; Heracross loses another stage of both defenses.",
+            "start": 2.36,
+            "duration": 5.772
+          }
+        ],
+        "duration": 8.333333333333334
+      },
+      {
+        "title": "HERACROSS: CLOSE COMBAT",
+        "text": "Scizor chooses Close Combat, giving up priority. Faster Heracross strikes first and takes the last ten HP.",
+        "note": "10 HP / SCIZOR'S PLANNED ATTACK DENIED",
+        "kind": "move",
+        "event_index": 6,
+        "image_key": "combat",
+        "index": 7,
+        "start": 48.083333333333336,
+        "captions": [
+          {
+            "text": "Scizor chooses Close Combat, giving up priority.",
+            "start": 0,
+            "duration": 3.490666666666667
+          },
+          {
+            "text": "Faster Heracross strikes first and takes the last ten HP.",
+            "start": 3.490666666666667,
+            "duration": 4.066666666666666
+          }
+        ],
+        "duration": 7.75
+      },
+      {
+        "title": "HERACROSS WINS",
+        "text": "Heracross wins with twenty-six percent health. This planned mistake shows why move order matters. Simulated example, not perfect play.",
+        "note": "HERACROSS: 93 HP / SCIZOR FAINTED",
+        "kind": "result",
+        "event_index": null,
+        "image_key": "result",
+        "index": 8,
+        "start": 55.833333333333336,
+        "captions": [
+          {
+            "text": "Heracross wins with twenty-six percent health.",
+            "start": 0,
+            "duration": 2.8293333333333335
+          },
+          {
+            "text": "This planned mistake shows why move order matters.",
+            "start": 2.8293333333333335,
+            "duration": 3.2346666666666666
+          },
+          {
+            "text": "Simulated example, not perfect play.",
+            "start": 6.064,
+            "duration": 2.8293333333333335
+          }
+        ],
+        "duration": 9.083333333333334
+      }
+    ],
+    "duration": 64.91666666666667,
+    "voice": {
+      "engine": "Kokoro ONNX",
+      "voice": "am_michael",
+      "speed": 1.12
+    }
+  },
+  "description": "Scizor vs Heracross: The Cost of Giving Up Priority\n\nA short matchup introduction, then every actual move in this fixed-seed tactical example. Planned teaching choices; accuracy, damage, effects, priority and fainting resolved by Pokemon Showdown 0.11.11, Generation 9 National Dex. No items, switching, Mega or Tera.\n\nScizor is Bug/Steel; Heracross is Bug/Fighting. Heracross is faster (206 vs 166), but Bullet Punch has +1 priority. Megahorn is resisted Bug STAB. Swords Dance doubles Scizor's physical Attack. Close Combat is neutral Fighting STAB against Bug/Steel: the two type modifiers cancel. Its Defense and Special Defense drops make later physical hits stronger. All actual attacks in this example are physical.\n\nImportant planned mistake: at 10 HP, Scizor selects ordinary-priority Close Combat instead of Bullet Punch. Faster Heracross executes Close Combat first; Scizor's chosen move never occurs. This is deliberately a teaching error, not perfect or recommended play. Heracross wins with 93/364 HP (25.55%). Both use Swarm; it does not boost these low-HP Fighting/Steel attacks.\n\nDeclared level-100 builds, 31 IVs in each stat:\nScizor: Swarm; Serious; EVs 252 HP, 252 DEF, 4 ATK; Bullet Punch, Close Combat, Knock Off, Swords Dance.\nHeracross: Swarm; Serious; EVs 252 HP, 252 DEF, 4 ATK; Megahorn, Close Combat, Stone Edge, Swords Dance.\nFixed seed: [28084, 61280, 27307, 25239].\n\nThis is one conditional simulated example, not a universal ranking, aggregate win probability or canon anime outcome. Full-scene AI illustrations, camera moves, exact animated HP and local Kokoro narration. Bullet Punch uses a silver-glow pre-attack portrait because its contact illustration was unavailable.\n\nRecent title/topic reference (not mechanics or trend proof):\nHeracross vs Scizor: Horn Power Meets Steel Speed | Real Life Pokémon Park; published 2026-10-07; https://www.youtube.com/watch?v=NSp-9WMYYLc; 7125 views observed on 26 Oct 2026.\n\nGeneral-audience competitive game analysis for teen and adult players. Independent fan analysis, not affiliated with or endorsed by The Pokemon Company, Nintendo, Game Freak or Creatures.\n\n#Pokemon #PokemonBattle #Shorts #Scizor #Heracross",
+  "quality": {
+    "decode": "passed full FFmpeg -xerror decode",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 1280,
+          "r_frame_rate": "24/1"
+        },
+        {
+          "codec_name": "aac",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "64.916667",
+        "size": "9665949"
+      }
+    },
+    "sha256": "58b9d6e0015e8f70aebc70c3c58dc9b5b59cabd3fad8426d6507034eae084ce6",
+    "integrated_lufs": -16.77,
+    "true_peak_dbtp": -1.45,
+    "intro_and_action_and_result_frames": "passed: all scenes visually inspected, full HP intro and correct final winner/defeated labels",
+    "intro_seconds": 3.625
+  },
+  "video_id": "fU_EVgTa50c",
+  "library_file_id": "libfile_20e5bcb570e48191a3e62d2b6cc6b8f0",
+  "schedule_verified": true,
+  "art_provenance": {
+    "provider": "built-in imagegen",
+    "distinct_illustrations": 6,
+    "style": "sunset forest stone sporting arena",
+    "images": {
+      "intro": "art/intro.png",
+      "megahorn": "art/megahorn.png",
+      "setup": "art/setup.png",
+      "bullet": "art/bullet.png",
+      "combat": "art/combat.png",
+      "result": "art/result.png"
+    },
+    "image_based_camera_motion": true,
+    "continuous_character_animation": false,
+    "permitted_alternative": {
+      "move": "Bullet Punch",
+      "reason": "Contact illustration rejected by image generation output safety check",
+      "alternative": "A separate sporting pre-attack silver-glow Scizor portrait was generated once and used, disclosed in description.",
+      "prompt": "Use case: illustration-story. A vertical 9:16 cinematic anime sporting portrait before an attack, with canonical red metallic Pokémon Scizor standing upright in the left foreground, one large pincer held forward and glowing with a soft silver aura, and canonical blue beetle Pokémon Heracross standing farther back on the right watching in a guarded pose, its central horn visible. No impact, no strike, no contact and no injury. Same sunset forest clearing with ancient mossy pale stone arena, warm golden rim lighting, detailed painted background, polished cel shading. Both creatures fully recognizable with canonical anatomy, no humans, no text, no logos, no panels. This is a calm pre-attack illustration with room above for a move label."
+    }
+  },
+  "schedule_verification": "YouTube Studio selected 27 Oct 2026, 10:00 AM, (GMT+05:30) Kolkata; saved Video scheduled modal confirms Oct 26 at 9:30 PM local GMT-0700, equivalent to 27 Oct 10:00 IST."
 }
