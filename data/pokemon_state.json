@@ -690,7 +690,7 @@
       "editorial_slot_date": "2026-10-25",
       "slot": "2026-10-25T22:00+05:30",
       "requested_publish_at": "2026-10-25T16:30:00Z",
-      "status": "private",
+      "status": "published",
       "created_at": "2026-10-25T17:55:39.531Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -823,7 +823,6 @@
       "production_record": "data/production/2026-10-25-dragonite-salamence.json",
       "publication_scheduled": false,
       "schedule_verified": false,
-      "release_blocker": "Original 22:00 IST slot missed after incorrect daily-cap withholding. Private upload only; explicit user authorization needed for late publication.",
       "quality": {
         "decode": "passed entire file with FFmpeg -xerror",
         "dimensions": "720x1280",
@@ -846,7 +845,14 @@
         "copyright": "No issues found",
         "community_guidelines": "No issues found"
       },
-      "missed_slot": true
+      "missed_slot": true,
+      "public_verified_on_ist": "2026-10-26",
+      "actual_publication_date_ist": "2026-10-26",
+      "publication_override": "User explicitly requested immediate release in chat: Public it. Applies only to GwZKC-cZ5aI, the missed 25 October evening post.",
+      "release_blocker_resolved": true,
+      "previous_release_blocker": "Original 22:00 IST slot missed after incorrect daily-cap withholding. Private upload only; explicit user authorization needed for late publication.",
+      "public_verification_source": "YouTube Studio video details: Visibility Public, Save disabled, matching title, video ID and authorized channel UCPNKs86kz0A8b9CH75-EY0w",
+      "actual_publication_note": "Immediate public change verified 26 October 2026 IST on explicit user instruction. Original 25 October 22:00 slot was missed; exact platform publication timestamp not retrieved."
     }
   ],
   "pilot_verified": true,
@@ -936,7 +942,7 @@
       "no_existing_schedules": true,
       "slots": {
         "10:00": "published_verified",
-        "22:00": "missed_cutoff_private_draft_GwZKC-cZ5aI"
+        "22:00": "missed_original_slot; GwZKC-cZ5aI published_26_October_on_explicit_user_request"
       },
       "limit_note": "User clarified in chat that E8PsFuSoHPo was the delayed 24 October 22:00 post and does not replace 25 October evening production. Complete 25 October 22:00 slot as a one-day exception to actual-date cap; preserve actual publication date for audit.",
       "completed_at": "2026-10-25T17:59:02.889Z",
