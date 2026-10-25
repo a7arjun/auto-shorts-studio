@@ -682,6 +682,160 @@
       "public_verified_on_ist": "2026-10-25",
       "public_verified_at": "2026-10-25T04:37:00Z",
       "public_verification_source": "Fresh YouTube Studio video details shows Visibility Public on the authorized channel; scheduled release executed. Exact platform publication timestamp not fetched."
+    },
+    {
+      "key": "2026-10-25T22:00+05:30",
+      "mode": "daily",
+      "date": "2026-10-25",
+      "editorial_slot_date": "2026-10-25",
+      "slot": "2026-10-25T22:00+05:30",
+      "requested_publish_at": "2026-10-25T16:30:00Z",
+      "status": "uploading",
+      "created_at": "2026-10-25T17:55:39.531Z",
+      "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
+      "upload_provider": "chatgpt_browser",
+      "format": "tactical_v1",
+      "pair": [
+        "Dragonite",
+        "Salamence"
+      ],
+      "simulation_key": "2026-10-25T22:00+05:30|Dragonite|Salamence",
+      "seed": [
+        57353,
+        6505,
+        5817,
+        3604
+      ],
+      "builds": [
+        {
+          "name": "Dragonite",
+          "species": "Dragonite",
+          "gender": "M",
+          "level": 100,
+          "ability": "Inner Focus",
+          "item": "",
+          "nature": "Serious",
+          "evs": {
+            "hp": 252,
+            "atk": 4,
+            "def": 252,
+            "spe": 0,
+            "spa": 0,
+            "spd": 0
+          },
+          "ivs": {
+            "hp": 31,
+            "atk": 31,
+            "def": 31,
+            "spa": 31,
+            "spd": 31,
+            "spe": 31
+          },
+          "moves": [
+            "Dragon Dance",
+            "Dragon Claw",
+            "Extreme Speed",
+            "Fire Punch"
+          ]
+        },
+        {
+          "name": "Salamence",
+          "species": "Salamence",
+          "gender": "M",
+          "level": 100,
+          "ability": "Intimidate",
+          "item": "",
+          "nature": "Serious",
+          "evs": {
+            "hp": 252,
+            "atk": 4,
+            "def": 252,
+            "spe": 0,
+            "spa": 0,
+            "spd": 0
+          },
+          "ivs": {
+            "hp": 31,
+            "atk": 31,
+            "def": 31,
+            "spa": 31,
+            "spd": 31,
+            "spe": 31
+          },
+          "moves": [
+            "Dragon Claw",
+            "Dual Wingbeat",
+            "Flamethrower",
+            "Dragon Dance"
+          ]
+        }
+      ],
+      "title": "Dragonite vs Salamence: Speed, a Miss and the Final Strike",
+      "duration_seconds": 63.291667,
+      "research": {
+        "checked_on_ist": "2026-10-25",
+        "method": "Bounded public search and direct YouTube description read; title/topic framing only, not mechanics or trend proof. Reference is Monster Battler comparison, not Showdown mechanics.",
+        "references": [
+          {
+            "title": "Dragonite vs Salamence vs Garchomp vs Hydreigon | Who wins?",
+            "id": "VOxU30HV_hk",
+            "url": "https://www.youtube.com/shorts/VOxU30HV_hk",
+            "published_date": "2026-09-26",
+            "views": 161,
+            "likes": 2,
+            "comments": 0
+          }
+        ],
+        "rejected": [
+          {
+            "id": "ygQFq3VjAks",
+            "published_date": "2023-04-17",
+            "reason": "older than four months"
+          }
+        ]
+      },
+      "move_reasons": [
+        "Salamence opens with accurate super-effective Dragon STAB while it is faster.",
+        "Dragonite uses Dragon Dance to boost physical damage and overtake Salamence. Inner Focus prevents Intimidate from dropping Attack.",
+        "Dragonite chooses boosted Dragon Claw, its strongest equipped direct attack into Dragon/Flying.",
+        "Salamence tries neutral Flying STAB Dual Wingbeat; a teaching comparison of accuracy and multi-hit risk, not an optimal-play claim. The fixed seeded attempt misses.",
+        "Dragonite chooses plus-two priority Extreme Speed because neutral damage suffices against remaining 40 HP."
+      ],
+      "mechanics_validation": {
+        "legality": "passed via TeamValidator gen9nationaldex 0.11.11",
+        "hp_conservation": "passed",
+        "miss": "Dual Wingbeat; zero damage",
+        "rounds": 3,
+        "events": 5,
+        "winner": "Dragonite",
+        "final_hp": {
+          "Dragonite": 200,
+          "Salamence": 0
+        },
+        "seed": [
+          57353,
+          6505,
+          5817,
+          3604
+        ],
+        "damage_total": 580
+      },
+      "production_record": "data/production/2026-10-25-dragonite-salamence.json",
+      "publication_scheduled": false,
+      "schedule_verified": false,
+      "release_blocker": "Original 22:00 IST slot missed after incorrect daily-cap withholding. Private upload only; explicit user authorization needed for late publication.",
+      "quality": {
+        "decode": "passed entire file with FFmpeg -xerror",
+        "dimensions": "720x1280",
+        "fps": 24,
+        "video_codec": "H264",
+        "audio_codec": "AAC",
+        "duration_seconds": 63.291667,
+        "integrated_lufs": -16.92,
+        "true_peak_dbtp": -1.14,
+        "frames_inspected": "All five move events and clear result composition",
+        "sha256": "d0b540eff5ddd667d9d619729229595623b3e9367e879ebc94169f1660f31c50"
+      }
     }
   ],
   "pilot_verified": true,
@@ -771,7 +925,7 @@
       "no_existing_schedules": true,
       "slots": {
         "10:00": "scheduled_verified",
-        "22:00": "preparing_after_user_correction"
+        "22:00": "missed_cutoff_private_upload_in_progress"
       },
       "limit_note": "User clarified in chat that E8PsFuSoHPo was the delayed 24 October 22:00 post and does not replace 25 October evening production. Complete 25 October 22:00 slot as a one-day exception to actual-date cap; preserve actual publication date for audit.",
       "completed_at": "2026-10-25 04:16:20 UTC",
