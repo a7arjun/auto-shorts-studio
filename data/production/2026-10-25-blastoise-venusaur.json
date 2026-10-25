@@ -1855,5 +1855,17 @@
   },
   "video_id": "ODWSGWI3_jg",
   "library_file_id": "libfile_b9b1368a66288191b00a7fd015874bed",
-  "status": "private_pending_community_guidelines_check"
+  "status": "scheduled",
+  "publish_at": "2026-10-25T04:30:00Z",
+  "verified_at": "2026-10-25 04:16:20 UTC",
+  "schedule_verification": "YouTube Studio: Checks complete no issues; Video scheduled modal; saved content row Scheduled; reopened saved privacy shows Oct 24 2026 9:30 PM GMT-0700 = Oct 25 10:00 IST.",
+  "checks": {
+    "copyright": "No issues found",
+    "community_guidelines": "No issues found"
+  },
+  "audio_measured": {
+    "integrated_lufs": -16.68,
+    "true_peak_dbtp": -1.28
+  },
+  "evening_slot": "withheld: existing immediate sample release on 25 October IST plus morning schedule reaches daily cap 2"
 }
