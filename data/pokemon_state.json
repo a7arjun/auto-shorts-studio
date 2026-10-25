@@ -690,7 +690,7 @@
       "editorial_slot_date": "2026-10-25",
       "slot": "2026-10-25T22:00+05:30",
       "requested_publish_at": "2026-10-25T16:30:00Z",
-      "status": "uploading",
+      "status": "private_upload_metadata_in_progress",
       "created_at": "2026-10-25T17:55:39.531Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -835,7 +835,10 @@
         "true_peak_dbtp": -1.14,
         "frames_inspected": "All five move events and clear result composition",
         "sha256": "d0b540eff5ddd667d9d619729229595623b3e9367e879ebc94169f1660f31c50"
-      }
+      },
+      "video_id": "GwZKC-cZ5aI",
+      "uploaded_at": "2026-10-25T17:56:34.761Z",
+      "library_file_id": "libfile_d90664b7edfc8191b2c64abed1f63853"
     }
   ],
   "pilot_verified": true,
