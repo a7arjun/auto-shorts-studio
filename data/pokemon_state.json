@@ -861,7 +861,7 @@
       "editorial_slot_date": "2026-10-27",
       "slot": "2026-10-27T10:00+05:30",
       "requested_publish_at": "2026-10-27T04:30:00Z",
-      "status": "uploading",
+      "status": "private_upload_processing",
       "created_on_ist": "2026-10-26",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -1032,7 +1032,9 @@
         "intro_seconds": 3.625
       },
       "duration_seconds": 64.91666666666667,
-      "opening_seconds": 3.625
+      "opening_seconds": 3.625,
+      "video_id": "fU_EVgTa50c",
+      "uploaded_on_ist": "2026-10-26"
     },
     {
       "key": "2026-10-27T22:00+05:30",
