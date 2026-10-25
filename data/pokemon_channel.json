@@ -81,8 +81,8 @@
       "scheduled_slot_ist": "10:00",
       "publish_at": "2026-10-25T04:30:00Z",
       "new_videos": 1,
-      "evening": "missed_22_00_slot_due_to_incorrect_cap_accounting; private_recovery_GwZKC-cZ5aI",
-      "note": "Morning generation, upload and native scheduling verified. User corrected evening withholding: delayed prior-day Gyarados post did not replace the evening slot. Recovery video GwZKC-cZ5aI uploaded privately after 22:00; no late publication authorized. Production remains enabled."
+      "evening": "missed_original_22_00_slot; GwZKC-cZ5aI published_26_October_on_explicit_user_request",
+      "note": "Morning upload and native scheduling verified. Evening recovery GwZKC-cZ5aI was initially private after incorrect cap withholding. User subsequently said Public it; existing ID was made Public and verified in Studio on 26 October IST. Retain its editorial slot date 25 October and actual publication date 26 October. This is a specific late-release override, not a change to the routine timetable."
     }
   }
 }
