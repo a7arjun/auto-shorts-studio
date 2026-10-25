@@ -468,7 +468,7 @@
       "date": "2026-10-25",
       "slot": "2026-10-25T10:00+05:30",
       "publish_at": "2026-10-25T04:30:00Z",
-      "status": "uploaded_private",
+      "status": "scheduled",
       "created_at": "2026-10-25T04:11:00Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -631,7 +631,52 @@
       },
       "production_record": "data/production/2026-10-25-blastoise-venusaur.json",
       "video_id": "ODWSGWI3_jg",
-      "uploaded_at": "2026-10-25 04:12:48 UTC"
+      "uploaded_at": "2026-10-25 04:12:48 UTC",
+      "publication_scheduled": true,
+      "schedule_verified": true,
+      "verified_at": "2026-10-25 04:16:20 UTC",
+      "verification_source": "YouTube Studio: Checks complete no issues; Video scheduled modal; saved content row Scheduled; reopened saved privacy shows Oct 24 2026 9:30 PM GMT-0700 = Oct 25 10:00 IST.",
+      "processing_status": "SD_complete_playable",
+      "checks": {
+        "copyright": "No issues found",
+        "community_guidelines": "No issues found"
+      },
+      "quality": {
+        "decode": "passed",
+        "dimensions": "720x1280",
+        "fps": 24,
+        "video_codec": "H264",
+        "audio_codec": "AAC",
+        "duration_seconds": 70.708333,
+        "frames_inspected": "action and result",
+        "hp_and_healing": "passed",
+        "sha256": "bb5064fc1fea069b57596df3474308c0c9d1fb39b2e40f0be8ba0cf5166b2561"
+      },
+      "library_file_id": "libfile_b9b1368a66288191b00a7fd015874bed",
+      "art_provenance": {
+        "provider": "built-in imagegen",
+        "count": 7,
+        "style": "full-scene cinematic anime, dusk rocky sporting arena; image-based motion comic",
+        "file_paths": [
+          "/workspace/scratch/19ff03ff8c17/generated_images/exec-7ad96c51-7207-4026-a575-857f9642d39d.png",
+          "/workspace/scratch/19ff03ff8c17/generated_images/exec-a564adb4-dfec-40ac-9929-778c7031e757.png",
+          "/workspace/scratch/19ff03ff8c17/generated_images/exec-0a03ccb3-514e-42d7-b1f9-93f5f755f953.png",
+          "/workspace/scratch/19ff03ff8c17/generated_images/exec-d10897c2-a541-4af3-a9c5-6f52b98409a4.png",
+          "/workspace/scratch/19ff03ff8c17/generated_images/exec-332dbce6-d3b0-4bba-a30e-2e6253946ee7.png",
+          "/workspace/scratch/19ff03ff8c17/generated_images/exec-13af7a6e-28e8-4a8c-897a-0597b9031382.png",
+          "/workspace/scratch/19ff03ff8c17/generated_images/exec-f9097a11-07a2-45ff-a64b-c2382d1b99d8.png"
+        ],
+        "scene_order": [
+          "Sludge Bomb",
+          "Shell Smash",
+          "Ice Beam",
+          "Giga Drain",
+          "Ice Beam",
+          "Giga Drain",
+          "Venusaur victory with defeated Blastoise"
+        ],
+        "note": "Seven separate generated images inspected for subject/action/result consistency; no continuous character animation claimed."
+      }
     }
   ],
   "pilot_verified": true,
@@ -720,10 +765,11 @@
       "studio_rows": 14,
       "no_existing_schedules": true,
       "slots": {
-        "10:00": "Preparing new tactical video",
+        "10:00": "scheduled_verified",
         "22:00": "withheld_daily_release_cap"
       },
-      "limit_note": "E8PsFuSoHPo has public_verified_on_ist=2026-10-25. Count conservatively toward two actual releases per IST date despite original ledger date 2026-10-24. One new release remains today."
+      "limit_note": "E8PsFuSoHPo has public_verified_on_ist=2026-10-25. Count conservatively toward two actual releases per IST date despite original ledger date 2026-10-24. One new release remains today.",
+      "completed_at": "2026-10-25 04:16:20 UTC"
     }
   ]
 }
