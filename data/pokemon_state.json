@@ -468,7 +468,7 @@
       "date": "2026-10-25",
       "slot": "2026-10-25T10:00+05:30",
       "publish_at": "2026-10-25T04:30:00Z",
-      "status": "scheduled",
+      "status": "published",
       "created_at": "2026-10-25T04:11:00Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -676,7 +676,10 @@
           "Venusaur victory with defeated Blastoise"
         ],
         "note": "Seven separate generated images inspected for subject/action/result consistency; no continuous character animation claimed."
-      }
+      },
+      "public_verified_on_ist": "2026-10-25",
+      "public_verified_at": "2026-10-25T04:37:00Z",
+      "public_verification_source": "Fresh YouTube Studio video details shows Visibility Public on the authorized channel; scheduled release executed. Exact platform publication timestamp not fetched."
     }
   ],
   "pilot_verified": true,
