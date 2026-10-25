@@ -690,7 +690,7 @@
       "editorial_slot_date": "2026-10-25",
       "slot": "2026-10-25T22:00+05:30",
       "requested_publish_at": "2026-10-25T16:30:00Z",
-      "status": "private_upload_metadata_in_progress",
+      "status": "private",
       "created_at": "2026-10-25T17:55:39.531Z",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -838,7 +838,15 @@
       },
       "video_id": "GwZKC-cZ5aI",
       "uploaded_at": "2026-10-25T17:56:34.761Z",
-      "library_file_id": "libfile_d90664b7edfc8191b2c64abed1f63853"
+      "library_file_id": "libfile_d90664b7edfc8191b2c64abed1f63853",
+      "private_verified_at": "2026-10-25T17:59:02.889Z",
+      "verification_source": "YouTube Studio saved Shorts row: Private; upload wizard Checks complete, no issues found; 1:04 playable; filename dragonite-salamence-tactical.mp4",
+      "processing_status": "SD_complete_playable",
+      "checks": {
+        "copyright": "No issues found",
+        "community_guidelines": "No issues found"
+      },
+      "missed_slot": true
     }
   ],
   "pilot_verified": true,
@@ -927,11 +935,11 @@
       "studio_rows": 14,
       "no_existing_schedules": true,
       "slots": {
-        "10:00": "scheduled_verified",
-        "22:00": "missed_cutoff_private_upload_in_progress"
+        "10:00": "published_verified",
+        "22:00": "missed_cutoff_private_draft_GwZKC-cZ5aI"
       },
       "limit_note": "User clarified in chat that E8PsFuSoHPo was the delayed 24 October 22:00 post and does not replace 25 October evening production. Complete 25 October 22:00 slot as a one-day exception to actual-date cap; preserve actual publication date for audit.",
-      "completed_at": "2026-10-25 04:16:20 UTC",
+      "completed_at": "2026-10-25T17:59:02.889Z",
       "user_correction": "We did not upload 10pm video"
     }
   ]
