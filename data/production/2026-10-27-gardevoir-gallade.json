@@ -1485,10 +1485,10 @@
     "Use case: illustration-story. Single full-scene vertical 9:16 cinematic anime illustration. Canonical Gardevoir at left extends its hands and uses Psychic, a controlled violet-pink psychic energy wave directed toward canonical Gallade at right. Gallade braces upright, its white body, green helmet crest and green elbow blades clearly visible, surrounded by soft psychic ripples. Gardevoir has its canonical green helmet-like hair, white gown-shaped body and red chest fin. Friendly sporting fantasy match, no injury or gore. Same moonlit meadow and pale stone arena, silver rim lighting, luminous flowers, blue-violet sky, rich painted scenery and polished cel shading. Both recognizable, no text, no logos, no panels.",
     "Use case: illustration-story. Single full-scene portrait 9:16 cinematic anime result composition. Canonical Gallade on the right stands upright as the winner, tired but composed, its white body, green helmet crest and green elbow blades recognizable. Canonical Gardevoir on the left sits safely resting in sporting defeat with its white gown-shaped body folded beneath it, green hair and red chest fin recognizable, eyes gently closed, unharmed. Moonlit meadow and pale stone arena, luminous flowers, silver rim light, blue-violet sky, consistent canonical creatures, painted background and polished cel shading. Clear winning and resting defeated opponents together, no humans, no text, no logos, no injuries, no panels."
   ],
-  "status": "private_upload_processing",
+  "status": "scheduled",
   "format": "tactical_v1_with_matchup_intro",
   "authorized_publish_at": "2026-10-27T16:30:00Z",
-  "publication_scheduled": false,
+  "publication_scheduled": true,
   "story": {
     "title": "Gardevoir vs Gallade: Why Speed Was Not Enough",
     "pair": [
@@ -1719,7 +1719,7 @@
   },
   "video_id": "UpUsIOXOLRw",
   "library_file_id": "libfile_22758f2d4de0819182b34eafedf0b34a",
-  "schedule_verified": false,
+  "schedule_verified": true,
   "art_provenance": {
     "provider": "built-in imagegen",
     "distinct_illustrations": 6,
@@ -1734,5 +1734,13 @@
     },
     "image_based_camera_motion": true,
     "continuous_character_animation": false
-  }
+  },
+  "publish_at": "2026-10-27T16:30:00Z",
+  "schedule_verification": "YouTube Studio selected 27 Oct 2026 10:00 PM in (GMT+05:30) Kolkata; saved Video scheduled modal confirms October 27 9:30 AM local GMT-0700, equivalent to 27 Oct 22:00 IST. Fresh saved Shorts content row shows Scheduled.",
+  "checks": {
+    "copyright": "No issues found",
+    "community_guidelines": "No issues found"
+  },
+  "processing_status": "SD_complete_playable",
+  "verified_on_ist": "2026-10-26"
 }
