@@ -460,7 +460,9 @@
       "public_verified_on_ist": "2026-10-25",
       "publication_override": "User explicitly requested immediate publication in chat: Publish now gyarados vs greninja.",
       "release_blocker_resolved": true,
-      "actual_publication_note": "Published immediately on user request; not a confirmed release at the original 24 October 22:00 IST slot. Exact publication timestamp not recorded."
+      "actual_publication_note": "Published immediately on user request; not a confirmed release at the original 24 October 22:00 IST slot. Exact publication timestamp not recorded.",
+      "editorial_slot_date": "2026-10-24",
+      "actual_publication_date_ist": "2026-10-25"
     },
     {
       "key": "2026-10-25T10:00+05:30",
@@ -769,10 +771,11 @@
       "no_existing_schedules": true,
       "slots": {
         "10:00": "scheduled_verified",
-        "22:00": "withheld_daily_release_cap"
+        "22:00": "preparing_after_user_correction"
       },
-      "limit_note": "E8PsFuSoHPo has public_verified_on_ist=2026-10-25. Count conservatively toward two actual releases per IST date despite original ledger date 2026-10-24. One new release remains today.",
-      "completed_at": "2026-10-25 04:16:20 UTC"
+      "limit_note": "User clarified in chat that E8PsFuSoHPo was the delayed 24 October 22:00 post and does not replace 25 October evening production. Complete 25 October 22:00 slot as a one-day exception to actual-date cap; preserve actual publication date for audit.",
+      "completed_at": "2026-10-25 04:16:20 UTC",
+      "user_correction": "We did not upload 10pm video"
     }
   ]
 }
