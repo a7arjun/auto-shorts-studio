@@ -1052,7 +1052,7 @@
       "editorial_slot_date": "2026-10-27",
       "slot": "2026-10-27T22:00+05:30",
       "requested_publish_at": "2026-10-27T16:30:00Z",
-      "status": "uploading",
+      "status": "private_upload_processing",
       "created_on_ist": "2026-10-26",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -1223,7 +1223,9 @@
       },
       "duration_seconds": 58.583333333333336,
       "opening_seconds": 3.7083333333333335,
-      "library_file_id": "libfile_22758f2d4de0819182b34eafedf0b34a"
+      "library_file_id": "libfile_22758f2d4de0819182b34eafedf0b34a",
+      "video_id": "UpUsIOXOLRw",
+      "uploaded_on_ist": "2026-10-26"
     }
   ],
   "pilot_verified": true,
