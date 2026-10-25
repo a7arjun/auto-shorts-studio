@@ -74,6 +74,15 @@
       "blanket_playback_acceleration": false,
       "requires_native_schedule_verification": true
     },
-    "unattended_tactical_run_verified": false
+    "unattended_tactical_run_verified": true,
+    "last_verified_tactical_run": {
+      "date_ist": "2026-10-25",
+      "video_id": "ODWSGWI3_jg",
+      "scheduled_slot_ist": "10:00",
+      "publish_at": "2026-10-25T04:30:00Z",
+      "new_videos": 1,
+      "evening": "withheld_daily_cap_due_to_E8PsFuSoHPo_immediate_release_on_2026_10_25_IST",
+      "note": "This run verified generation, local Kokoro/rendering, private browser upload, checks and native scheduling for one video. It does not establish reliability of two new videos within every future morning window."
+    }
   }
 }
