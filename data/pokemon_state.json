@@ -461,6 +461,175 @@
       "publication_override": "User explicitly requested immediate publication in chat: Publish now gyarados vs greninja.",
       "release_blocker_resolved": true,
       "actual_publication_note": "Published immediately on user request; not a confirmed release at the original 24 October 22:00 IST slot. Exact publication timestamp not recorded."
+    },
+    {
+      "key": "2026-10-25T10:00+05:30",
+      "mode": "daily",
+      "date": "2026-10-25",
+      "slot": "2026-10-25T10:00+05:30",
+      "publish_at": "2026-10-25T04:30:00Z",
+      "status": "uploading",
+      "created_at": "2026-10-25T04:11:00Z",
+      "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
+      "upload_provider": "chatgpt_browser",
+      "format": "tactical_v1",
+      "pair": [
+        "Blastoise",
+        "Venusaur"
+      ],
+      "simulation_key": "2026-10-25T10:00+05:30|Blastoise|Venusaur",
+      "seed": [
+        2026,
+        10,
+        25,
+        10
+      ],
+      "builds": [
+        {
+          "name": "Blastoise",
+          "species": "Blastoise",
+          "level": 100,
+          "ability": "Torrent",
+          "item": "",
+          "nature": "Serious",
+          "evs": {
+            "hp": 252,
+            "spa": 4,
+            "spd": 252,
+            "atk": 0,
+            "def": 0,
+            "spe": 0
+          },
+          "ivs": {
+            "hp": 31,
+            "atk": 31,
+            "def": 31,
+            "spa": 31,
+            "spd": 31,
+            "spe": 31
+          },
+          "moves": [
+            "Shell Smash",
+            "Ice Beam",
+            "Hydro Pump",
+            "Aura Sphere"
+          ]
+        },
+        {
+          "name": "Venusaur",
+          "species": "Venusaur",
+          "level": 100,
+          "ability": "Overgrow",
+          "item": "",
+          "nature": "Serious",
+          "evs": {
+            "hp": 252,
+            "spa": 4,
+            "spd": 252,
+            "atk": 0,
+            "def": 0,
+            "spe": 0
+          },
+          "ivs": {
+            "hp": 31,
+            "atk": 31,
+            "def": 31,
+            "spa": 31,
+            "spd": 31,
+            "spe": 31
+          },
+          "moves": [
+            "Sludge Bomb",
+            "Giga Drain",
+            "Earth Power",
+            "Synthesis"
+          ]
+        }
+      ],
+      "title": "Blastoise vs Venusaur: The Hidden Cost of Shell Smash",
+      "duration_seconds": 70.70833333333333,
+      "research": {
+        "status": "researched",
+        "checked_at": "2026-10-25T04:07:32Z",
+        "published_after": "2026-06-25",
+        "pair": [
+          "Blastoise",
+          "Venusaur"
+        ],
+        "matched_video_count": 1,
+        "method": "Bounded web-search queries followed by direct YouTube description verification. Topic/title phrasing only, not mechanics evidence or measured trend.",
+        "references": [
+          {
+            "id": "mggh8_zw1wU",
+            "url": "https://www.youtube.com/shorts/mggh8_zw1wU",
+            "title": "Blastoise vs Venusaur 🌊🌿 Can Water Beat Grass? #Shorts",
+            "published_date": "2026-10-21",
+            "views": 285,
+            "likes": 4,
+            "comments": 0
+          }
+        ],
+        "candidate_sets": {
+          "morning": [
+            [
+              "Blastoise",
+              "Venusaur"
+            ],
+            [
+              "Lucario",
+              "Machamp"
+            ],
+            [
+              "Gengar",
+              "Alakazam"
+            ]
+          ],
+          "evening": [
+            [
+              "Dragonite",
+              "Salamence"
+            ],
+            [
+              "Dragonite",
+              "Garchomp"
+            ],
+            [
+              "Gardevoir",
+              "Sylveon"
+            ]
+          ]
+        },
+        "note": "Other candidate searches did not establish qualifying recent references. Blastoise/Venusaur qualified through directly observed Short description."
+      },
+      "move_reasons": [
+        "Venusaur: neutral Poison STAB against Water, exploiting its narrow starting speed lead.",
+        "Blastoise: planned Shell Smash setup to boost special damage and reverse speed order; honest defensive tradeoff.",
+        "Blastoise: Ice Beam gives super-effective Grass coverage; Hydro Pump is resisted and Aura Sphere is resisted by Poison.",
+        "Venusaur: Giga Drain is super-effective Grass STAB against Water and restores HP needed to survive a second Ice Beam.",
+        "Blastoise: repeat strongest equipped coverage instead of arbitrary rotation.",
+        "Venusaur: drain remaining HP to finish; healing uses capped actual damage."
+      ],
+      "mechanics_validation": {
+        "hp_conservation": "passed",
+        "final_hp": {
+          "Blastoise": 0,
+          "Venusaur": 73
+        },
+        "totals": {
+          "damage": 774,
+          "healing": 121
+        },
+        "legality": "passed by TeamValidator gen9nationaldex 0.11.11",
+        "seed": [
+          2026,
+          10,
+          25,
+          10
+        ],
+        "events": 6,
+        "rounds": 3
+      },
+      "production_record": "data/production/2026-10-25-blastoise-venusaur.json"
     }
   ],
   "pilot_verified": true,
@@ -539,6 +708,20 @@
       "note": "Approved 62.75-second tactical reference E8PsFuSoHPo published immediately after explicit user instruction and verified Public in YouTube Studio. Older 22-second video visibility was not changed.",
       "uploaded_video_id": "E8PsFuSoHPo",
       "public_verified_on_ist": "2026-10-25"
+    }
+  ],
+  "slot_reconciliation": [
+    {
+      "date": "2026-10-25",
+      "checked_at": "2026-10-25T04:11:00Z",
+      "studio_channel": "UCPNKs86kz0A8b9CH75-EY0w",
+      "studio_rows": 14,
+      "no_existing_schedules": true,
+      "slots": {
+        "10:00": "Preparing new tactical video",
+        "22:00": "withheld_daily_release_cap"
+      },
+      "limit_note": "E8PsFuSoHPo has public_verified_on_ist=2026-10-25. Count conservatively toward two actual releases per IST date despite original ledger date 2026-10-24. One new release remains today."
     }
   ]
 }
