@@ -1,0 +1,1584 @@
+{
+  "battle": {
+    "schema": 1,
+    "format": "gen9nationaldex",
+    "generation": 9,
+    "seed": [
+      57353,
+      6505,
+      5817,
+      3604
+    ],
+    "policy": "Scripted tactical demonstration; all accuracy, damage rolls, priority, abilities and effects resolved by the pinned Showdown engine. No random-seed search. No items, switching, Mega or Tera. Not optimal-play proof or aggregate win probability.",
+    "builds": [
+      {
+        "name": "Dragonite",
+        "species": "Dragonite",
+        "gender": "M",
+        "level": 100,
+        "ability": "Inner Focus",
+        "item": "",
+        "nature": "Serious",
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "def": 252,
+          "spe": 0,
+          "spa": 0,
+          "spd": 0
+        },
+        "ivs": {
+          "hp": 31,
+          "atk": 31,
+          "def": 31,
+          "spa": 31,
+          "spd": 31,
+          "spe": 31
+        },
+        "moves": [
+          "Dragon Dance",
+          "Dragon Claw",
+          "Extreme Speed",
+          "Fire Punch"
+        ]
+      },
+      {
+        "name": "Salamence",
+        "species": "Salamence",
+        "gender": "M",
+        "level": 100,
+        "ability": "Intimidate",
+        "item": "",
+        "nature": "Serious",
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "def": 252,
+          "spe": 0,
+          "spa": 0,
+          "spd": 0
+        },
+        "ivs": {
+          "hp": 31,
+          "atk": 31,
+          "def": 31,
+          "spa": 31,
+          "spd": 31,
+          "spe": 31
+        },
+        "moves": [
+          "Dragon Claw",
+          "Dual Wingbeat",
+          "Flamethrower",
+          "Dragon Dance"
+        ]
+      }
+    ],
+    "moveBanks": [
+      {
+        "pokemon": "Dragonite",
+        "equipped": [
+          "Dragon Dance",
+          "Dragon Claw",
+          "Extreme Speed",
+          "Fire Punch"
+        ],
+        "reserve": "Earthquake",
+        "moves": [
+          {
+            "name": "Dragon Dance",
+            "type": "Dragon",
+            "category": "Status",
+            "base_power": 0,
+            "accuracy": true,
+            "priority": 0
+          },
+          {
+            "name": "Dragon Claw",
+            "type": "Dragon",
+            "category": "Physical",
+            "base_power": 80,
+            "accuracy": 100,
+            "priority": 0
+          },
+          {
+            "name": "Extreme Speed",
+            "type": "Normal",
+            "category": "Physical",
+            "base_power": 80,
+            "accuracy": 100,
+            "priority": 2
+          },
+          {
+            "name": "Fire Punch",
+            "type": "Fire",
+            "category": "Physical",
+            "base_power": 75,
+            "accuracy": 100,
+            "priority": 0
+          },
+          {
+            "name": "Earthquake",
+            "type": "Ground",
+            "category": "Physical",
+            "base_power": 100,
+            "accuracy": 100,
+            "priority": 0
+          }
+        ]
+      },
+      {
+        "pokemon": "Salamence",
+        "equipped": [
+          "Dragon Claw",
+          "Dual Wingbeat",
+          "Flamethrower",
+          "Dragon Dance"
+        ],
+        "reserve": "Earthquake",
+        "moves": [
+          {
+            "name": "Dragon Claw",
+            "type": "Dragon",
+            "category": "Physical",
+            "base_power": 80,
+            "accuracy": 100,
+            "priority": 0
+          },
+          {
+            "name": "Dual Wingbeat",
+            "type": "Flying",
+            "category": "Physical",
+            "base_power": 40,
+            "accuracy": 90,
+            "priority": 0
+          },
+          {
+            "name": "Flamethrower",
+            "type": "Fire",
+            "category": "Special",
+            "base_power": 90,
+            "accuracy": 100,
+            "priority": 0
+          },
+          {
+            "name": "Dragon Dance",
+            "type": "Dragon",
+            "category": "Status",
+            "base_power": 0,
+            "accuracy": true,
+            "priority": 0
+          },
+          {
+            "name": "Earthquake",
+            "type": "Ground",
+            "category": "Physical",
+            "base_power": 100,
+            "accuracy": 100,
+            "priority": 0
+          }
+        ]
+      }
+    ],
+    "initial": [
+      {
+        "name": "Dragonite",
+        "hp": 386,
+        "max_hp": 386,
+        "types": [
+          "Dragon",
+          "Flying"
+        ],
+        "boosts": {
+          "atk": 0,
+          "def": 0,
+          "spa": 0,
+          "spd": 0,
+          "spe": 0,
+          "accuracy": 0,
+          "evasion": 0
+        },
+        "speed": 196
+      },
+      {
+        "name": "Salamence",
+        "hp": 394,
+        "max_hp": 394,
+        "types": [
+          "Dragon",
+          "Flying"
+        ],
+        "boosts": {
+          "atk": 0,
+          "def": 0,
+          "spa": 0,
+          "spd": 0,
+          "spe": 0,
+          "accuracy": 0,
+          "evasion": 0
+        },
+        "speed": 236
+      }
+    ],
+    "events": [
+      {
+        "turn": 1,
+        "actor": "Salamence",
+        "move": "Dragon Claw",
+        "before": [
+          {
+            "name": "Dragonite",
+            "hp": 386,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 196
+          },
+          {
+            "name": "Salamence",
+            "hp": 394,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ],
+        "damage": [
+          {
+            "target": "Dragonite",
+            "hp_after": 200,
+            "max_hp": 386,
+            "hp_lost": 186,
+            "percent_max_hp": 48.19
+          }
+        ],
+        "after": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 196
+          },
+          {
+            "name": "Salamence",
+            "hp": 394,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ],
+        "damage_total": 186
+      },
+      {
+        "turn": 1,
+        "actor": "Dragonite",
+        "move": "Dragon Dance",
+        "before": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 196
+          },
+          {
+            "name": "Salamence",
+            "hp": 394,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ],
+        "damage": [],
+        "after": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 294
+          },
+          {
+            "name": "Salamence",
+            "hp": 394,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ],
+        "damage_total": 0
+      },
+      {
+        "turn": 2,
+        "actor": "Dragonite",
+        "move": "Dragon Claw",
+        "before": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 294
+          },
+          {
+            "name": "Salamence",
+            "hp": 394,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ],
+        "damage": [
+          {
+            "target": "Salamence",
+            "hp_after": 40,
+            "max_hp": 394,
+            "hp_lost": 354,
+            "percent_max_hp": 89.85
+          }
+        ],
+        "after": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 294
+          },
+          {
+            "name": "Salamence",
+            "hp": 40,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ],
+        "damage_total": 354
+      },
+      {
+        "turn": 2,
+        "actor": "Salamence",
+        "move": "Dual Wingbeat",
+        "before": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 294
+          },
+          {
+            "name": "Salamence",
+            "hp": 40,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ],
+        "damage": [],
+        "missed": true,
+        "after": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 294
+          },
+          {
+            "name": "Salamence",
+            "hp": 40,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ],
+        "damage_total": 0
+      },
+      {
+        "turn": 3,
+        "actor": "Dragonite",
+        "move": "Extreme Speed",
+        "before": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 294
+          },
+          {
+            "name": "Salamence",
+            "hp": 40,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ],
+        "damage": [
+          {
+            "target": "Salamence",
+            "hp_after": 0,
+            "max_hp": 394,
+            "hp_lost": 40,
+            "percent_max_hp": 10.15
+          }
+        ],
+        "after": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 294
+          },
+          {
+            "name": "Salamence",
+            "hp": 0,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ],
+        "damage_total": 40
+      }
+    ],
+    "turns": [
+      {
+        "turn": 1,
+        "planned": [
+          "Dragon Dance",
+          "Dragon Claw"
+        ],
+        "after": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 294
+          },
+          {
+            "name": "Salamence",
+            "hp": 394,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ]
+      },
+      {
+        "turn": 2,
+        "planned": [
+          "Dragon Claw",
+          "Dual Wingbeat"
+        ],
+        "after": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 294
+          },
+          {
+            "name": "Salamence",
+            "hp": 40,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ]
+      },
+      {
+        "turn": 3,
+        "planned": [
+          "Extreme Speed",
+          "Dragon Claw"
+        ],
+        "after": [
+          {
+            "name": "Dragonite",
+            "hp": 200,
+            "max_hp": 386,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 1,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 1,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 294
+          },
+          {
+            "name": "Salamence",
+            "hp": 0,
+            "max_hp": 394,
+            "types": [
+              "Dragon",
+              "Flying"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 236
+          }
+        ]
+      }
+    ],
+    "winner": "Dragonite",
+    "ended": true,
+    "log": [
+      "|t:|1792950129",
+      "|gametype|singles",
+      "|player|p1|Dragonite||",
+      "|player|p2|Salamence||",
+      "|gen|9",
+      "|tier|[Gen 9] National Dex",
+      "|rule|HP Percentage Mod: HP is shown in percentages",
+      "|rule|Endless Battle Clause: Forcing endless battles is banned",
+      "|rule|Species Clause: Limit one of each Pokémon",
+      "|rule|OHKO Clause: OHKO moves are banned",
+      "|rule|Evasion Clause: Evasion abilities, items, and moves are banned",
+      "|rule|Evasion Abilities Clause: Evasion abilities are banned",
+      "|rule|Evasion Items Clause: Evasion items are banned",
+      "|rule|Evasion Moves Clause: Evasion moves are banned",
+      "|rule|Sleep Clause Mod: Limit one foe put to sleep",
+      "|rule|Terastal Clause: You cannot Terastallize",
+      "|clearpoke",
+      "|poke|p1|Dragonite, M|",
+      "|poke|p2|Salamence, M|",
+      "|teampreview",
+      "|",
+      "|t:|1792950129",
+      "|teamsize|p1|1",
+      "|teamsize|p2|1",
+      "|start",
+      "|split|p1",
+      "|switch|p1a: Dragonite|Dragonite, M|386/386",
+      "|switch|p1a: Dragonite|Dragonite, M|100/100",
+      "|split|p2",
+      "|switch|p2a: Salamence|Salamence, M|394/394",
+      "|switch|p2a: Salamence|Salamence, M|100/100",
+      "|-ability|p2a: Salamence|Intimidate|boost",
+      "|-fail|p1a: Dragonite|unboost|Attack|[from] ability: Inner Focus|[of] p1a: Dragonite",
+      "|turn|1",
+      "|",
+      "|t:|1792950129",
+      "|move|p2a: Salamence|Dragon Claw|p1a: Dragonite",
+      "|-supereffective|p1a: Dragonite",
+      "|split|p1",
+      "|-damage|p1a: Dragonite|200/386",
+      "|-damage|p1a: Dragonite|52/100",
+      "|move|p1a: Dragonite|Dragon Dance|p1a: Dragonite",
+      "|-boost|p1a: Dragonite|atk|1",
+      "|-boost|p1a: Dragonite|spe|1",
+      "|",
+      "|upkeep",
+      "|turn|2",
+      "|",
+      "|t:|1792950129",
+      "|move|p1a: Dragonite|Dragon Claw|p2a: Salamence",
+      "|-supereffective|p2a: Salamence",
+      "|split|p2",
+      "|-damage|p2a: Salamence|40/394",
+      "|-damage|p2a: Salamence|11/100",
+      "|move|p2a: Salamence|Dual Wingbeat|p1a: Dragonite|[miss]",
+      "|-miss|p2a: Salamence|p1a: Dragonite",
+      "|",
+      "|upkeep",
+      "|turn|3",
+      "|",
+      "|t:|1792950129",
+      "|move|p1a: Dragonite|Extreme Speed|p2a: Salamence",
+      "|split|p2",
+      "|-damage|p2a: Salamence|0 fnt",
+      "|-damage|p2a: Salamence|0 fnt",
+      "|faint|p2a: Salamence",
+      "|",
+      "|win|Dragonite"
+    ],
+    "simulator_version": "0.11.11"
+  },
+  "story": {
+    "title": "Dragonite vs Salamence: Speed, a Miss and the Final Strike",
+    "duration": 63.291666666666664,
+    "segments": [
+      {
+        "index": 0,
+        "title": "DRAGON CLAW",
+        "text": "Salamence strikes first. Dragon Claw gets same-type bonus and is super effective against Dragonite, removing forty-eight percent. But Inner Focus blocks Intimidate's Attack drop.",
+        "note": "STAB / 2x / 186 HP REMOVED",
+        "accent": "#D2AAFF",
+        "start": 0,
+        "duration": 11.875,
+        "captions": [
+          {
+            "text": "Salamence strikes first.",
+            "start": 0,
+            "duration": 1.8053333333333335
+          },
+          {
+            "text": "Dragon Claw gets same-type bonus and is super effective against Dragonite, removing forty-eight percent.",
+            "start": 1.8053333333333332,
+            "duration": 6.626666666666667
+          },
+          {
+            "text": "But Inner Focus blocks Intimidate's Attack drop.",
+            "start": 8.432,
+            "duration": 3.170666666666667
+          }
+        ],
+        "event": {
+          "turn": 1,
+          "actor": "Salamence",
+          "move": "Dragon Claw",
+          "before": [
+            {
+              "name": "Dragonite",
+              "hp": 386,
+              "max_hp": 386,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 196
+            },
+            {
+              "name": "Salamence",
+              "hp": 394,
+              "max_hp": 394,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 236
+            }
+          ],
+          "damage": [
+            {
+              "target": "Dragonite",
+              "hp_after": 200,
+              "max_hp": 386,
+              "hp_lost": 186,
+              "percent_max_hp": 48.19
+            }
+          ],
+          "after": [
+            {
+              "name": "Dragonite",
+              "hp": 200,
+              "max_hp": 386,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 196
+            },
+            {
+              "name": "Salamence",
+              "hp": 394,
+              "max_hp": 394,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 236
+            }
+          ],
+          "damage_total": 186
+        }
+      },
+      {
+        "index": 1,
+        "title": "DRAGON DANCE",
+        "text": "Dragonite invests in Dragon Dance. Attack and Speed rise one stage. Its Speed reaches two ninety-four, overtaking Salamence's two thirty-six.",
+        "note": "ATTACK +1 / SPEED 196 -> 294",
+        "accent": "#FFC47A",
+        "start": 11.875,
+        "duration": 9.875,
+        "captions": [
+          {
+            "text": "Dragonite invests in Dragon Dance.",
+            "start": 0,
+            "duration": 2.4453333333333336
+          },
+          {
+            "text": "Attack and Speed rise one stage.",
+            "start": 2.445333333333333,
+            "duration": 2.4026666666666667
+          },
+          {
+            "text": "Its Speed reaches two ninety-four, overtaking Salamence's two thirty-six.",
+            "start": 4.848,
+            "duration": 4.766666666666667
+          }
+        ],
+        "event": {
+          "turn": 1,
+          "actor": "Dragonite",
+          "move": "Dragon Dance",
+          "before": [
+            {
+              "name": "Dragonite",
+              "hp": 200,
+              "max_hp": 386,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 196
+            },
+            {
+              "name": "Salamence",
+              "hp": 394,
+              "max_hp": 394,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 236
+            }
+          ],
+          "damage": [],
+          "after": [
+            {
+              "name": "Dragonite",
+              "hp": 200,
+              "max_hp": 386,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 1,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 1,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 294
+            },
+            {
+              "name": "Salamence",
+              "hp": 394,
+              "max_hp": 394,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 236
+            }
+          ],
+          "damage_total": 0
+        }
+      },
+      {
+        "index": 2,
+        "title": "DRAGON CLAW",
+        "text": "Now Dragonite strikes first. Boosted Dragon Claw gets same-type bonus and hits super effectively for ninety percent. Salamence hangs on with forty HP.",
+        "note": "STAB / 2x / 354 HP REMOVED",
+        "accent": "#A8F3FF",
+        "start": 21.75,
+        "duration": 10.416666666666666,
+        "captions": [
+          {
+            "text": "Now Dragonite strikes first.",
+            "start": 0,
+            "duration": 2.04
+          },
+          {
+            "text": "Boosted Dragon Claw gets same-type bonus and hits super effectively for ninety percent.",
+            "start": 2.04,
+            "duration": 5.538666666666667
+          },
+          {
+            "text": "Salamence hangs on with forty HP.",
+            "start": 7.578666666666667,
+            "duration": 2.5733333333333333
+          }
+        ],
+        "event": {
+          "turn": 2,
+          "actor": "Dragonite",
+          "move": "Dragon Claw",
+          "before": [
+            {
+              "name": "Dragonite",
+              "hp": 200,
+              "max_hp": 386,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 1,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 1,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 294
+            },
+            {
+              "name": "Salamence",
+              "hp": 394,
+              "max_hp": 394,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 236
+            }
+          ],
+          "damage": [
+            {
+              "target": "Salamence",
+              "hp_after": 40,
+              "max_hp": 394,
+              "hp_lost": 354,
+              "percent_max_hp": 89.85
+            }
+          ],
+          "after": [
+            {
+              "name": "Dragonite",
+              "hp": 200,
+              "max_hp": 386,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 1,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 1,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 294
+            },
+            {
+              "name": "Salamence",
+              "hp": 40,
+              "max_hp": 394,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 236
+            }
+          ],
+          "damage_total": 354
+        }
+      },
+      {
+        "index": 3,
+        "title": "DUAL WINGBEAT: MISS",
+        "text": "Dual Wingbeat could hit twice. But ninety-percent accuracy is no guarantee. This attempt misses completely. Dragonite loses no health.",
+        "note": "90% ACC / MISSED / ZERO DAMAGE",
+        "accent": "#92EF77",
+        "start": 32.166666666666664,
+        "duration": 9.333333333333334,
+        "captions": [
+          {
+            "text": "Dual Wingbeat could hit twice.",
+            "start": 0,
+            "duration": 1.9546666666666668
+          },
+          {
+            "text": "But ninety-percent accuracy is no guarantee.",
+            "start": 1.9546666666666668,
+            "duration": 3.106666666666667
+          },
+          {
+            "text": "This attempt misses completely.",
+            "start": 5.061333333333334,
+            "duration": 1.976
+          },
+          {
+            "text": "Dragonite loses no health.",
+            "start": 7.037333333333334,
+            "duration": 2.018666666666667
+          }
+        ],
+        "event": {
+          "turn": 2,
+          "actor": "Salamence",
+          "move": "Dual Wingbeat",
+          "before": [
+            {
+              "name": "Dragonite",
+              "hp": 200,
+              "max_hp": 386,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 1,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 1,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 294
+            },
+            {
+              "name": "Salamence",
+              "hp": 40,
+              "max_hp": 394,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 236
+            }
+          ],
+          "damage": [],
+          "missed": true,
+          "after": [
+            {
+              "name": "Dragonite",
+              "hp": 200,
+              "max_hp": 386,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 1,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 1,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 294
+            },
+            {
+              "name": "Salamence",
+              "hp": 40,
+              "max_hp": 394,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 236
+            }
+          ],
+          "damage_total": 0
+        }
+      },
+      {
+        "index": 4,
+        "title": "EXTREME SPEED",
+        "text": "Dragonite chooses Extreme Speed. Plus-two priority beats ordinary moves. Normal damage is neutral here, but enough to remove Salamence's last forty HP.",
+        "note": "PRIORITY +2 / 1x / FINISHER",
+        "accent": "#A8F3FF",
+        "start": 41.5,
+        "duration": 10.541666666666666,
+        "captions": [
+          {
+            "text": "Dragonite chooses Extreme Speed.",
+            "start": 0,
+            "duration": 2.232
+          },
+          {
+            "text": "Plus-two priority beats ordinary moves.",
+            "start": 2.232,
+            "duration": 2.7226666666666666
+          },
+          {
+            "text": "Normal damage is neutral here, but enough to remove Salamence's last forty HP.",
+            "start": 4.954666666666666,
+            "duration": 5.313958333333334
+          }
+        ],
+        "event": {
+          "turn": 3,
+          "actor": "Dragonite",
+          "move": "Extreme Speed",
+          "before": [
+            {
+              "name": "Dragonite",
+              "hp": 200,
+              "max_hp": 386,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 1,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 1,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 294
+            },
+            {
+              "name": "Salamence",
+              "hp": 40,
+              "max_hp": 394,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 236
+            }
+          ],
+          "damage": [
+            {
+              "target": "Salamence",
+              "hp_after": 0,
+              "max_hp": 394,
+              "hp_lost": 40,
+              "percent_max_hp": 10.15
+            }
+          ],
+          "after": [
+            {
+              "name": "Dragonite",
+              "hp": 200,
+              "max_hp": 386,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 1,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 1,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 294
+            },
+            {
+              "name": "Salamence",
+              "hp": 0,
+              "max_hp": 394,
+              "types": [
+                "Dragon",
+                "Flying"
+              ],
+              "boosts": {
+                "atk": 0,
+                "def": 0,
+                "spa": 0,
+                "spd": 0,
+                "spe": 0,
+                "accuracy": 0,
+                "evasion": 0
+              },
+              "speed": 236
+            }
+          ],
+          "damage_total": 40
+        }
+      },
+      {
+        "index": 5,
+        "title": "DRAGONITE WINS",
+        "text": "Dragonite wins with fifty-two percent health. Setup, an accuracy miss, then priority decided this example. Planned choices, simulated damage, not a universal ranking.",
+        "note": "WINNER DRAGONITE / SALAMENCE FAINTED",
+        "accent": "#FFD777",
+        "start": 52.041666666666664,
+        "duration": 11.25,
+        "captions": [
+          {
+            "text": "Dragonite wins with fifty-two percent health.",
+            "start": 0,
+            "duration": 2.8080000000000003
+          },
+          {
+            "text": "Setup, an accuracy miss, then priority decided this example.",
+            "start": 2.808,
+            "duration": 4.150666666666667
+          },
+          {
+            "text": "Planned choices, simulated damage, not a universal ranking.",
+            "start": 6.958666666666667,
+            "duration": 4.012625
+          }
+        ],
+        "event": null
+      }
+    ],
+    "mode": "Scripted tactical choices; engine-resolved damage",
+    "generation": 9
+  },
+  "validation": {
+    "legality": "passed via TeamValidator gen9nationaldex 0.11.11",
+    "hp_conservation": "passed",
+    "miss": "Dual Wingbeat; zero damage",
+    "rounds": 3,
+    "events": 5,
+    "winner": "Dragonite",
+    "final_hp": {
+      "Dragonite": 200,
+      "Salamence": 0
+    },
+    "seed": [
+      57353,
+      6505,
+      5817,
+      3604
+    ],
+    "damage_total": 580
+  },
+  "simulator_source": "const fs=require('fs');\nconst {Battle,Dex,TeamValidator}=require('pokemon-showdown');\nconst format='gen9nationaldex';\nconst builds=[{\"name\": \"Dragonite\", \"species\": \"Dragonite\", \"gender\": \"M\", \"level\": 100, \"ability\": \"Inner Focus\", \"item\": \"\", \"nature\": \"Serious\", \"evs\": {\"hp\": 252, \"atk\": 4, \"def\": 252}, \"ivs\": {\"hp\": 31, \"atk\": 31, \"def\": 31, \"spa\": 31, \"spd\": 31, \"spe\": 31}, \"moves\": [\"Dragon Dance\", \"Dragon Claw\", \"Extreme Speed\", \"Fire Punch\"]}, {\"name\": \"Salamence\", \"species\": \"Salamence\", \"gender\": \"M\", \"level\": 100, \"ability\": \"Intimidate\", \"item\": \"\", \"nature\": \"Serious\", \"evs\": {\"hp\": 252, \"atk\": 4, \"def\": 252}, \"ivs\": {\"hp\": 31, \"atk\": 31, \"def\": 31, \"spa\": 31, \"spd\": 31, \"spe\": 31}, \"moves\": [\"Dragon Claw\", \"Dual Wingbeat\", \"Flamethrower\", \"Dragon Dance\"]}];\nconst validator=new TeamValidator(format);\nfor(const set of builds){const errors=validator.validateTeam([structuredClone(set)]);if(errors?.length)throw new Error(errors.join('\\n'));}\nconst moveBanks=builds.map((b,i)=>({pokemon:b.species,equipped:b.moves,reserve:i===0?'Earthquake':'Earthquake',moves:[...b.moves,i===0?'Earthquake':'Earthquake'].map(n=>{let m=Dex.moves.get(n);return {name:m.name,type:m.type,category:m.category,base_power:m.basePower,accuracy:m.accuracy,priority:m.priority};})}));\nconst seed=[57353, 6505, 5817, 3604];\nconst battle=new Battle({formatid:format,seed,send:()=>{}});\nconst events=[];let current=null;\nconst snap=p=>({name:p.name,hp:p.hp,max_hp:p.maxhp,types:p.getTypes(),boosts:{...p.boosts},speed:p.getStat('spe')});\nconst addMove=battle.addMove;\nbattle.addMove=function(...args){\n if(args[0]==='move'){\n  current={turn:this.turn,actor:args[1].name,move:args[2],before:this.sides.map(s=>snap(s.active[0])),damage:[]};events.push(current);\n }\n return addMove.apply(this,args);\n};\nconst add=battle.add;\nbattle.add=function(...args){\n if(args[0]==='-damage'&&current&&args[1]?.side){const p=args[1];current.damage.push({target:p.name,hp_after:p.hp,max_hp:p.maxhp});}\n if(args[0]==='-miss'&&current)current.missed=true;\n if(args[0]==='cant'&&current)current.cant=String(args[2]);\n return add.apply(this,args);\n};\nbattle.setPlayer('p1',{name:'Dragonite',team:[builds[0]]});battle.setPlayer('p2',{name:'Salamence',team:[builds[1]]});\nif(battle.requestState==='teampreview')battle.makeChoices('team 1','team 1');\nconst initial=battle.sides.map(s=>snap(s.active[0]));\n// Deliberately scripted teaching choices, not a claim of optimal competitive play.\nconst plans=[['Dragon Dance','Dragon Claw'],['Dragon Claw','Dual Wingbeat'],['Extreme Speed','Dragon Claw'],['Dragon Claw','Dragon Claw'],['Extreme Speed','Dragon Claw']];\nconst turns=[];\nfor(let i=0;i<plans.length&&!battle.ended;i++){\n const choices=plans[i].map((m,s)=>{let idx=battle.sides[s].active[0].moveSlots.findIndex(x=>x.id===Dex.moves.get(m).id);if(idx<0)throw Error('Move not equipped');return 'move '+(idx+1);});\n battle.makeChoices(...choices);turns.push({turn:i+1,planned:plans[i],after:battle.sides.map(s=>snap(s.active[0]))});\n const errors=battle.log.filter(x=>x.startsWith('|error|'));if(errors.length)throw Error(errors.join('\\n'));\n}\nfor(let i=0;i<events.length;i++){\n const e=events[i];e.after=i+1<events.length?events[i+1].before:turns[turns.length-1].after;\n const seen=new Set();e.damage=e.damage.filter(d=>{const key=d.target+':'+d.hp_after;if(seen.has(key))return false;seen.add(key);return true;});\n const hp=Object.fromEntries(e.before.map(p=>[p.name,p.hp]));\n for(const d of e.damage){d.hp_lost=hp[d.target]-d.hp_after;hp[d.target]=d.hp_after;d.percent_max_hp=+(100*d.hp_lost/d.max_hp).toFixed(2);}\n e.damage_total=e.damage.reduce((sum,d)=>sum+d.hp_lost,0);\n}\nconst out={schema:1,format,generation:9,seed,policy:'Scripted tactical demonstration; all accuracy, damage rolls, priority, abilities and effects resolved by the pinned Showdown engine. No random-seed search. No items, switching, Mega or Tera. Not optimal-play proof or aggregate win probability.',builds,moveBanks,initial,events,turns,winner:battle.winner||null,ended:battle.ended,log:battle.log,simulator_version:require('pokemon-showdown/package.json').version};\nfs.writeFileSync('battle.json',JSON.stringify(out,null,2));console.log(JSON.stringify({initial,events,turns,winner:out.winner,ended:out.ended},null,2));battle.destroy();\n",
+  "renderer_source": "\"\"\"One mechanics-backed tactical example; renders only and never uploads.\"\"\"\nfrom pathlib import Path\nimport json,math,os,subprocess,sys\nfrom functools import lru_cache\nimport numpy as np\nimport soundfile as sf\nfrom PIL import Image,ImageDraw,ImageFont,ImageOps,ImageFilter\n\nROOT=Path(__file__).resolve().parent;PARENT=ROOT.parent\nsys.path.insert(0,str(PARENT))\nfrom render_support import speech_engine,phonemes\nW,H,FPS,SR=720,1280,24,24000\nFONT='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'\n@lru_cache(maxsize=24)\ndef font(n):return ImageFont.truetype(FONT,n)\n\nSPEECH=[\n ('DRAGON CLAW',\"Salamence strikes first. Dragon Claw gets same-type bonus and is super effective against Dragonite, removing forty-eight percent. But Inner Focus blocks Intimidate's Attack drop.\", 'STAB / 2x / 186 HP REMOVED', '#D2AAFF'),\n ('DRAGON DANCE',\"Dragonite invests in Dragon Dance. Attack and Speed rise one stage. Its Speed reaches two ninety-four, overtaking Salamence's two thirty-six.\", 'ATTACK +1 / SPEED 196 -> 294', '#FFC47A'),\n ('DRAGON CLAW',\"Now Dragonite strikes first. Boosted Dragon Claw gets same-type bonus and hits super effectively for ninety percent. Salamence hangs on with forty HP.\", 'STAB / 2x / 354 HP REMOVED', '#A8F3FF'),\n ('DUAL WINGBEAT: MISS',\"Dual Wingbeat could hit twice. But ninety-percent accuracy is no guarantee. This attempt misses completely. Dragonite loses no health.\", '90% ACC / MISSED / ZERO DAMAGE', '#92EF77'),\n ('EXTREME SPEED',\"Dragonite chooses Extreme Speed. Plus-two priority beats ordinary moves. Normal damage is neutral here, but enough to remove Salamence's last forty HP.\", 'PRIORITY +2 / 1x / FINISHER', '#A8F3FF'),\n ('DRAGONITE WINS',\"Dragonite wins with fifty-two percent health. Setup, an accuracy miss, then priority decided this example. Planned choices, simulated damage, not a universal ranking.\", 'WINNER DRAGONITE / SALAMENCE FAINTED', '#FFD777'),\n]\n\ndef voice():\n engine=speech_engine();segments=[];pieces=[];start=0;timeline=[]\n b=json.loads((ROOT/'battle.json').read_text())\n for i,(move,text,note,accent) in enumerate(SPEECH):\n  # Punctuation-aware short phrases improve caption timing and preserve attack-name spelling.\n  import re\n  phrases=[p.strip() for p in re.split(r'(?<=[.!?])\\s+',text) if p.strip()]\n  segment=[];captions=[];cursor=0\n  for phrase in phrases:\n   a,sr=engine.create(phonemes(phrase,engine),voice='am_michael',speed=1.18,lang='en-us',is_phonemes=True,sentence_pause=.14,clause_pause=.08)\n   if sr!=SR:raise RuntimeError('Unexpected speech sample rate')\n   spoken=len(a)/SR;a=np.concatenate([a,np.zeros(round(.12*SR),np.float32)])\n   captions.append(dict(text=phrase,start=cursor,duration=spoken+.12));cursor+=len(a)/SR;segment.append(a)\n  a=np.concatenate(segment+[np.zeros(round(.24*SR),np.float32)])\n  frames=math.ceil(len(a)/SR*FPS);a=np.pad(a,(0,round(frames/FPS*SR)-len(a)))\n  duration=len(a)/SR\n  e=b['events'][i] if i<len(b['events']) else None\n  timeline.append(dict(index=i,title=move,text=text,note=note,accent=accent,start=start,duration=duration,captions=captions,event=e))\n  pieces.append(a);start+=duration\n a=np.concatenate(pieces);fx=np.zeros_like(a);rng=np.random.default_rng(20261024)\n for s in timeline[:-1]:\n  pos=int((s['start']+.3)*SR);n=int(.40*SR);t=np.arange(n)/SR\n  sound=(rng.standard_normal(n)*.035+np.sin(2*np.pi*(110*t+250*t*t))*.06)*np.exp(-t*14)\n  fx[pos:pos+n]+=sound[:len(fx[pos:pos+n])]\n sf.write(ROOT/'narration.wav',np.clip(a+fx,-.92,.92),SR)\n story=dict(title='Dragonite vs Salamence: Speed, a Miss and the Final Strike',duration=start,segments=timeline,mode='Scripted tactical choices; engine-resolved damage',generation=9)\n (ROOT/'story.json').write_text(json.dumps(story,indent=2));print('NARRATION',round(start,2),flush=True)\n\ndef draw_wrap(d,text,x,y,maxw,size=34,fill='white',center=False):\n f=font(size);lines=[];line=''\n for word in text.split():\n  trial=(line+' '+word).strip()\n  if d.textbbox((0,0),trial,font=f)[2]>maxw and line:lines.append(line);line=word\n  else:line=trial\n if line:lines.append(line)\n for line in lines:\n  width=d.textbbox((0,0),line,font=f)[2]\n  d.text((x+(maxw-width)/2 if center else x,y),line,font=f,fill=fill,stroke_width=1,stroke_fill='#080D19')\n  y+=size+10\n return y\n\ndef hp_bar(d,label,hp,maxhp,x,y,color,types):\n pct=max(0,min(100,100*hp/maxhp));d.text((x,y),label,font=font(22),fill='white')\n pcttext=f'{round(pct)}%';d.text((x+220,y),pcttext,font=font(22),fill='white')\n d.rounded_rectangle((x,y+34,x+290,y+49),radius=6,fill='#354052')\n if pct>0:d.rounded_rectangle((x,y+34,x+round(290*pct/100),y+49),radius=6,fill=color)\n d.text((x,y+58),types.upper(),font=font(15),fill='#D3DAE6')\n\ndef frame(story,scene,art,t,b,loser_art=None):\n i=scene['index'];p=t/scene['duration'];accent=scene['accent']\n # Entire portrait artwork is visible; shallow zoom and alternating pans add motion.\n scaled=ImageOps.fit(art,(W,1080),Image.Resampling.LANCZOS)\n zoom=1.012+.025*p\n scaled=scaled.resize((round(W*zoom),round(1080*zoom)),Image.Resampling.LANCZOS)\n im=Image.new('RGB',(W,H),'#080D19');x=(W-scaled.width)//2+round(3*math.sin(math.pi*p));y=132-(scaled.height-1080)//2\n if i in [2,3,5] and .25<t<.43:x+=round(5*math.sin(t*85))\n im.paste(scaled,(x,y))\n overlay=Image.new('RGBA',(W,H));od=ImageDraw.Draw(overlay)\n od.rectangle((0,0,W,145),fill=(6,11,21,237))\n for yy in range(936,H):od.line((0,yy,W,yy),fill=(6,11,21,round(min(238,(yy-936)*1.6))))\n im=Image.alpha_composite(im.convert('RGBA'),overlay);d=ImageDraw.Draw(im)\n if False:\n  lw,lh=loser_art.size\n  card=ImageOps.fit(loser_art.crop((0,round(lh*.35),round(lw*.49),round(lh*.90))),(230,345),Image.Resampling.LANCZOS)\n  im.paste(card,(35,490));d=ImageDraw.Draw(im)\n  d.rounded_rectangle((30,484,270,842),radius=10,outline='#D8E2F1',width=3)\n  d.rounded_rectangle((30,847,331,887),radius=8,fill='#111C2F')\n  d.text((44,858),'GRENINJA: 0 HP',font=font(22),fill='white')\n d.text((30,15),'DRAGONITE vs SALAMENCE',font=font(22),fill='#F3F7FF')\n before=b['initial'] if i==0 else (b['events'][i]['before'] if i<5 else b['turns'][-1]['after'])\n after=b['events'][i]['after'] if i<5 else before\n mix=max(0,min(1,(t-.20)/.80))\n stats=[]\n for a,z in zip(before,after):stats.append({**z,'hp':a['hp']+(z['hp']-a['hp'])*mix})\n hp_bar(d,'DRAGONITE',stats[0]['hp'],386,30,51,'#6BD6FA','Dragon / Flying')\n hp_bar(d,'SALAMENCE',stats[1]['hp'],394,392,51,'#8EEC79','Dragon / Flying')\n label=f'ROUND {i//2+1} / 3' if i<5 else 'RESULT'\n d.rounded_rectangle((30,165,226,205),radius=10,fill='#080D19',outline=accent,width=2)\n d.text((44,174),label,font=font(20),fill='white')\n if i==5:\n  d.rounded_rectangle((30,226,555,283),radius=10,fill='#211B0C',outline=accent,width=2)\n  d.text((47,240),'WINNER: DRAGONITE',font=font(27),fill=accent)\n  d.rounded_rectangle((30,302,555,351),radius=10,fill='#10182A')\n  d.text((47,314),'SALAMENCE: FAINTED',font=font(23),fill='#EEF2FC')\n d.text((30,945),scene['title'],font=font(30),fill=accent,stroke_width=2,stroke_fill='#080D19')\n draw_wrap(d,scene['note'],30,995,660,21,accent)\n # Use sentence audio durations, then distribute short caption chunks inside each phrase.\n chosen=scene['captions'][-1]\n for cap in scene['captions']:\n  if cap['start']<=t<cap['start']+cap['duration']:chosen=cap;break\n words=chosen['text'].split();chunks=[' '.join(words[k:k+6]) for k in range(0,len(words),6)]\n q=max(0,min(.999,(t-chosen['start'])/chosen['duration']));line=chunks[min(len(chunks)-1,int(q*len(chunks)))]\n draw_wrap(d,line,36,1050,648,36,center=True)\n absolute=scene['start']+t\n d.rectangle((30,1200,690,1204),fill='#334057');d.rectangle((30,1200,30+660*absolute/story['duration'],1204),fill=accent)\n d.text((30,1227),'LV100  /  GEN9  /  NO ITEMS',font=font(17),fill='#D7DFEC')\n d.text((30,1253),'SCRIPTED CHOICES  /  SIMULATED DAMAGE',font=font(14),fill='#AAB7CC')\n return im.convert('RGB')\n\ndef render():\n story=json.loads((ROOT/'story.json').read_text());b=json.loads((ROOT/'battle.json').read_text());paths=json.loads((ROOT/'images.json').read_text())\n args=['ffmpeg','-hide_banner','-loglevel','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','pipe:0','-i',str(ROOT/'narration.wav'),'-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-af','loudnorm=I=-16:TP=-1.5:LRA=9','-movflags','+faststart','-shortest',str(ROOT/'dragonite-salamence-tactical.mp4')]\n proc=subprocess.Popen(args,stdin=subprocess.PIPE)\n loser_art=Image.open(ROOT/paths[7]).convert('RGB') if len(paths)>7 else None\n for s,path in zip(story['segments'],paths[:6]):\n  art=Image.open(ROOT/path).convert('RGB')\n  for n in range(round(s['duration']*FPS)):\n   t=n/FPS;im=frame(story,s,art,t,b,loser_art);proc.stdin.write(im.tobytes())\n   if n==round(FPS*.9):im.save(ROOT/f\"review-{s['index']+1}.jpg\",quality=90)\n proc.stdin.close();rc=proc.wait()\n if rc:raise RuntimeError(f'FFmpeg render failed: {rc}')\n print('RENDERED',flush=True)\n\nif __name__=='__main__':\n if '--render' in sys.argv:render()\n else:voice()\n",
+  "status": "awaiting_art",
+  "research": {
+    "checked_on_ist": "2026-10-25",
+    "method": "Bounded public search and direct YouTube description read; title/topic framing only, not mechanics or trend proof. Reference is Monster Battler comparison, not Showdown mechanics.",
+    "references": [
+      {
+        "title": "Dragonite vs Salamence vs Garchomp vs Hydreigon | Who wins?",
+        "id": "VOxU30HV_hk",
+        "url": "https://www.youtube.com/shorts/VOxU30HV_hk",
+        "published_date": "2026-09-26",
+        "views": 161,
+        "likes": 2,
+        "comments": 0
+      }
+    ],
+    "rejected": [
+      {
+        "id": "ygQFq3VjAks",
+        "published_date": "2023-04-17",
+        "reason": "older than four months"
+      }
+    ]
+  },
+  "move_reasons": [
+    "Salamence opens with accurate super-effective Dragon STAB while it is faster.",
+    "Dragonite uses Dragon Dance to boost physical damage and overtake Salamence. Inner Focus prevents Intimidate from dropping Attack.",
+    "Dragonite chooses boosted Dragon Claw, its strongest equipped direct attack into Dragon/Flying.",
+    "Salamence tries neutral Flying STAB Dual Wingbeat; a teaching comparison of accuracy and multi-hit risk, not an optimal-play claim. The fixed seeded attempt misses.",
+    "Dragonite chooses plus-two priority Extreme Speed because neutral damage suffices against remaining 40 HP."
+  ],
+  "authorization": "User corrected missing 25 October evening post; delayed Gyarados sample belongs to previous evening slot. One-day cap exception documented in runbook."
+}
