@@ -81,8 +81,8 @@
       "scheduled_slot_ist": "10:00",
       "publish_at": "2026-10-25T04:30:00Z",
       "new_videos": 1,
-      "evening": "withheld_daily_cap_due_to_E8PsFuSoHPo_immediate_release_on_2026_10_25_IST",
-      "note": "This run verified generation, local Kokoro/rendering, private browser upload, checks and native scheduling for one video. It does not establish reliability of two new videos within every future morning window."
+      "evening": "missed_22_00_slot_due_to_incorrect_cap_accounting; private_recovery_GwZKC-cZ5aI",
+      "note": "Morning generation, upload and native scheduling verified. User corrected evening withholding: delayed prior-day Gyarados post did not replace the evening slot. Recovery video GwZKC-cZ5aI uploaded privately after 22:00; no late publication authorized. Production remains enabled."
     }
   }
 }
