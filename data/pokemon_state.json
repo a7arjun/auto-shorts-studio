@@ -853,6 +853,305 @@
       "previous_release_blocker": "Original 22:00 IST slot missed after incorrect daily-cap withholding. Private upload only; explicit user authorization needed for late publication.",
       "public_verification_source": "YouTube Studio video details: Visibility Public, Save disabled, matching title, video ID and authorized channel UCPNKs86kz0A8b9CH75-EY0w",
       "actual_publication_note": "Immediate public change verified 26 October 2026 IST on explicit user instruction. Original 25 October 22:00 slot was missed; exact platform publication timestamp not retrieved."
+    },
+    {
+      "key": "2026-10-27T10:00+05:30",
+      "mode": "daily",
+      "date": "2026-10-27",
+      "editorial_slot_date": "2026-10-27",
+      "slot": "2026-10-27T10:00+05:30",
+      "requested_publish_at": "2026-10-27T04:30:00Z",
+      "status": "preparing",
+      "created_on_ist": "2026-10-26",
+      "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
+      "upload_provider": "chatgpt_browser",
+      "format": "tactical_v1",
+      "pair": [
+        "Scizor",
+        "Heracross"
+      ],
+      "simulation_key": "2026-10-27T10:00+05:30|Scizor|Heracross",
+      "seed": [
+        28084,
+        61280,
+        27307,
+        25239
+      ],
+      "builds": [
+        {
+          "name": "Scizor",
+          "species": "Scizor",
+          "gender": "M",
+          "level": 100,
+          "ability": "Swarm",
+          "item": "",
+          "nature": "Serious",
+          "evs": {
+            "hp": 252,
+            "def": 252,
+            "atk": 4,
+            "spe": 0,
+            "spa": 0,
+            "spd": 0
+          },
+          "ivs": {
+            "hp": 31,
+            "atk": 31,
+            "def": 31,
+            "spa": 31,
+            "spd": 31,
+            "spe": 31
+          },
+          "moves": [
+            "Bullet Punch",
+            "Close Combat",
+            "Knock Off",
+            "Swords Dance"
+          ]
+        },
+        {
+          "name": "Heracross",
+          "species": "Heracross",
+          "gender": "M",
+          "level": 100,
+          "ability": "Swarm",
+          "item": "",
+          "nature": "Serious",
+          "evs": {
+            "hp": 252,
+            "def": 252,
+            "atk": 4,
+            "spe": 0,
+            "spa": 0,
+            "spd": 0
+          },
+          "ivs": {
+            "hp": 31,
+            "atk": 31,
+            "def": 31,
+            "spa": 31,
+            "spd": 31,
+            "spe": 31
+          },
+          "moves": [
+            "Megahorn",
+            "Close Combat",
+            "Stone Edge",
+            "Swords Dance"
+          ]
+        }
+      ],
+      "title": "Scizor vs Heracross: The Cost of Giving Up Priority",
+      "research": {
+        "checked_on_ist": "2026-10-26",
+        "matched_video_count": 1,
+        "method": "Bounded web search followed by direct YouTube expanded description. AI fan comparison used for title/topic framing only, not mechanics or trend proof.",
+        "references": [
+          {
+            "id": "NSp-9WMYYLc",
+            "url": "https://www.youtube.com/watch?v=NSp-9WMYYLc",
+            "title": "Heracross vs Scizor: Horn Power Meets Steel Speed | Real Life Pokémon Park",
+            "published_date": "2026-10-07",
+            "views": 7125,
+            "likes": 773,
+            "comments": null
+          }
+        ],
+        "candidate_rejected": {
+          "pair": [
+            "Lucario",
+            "Machamp"
+          ],
+          "reason": "Fixed seeded teaching sequence ended in two rounds; replaced with alternative, not rerolled."
+        }
+      },
+      "move_reasons": [
+        "Heracross is faster. Megahorn lands, but Scizor resists Bug damage. Twenty-one percent lost.",
+        "Scizor uses Swords Dance. Its physical Attack doubles; its Speed stays the same.",
+        "Bullet Punch jumps the queue with plus-one priority. Boosted Steel STAB removes thirty-one percent.",
+        "Heracross changes to Close Combat. Fighting hits Bug and Steel neutrally, removing thirty-nine percent. Both defenses fall.",
+        "Another priority strike hits the lowered Defense harder: forty-four percent. Heracross has ninety-three HP.",
+        "Heracross repeats Close Combat. Scizor survives on ten HP; Heracross loses another stage of both defenses.",
+        "Scizor chooses Close Combat, giving up priority. Faster Heracross strikes first and takes the last ten HP."
+      ],
+      "mechanics_validation": {
+        "legality": "passed pinned TeamValidator 0.11.11, gen9nationaldex",
+        "hp_conservation": "passed",
+        "all_actual_move_events_in_order": true,
+        "event_count": 7,
+        "rounds": 4,
+        "seed": [
+          28084,
+          61280,
+          27307,
+          25239
+        ],
+        "winner": "Heracross",
+        "final_hp": {
+          "Scizor": 0,
+          "Heracross": 93
+        },
+        "damage_totals": {
+          "Scizor": 344,
+          "Heracross": 271
+        },
+        "intro": "separate, no attack or damage, full starting HP",
+        "planned_not_perfect_play": true
+      },
+      "publication_scheduled": false,
+      "schedule_verified": false,
+      "opening": "Short spoken matchup introduction before battle; full starting HP",
+      "production_record": "data/production/2026-10-27-scizor-heracross.json",
+      "authorization": "User explicitly requested two new videos for tomorrow (27 October), 10 AM and 10 PM IST, and a matchup intro for upcoming videos."
+    },
+    {
+      "key": "2026-10-27T22:00+05:30",
+      "mode": "daily",
+      "date": "2026-10-27",
+      "editorial_slot_date": "2026-10-27",
+      "slot": "2026-10-27T22:00+05:30",
+      "requested_publish_at": "2026-10-27T16:30:00Z",
+      "status": "preparing",
+      "created_on_ist": "2026-10-26",
+      "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
+      "upload_provider": "chatgpt_browser",
+      "format": "tactical_v1",
+      "pair": [
+        "Gardevoir",
+        "Gallade"
+      ],
+      "simulation_key": "2026-10-27T22:00+05:30|Gardevoir|Gallade",
+      "seed": [
+        27289,
+        6056,
+        2556,
+        52617
+      ],
+      "builds": [
+        {
+          "name": "Gardevoir",
+          "species": "Gardevoir",
+          "gender": "M",
+          "level": 100,
+          "ability": "Synchronize",
+          "item": "",
+          "nature": "Timid",
+          "evs": {
+            "hp": 252,
+            "spe": 252,
+            "spa": 4,
+            "atk": 0,
+            "def": 0,
+            "spd": 0
+          },
+          "ivs": {
+            "hp": 31,
+            "atk": 31,
+            "def": 31,
+            "spa": 31,
+            "spd": 31,
+            "spe": 31
+          },
+          "moves": [
+            "Calm Mind",
+            "Psychic",
+            "Moonblast",
+            "Mystical Fire"
+          ]
+        },
+        {
+          "name": "Gallade",
+          "species": "Gallade",
+          "gender": "M",
+          "level": 100,
+          "ability": "Steadfast",
+          "item": "",
+          "nature": "Serious",
+          "evs": {
+            "hp": 252,
+            "spd": 252,
+            "atk": 4,
+            "def": 0,
+            "spe": 0,
+            "spa": 0
+          },
+          "ivs": {
+            "hp": 31,
+            "atk": 31,
+            "def": 31,
+            "spa": 31,
+            "spd": 31,
+            "spe": 31
+          },
+          "moves": [
+            "Swords Dance",
+            "Shadow Sneak",
+            "Psycho Cut",
+            "Close Combat"
+          ]
+        }
+      ],
+      "title": "Gardevoir vs Gallade: Why Speed Was Not Enough",
+      "research": {
+        "checked_on_ist": "2026-10-26",
+        "matched_video_count": 1,
+        "method": "Bounded web search followed by direct YouTube expanded description. AI fan comparison used for title/topic framing only, not mechanics or trend proof.",
+        "references": [
+          {
+            "id": "XKLkcsAC7LA",
+            "url": "https://www.youtube.com/watch?v=XKLkcsAC7LA",
+            "title": "Gardevoir vs Gallade: Psychic Grace Meets Blade Precision | Real Life Pokémon Park",
+            "published_date": "2026-09-27",
+            "views": 43501,
+            "likes_display": "1K",
+            "likes_exact": null,
+            "comments": null
+          }
+        ],
+        "rejected_pair": {
+          "pair": [
+            "Gardevoir",
+            "Sylveon"
+          ],
+          "reason": "Three direct comparison candidates were published in 2023; no qualifying recent direct matchup reference verified. Replaced with first alternative Gardevoir/Gallade."
+        }
+      },
+      "move_reasons": [
+        "Gardevoir moves first and uses Calm Mind, raising Special Attack and Special Defense.",
+        "Gallade answers with Swords Dance. Its physical Attack doubles. Gardevoir has boosted the wrong defense against this attacker.",
+        "Shadow Sneak has plus-one priority, so Gallade jumps ahead. Ghost is super effective against Psychic. It removes sixty-eight percent.",
+        "Gardevoir returns Psychic. Same-type bonus applies, but Fighting weakness and Psychic resistance cancel out. Neutral damage removes forty-two percent.",
+        "Gardevoir plans super-effective Moonblast. But another Shadow Sneak strikes first, removing its last one hundred ten HP. Moonblast never happens."
+      ],
+      "mechanics_validation": {
+        "legality": "passed pinned TeamValidator 0.11.11, gen9nationaldex",
+        "hp_conservation": "passed",
+        "all_actual_move_events_in_order": true,
+        "event_count": 5,
+        "rounds": 3,
+        "seed": [
+          27289,
+          6056,
+          2556,
+          52617
+        ],
+        "winner": "Gallade",
+        "final_hp": {
+          "Gardevoir": 0,
+          "Gallade": 198
+        },
+        "damage_totals": {
+          "Gardevoir": 340,
+          "Gallade": 142
+        },
+        "intro": "separate, no attack or damage, full starting HP",
+        "planned_not_perfect_play": true
+      },
+      "publication_scheduled": false,
+      "schedule_verified": false,
+      "opening": "Short spoken matchup introduction before battle; full starting HP",
+      "production_record": "data/production/2026-10-27-gardevoir-gallade.json",
+      "authorization": "User explicitly requested two new videos for tomorrow (27 October), 10 AM and 10 PM IST, and a matchup intro for upcoming videos."
     }
   ],
   "pilot_verified": true,
@@ -947,6 +1246,17 @@
       "limit_note": "User clarified in chat that E8PsFuSoHPo was the delayed 24 October 22:00 post and does not replace 25 October evening production. Complete 25 October 22:00 slot as a one-day exception to actual-date cap; preserve actual publication date for audit.",
       "completed_at": "2026-10-25T17:59:02.889Z",
       "user_correction": "We did not upload 10pm video"
+    },
+    {
+      "date": "2026-10-27",
+      "checked_on_ist": "2026-10-26",
+      "studio_channel": "UCPNKs86kz0A8b9CH75-EY0w",
+      "no_existing_schedules": true,
+      "slots": {
+        "10:00": "preparing",
+        "22:00": "preparing"
+      },
+      "note": "Studio Shorts list inspected; neither new matchup nor accepted schedule for 27 October. Creating only these two explicitly requested slots."
     }
   ]
 }
