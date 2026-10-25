@@ -861,7 +861,7 @@
       "editorial_slot_date": "2026-10-27",
       "slot": "2026-10-27T10:00+05:30",
       "requested_publish_at": "2026-10-27T04:30:00Z",
-      "status": "private_upload_processing",
+      "status": "scheduled",
       "created_on_ist": "2026-10-26",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -998,8 +998,8 @@
         "intro": "separate, no attack or damage, full starting HP",
         "planned_not_perfect_play": true
       },
-      "publication_scheduled": false,
-      "schedule_verified": false,
+      "publication_scheduled": true,
+      "schedule_verified": true,
       "opening": "Short spoken matchup introduction before battle; full starting HP",
       "production_record": "data/production/2026-10-27-scizor-heracross.json",
       "authorization": "User explicitly requested two new videos for tomorrow (27 October), 10 AM and 10 PM IST, and a matchup intro for upcoming videos.",
@@ -1034,7 +1034,16 @@
       "duration_seconds": 64.91666666666667,
       "opening_seconds": 3.625,
       "video_id": "fU_EVgTa50c",
-      "uploaded_on_ist": "2026-10-26"
+      "uploaded_on_ist": "2026-10-26",
+      "publish_at": "2026-10-27T04:30:00Z",
+      "verified_on_ist": "2026-10-26",
+      "verification_source": "YouTube Studio selected 27 Oct 2026, 10:00 AM, (GMT+05:30) Kolkata; saved Video scheduled modal confirms Oct 26 at 9:30 PM local GMT-0700, equivalent to 27 Oct 10:00 IST.",
+      "processing_status": "SD_complete_playable",
+      "checks": {
+        "copyright": "No issues found",
+        "community_guidelines": "No issues found"
+      },
+      "library_file_id": "libfile_20e5bcb570e48191a3e62d2b6cc6b8f0"
     },
     {
       "key": "2026-10-27T22:00+05:30",
@@ -1043,7 +1052,7 @@
       "editorial_slot_date": "2026-10-27",
       "slot": "2026-10-27T22:00+05:30",
       "requested_publish_at": "2026-10-27T16:30:00Z",
-      "status": "preparing",
+      "status": "uploading",
       "created_on_ist": "2026-10-26",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -1183,7 +1192,38 @@
       "schedule_verified": false,
       "opening": "Short spoken matchup introduction before battle; full starting HP",
       "production_record": "data/production/2026-10-27-gardevoir-gallade.json",
-      "authorization": "User explicitly requested two new videos for tomorrow (27 October), 10 AM and 10 PM IST, and a matchup intro for upcoming videos."
+      "authorization": "User explicitly requested two new videos for tomorrow (27 October), 10 AM and 10 PM IST, and a matchup intro for upcoming videos.",
+      "quality": {
+        "decode": "passed full FFmpeg -xerror decode",
+        "probe": {
+          "programs": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 720,
+              "height": 1280,
+              "r_frame_rate": "24/1"
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "r_frame_rate": "0/0"
+            }
+          ],
+          "format": {
+            "duration": "58.583333",
+            "size": "8467504"
+          }
+        },
+        "sha256": "bb1d61aa57b6fcf57108052d0fe39a3837613dcd807483c03df8ec60c89d85e3",
+        "integrated_lufs": -16.81,
+        "true_peak_dbtp": -1.34,
+        "intro_and_action_and_result_frames": "passed: all scenes visually inspected, full HP intro and correct final winner/defeated labels",
+        "intro_seconds": 3.7083333333333335
+      },
+      "duration_seconds": 58.583333333333336,
+      "opening_seconds": 3.7083333333333335,
+      "library_file_id": "libfile_22758f2d4de0819182b34eafedf0b34a"
     }
   ],
   "pilot_verified": true,
@@ -1285,7 +1325,7 @@
       "studio_channel": "UCPNKs86kz0A8b9CH75-EY0w",
       "no_existing_schedules": true,
       "slots": {
-        "10:00": "preparing",
+        "10:00": "scheduled_verified_fU_EVgTa50c",
         "22:00": "preparing"
       },
       "note": "Studio Shorts list inspected; neither new matchup nor accepted schedule for 27 October. Creating only these two explicitly requested slots."
