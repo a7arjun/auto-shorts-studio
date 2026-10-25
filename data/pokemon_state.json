@@ -1037,7 +1037,7 @@
       "uploaded_on_ist": "2026-10-26",
       "publish_at": "2026-10-27T04:30:00Z",
       "verified_on_ist": "2026-10-26",
-      "verification_source": "YouTube Studio selected 27 Oct 2026, 10:00 AM, (GMT+05:30) Kolkata; saved Video scheduled modal confirms Oct 26 at 9:30 PM local GMT-0700, equivalent to 27 Oct 10:00 IST.",
+      "verification_source": "YouTube Studio selected 27 Oct 2026, 10:00 AM, (GMT+05:30) Kolkata; saved Video scheduled modal confirms Oct 26 at 9:30 PM local GMT-0700, equivalent to 27 Oct 10:00 IST. Fresh saved content row shows Scheduled.",
       "processing_status": "SD_complete_playable",
       "checks": {
         "copyright": "No issues found",
@@ -1052,7 +1052,7 @@
       "editorial_slot_date": "2026-10-27",
       "slot": "2026-10-27T22:00+05:30",
       "requested_publish_at": "2026-10-27T16:30:00Z",
-      "status": "private_upload_processing",
+      "status": "scheduled",
       "created_on_ist": "2026-10-26",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
@@ -1188,8 +1188,8 @@
         "intro": "separate, no attack or damage, full starting HP",
         "planned_not_perfect_play": true
       },
-      "publication_scheduled": false,
-      "schedule_verified": false,
+      "publication_scheduled": true,
+      "schedule_verified": true,
       "opening": "Short spoken matchup introduction before battle; full starting HP",
       "production_record": "data/production/2026-10-27-gardevoir-gallade.json",
       "authorization": "User explicitly requested two new videos for tomorrow (27 October), 10 AM and 10 PM IST, and a matchup intro for upcoming videos.",
@@ -1225,7 +1225,15 @@
       "opening_seconds": 3.7083333333333335,
       "library_file_id": "libfile_22758f2d4de0819182b34eafedf0b34a",
       "video_id": "UpUsIOXOLRw",
-      "uploaded_on_ist": "2026-10-26"
+      "uploaded_on_ist": "2026-10-26",
+      "publish_at": "2026-10-27T16:30:00Z",
+      "verified_on_ist": "2026-10-26",
+      "verification_source": "YouTube Studio selected 27 Oct 2026 10:00 PM in (GMT+05:30) Kolkata; saved Video scheduled modal confirms October 27 9:30 AM local GMT-0700, equivalent to 27 Oct 22:00 IST. Fresh saved Shorts content row shows Scheduled.",
+      "processing_status": "SD_complete_playable",
+      "checks": {
+        "copyright": "No issues found",
+        "community_guidelines": "No issues found"
+      }
     }
   ],
   "pilot_verified": true,
@@ -1328,9 +1336,10 @@
       "no_existing_schedules": true,
       "slots": {
         "10:00": "scheduled_verified_fU_EVgTa50c",
-        "22:00": "preparing"
+        "22:00": "scheduled_verified_UpUsIOXOLRw"
       },
-      "note": "Studio Shorts list inspected; neither new matchup nor accepted schedule for 27 October. Creating only these two explicitly requested slots."
+      "note": "Studio Shorts list inspected; neither new matchup nor accepted schedule for 27 October. Creating only these two explicitly requested slots.",
+      "completed_on_ist": "2026-10-26"
     }
   ]
 }
