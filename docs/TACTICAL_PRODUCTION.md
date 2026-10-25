@@ -40,3 +40,7 @@ Limit public releases to two per IST calendar date and 62 per month. Existing ap
 ## Delayed prior-day release accounting — clarification on 25 October 2026
 
 Keep editorial slot/date separate from the actual public timestamp. The user clarified that E8PsFuSoHPo is the delayed 24 October 22:00 post and does not substitute for the new 25 October evening video. Complete the 25 October 22:00 slot as this specific one-day exception to the two actual-publications cap. Preserve the real publication date and all IDs; do not rewrite history or republish the sample. The usual two-release daily and 62 monthly limits remain in force otherwise. For a future cross-date exception, flag the conflict rather than silently counting an old slot as a new scheduled slot.
+
+## Matchup opening — approved 26 October 2026
+
+Begin each upcoming new Short with a concise 3–5 second spoken introduction naming both Pokémon and saying they face each other, over a clear pre-battle face-off. Only then start the resolved battle. Show full starting HP and no attacks or HP loss during the introduction. Include it within the existing 45–75 second runtime; all remaining tactical requirements stay unchanged. Already accepted schedules and IDs are preserved.
