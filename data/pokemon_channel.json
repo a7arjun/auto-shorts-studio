@@ -72,7 +72,16 @@
       "explain_move_choices": true,
       "show_winner_and_defeated_opponent": true,
       "blanket_playback_acceleration": false,
-      "requires_native_schedule_verification": true
+      "requires_native_schedule_verification": true,
+      "opening": {
+        "approved_on": "2026-10-26",
+        "spoken_matchup_intro": true,
+        "target_seconds": [
+          3,
+          5
+        ],
+        "visual": "Both opponents face off; full starting HP; no attack or damage until battle begins"
+      }
     },
     "unattended_tactical_run_verified": true,
     "last_verified_tactical_run": {
