@@ -1242,7 +1242,7 @@
       "editorial_slot_date": "2026-10-26",
       "slot": "2026-10-26T10:00+05:30",
       "publish_at": "2026-10-26T04:30:00Z",
-      "status": "uploaded_private_processing",
+      "status": "scheduled",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
       "format": "tactical_v1",
@@ -1376,7 +1376,17 @@
       "video_id": "cfzEiTOyPAw",
       "uploaded_on_ist": "2026-10-26",
       "library_file_id": "libfile_874ff2b7fd708191be57dc46854b44b2",
-      "processing_status": "upload_complete_pending_SD"
+      "processing_status": "SD_complete_playable",
+      "publication_scheduled": true,
+      "schedule_verified": true,
+      "verified_at": "2026-10-26 04:14:13 UTC",
+      "verified_on_ist": "2026-10-26",
+      "verification_source": "YouTube Studio selected 26 Oct 2026, 10:00 AM, (GMT+05:30) Kolkata; saved Video scheduled modal confirms October 25, 2026 at 9:30 PM local GMT-0700, equivalent to 26 Oct 10:00 IST. Fresh reloaded content row confirms Scheduled with matching video ID and title.",
+      "checks": {
+        "copyright": "No issues found",
+        "community_guidelines": "No issues found"
+      },
+      "duration_seconds": 62.833333
     }
   ],
   "pilot_verified": true,
@@ -1489,7 +1499,7 @@
       "checked_at": "2026-10-26T04:10:00Z",
       "studio_channel": "UCPNKs86kz0A8b9CH75-EY0w",
       "slots": {
-        "10:00": "validated_missing_slot_reserved",
+        "10:00": "scheduled_verified_cfzEiTOyPAw",
         "22:00": "blocked_daily_actual_publication_cap"
       },
       "actual_date_existing_releases": [
@@ -1499,7 +1509,8 @@
           "actual_publication_date_ist": "2026-10-26"
         }
       ],
-      "limit_note": "Current date already includes delayed prior-day release GwZKC-cZ5aI. One new morning release is within two actual publications; a second new evening release would make three and is blocked. No new cross-date exception authorized. Existing 27 October schedules preserved."
+      "limit_note": "Current date already includes delayed prior-day release GwZKC-cZ5aI. One new morning release is within two actual publications; a second new evening release would make three and is blocked. No new cross-date exception authorized. Existing 27 October schedules preserved.",
+      "completed_at": "2026-10-26 04:14:13 UTC"
     }
   ]
 }
