@@ -1242,7 +1242,7 @@
       "editorial_slot_date": "2026-10-26",
       "slot": "2026-10-26T10:00+05:30",
       "publish_at": "2026-10-26T04:30:00Z",
-      "status": "uploading",
+      "status": "uploaded_private_processing",
       "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
       "upload_provider": "chatgpt_browser",
       "format": "tactical_v1",
@@ -1372,7 +1372,11 @@
         "intro_seconds": 4.375
       },
       "production_record": "data/production/2026-10-26-lucario-machamp.json",
-      "opening_seconds": 4.375
+      "opening_seconds": 4.375,
+      "video_id": "cfzEiTOyPAw",
+      "uploaded_on_ist": "2026-10-26",
+      "library_file_id": "libfile_874ff2b7fd708191be57dc46854b44b2",
+      "processing_status": "upload_complete_pending_SD"
     }
   ],
   "pilot_verified": true,
