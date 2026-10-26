@@ -1234,6 +1234,145 @@
         "copyright": "No issues found",
         "community_guidelines": "No issues found"
       }
+    },
+    {
+      "key": "2026-10-26T10:00+05:30",
+      "mode": "daily",
+      "date": "2026-10-26",
+      "editorial_slot_date": "2026-10-26",
+      "slot": "2026-10-26T10:00+05:30",
+      "publish_at": "2026-10-26T04:30:00Z",
+      "status": "uploading",
+      "channel_id": "UCPNKs86kz0A8b9CH75-EY0w",
+      "upload_provider": "chatgpt_browser",
+      "format": "tactical_v1",
+      "pair": [
+        "Lucario",
+        "Machamp"
+      ],
+      "simulation_key": "2026-10-26T10:00+05:30|Lucario|Machamp",
+      "seed": [
+        48966,
+        19465,
+        42084,
+        12090
+      ],
+      "builds": [
+        {
+          "name": "Lucario",
+          "species": "Lucario",
+          "level": 100,
+          "ability": "Steadfast",
+          "item": "",
+          "nature": "Bold",
+          "evs": {
+            "hp": 252,
+            "def": 252,
+            "spa": 4,
+            "atk": 0,
+            "spe": 0,
+            "spd": 0
+          },
+          "ivs": {
+            "hp": 31,
+            "atk": 31,
+            "def": 31,
+            "spa": 31,
+            "spd": 31,
+            "spe": 31
+          },
+          "moves": [
+            "Swords Dance",
+            "Aura Sphere",
+            "Extreme Speed",
+            "Close Combat"
+          ]
+        },
+        {
+          "name": "Machamp",
+          "species": "Machamp",
+          "level": 100,
+          "ability": "Guts",
+          "item": "",
+          "nature": "Serious",
+          "evs": {
+            "hp": 252,
+            "def": 252,
+            "atk": 4,
+            "spe": 0,
+            "spa": 0,
+            "spd": 0
+          },
+          "ivs": {
+            "hp": 31,
+            "atk": 31,
+            "def": 31,
+            "spa": 31,
+            "spd": 31,
+            "spe": 31
+          },
+          "moves": [
+            "Ice Punch",
+            "Close Combat",
+            "Bullet Punch",
+            "Stone Edge"
+          ]
+        }
+      ],
+      "title": "Lucario vs Machamp: The Setup That Boosted the Wrong Move",
+      "research": {
+        "checked_on_ist": "2026-10-26",
+        "matched_video_count": 1,
+        "method": "Search engines returned old or insufficient matches. Direct YouTube search and expanded description verified one current comparison. Source used for topic framing only, not mechanics or canon outcome.",
+        "references": [
+          {
+            "url": "https://www.youtube.com/watch?v=gJykxQlQXKg",
+            "title": "Machamp DESTROYS Lucario! #pokemon #pokemonchannel #pokemonanime #anime #ashketchum #pokemonjourneys",
+            "published_date": "2026-06-26",
+            "views": 37507,
+            "likes": 1749,
+            "comments": 53
+          }
+        ],
+        "search_pairs": [
+          "Lucario/Machamp",
+          "Gengar/Alakazam",
+          "Garchomp/Haxorus"
+        ],
+        "qualifying_window": "2026-06-26 through 2026-10-26"
+      },
+      "move_reasons": [
+        "Faster Lucario uses Swords Dance, doubling physical Attack. Its Special Attack stays unchanged.",
+        "Machamp tries coverage. Ice Punch is resisted by Steel and removes only nine percent.",
+        "Lucario chooses Aura Sphere. Fighting gets same-type bonus and hits neutrally. Thirty percent lost, but Swords Dance cannot boost this special move.",
+        "Machamp switches to Close Combat. Fighting exploits Lucario’s Steel weakness: eighty-seven percent gone. Lucario survives on thirteen HP. Machamp lowers both defenses.",
+        "Extreme Speed has plus-two priority, ahead of Bullet Punch. Boosted physical damage hits lowered Defense for forty-two percent. Machamp still has one hundred five HP.",
+        "Machamp’s Bullet Punch is resisted, but takes Lucario’s last thirteen HP."
+      ],
+      "quality": {
+        "decode": "passed full FFmpeg -xerror decode",
+        "duration_seconds": 62.833333,
+        "width": 720,
+        "height": 1280,
+        "fps": 24,
+        "video": "h264",
+        "audio": "aac",
+        "integrated_lufs": -16.65,
+        "true_peak_dbtp": -1.3,
+        "intro_action_and_result_frames": "passed visual inspection",
+        "sha256": "de1f49645e3ee4f571507571c4bf54015f0a95431cee7bd3962f1e4ebe7e82c2"
+      },
+      "mechanics_validation": {
+        "legality": "passed pinned TeamValidator 0.11.11 gen9nationaldex",
+        "hp_conservation": "passed",
+        "all_moves_in_order": true,
+        "event_count": 6,
+        "rounds": 3,
+        "intro_no_damage": true,
+        "intro_seconds": 4.375
+      },
+      "production_record": "data/production/2026-10-26-lucario-machamp.json",
+      "opening_seconds": 4.375
     }
   ],
   "pilot_verified": true,
@@ -1340,6 +1479,23 @@
       },
       "note": "Studio Shorts list inspected; neither new matchup nor accepted schedule for 27 October. Creating only these two explicitly requested slots.",
       "completed_on_ist": "2026-10-26"
+    },
+    {
+      "date": "2026-10-26",
+      "checked_at": "2026-10-26T04:10:00Z",
+      "studio_channel": "UCPNKs86kz0A8b9CH75-EY0w",
+      "slots": {
+        "10:00": "validated_missing_slot_reserved",
+        "22:00": "blocked_daily_actual_publication_cap"
+      },
+      "actual_date_existing_releases": [
+        {
+          "video_id": "GwZKC-cZ5aI",
+          "editorial_slot_date": "2026-10-25",
+          "actual_publication_date_ist": "2026-10-26"
+        }
+      ],
+      "limit_note": "Current date already includes delayed prior-day release GwZKC-cZ5aI. One new morning release is within two actual publications; a second new evening release would make three and is blocked. No new cross-date exception authorized. Existing 27 October schedules preserved."
     }
   ]
 }
