@@ -1396,11 +1396,11 @@
       "upload_provider": "chatgpt_browser",
       "playlist_name": "Pokémon What If",
       "playlist_id": null,
-      "status": "ready_waiting_authentication",
+      "status": "uploaded_private_draft_waiting_approval",
       "publication_scheduled": false,
       "schedule_verified": false,
       "authorization": "26 October user requested Pikachu today at 16:00 IST, a new longer What If tomorrow at 16:00, and one daily longer What If plus two battle Shorts.",
-      "blocker": "Google two-step verification is awaiting Yes approval on Motorola edge 60 pro; not uploaded; playlist not created.",
+      "blocker": "Upload audience selection requires explicit user authorization after automatic approval review rejection. Playlist created Private; Public playlist visibility also requires explicit authorization. Videos are drafts, not published or scheduled.",
       "key": "2026-10-26T16:00+05:30",
       "date": "2026-10-26",
       "editorial_slot_date": "2026-10-26",
@@ -1410,7 +1410,11 @@
       "library_file_id": "libfile_165a476d86608191a88a6756fe9c2dd6",
       "source_bundle_library_file_id": "libfile_b12336c987d0819181c73b0a20f5a986",
       "duration_seconds": 290.25,
-      "sha256": "f506364acae82abc2077d829eae29ce9b90cc103da24e402c5a4088377de8b7f"
+      "sha256": "f506364acae82abc2077d829eae29ce9b90cc103da24e402c5a4088377de8b7f",
+      "video_id": "036JHi2cGFI",
+      "playlist_created": true,
+      "playlist_visibility": "private",
+      "uploaded_on_ist": "2026-10-26"
     },
     {
       "mode": "daily",
@@ -1420,11 +1424,11 @@
       "upload_provider": "chatgpt_browser",
       "playlist_name": "Pokémon What If",
       "playlist_id": null,
-      "status": "ready_waiting_authentication",
+      "status": "uploaded_private_draft_waiting_approval",
       "publication_scheduled": false,
       "schedule_verified": false,
       "authorization": "26 October user requested Pikachu today at 16:00 IST, a new longer What If tomorrow at 16:00, and one daily longer What If plus two battle Shorts.",
-      "blocker": "Google two-step verification is awaiting Yes approval on Motorola edge 60 pro; not uploaded; playlist not created.",
+      "blocker": "Upload audience selection requires explicit user authorization after automatic approval review rejection. Playlist created Private; Public playlist visibility also requires explicit authorization. Videos are drafts, not published or scheduled.",
       "key": "2026-10-27T16:00+05:30",
       "date": "2026-10-27",
       "editorial_slot_date": "2026-10-27",
@@ -1447,7 +1451,11 @@
         "fps": 24,
         "type_chart_validated": "pokemon-showdown 0.11.11",
         "art": "Previously approved watercolor reference restored after two image service failures"
-      }
+      },
+      "video_id": "2kGREJTJpBA",
+      "playlist_created": true,
+      "playlist_visibility": "private",
+      "uploaded_on_ist": "2026-10-26"
     }
   ],
   "pilot_verified": true,
