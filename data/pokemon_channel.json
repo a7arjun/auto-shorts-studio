@@ -5,8 +5,8 @@
   "reference_video_id": "1uvpsNPF63A",
   "voice": "am_michael",
   "voice_speed": 1,
-  "daily_limit": 2,
-  "monthly_limit": 62,
+  "daily_limit": 3,
+  "monthly_limit": 93,
   "trials": 100,
   "made_for_kids": false,
   "audience_rationale": "General audience competitive game analysis for teen and adult players; statistical comparisons, legal builds and conditional results. No child-directed songs, stories, thumbnails or calls to children.",
@@ -16,6 +16,7 @@
   "description": "English Pokemon battle analysis: legal builds, simulated matchups and the mechanics behind the result. Independent fan analysis; not affiliated with or endorsed by The Pokemon Company, Nintendo, Game Freak or Creatures. Results depend on the stated rules and strategy.",
   "publish_times_ist": [
     "10:00",
+    "16:00",
     "22:00"
   ],
   "preparation_lead_minutes": 30,
@@ -92,6 +93,38 @@
       "new_videos": 1,
       "evening": "missed_original_22_00_slot; GwZKC-cZ5aI published_26_October_on_explicit_user_request",
       "note": "Morning upload and native scheduling verified. Evening recovery GwZKC-cZ5aI was initially private after incorrect cap withholding. User subsequently said Public it; existing ID was made Public and verified in Studio on 26 October IST. Retain its editorial slot date 25 October and actual publication date 26 October. This is a specific late-release override, not a change to the routine timetable."
+    },
+    "longform": {
+      "enabled": true,
+      "series": "Pokémon What If",
+      "playlist_id": null,
+      "publish_time_ist": "16:00",
+      "target_duration_seconds": [
+        240,
+        300
+      ],
+      "orientation": "landscape_16_9",
+      "format": "narrated_illustrated_what_if",
+      "manual_editing_required": false,
+      "first_release_date_ist": "2026-10-26",
+      "approved_on": "2026-10-26",
+      "status": "preparing_first_two_episodes; YouTube sign-in pending",
+      "runbook": "docs/WHAT_IF_PRODUCTION.md"
+    }
+  },
+  "series_limits": {
+    "battle_shorts": {
+      "daily": 2,
+      "monthly": 62,
+      "publish_times_ist": [
+        "10:00",
+        "22:00"
+      ]
+    },
+    "what_if_long": {
+      "daily": 1,
+      "monthly": 31,
+      "publish_time_ist": "16:00"
     }
   }
 }
