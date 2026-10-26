@@ -1,0 +1,1285 @@
+{
+  "date_ist": "2026-10-26",
+  "slot": "10:00",
+  "format": "tactical_v1",
+  "title": "Lucario vs Machamp: The Setup That Boosted the Wrong Move",
+  "simulation_key": "2026-10-26T10:00+05:30|Lucario|Machamp",
+  "battle": {
+    "schema": 1,
+    "format": "gen9nationaldex",
+    "generation": 9,
+    "seed": [
+      48966,
+      19465,
+      42084,
+      12090
+    ],
+    "policy": "Scripted tactical demonstration; all accuracy, damage rolls, priority, abilities and effects resolved by the pinned Showdown engine. No random-seed search. No items, switching, Mega or Tera. Not optimal-play proof or aggregate win probability.",
+    "builds": [
+      {
+        "name": "Lucario",
+        "species": "Lucario",
+        "level": 100,
+        "ability": "Steadfast",
+        "item": "",
+        "nature": "Bold",
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spa": 4,
+          "atk": 0,
+          "spe": 0,
+          "spd": 0
+        },
+        "ivs": {
+          "hp": 31,
+          "atk": 31,
+          "def": 31,
+          "spa": 31,
+          "spd": 31,
+          "spe": 31
+        },
+        "moves": [
+          "Swords Dance",
+          "Aura Sphere",
+          "Extreme Speed",
+          "Close Combat"
+        ]
+      },
+      {
+        "name": "Machamp",
+        "species": "Machamp",
+        "level": 100,
+        "ability": "Guts",
+        "item": "",
+        "nature": "Serious",
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "atk": 4,
+          "spe": 0,
+          "spa": 0,
+          "spd": 0
+        },
+        "ivs": {
+          "hp": 31,
+          "atk": 31,
+          "def": 31,
+          "spa": 31,
+          "spd": 31,
+          "spe": 31
+        },
+        "moves": [
+          "Ice Punch",
+          "Close Combat",
+          "Bullet Punch",
+          "Stone Edge"
+        ]
+      }
+    ],
+    "moveBanks": [
+      {
+        "pokemon": "Lucario",
+        "equipped": [
+          "Swords Dance",
+          "Aura Sphere",
+          "Extreme Speed",
+          "Close Combat"
+        ],
+        "reserve": "Flash Cannon",
+        "moves": [
+          {
+            "name": "Swords Dance",
+            "type": "Normal",
+            "category": "Status",
+            "base_power": 0,
+            "accuracy": true,
+            "priority": 0
+          },
+          {
+            "name": "Aura Sphere",
+            "type": "Fighting",
+            "category": "Special",
+            "base_power": 80,
+            "accuracy": true,
+            "priority": 0
+          },
+          {
+            "name": "Extreme Speed",
+            "type": "Normal",
+            "category": "Physical",
+            "base_power": 80,
+            "accuracy": 100,
+            "priority": 2
+          },
+          {
+            "name": "Close Combat",
+            "type": "Fighting",
+            "category": "Physical",
+            "base_power": 120,
+            "accuracy": 100,
+            "priority": 0
+          },
+          {
+            "name": "Flash Cannon",
+            "type": "Steel",
+            "category": "Special",
+            "base_power": 80,
+            "accuracy": 100,
+            "priority": 0
+          }
+        ]
+      },
+      {
+        "pokemon": "Machamp",
+        "equipped": [
+          "Ice Punch",
+          "Close Combat",
+          "Bullet Punch",
+          "Stone Edge"
+        ],
+        "reserve": "Dynamic Punch",
+        "moves": [
+          {
+            "name": "Ice Punch",
+            "type": "Ice",
+            "category": "Physical",
+            "base_power": 75,
+            "accuracy": 100,
+            "priority": 0
+          },
+          {
+            "name": "Close Combat",
+            "type": "Fighting",
+            "category": "Physical",
+            "base_power": 120,
+            "accuracy": 100,
+            "priority": 0
+          },
+          {
+            "name": "Bullet Punch",
+            "type": "Steel",
+            "category": "Physical",
+            "base_power": 40,
+            "accuracy": 100,
+            "priority": 1
+          },
+          {
+            "name": "Stone Edge",
+            "type": "Rock",
+            "category": "Physical",
+            "base_power": 100,
+            "accuracy": 80,
+            "priority": 0
+          },
+          {
+            "name": "Dynamic Punch",
+            "type": "Fighting",
+            "category": "Physical",
+            "base_power": 100,
+            "accuracy": 50,
+            "priority": 0
+          }
+        ]
+      }
+    ],
+    "initial": [
+      {
+        "name": "Lucario",
+        "hp": 344,
+        "max_hp": 344,
+        "types": [
+          "Fighting",
+          "Steel"
+        ],
+        "boosts": {
+          "atk": 0,
+          "def": 0,
+          "spa": 0,
+          "spd": 0,
+          "spe": 0,
+          "accuracy": 0,
+          "evasion": 0
+        },
+        "speed": 216
+      },
+      {
+        "name": "Machamp",
+        "hp": 384,
+        "max_hp": 384,
+        "types": [
+          "Fighting"
+        ],
+        "boosts": {
+          "atk": 0,
+          "def": 0,
+          "spa": 0,
+          "spd": 0,
+          "spe": 0,
+          "accuracy": 0,
+          "evasion": 0
+        },
+        "speed": 146
+      }
+    ],
+    "events": [
+      {
+        "turn": 1,
+        "actor": "Lucario",
+        "move": "Swords Dance",
+        "before": [
+          {
+            "name": "Lucario",
+            "hp": 344,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 384,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage": [],
+        "after": [
+          {
+            "name": "Lucario",
+            "hp": 344,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 384,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage_total": 0
+      },
+      {
+        "turn": 1,
+        "actor": "Machamp",
+        "move": "Ice Punch",
+        "before": [
+          {
+            "name": "Lucario",
+            "hp": 344,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 384,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage": [
+          {
+            "target": "Lucario",
+            "hp_after": 313,
+            "max_hp": 344,
+            "hp_lost": 31,
+            "percent_max_hp": 9.01
+          }
+        ],
+        "after": [
+          {
+            "name": "Lucario",
+            "hp": 313,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 384,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage_total": 31
+      },
+      {
+        "turn": 2,
+        "actor": "Lucario",
+        "move": "Aura Sphere",
+        "before": [
+          {
+            "name": "Lucario",
+            "hp": 313,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 384,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage": [
+          {
+            "target": "Machamp",
+            "hp_after": 267,
+            "max_hp": 384,
+            "hp_lost": 117,
+            "percent_max_hp": 30.47
+          }
+        ],
+        "after": [
+          {
+            "name": "Lucario",
+            "hp": 313,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 267,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage_total": 117
+      },
+      {
+        "turn": 2,
+        "actor": "Machamp",
+        "move": "Close Combat",
+        "before": [
+          {
+            "name": "Lucario",
+            "hp": 313,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 267,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage": [
+          {
+            "target": "Lucario",
+            "hp_after": 13,
+            "max_hp": 344,
+            "hp_lost": 300,
+            "percent_max_hp": 87.21
+          }
+        ],
+        "after": [
+          {
+            "name": "Lucario",
+            "hp": 13,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 267,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage_total": 300
+      },
+      {
+        "turn": 3,
+        "actor": "Lucario",
+        "move": "Extreme Speed",
+        "before": [
+          {
+            "name": "Lucario",
+            "hp": 13,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 267,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage": [
+          {
+            "target": "Machamp",
+            "hp_after": 105,
+            "max_hp": 384,
+            "hp_lost": 162,
+            "percent_max_hp": 42.19
+          }
+        ],
+        "after": [
+          {
+            "name": "Lucario",
+            "hp": 13,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 105,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage_total": 162
+      },
+      {
+        "turn": 3,
+        "actor": "Machamp",
+        "move": "Bullet Punch",
+        "before": [
+          {
+            "name": "Lucario",
+            "hp": 13,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 105,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage": [
+          {
+            "target": "Lucario",
+            "hp_after": 0,
+            "max_hp": 344,
+            "hp_lost": 13,
+            "percent_max_hp": 3.78
+          }
+        ],
+        "after": [
+          {
+            "name": "Lucario",
+            "hp": 0,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 105,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ],
+        "damage_total": 13
+      }
+    ],
+    "turns": [
+      {
+        "turn": 1,
+        "planned": [
+          "Swords Dance",
+          "Ice Punch"
+        ],
+        "after": [
+          {
+            "name": "Lucario",
+            "hp": 313,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 384,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ]
+      },
+      {
+        "turn": 2,
+        "planned": [
+          "Aura Sphere",
+          "Close Combat"
+        ],
+        "after": [
+          {
+            "name": "Lucario",
+            "hp": 13,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 2,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 267,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ]
+      },
+      {
+        "turn": 3,
+        "planned": [
+          "Extreme Speed",
+          "Bullet Punch"
+        ],
+        "after": [
+          {
+            "name": "Lucario",
+            "hp": 0,
+            "max_hp": 344,
+            "types": [
+              "Fighting",
+              "Steel"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": 0,
+              "spa": 0,
+              "spd": 0,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 216
+          },
+          {
+            "name": "Machamp",
+            "hp": 105,
+            "max_hp": 384,
+            "types": [
+              "Fighting"
+            ],
+            "boosts": {
+              "atk": 0,
+              "def": -1,
+              "spa": 0,
+              "spd": -1,
+              "spe": 0,
+              "accuracy": 0,
+              "evasion": 0
+            },
+            "speed": 146
+          }
+        ]
+      }
+    ],
+    "winner": "Machamp",
+    "ended": true,
+    "log": [
+      "|t:|1792987289",
+      "|gametype|singles",
+      "|player|p1|Lucario||",
+      "|player|p2|Machamp||",
+      "|gen|9",
+      "|tier|[Gen 9] National Dex",
+      "|rule|HP Percentage Mod: HP is shown in percentages",
+      "|rule|Endless Battle Clause: Forcing endless battles is banned",
+      "|rule|Species Clause: Limit one of each Pokémon",
+      "|rule|OHKO Clause: OHKO moves are banned",
+      "|rule|Evasion Clause: Evasion abilities, items, and moves are banned",
+      "|rule|Evasion Abilities Clause: Evasion abilities are banned",
+      "|rule|Evasion Items Clause: Evasion items are banned",
+      "|rule|Evasion Moves Clause: Evasion moves are banned",
+      "|rule|Sleep Clause Mod: Limit one foe put to sleep",
+      "|rule|Terastal Clause: You cannot Terastallize",
+      "|clearpoke",
+      "|poke|p1|Lucario, F|",
+      "|poke|p2|Machamp, M|",
+      "|teampreview",
+      "|",
+      "|t:|1792987289",
+      "|teamsize|p1|1",
+      "|teamsize|p2|1",
+      "|start",
+      "|split|p1",
+      "|switch|p1a: Lucario|Lucario, F|344/344",
+      "|switch|p1a: Lucario|Lucario, F|100/100",
+      "|split|p2",
+      "|switch|p2a: Machamp|Machamp, M|384/384",
+      "|switch|p2a: Machamp|Machamp, M|100/100",
+      "|turn|1",
+      "|",
+      "|t:|1792987289",
+      "|move|p1a: Lucario|Swords Dance|p1a: Lucario",
+      "|-boost|p1a: Lucario|atk|2",
+      "|move|p2a: Machamp|Ice Punch|p1a: Lucario",
+      "|-resisted|p1a: Lucario",
+      "|split|p1",
+      "|-damage|p1a: Lucario|313/344",
+      "|-damage|p1a: Lucario|91/100",
+      "|",
+      "|upkeep",
+      "|turn|2",
+      "|",
+      "|t:|1792987289",
+      "|move|p1a: Lucario|Aura Sphere|p2a: Machamp",
+      "|split|p2",
+      "|-damage|p2a: Machamp|267/384",
+      "|-damage|p2a: Machamp|70/100",
+      "|move|p2a: Machamp|Close Combat|p1a: Lucario",
+      "|-supereffective|p1a: Lucario",
+      "|split|p1",
+      "|-damage|p1a: Lucario|13/344",
+      "|-damage|p1a: Lucario|4/100",
+      "|-unboost|p2a: Machamp|def|1",
+      "|-unboost|p2a: Machamp|spd|1",
+      "|",
+      "|upkeep",
+      "|turn|3",
+      "|",
+      "|t:|1792987289",
+      "|move|p1a: Lucario|Extreme Speed|p2a: Machamp",
+      "|split|p2",
+      "|-damage|p2a: Machamp|105/384",
+      "|-damage|p2a: Machamp|28/100",
+      "|move|p2a: Machamp|Bullet Punch|p1a: Lucario",
+      "|-resisted|p1a: Lucario",
+      "|split|p1",
+      "|-damage|p1a: Lucario|0 fnt",
+      "|-damage|p1a: Lucario|0 fnt",
+      "|faint|p1a: Lucario",
+      "|",
+      "|win|Machamp"
+    ],
+    "simulator_version": "0.11.11"
+  },
+  "story": {
+    "title": "Lucario vs Machamp: The Setup That Boosted the Wrong Move",
+    "duration": 62.83333333333333,
+    "segments": [
+      {
+        "index": 0,
+        "title": "LUCARIO vs MACHAMP",
+        "text": "Lucario faces Machamp. Let's see how this battle plays out.",
+        "note": "FULL HEALTH / BEFORE THE BATTLE",
+        "start": 0,
+        "duration": 4.375,
+        "captions": [
+          {
+            "text": "Lucario faces Machamp.",
+            "start": 0,
+            "duration": 1.9346666666666668
+          },
+          {
+            "text": "Let's see how this battle plays out.",
+            "start": 1.9346666666666668,
+            "duration": 2.2546666666666666
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "title": "SWORDS DANCE",
+        "text": "Faster Lucario uses Swords Dance, doubling physical Attack. Its Special Attack stays unchanged.",
+        "note": "ATTACK +2 / SPEED 216 vs 146",
+        "start": 4.375,
+        "duration": 6.375,
+        "captions": [
+          {
+            "text": "Faster Lucario uses Swords Dance, doubling physical Attack.",
+            "start": 0,
+            "duration": 3.9186666666666667
+          },
+          {
+            "text": "Its Special Attack stays unchanged.",
+            "start": 3.9186666666666667,
+            "duration": 2.276
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "title": "ICE PUNCH",
+        "text": "Machamp tries coverage. Ice Punch is resisted by Steel and removes only nine percent.",
+        "note": "100% BASE ACC / ICE RESISTED",
+        "start": 10.75,
+        "duration": 6.333333333333333,
+        "captions": [
+          {
+            "text": "Machamp tries coverage.",
+            "start": 0,
+            "duration": 1.7853333333333334
+          },
+          {
+            "text": "Ice Punch is resisted by Steel and removes only nine percent.",
+            "start": 1.7853333333333334,
+            "duration": 4.388
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "title": "AURA SPHERE",
+        "text": "Lucario chooses Aura Sphere. Fighting gets same-type bonus and hits neutrally. Thirty percent lost, but Swords Dance cannot boost this special move.",
+        "note": "NO ACCURACY CHECK / SPECIAL ATTACK",
+        "start": 17.083333333333332,
+        "duration": 9.708333333333334,
+        "captions": [
+          {
+            "text": "Lucario chooses Aura Sphere.",
+            "start": 0,
+            "duration": 2.084
+          },
+          {
+            "text": "Fighting gets same-type bonus and hits neutrally.",
+            "start": 2.084,
+            "duration": 3.1506666666666665
+          },
+          {
+            "text": "Thirty percent lost, but Swords Dance cannot boost this special move.",
+            "start": 5.234666666666667,
+            "duration": 4.29
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "title": "CLOSE COMBAT",
+        "text": "Machamp switches to Close Combat. Fighting exploits Lucario’s Steel weakness: eighty-seven percent gone. Lucario survives on thirteen HP. Machamp lowers both defenses.",
+        "note": "100% BASE ACC / 2x EFFECTIVE",
+        "start": 26.791666666666664,
+        "duration": 11.791666666666666,
+        "captions": [
+          {
+            "text": "Machamp switches to Close Combat.",
+            "start": 0,
+            "duration": 2.2973333333333334
+          },
+          {
+            "text": "Fighting exploits Lucario’s Steel weakness: eighty-seven percent gone.",
+            "start": 2.2973333333333334,
+            "duration": 4.537333333333334
+          },
+          {
+            "text": "Lucario survives on thirteen HP.",
+            "start": 6.834666666666667,
+            "duration": 2.596
+          },
+          {
+            "text": "Machamp lowers both defenses.",
+            "start": 9.430666666666667,
+            "duration": 2.1906666666666665
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "title": "EXTREME SPEED",
+        "text": "Extreme Speed has plus-two priority, ahead of Bullet Punch. Boosted physical damage hits lowered Defense for forty-two percent. Machamp still has one hundred five HP.",
+        "note": "PRIORITY +2 / PHYSICAL / NEUTRAL",
+        "start": 38.58333333333333,
+        "duration": 10.875,
+        "captions": [
+          {
+            "text": "Extreme Speed has plus-two priority, ahead of Bullet Punch.",
+            "start": 0,
+            "duration": 3.7466666666666666
+          },
+          {
+            "text": "Boosted physical damage hits lowered Defense for forty-two percent.",
+            "start": 3.7466666666666666,
+            "duration": 4.068
+          },
+          {
+            "text": "Machamp still has one hundred five HP.",
+            "start": 7.814666666666666,
+            "duration": 2.8733333333333335
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "title": "BULLET PUNCH",
+        "text": "Machamp’s Bullet Punch is resisted, but takes Lucario’s last thirteen HP.",
+        "note": "PRIORITY +1 / STEEL RESISTED",
+        "start": 49.45833333333333,
+        "duration": 5.083333333333333,
+        "captions": [
+          {
+            "text": "Machamp’s Bullet Punch is resisted, but takes Lucario’s last thirteen HP.",
+            "start": 0,
+            "duration": 4.898666666666666
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "title": "MACHAMP WINS",
+        "text": "Machamp wins with twenty-seven percent health. The lesson: match your setup to your attack. These were planned choices, not perfect play.",
+        "note": "WINNER: MACHAMP / LUCARIO: FAINTED",
+        "start": 54.541666666666664,
+        "duration": 8.291666666666666,
+        "captions": [
+          {
+            "text": "Machamp wins with twenty-seven percent health.",
+            "start": 0,
+            "duration": 2.7453333333333334
+          },
+          {
+            "text": "The lesson: match your setup to your attack.",
+            "start": 2.7453333333333334,
+            "duration": 2.489333333333333
+          },
+          {
+            "text": "These were planned choices, not perfect play.",
+            "start": 5.234666666666667,
+            "duration": 2.8733333333333335
+          }
+        ]
+      }
+    ]
+  },
+  "research": {
+    "checked_on_ist": "2026-10-26",
+    "matched_video_count": 1,
+    "method": "Search engines returned old or insufficient matches. Direct YouTube search and expanded description verified one current comparison. Source used for topic framing only, not mechanics or canon outcome.",
+    "references": [
+      {
+        "url": "https://www.youtube.com/watch?v=gJykxQlQXKg",
+        "title": "Machamp DESTROYS Lucario! #pokemon #pokemonchannel #pokemonanime #anime #ashketchum #pokemonjourneys",
+        "published_date": "2026-06-26",
+        "views": 37507,
+        "likes": 1749,
+        "comments": 53
+      }
+    ],
+    "search_pairs": [
+      "Lucario/Machamp",
+      "Gengar/Alakazam",
+      "Garchomp/Haxorus"
+    ],
+    "qualifying_window": "2026-06-26 through 2026-10-26"
+  },
+  "move_reasons": [
+    "Faster Lucario uses Swords Dance, doubling physical Attack. Its Special Attack stays unchanged.",
+    "Machamp tries coverage. Ice Punch is resisted by Steel and removes only nine percent.",
+    "Lucario chooses Aura Sphere. Fighting gets same-type bonus and hits neutrally. Thirty percent lost, but Swords Dance cannot boost this special move.",
+    "Machamp switches to Close Combat. Fighting exploits Lucario’s Steel weakness: eighty-seven percent gone. Lucario survives on thirteen HP. Machamp lowers both defenses.",
+    "Extreme Speed has plus-two priority, ahead of Bullet Punch. Boosted physical damage hits lowered Defense for forty-two percent. Machamp still has one hundred five HP.",
+    "Machamp’s Bullet Punch is resisted, but takes Lucario’s last thirteen HP."
+  ],
+  "validation": {
+    "legality": "passed pinned TeamValidator 0.11.11 gen9nationaldex",
+    "hp_conservation": "passed",
+    "all_moves_in_order": true,
+    "event_count": 6,
+    "rounds": 3,
+    "intro_no_damage": true,
+    "intro_seconds": 4.375
+  },
+  "status": "uploaded_private_processing",
+  "audience_rationale": "General audience competitive game analysis for teen and adult players; statistical comparisons, legal builds and conditional results. No child-directed songs, stories, thumbnails or calls to children.",
+  "simulator_source": "const fs=require('fs');const crypto=require('crypto');\nconst {Battle,Dex,TeamValidator}=require('pokemon-showdown');\nconst format='gen9nationaldex';\nconst builds=[\n{name:'Lucario',species:'Lucario',level:100,ability:'Steadfast',item:'',nature:'Bold',evs:{hp:252,def:252,spa:4},ivs:{hp:31,atk:31,def:31,spa:31,spd:31,spe:31},moves:['Swords Dance','Aura Sphere','Extreme Speed','Close Combat']},\n{name:'Machamp',species:'Machamp',level:100,ability:'Guts',item:'',nature:'Serious',evs:{hp:252,def:252,atk:4},ivs:{hp:31,atk:31,def:31,spa:31,spd:31,spe:31},moves:['Ice Punch','Close Combat','Bullet Punch','Stone Edge']}\n];\nconst validator=new TeamValidator(format);\nfor(const set of builds){const errors=validator.validateTeam([structuredClone(set)]);if(errors?.length)throw new Error(errors.join('\\n'));}\nconst moveBanks=builds.map((b,i)=>({pokemon:b.species,equipped:b.moves,reserve:i===0?'Flash Cannon':'Dynamic Punch',moves:[...b.moves,i===0?'Flash Cannon':'Dynamic Punch'].map(n=>{let m=Dex.moves.get(n);return {name:m.name,type:m.type,category:m.category,base_power:m.basePower,accuracy:m.accuracy,priority:m.priority};})}));\nconst key='2026-10-26T10:00+05:30|Lucario|Machamp';const h=crypto.createHash('sha256').update(key).digest();const seed=[0,1,2,3].map(i=>h.readUInt16BE(i*2));\nconst battle=new Battle({formatid:format,seed,send:()=>{}});\nconst events=[];let current=null;\nconst snap=p=>({name:p.name,hp:p.hp,max_hp:p.maxhp,types:p.getTypes(),boosts:{...p.boosts},speed:p.getStat('spe')});\nconst addMove=battle.addMove;\nbattle.addMove=function(...args){\n if(args[0]==='move'){\n  current={turn:this.turn,actor:args[1].name,move:args[2],before:this.sides.map(s=>snap(s.active[0])),damage:[]};events.push(current);\n }\n return addMove.apply(this,args);\n};\nconst add=battle.add;\nbattle.add=function(...args){\n if(args[0]==='-damage'&&current&&args[1]?.side){const p=args[1];current.damage.push({target:p.name,hp_after:p.hp,max_hp:p.maxhp});}\n if(args[0]==='-miss'&&current)current.missed=true;\n if(args[0]==='cant'&&current)current.cant=String(args[2]);\n return add.apply(this,args);\n};\nbattle.setPlayer('p1',{name:'Lucario',team:[builds[0]]});battle.setPlayer('p2',{name:'Machamp',team:[builds[1]]});\nif(battle.requestState==='teampreview')battle.makeChoices('team 1','team 1');\nconst initial=battle.sides.map(s=>snap(s.active[0]));\n// Deliberately scripted teaching choices, not a claim of optimal competitive play.\nconst plans=[['Swords Dance','Ice Punch'],['Aura Sphere','Close Combat'],['Extreme Speed','Bullet Punch'],['Close Combat','Close Combat']];\nconst turns=[];\nfor(let i=0;i<plans.length&&!battle.ended;i++){\n const choices=plans[i].map((m,s)=>{let idx=battle.sides[s].active[0].moveSlots.findIndex(x=>x.id===Dex.moves.get(m).id);if(idx<0)throw Error('Move not equipped');return 'move '+(idx+1);});\n battle.makeChoices(...choices);turns.push({turn:i+1,planned:plans[i],after:battle.sides.map(s=>snap(s.active[0]))});\n const errors=battle.log.filter(x=>x.startsWith('|error|'));if(errors.length)throw Error(errors.join('\\n'));\n}\nfor(let i=0;i<events.length;i++){\n const e=events[i];e.after=i+1<events.length?events[i+1].before:turns[turns.length-1].after;\n const seen=new Set();e.damage=e.damage.filter(d=>{const key=d.target+':'+d.hp_after;if(seen.has(key))return false;seen.add(key);return true;});\n const hp=Object.fromEntries(e.before.map(p=>[p.name,p.hp]));\n for(const d of e.damage){d.hp_lost=hp[d.target]-d.hp_after;hp[d.target]=d.hp_after;d.percent_max_hp=+(100*d.hp_lost/d.max_hp).toFixed(2);}\n e.damage_total=e.damage.reduce((sum,d)=>sum+d.hp_lost,0);\n}\nconst out={schema:1,format,generation:9,seed,policy:'Scripted tactical demonstration; all accuracy, damage rolls, priority, abilities and effects resolved by the pinned Showdown engine. No random-seed search. No items, switching, Mega or Tera. Not optimal-play proof or aggregate win probability.',builds,moveBanks,initial,events,turns,winner:battle.winner||null,ended:battle.ended,log:battle.log,simulator_version:require('pokemon-showdown/package.json').version};\nfs.writeFileSync('battle.json',JSON.stringify(out,null,2));console.log(JSON.stringify({initial,events,turns,winner:out.winner,ended:out.ended},null,2));battle.destroy();\n",
+  "renderer_source": "from pathlib import Path\nimport json,math,subprocess,sys,re\nimport numpy as np,soundfile as sf\nfrom PIL import Image,ImageDraw,ImageFont,ImageOps\nfrom functools import lru_cache\nfrom render_support import speech_engine,phonemes\nROOT=Path(__file__).resolve().parent\nW,H,FPS,SR=720,1280,24,24000\nSPEECH=[\n('LUCARIO vs MACHAMP',\"Lucario faces Machamp. Let's see how this battle plays out.\",'FULL HEALTH / BEFORE THE BATTLE'),\n('SWORDS DANCE',\"Faster Lucario uses Swords Dance, doubling physical Attack. Its Special Attack stays unchanged.\",'ATTACK +2 / SPEED 216 vs 146'),\n('ICE PUNCH',\"Machamp tries coverage. Ice Punch is resisted by Steel and removes only nine percent.\",'100% BASE ACC / ICE RESISTED'),\n('AURA SPHERE',\"Lucario chooses Aura Sphere. Fighting gets same-type bonus and hits neutrally. Thirty percent lost, but Swords Dance cannot boost this special move.\",'NO ACCURACY CHECK / SPECIAL ATTACK'),\n('CLOSE COMBAT',\"Machamp switches to Close Combat. Fighting exploits Lucario’s Steel weakness: eighty-seven percent gone. Lucario survives on thirteen HP. Machamp lowers both defenses.\",'100% BASE ACC / 2x EFFECTIVE'),\n('EXTREME SPEED',\"Extreme Speed has plus-two priority, ahead of Bullet Punch. Boosted physical damage hits lowered Defense for forty-two percent. Machamp still has one hundred five HP.\",'PRIORITY +2 / PHYSICAL / NEUTRAL'),\n('BULLET PUNCH',\"Machamp’s Bullet Punch is resisted, but takes Lucario’s last thirteen HP.\",'PRIORITY +1 / STEEL RESISTED'),\n('MACHAMP WINS',\"Machamp wins with twenty-seven percent health. The lesson: match your setup to your attack. These were planned choices, not perfect play.\",'WINNER: MACHAMP / LUCARIO: FAINTED')]\n@lru_cache(None)\ndef font(n):return ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',n)\ndef wrap(d,text,y,size=30,color='white',width=650):\n lines=[];line=''\n for word in text.split():\n  trial=(line+' '+word).strip()\n  if d.textlength(trial,font=font(size))>width and line:lines.append(line);line=word\n  else:line=trial\n if line:lines.append(line)\n for l in lines:d.text(((W-d.textlength(l,font=font(size)))/2,y),l,font=font(size),fill=color,stroke_width=1,stroke_fill='#070e1e');y+=size+9\n return y\n\ndef voice():\n engine=speech_engine();pieces=[];timeline=[];start=0\n for i,(title,text,note) in enumerate(SPEECH):\n  seg=[];captions=[];cursor=0\n  for phrase in re.split(r'(?<=[.!?])\\s+',text):\n   a,sr=engine.create(phonemes(phrase,engine),voice='am_michael',speed=1.18,lang='en-us',is_phonemes=True,sentence_pause=.14,clause_pause=.08)\n   a=np.concatenate([a,np.zeros(round(.1*SR),np.float32)])\n   captions.append(dict(text=phrase,start=cursor,duration=len(a)/SR));cursor+=len(a)/SR;seg.append(a)\n  a=np.concatenate(seg+[np.zeros(round(.16*SR),np.float32)])\n  frames=math.ceil(len(a)/SR*FPS);a=np.pad(a,(0,round(frames/FPS*SR)-len(a)))\n  timeline.append(dict(index=i,title=title,text=text,note=note,start=start,duration=len(a)/SR,captions=captions));start+=len(a)/SR;pieces.append(a)\n sf.write(ROOT/'narration.wav',np.concatenate(pieces),SR)\n (ROOT/'story.json').write_text(json.dumps(dict(title='Lucario vs Machamp: The Setup That Boosted the Wrong Move',duration=start,segments=timeline),indent=2))\n print('DURATION',start,flush=True)\n\ndef frame(scene,art,t,b,total):\n i=scene['index'];p=t/scene['duration'];im=ImageOps.fit(art,(W,H),Image.Resampling.LANCZOS)\n z=1+.035*p;im=ImageOps.fit(im.resize((round(W*z),round(H*z))), (W,H),centering=(.5,.5))\n layer=Image.new('RGBA',(W,H));d=ImageDraw.Draw(layer)\n d.rectangle((0,0,W,155),fill=(6,12,25,240));d.rectangle((0,930,W,H),fill=(6,12,25,238))\n im=Image.alpha_composite(im.convert('RGBA'),layer);d=ImageDraw.Draw(im)\n d.text((25,12),'LUCARIO vs MACHAMP',font=font(24),fill='white')\n if i==0:before=after=b['initial']\n elif i==7:before=after=b['turns'][-1]['after']\n else:before=b['events'][i-1]['before'];after=b['events'][i-1]['after']\n mix=max(0,min(1,(t-.35)/.9))\n for j,(a,z) in enumerate(zip(before,after)):\n  x=25+j*365;hp=a['hp']+(z['hp']-a['hp'])*mix;pct=100*hp/a['max_hp']\n  d.text((x,52),a['name'].upper(),font=font(20),fill='white');d.text((x+220,52),f'{round(pct)}%',font=font(22),fill='#ffdc86')\n  d.rounded_rectangle((x,85,x+300,102),radius=6,fill='#334052')\n  if pct>0:d.rounded_rectangle((x,85,x+max(2,300*pct/100),102),radius=6,fill='#73e6a3')\n  d.text((x,115),' / '.join(a['types']).upper(),font=font(15),fill='#d7e2ef')\n label='FACE-OFF' if i==0 else ('RESULT' if i==7 else f\"ROUND {b['events'][i-1]['turn']} / 3\")\n d.rounded_rectangle((25,175,250,220),radius=8,fill='#0c1728',outline='#f9cf75',width=2);d.text((40,185),label,font=font(23),fill='white')\n if i==7:\n  d.rounded_rectangle((25,245,450,345),radius=8,fill='#0c1728');d.text((40,260),'WINNER: MACHAMP',font=font(30),fill='#f9cf75');d.text((40,305),'LUCARIO: FAINTED / 0 HP',font=font(24),fill='white')\n wrap(d,scene['title'],950,32,'#ffdb81');wrap(d,scene['note'],1000,19,'#a8ddff')\n cap=scene['captions'][-1]\n for c in scene['captions']:\n  if c['start']<=t<c['start']+c['duration']:cap=c;break\n words=cap['text'].split();chunks=[' '.join(words[k:k+6]) for k in range(0,len(words),6)];q=max(0,min(.999,(t-cap['start'])/cap['duration']));wrap(d,chunks[int(q*len(chunks))],1070,35)\n d.rectangle((25,1200,695,1205),fill='#334052');d.rectangle((25,1200,25+670*(scene['start']+t)/total,1205),fill='#f9cf75')\n d.text((25,1230),'LV100 / GEN9 NATIONAL DEX / NO ITEMS',font=font(17),fill='white');d.text((25,1258),'PLANNED CHOICES / ENGINE-RESOLVED DAMAGE',font=font(14),fill='#b4c4d9')\n return im.convert('RGB')\ndef render():\n story=json.loads((ROOT/'story.json').read_text());b=json.loads((ROOT/'battle.json').read_text());paths=json.loads((ROOT/'images.json').read_text());out=ROOT/'lucario-machamp-tactical.mp4'\n proc=subprocess.Popen(['ffmpeg','-hide_banner','-loglevel','error','-y','-f','rawvideo','-pix_fmt','rgb24','-s','720x1280','-r','24','-i','pipe:0','-i',str(ROOT/'narration.wav'),'-c:v','libx264','-preset','veryfast','-crf','20','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-af','loudnorm=I=-16:TP=-1.5:LRA=9','-movflags','+faststart','-shortest',str(out)],stdin=subprocess.PIPE)\n for s,path in zip(story['segments'],paths):\n  art=Image.open(path).convert('RGB')\n  for n in range(round(s['duration']*FPS)):\n   im=frame(s,art,n/FPS,b,story['duration']);proc.stdin.write(im.tobytes())\n   if n==24:im.save(ROOT/f\"review-{s['index']}.jpg\")\n proc.stdin.close();rc=proc.wait();assert rc==0\n print(out,flush=True)\nif __name__=='__main__':render() if '--render' in sys.argv else voice()\n",
+  "art": {
+    "provider": "built-in image_gen",
+    "style": "consistent full-scene cinematic anime, moonlit arena",
+    "new_images": 7,
+    "result_portrait": "unavailable; permitted finishing-action scene reuse with explicit winner and fainted labels",
+    "files": [
+      {
+        "path": "/workspace/scratch/19ff03ff8c17/generated_images/exec-d2e68206-403c-4b4c-8b40-cd8058507545.png",
+        "sha256": "45441df63c6001b03a39a1085159fa4e484ea879ee87988467ef40871a5bbef3"
+      },
+      {
+        "path": "/workspace/scratch/19ff03ff8c17/generated_images/exec-0f497247-194d-4593-ad4b-643e557c175f.png",
+        "sha256": "542f36de46f1a486250d39a182b3b697ddb991ed2233410ddd9efb9c68eea5c4"
+      },
+      {
+        "path": "/workspace/scratch/19ff03ff8c17/generated_images/exec-5260fcf3-33e7-4787-93ad-89f8c572dec6.png",
+        "sha256": "749202fbb033472edbe3366c1c69358dde5d3ebb6d269c41a49cf28462e806c3"
+      },
+      {
+        "path": "/workspace/scratch/19ff03ff8c17/generated_images/exec-6ba4e90d-c9e2-4703-a577-e8f538b0b821.png",
+        "sha256": "703a85b05f501643a346bc17a4f22630a0c672e1677f1ca6d4441dc020b9db79"
+      },
+      {
+        "path": "/workspace/scratch/19ff03ff8c17/generated_images/exec-20888e82-7619-4de6-882e-9bb3b490ce5e.png",
+        "sha256": "91be6e6e4c017e20fd1f90e654c0a885a7e71d6625c79a1d68f7e7d7e1060ea8"
+      },
+      {
+        "path": "/workspace/scratch/19ff03ff8c17/generated_images/exec-326505d2-4b32-4300-8b39-0f9bb4bb71d1.png",
+        "sha256": "6d2d03078114a618933d5bc99d1cf4a30e4e3c6f6bdcaa4fa71bf6a439d6b85b"
+      },
+      {
+        "path": "/workspace/scratch/19ff03ff8c17/generated_images/exec-0c08fc8d-0762-4f1f-ba6e-7c527f054092.png",
+        "sha256": "152d0728ed7eedf89beb0c872d19565bb240c69b9e5ce18c9293ed1339882002"
+      },
+      {
+        "path": "/workspace/scratch/19ff03ff8c17/generated_images/exec-0c08fc8d-0762-4f1f-ba6e-7c527f054092.png",
+        "sha256": "152d0728ed7eedf89beb0c872d19565bb240c69b9e5ce18c9293ed1339882002"
+      }
+    ]
+  },
+  "quality": {
+    "decode": "passed full FFmpeg -xerror decode",
+    "duration_seconds": 62.833333,
+    "width": 720,
+    "height": 1280,
+    "fps": 24,
+    "video": "h264",
+    "audio": "aac",
+    "integrated_lufs": -16.65,
+    "true_peak_dbtp": -1.3,
+    "intro_action_and_result_frames": "passed visual inspection",
+    "sha256": "de1f49645e3ee4f571507571c4bf54015f0a95431cee7bd3962f1e4ebe7e82c2"
+  },
+  "description": "Lucario faces Machamp in a three-round tactical teaching example. Every actual move is shown in engine order after a short full-health face-off introduction.\n\nPlanned teaching choices, with damage and effects resolved by Pokemon Showdown 0.11.11, Generation 9 National Dex. This is not perfect play, a canon anime result, a species ranking or an aggregate win probability.\n\nLucario: Fighting/Steel, level 100, Steadfast, Bold, 252 HP / 252 Defense / 4 Special Attack EVs; Swords Dance, Aura Sphere, Extreme Speed, Close Combat. Machamp: Fighting, level 100, Guts, Serious, 252 HP / 252 Defense / 4 Attack EVs; Ice Punch, Close Combat, Bullet Punch, Stone Edge. Both: 31 IVs, no items, switching, Mega Evolution or Tera. Neither ability activates in this sequence. Fixed seed: 48966, 19465, 42084, 12090.\n\nLucario is faster (216 vs 146). Swords Dance doubles physical Attack but cannot boost special Aura Sphere. Ice Punch is resisted by Steel; Aura Sphere is neutral Fighting STAB and does not check accuracy. Machamp's physical Fighting STAB Close Combat hits Lucario super effectively, leaving it on 13 HP, and drops Machamp's Defense and Special Defense. Extreme Speed (+2 priority) precedes Bullet Punch (+1), but cannot remove Machamp's remaining 267 HP; it removes 162. Resisted Bullet Punch then takes Lucario's last 13 HP. Machamp wins with 105/384 HP (27.3%).\n\nActual HP removed: Ice Punch 31/344 (9.0%); Aura Sphere 117/384 (30.5%); Close Combat 300/344 (87.2%); Extreme Speed 162/384 (42.2%); Bullet Punch 13/344 (3.8%). Spoken percentages are rounded. Other than Aura Sphere's accuracy bypass, all moves here have 100% base accuracy. Current typing stays unchanged throughout.\n\nOriginal generated anime illustrations with camera movement, captions and animated HP bars; not continuous character animation.\n\nIndependent fan analysis; not affiliated with The Pokemon Company, Nintendo, Game Freak or Creatures.\n#Pokemon #Lucario #Machamp #PokemonBattle #Shorts\n",
+  "video_id": "cfzEiTOyPAw",
+  "library_file_id": "libfile_874ff2b7fd708191be57dc46854b44b2",
+  "checks": {
+    "copyright": "No issues found",
+    "community_guidelines": "checking"
+  }
+}
